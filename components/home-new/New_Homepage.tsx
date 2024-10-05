@@ -11,6 +11,7 @@ import 'aos/dist/aos.css'
 import { languageData } from '@/langauge'
 import axios from 'axios'
 import LangLayout from '@/app/[locale]/langLayout'
+import BrandsCarousel from './brands-carousel'
 
 const New_Homepage = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en') // Initialize with default value
@@ -110,7 +111,9 @@ const New_Homepage = () => {
     }, [])
 
     return (
-        <div className="h-full lg:min-h-screen lg:bg-white lg:p-5">
+        <>
+      
+        <div className="h-full  lg:bg-white lg:p-5">
             <div className="relative h-full overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-2xl">
                 <div className="relative z-10">
                     <Header />
@@ -259,6 +262,8 @@ const New_Homepage = () => {
                 />
             </div>
         </div>
+            <BrandsCarousel />
+          </>
     )
 }
 

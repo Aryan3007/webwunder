@@ -201,7 +201,7 @@ const Footer = () => {
                             </div>
                             <div className="row-span-2 lg:min-w-max">
                                
-                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
+                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-8 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
                                         target="_blank"
                                         href="https://dribbble.com/web_wunder"
@@ -255,7 +255,7 @@ const Footer = () => {
                             </div>
                             <div className="row-span-2 lg:min-w-max">
                                 
-                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
+                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-8 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
                                         
                                         href="#faqs"

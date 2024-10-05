@@ -211,7 +211,7 @@ const JoinUs: React.FC = () => {
             gsap.to(s1, {
                 y: -80,
                 scrollTrigger: {
-                    trigger: ".rock",
+                    trigger: ".ph1",
                     start: 'top 90%', // Start when the top of the container reaches 75% of the viewport
                     end: 'bottom 50%', // End when the bottom of the container reaches 25% of the viewport
                     scrub: 1, // Smooth scrubbing
@@ -225,9 +225,9 @@ const JoinUs: React.FC = () => {
 
             gsap.to(s2, {
 
-                x: 100,
+                x: 60,
                 scrollTrigger: {
-                    trigger: ".rock",
+                    trigger: ".ph1",
                     start: 'top 90%', // Start when the top of the container reaches 75% of the viewport
                     end: 'bottom 50%', // End when the bottom of the container reaches 25% of the viewport
                     scrub: 1, // Smooth scrubbing
@@ -243,7 +243,7 @@ const JoinUs: React.FC = () => {
                 y: 60,
 
                 scrollTrigger: {
-                    trigger: ".rock",
+                    trigger: ".ph1",
                     start: 'top 90%', // Start when the top of the container reaches 75% of the viewport
                     end: 'bottom 50%', // End when the bottom of the container reaches 25% of the viewport
                     scrub: 1, // Smooth scrubbing
@@ -264,7 +264,7 @@ const JoinUs: React.FC = () => {
     return (
         <div id='join-us' className="flex h-fit flex-col items-center justify-center gap-5 bg-[#020202] text-white lg:pt-16">
             <Slider />
-            <div className="md:-mt-44 flex w-full lg:scale-75 flex-col items-center justify-between px-4 lg:mt-0 lg:flex-row lg:gap-20 2xl:gap-0 2xl:px-28">
+            <div className="md:-mt-44 flex w-full lg:scale-75 flex-col items-center justify-between px-4 lg:mt-0 lg:flex-row lg:gap-44 2xl:gap-0 2xl:px-28">
                 <div className="flex flex-col items-center gap-4 lg:hidden">
                     <Badge className="w-fit bg-[#5D59E1] font-archivo text-sm font-normal">
                         {
@@ -366,7 +366,7 @@ const JoinUs: React.FC = () => {
                     width={imageWidth}
                 />
                 <Image
-                    className='ph2 absolute top-1 lg:flex hidden left-[400px] h-[450px] w-80'
+                    className='ph2 absolute -top-12 lg:flex hidden left-[350px] h-[450px] w-80'
                     src="/images/home/join-us/ph2.png"
                     alt="Three steps"
                     height={1000}

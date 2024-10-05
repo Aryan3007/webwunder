@@ -1,4 +1,4 @@
-import BrandsCarousel from '@/components/home-new/brands-carousel'
+
 import WhyWebWunder from '@/components/home-new/why-webwunder'
 import AllInOne from '../../../components/home-new/all-in-one'
 import JoinUs from '@/components/home-new/join-us'
@@ -20,7 +20,7 @@ export default function HomePage() {
             <div className="overflow-hidden">
                 {/* <HomeLanding /> */}
                 <New_Homepage />
-                <BrandsCarousel />
+              
                 <div className="hidden lg:flex">
                     <WhyWebWunder />
                 </div>
