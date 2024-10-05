@@ -82,10 +82,30 @@ export async function generateMetadata() {
             },
         }
     } catch (error) {
-        console.error('Error generating metadata:', error)
+        let title = de.global['site-title']
+        let description = de.global['site-desc']
+        let imageUrl =
+            'https://res.cloudinary.com/dacn52tbe/image/upload/v1728158034/centerimage_t4imck.png'
+
         return {
-            title: 'Not Available',
-            description: 'Not available',
+            title: title,
+            description: description,
+            openGraph: {
+                title: title,
+                description: description,
+                images: [
+                    {
+                        url: imageUrl,
+                        alt: 'Default Image',
+                    },
+                ],
+            },
+            twitter: {
+                card: 'summary_large_image',
+                title: title,
+                description: description,
+                images: [imageUrl],
+            },
         }
     }
 }
