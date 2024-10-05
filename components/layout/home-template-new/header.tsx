@@ -6,7 +6,7 @@ import NextTopLoader from 'nextjs-toploader'
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 import { useTranslations } from 'next-intl'
-
+import React from 'react'
 export default function Header() {
     const t = useTranslations('home')
 

@@ -7,7 +7,8 @@ import { Badge } from '../ui/badge'
 import { gsap } from 'gsap'
 
 import { languageData } from '@/langauge'
-import axios from 'axios';
+import axios from 'axios'
+import Link from 'next/link'
 
 export interface PricingCardProps {
     icon: string
@@ -21,7 +22,8 @@ export interface PricingCardProps {
     ctaText?: string
     onSignUp?: () => void
     isCenter?: boolean
-    onCardClick?:()=>void
+    isBooked?: boolean
+    onCardClick?: () => void
 }
 
 const PricingCard: React.FC<PricingCardProps> = ({
@@ -35,8 +37,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
     signMeUp,
     ctaText,
     onSignUp,
+    isBooked,
     isCenter = false,
-    onCardClick
+    onCardClick,
 }) => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en') // Initialize with default value
 
@@ -50,11 +53,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
     }, [])
     return (
         <Card
-            className={`flex cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] h-[730px] lg:min-h- text-white transition-all duration-300 lg:w-[500px] xl:w-[700px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] ${isCenter
-                    ? ` ${changeLanguage === "de" ? "lg:h-[970px]" : "lg:h-[920px]"} lg:scale-[200%] lg:-translate-y-10 xl:scale-90 lg:border-[5px]  lg:border-white`
-                    : `lg:h-[880px] ${changeLanguage === "de" ? "xl:h-[910px]" : "xl:h-[837px]"}`
-                }`}
-                onClick={onCardClick}
+            className={`lg:min-h- flex h-[730px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
+                isCenter
+                    ? ` ${changeLanguage === 'de' ? 'lg:h-[970px]' : 'lg:h-[920px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
+                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[910px]' : 'xl:h-[837px]'}`
+            }`}
+            onClick={onCardClick}
         >
             <div className="flex flex-col">
                 <CardHeader className="space-y-4">
@@ -87,32 +91,33 @@ const PricingCard: React.FC<PricingCardProps> = ({
                         <div className="font-inter text-[45px] font-semibold text-white lg:text-[70px]">
                             €{price}
                             <span className="font-inter text-base font-normal text-white">
-                                / {languageData?.paymentsCard?.[changeLanguage]?.priceTag}
+                                /{' '}
+                                {
+                                    languageData?.paymentsCard?.[changeLanguage]
+                                        ?.priceTag
+                                }
                             </span>
                         </div>
-                        <div className="font-inter lg:pt-0 pt-1 lg:pb-2 pb-1 text-lg font-semibold text-white lg:text-xl">
+                        <div className="pb-1 pt-1 font-inter text-lg font-semibold text-white lg:pb-2 lg:pt-0 lg:text-xl">
                             €{setupFee}
-
-
                         </div>
                     </div>
-                    <p className="font-inter pb-2 text-sm font-normal text-white/50 lg:text-base">
+                    <p className="pb-2 font-inter text-sm font-normal text-white/50 lg:text-base">
                         {description}
                     </p>
                     <div className="space-y-2">
                         <p className="font-inter text-sm font-bold text-white lg:text-base">
                             {/* What You Get: */}
-                            {languageData?.paymentsCard?.[changeLanguage]?.whatYouGet}
-
+                            {
+                                languageData?.paymentsCard?.[changeLanguage]
+                                    ?.whatYouGet
+                            }
                         </p>
-                        <div className={`  ${isCenter
-                                ? 'flex flex-col'
-                                : ''
-                            }`}>
+                        <div className={` ${isCenter ? 'flex flex-col' : ''}`}>
                             {features.map((feature, index) => (
                                 <div
                                     key={index}
-                                    className="flex items-center lg:py-0 py-1 space-x-2"
+                                    className="flex items-center space-x-2 py-1 lg:py-0"
                                 >
                                     <div className="flex h-fit w-fit items-center justify-center rounded-full bg-[#46B277] p-1">
                                         <Check
@@ -120,7 +125,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                                             className="font-extrabold text-black"
                                         />
                                     </div>
-                                    <span className="font-inter text-[12px] py-1 font-light leading-none text-white/50 lg:my-0 lg:text-base">
+                                    <span className="py-1 font-inter text-[12px] font-light leading-none text-white/50 lg:my-0 lg:text-base">
                                         {feature}
                                     </span>
                                 </div>
@@ -130,15 +135,36 @@ const PricingCard: React.FC<PricingCardProps> = ({
                 </CardContent>
             </div>
             <CardFooter className="flex flex-col gap-2 space-y-2 text-white">
-                <button
-                    className="w-full rounded-full bg-[#5D59E1] py-4 font-inter text-base font-semibold text-white transition-all duration-200 hover:scale-95"
-                    onClick={onSignUp}
-                >
-                    {/* Sign Me Up! */}
-                    {languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.signMeUp}
-
-                </button>
-
+                {isBooked ? (
+                    <button
+                        className="w-full cursor-pointer rounded-full bg-[#C2C2C2] py-4 font-inter text-base font-semibold text-black transition-all duration-200 hover:scale-95"
+                        onClick={onSignUp}
+                    >
+                        <Link href={'mailto:info@webwunder.de'} target="_blank">
+                            {/* Sign Me Up! */}
+                            <div className="text-xl font-bold">
+                                {
+                                    languageData?.paymentsCard?.[changeLanguage]
+                                        ?.booked
+                                }
+                            </div>
+                            <div className="">
+                                {
+                                    languageData?.paymentsCard?.[changeLanguage]
+                                        ?.booked2
+                                }
+                            </div>
+                        </Link>
+                    </button>
+                ) : (
+                    <button
+                        className="w-full rounded-full bg-[#5D59E1] py-4 font-inter text-base font-semibold text-white transition-all duration-200 hover:scale-95"
+                        onClick={onSignUp}
+                    >
+                        {/* Sign Me Up! */}
+                        {languageData?.paymentsCard?.[changeLanguage]?.signMeUp}
+                    </button>
+                )}
             </CardFooter>
         </Card>
     )
