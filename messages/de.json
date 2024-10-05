@@ -1,13 +1,13 @@
 {
     "home": {
         "request-consultation": "Kostenlose Beratung Anfordern",
-        "hero" :{
+        "hero": {
             "title": "Websites, die mehr Umsatz bringen"
         }
     },
     "global": {
-        "site-desc": "Machen Sie Ihre Site zu einem Umsatzmotor",
-        "site-title": "WebWunder"
+        "site-desc": "Steigern Sie den Umsatz und senken Sie die Kosten mit den verwalteten Websites von WebWunder. Buchen Sie noch heute ein Gespräch!",
+        "site-title": "WebWunder - Websites, die mehr Umsatz und geringere Kosten liefern"
     },
     "testimonials": {
         "wladimir-schmitt": "WebWunder hat unsere Website über unsere Erwartungen hinaus verwandelt. Die Zusammenarbeit mit Johannes war unglaublich effizient und schnell. Wir haben wenig Zeit investiert, und die Ergebnisse haben sich schnell ausgezahlt. Das Team lieferte schnelle und professionelle Arbeit.",
@@ -15,6 +15,5 @@
         "mohaned-sharif": "Der CampaignWonder-Service von WebWunder war ein Wendepunkt. Der erstellte Sales Funnel hat unsere Verkäufe erheblich gesteigert. Das Team arbeitete schnell und professionell und lieferte großartige Ergebnisse.",
         "justus-becker": "Die Zusammenarbeit mit WebWunder an unserer Marketingstrategie war ein Kinderspiel. Johannes' effiziente und direkte Herangehensweise erforderte minimalen Zeitaufwand, und die Ergebnisse waren herausragend. Unser neuer Sales Funnel treibt erhebliches Wachstum voran.",
         "lena-weber": "Das Team von WebWunder lieferte eine Website, die perfekt unsere Marke widerspiegelt und unsere Online-Präsenz erheblich verbessert hat."
-    }    
+    }
 }
-

@@ -1,17 +1,17 @@
+import axios from 'axios'
 import type { Metadata } from 'next'
 import { Archivo, DM_Sans, Inter, Figtree } from 'next/font/google'
 import './cookie-scripts.scss'
 import '@/assets/styles/scss/globals.scss'
-import { Locale, i18n } from '@/i18n.config'
-import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl'
-import { getTranslations } from 'next-intl/server'
 import { Toaster } from '@/components/ui/toaster'
+import en from '@/messages/en.json'
+import de from '@/messages/de.json'
 
 interface Props {
-    params: { locale: Locale }
     children: React.ReactNode
 }
 
+// Import fonts
 const archivo = Archivo({
     subsets: ['latin'],
     variable: '--font-archivo',
@@ -32,106 +32,101 @@ const figtree = Figtree({
     variable: '--font-figtree',
 })
 
-export function generateStaticParams() {
-    return i18n.locales.map((locale) => ({ locale }))
-}
+// Function to fetch locale based on IP
+async function getLocaleFromIP(): Promise<'en' | 'de'> {
+    try {
+        const response = await axios.get('https://ipapi.co/json/')
+        const country = response.data.country_code
 
-export async function generateMetadata(): Promise<Metadata> {
-    const t = await getTranslations('global')
-
-    // SEO data for English
-    const seoData = {
-        title: "WebWunder - Websites That Deliver More Sales & Lower Costs",
-        description: "Boost sales & cut costs with managed websites. Book a call today!",
-        keywords: "WebWunder, subscription website, web design, boost revenue, reduce costs, website management, SEO, design services, affordable web design, business website design",
-        ogDescription: "Turn your website into a revenue driver with WebWunder’s expert, subscription-based design.",
-        logo: "/webwunder-icon.png", // Logo path
-    }
-
-    return {
-        title: seoData.title,
-        description: seoData.description,
-        openGraph: {
-            title: seoData.title,
-            description: seoData.ogDescription,
-            images: [
-                {
-                    url: seoData.logo,
-                    alt: seoData.title,
-                },
-            ],
-        },
-        twitter: {
-            card: 'summary_large_image',
-            title: seoData.title,
-            description: seoData.description,
-            images: [seoData.logo],
-        },
+        // Use 'de' for Germany, Belgium, Austria, and Switzerland, otherwise use 'en'
+        const germanSpeakingCountries = ['DE', 'BE', 'AT', 'CH']
+        return germanSpeakingCountries.includes(country) ? 'de' : 'en'
+    } catch (error) {
+        console.error('Failed to fetch IP location:', error)
+        return 'de' // Default to 'en' in case of error
     }
 }
 
-export default function RootLayout({
-    children,
-    params: { locale },
-}: Readonly<Props>) {
-    const t = useTranslations('global')
-    const messages = useMessages()
+export default async function RootLayout({ children }: Readonly<Props>) {
+    const locale = await getLocaleFromIP()
+    const messages: any = locale === 'de' ? de : en
+    console.log('ayushayush', messages)
+
     const logo = `${process.env['HOST']}/webwunder-icon.png`
     const host = process.env['HOST']
 
     return (
         <html lang={locale} suppressHydrationWarning={true}>
-            <NextIntlClientProvider locale={locale} messages={messages}>
-                <head>
-                    <link rel="icon" href="/favicon.ico" sizes="any" />
-                    <link
-                        rel="apple-touch-icon"
-                        sizes="180x180"
-                        href="/apple-touch-icon.png"
-                    />
-                    <link
-                        rel="icon"
-                        type="image/png"
-                        sizes="32x32"
-                        href="/favicon-32x32.png"
-                    />
-                    <link
-                        rel="icon"
-                        type="image/png"
-                        sizes="16x16"
-                        href="/favicon-16x16.png"
-                    />
-                    <link rel="manifest" href="/site.webmanifest" />
+            <head>
+                <link rel="icon" href="/favicon.ico" sizes="any" />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="/apple-touch-icon.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="/favicon-16x16.png"
+                />
+                <link rel="manifest" href="/site.webmanifest" />
 
-                    {/* SEO */}
-                    <link rel="canonical" href={host} />
-                    <meta name="description" content={t('site-desc')} />
-                    <meta name="keywords" content="WebWunder, subscription website, web design, boost revenue, reduce costs, website management, SEO, design services, affordable web design, business website design" />
-                    <meta name="robots" content="max-image-preview:large" />
-                    <meta property="og:locale" content="en" />
-                    <meta property="og:site_name" content={t('site-title')} />
-                    <meta property="og:type" content="article" />
-                    <meta property="og:title" content={t('site-title')} />
-                    <meta property="og:description" content={t('site-desc')} />
-                    <meta property="og:url" content={host} />
-                    <meta property="og:image" content={logo} />
-                    <meta property="og:image:secure_url" content={logo} />
-                    <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:title" content={t('site-title')} />
-                    <meta name="twitter:description" content={t('site-desc')} />
-                    <meta name="twitter:image" content={logo} />
-                    {/* SEO */}
-                </head>
-                <body
-                    className={`${dmSans.variable} ${archivo.variable} ${inter.variable} antialiased`}
-                    suppressHydrationWarning={true}
-                >
-                    {children}
-                    <div id="menu-section" />
-                    <div id="modal-section" />
-                    <Toaster />
-                </body>
-            </NextIntlClientProvider>
+                {/* SEO */}
+                <link rel="canonical" href={host} />
+                <meta
+                    name="description"
+                    content={messages.global['site-desc']}
+                />
+                <meta
+                    name="keywords"
+                    content="WebWunder, subscription website, web design, boost revenue, reduce costs, website management, SEO, design services, affordable web design, business website design"
+                />
+                <meta name="robots" content="max-image-preview:large" />
+                <meta property="og:locale" content={locale} />
+                <meta
+                    property="og:site_name"
+                    content={messages.global['site-title']}
+                />
+                <meta property="og:type" content="article" />
+                <meta
+                    property="og:title"
+                    content={messages.global['site-title']}
+                />
+                <meta
+                    property="og:description"
+                    content={messages.global['site-desc']}
+                />
+                <meta property="og:url" content={host} />
+                <meta property="og:image" content={logo} />
+                <meta property="og:image:secure_url" content={logo} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta
+                    name="twitter:title"
+                    content={messages.global['site-title']}
+                />
+                <meta
+                    name="twitter:description"
+                    content={messages.global['site-desc']}
+                />
+                <meta name="twitter:image" content={logo} />
+                {/* SEO */}
+            </head>
+            <body
+                className={`${dmSans.variable} ${archivo.variable} ${inter.variable} antialiased`}
+                suppressHydrationWarning={true}
+            >
+                {children}
+                <div id="menu-section" />
+                <div id="modal-section" />
+                <Toaster />
+            </body>
         </html>
     )
 }

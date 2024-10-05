@@ -6,11 +6,7 @@ import NextTopLoader from 'nextjs-toploader'
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import { useTranslations } from 'next-intl'
-
 export default function Header() {
-    const t = useTranslations('home')
-
     const viewHolder = useRef(null)
     const init = useRef(false)
     useEffect(() => {
@@ -36,7 +32,7 @@ export default function Header() {
         },
     }
 
-    let animDivProps:any  = {
+    let animDivProps: any = {
         initial: 'hide',
         animate: 'animateState',
         variants: variants,
@@ -46,8 +42,6 @@ export default function Header() {
             delay: 0,
         },
     }
-
-
 
     return (
         <>

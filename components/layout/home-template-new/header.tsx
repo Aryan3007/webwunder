@@ -5,11 +5,8 @@ import Logo from '@/components/common/logo'
 import NextTopLoader from 'nextjs-toploader'
 import { motion } from 'framer-motion'
 import { useEffect, useRef } from 'react'
-import { useTranslations } from 'next-intl'
 import React from 'react'
 export default function Header() {
-    const t = useTranslations('home')
-
     const viewHolder = useRef(null)
     const init = useRef(false)
     useEffect(() => {
@@ -56,11 +53,9 @@ export default function Header() {
                     {...animDivProps}
                     className={`z-20 flex w-full flex-col bg-transparent ${isScrolling ? 'fixed top-2 lg:top-2' : ''}`}
                 >
-                    <div
-                        className={`p-3 px-4`}
-                    >
+                    <div className={`p-3 px-4`}>
                         <div
-                            className={`flex w-full items-center lg:justify-around justify-between rounded-xl bg-transparent ${isScrolling ? 'backdrop-blur-sm' : ''}`}
+                            className={`flex w-full items-center justify-between rounded-xl bg-transparent lg:justify-around ${isScrolling ? 'backdrop-blur-sm' : ''}`}
                         >
                             <Logo />
                             <div className="flex items-center">
