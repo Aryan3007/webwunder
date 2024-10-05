@@ -2,7 +2,7 @@
 import Header from './home2-template/header'
 import Footer from './home2-template/footer'
 import Script from 'next/script'
-
+import React from 'react'
 interface Props {
     children: React.ReactNode
 }
