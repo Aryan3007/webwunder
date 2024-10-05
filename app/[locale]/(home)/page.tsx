@@ -13,6 +13,7 @@ import Footer from '@/components/layout/home-template-new/footer'
 import New_Homepage from '@/components/home-new/New_Homepage'
 import Why_mobCrousel from '@/components/home-new/why_mobCrousel'
 import LangLayout from '../langLayout'
+import Home_new from '@/components/home-new/Home_new'
 
 export default function HomePage() {
     return (
@@ -21,6 +22,8 @@ export default function HomePage() {
                 {/* <HomeLanding /> */}
                 <New_Homepage />
               
+                {/* <Home_new/> */}
+                
                 <div className="hidden lg:flex">
                     <WhyWebWunder />
                 </div>

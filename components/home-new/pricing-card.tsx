@@ -53,10 +53,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
     }, [])
     return (
         <Card
-            className={`lg:min-h- flex h-[730px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
+            className={` flex h-[730px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
                 isCenter
                     ? ` ${changeLanguage === 'de' ? 'lg:h-[970px]' : 'lg:h-[920px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
-                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[910px]' : 'xl:h-[837px]'}`
+                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[910px]' : 'xl:h-[850px]'}`
             }`}
             onClick={onCardClick}
         >
@@ -137,12 +137,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <CardFooter className="flex flex-col gap-2 space-y-2 text-white">
                 {isBooked ? (
                     <button
-                        className="w-full cursor-pointer rounded-full bg-[#C2C2C2] py-4 font-inter text-base font-semibold text-black transition-all duration-200 hover:scale-95"
+                        className="w-full cursor-pointer rounded-full bg-[#C2C2C2] py-2 font-inter text-sm font-semibold text-black transition-all duration-200 hover:scale-95"
                         onClick={onSignUp}
                     >
                         <Link href={'mailto:info@webwunder.de'} target="_blank">
                             {/* Sign Me Up! */}
-                            <div className="text-xl font-bold">
+                            <div className="text-lg font-bold">
                                 {
                                     languageData?.paymentsCard?.[changeLanguage]
                                         ?.booked
