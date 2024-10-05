@@ -6,6 +6,7 @@ import { Locale, i18n } from '@/i18n.config'
 import { NextIntlClientProvider, useMessages, useTranslations } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { Toaster } from '@/components/ui/toaster'
+
 interface Props {
     params: { locale: Locale }
     children: React.ReactNode
@@ -37,8 +38,35 @@ export function generateStaticParams() {
 
 export async function generateMetadata(): Promise<Metadata> {
     const t = await getTranslations('global')
+
+    // SEO data for English
+    const seoData = {
+        title: "WebWunder - Websites That Deliver More Sales & Lower Costs",
+        description: "Boost sales & cut costs with managed websites. Book a call today!",
+        keywords: "WebWunder, subscription website, web design, boost revenue, reduce costs, website management, SEO, design services, affordable web design, business website design",
+        ogDescription: "Turn your website into a revenue driver with WebWunder’s expert, subscription-based design.",
+        logo: "/webwunder-icon.png", // Logo path
+    }
+
     return {
-        title: t('site-title') + ' - ' + t('site-desc'),
+        title: seoData.title,
+        description: seoData.description,
+        openGraph: {
+            title: seoData.title,
+            description: seoData.ogDescription,
+            images: [
+                {
+                    url: seoData.logo,
+                    alt: seoData.title,
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: seoData.title,
+            description: seoData.description,
+            images: [seoData.logo],
+        },
     }
 }
 
@@ -47,9 +75,7 @@ export default function RootLayout({
     params: { locale },
 }: Readonly<Props>) {
     const t = useTranslations('global')
-
     const messages = useMessages()
-
     const logo = `${process.env['HOST']}/webwunder-icon.png`
     const host = process.env['HOST']
 
@@ -79,10 +105,10 @@ export default function RootLayout({
 
                     {/* SEO */}
                     <link rel="canonical" href={host} />
-                    {/* <title>{t('site-title') + ' - ' + t('site-desc')}</title> */}
                     <meta name="description" content={t('site-desc')} />
+                    <meta name="keywords" content="WebWunder, subscription website, web design, boost revenue, reduce costs, website management, SEO, design services, affordable web design, business website design" />
                     <meta name="robots" content="max-image-preview:large" />
-                    <meta property="og:locale" content="de" />
+                    <meta property="og:locale" content="en" />
                     <meta property="og:site_name" content={t('site-title')} />
                     <meta property="og:type" content="article" />
                     <meta property="og:title" content={t('site-title')} />
@@ -110,4 +136,4 @@ export default function RootLayout({
     )
 }
 
-export const runtime = 'edge' // 'nodejs' (default) | 'edge'
+export const runtime = 'edge'
