@@ -6,6 +6,7 @@ import '@/assets/styles/scss/globals.scss'
 import { Toaster } from '@/components/ui/toaster'
 import en from '@/messages/en.json'
 import de from '@/messages/de.json'
+import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
 
 interface Props {
     children: React.ReactNode
@@ -40,17 +41,16 @@ async function getLocaleFromIP(): Promise<'en' | 'de'> {
 
         // Use 'de' for Germany, Belgium, Austria, and Switzerland, otherwise use 'en'
         const germanSpeakingCountries = ['DE', 'BE', 'AT', 'CH']
+
         return germanSpeakingCountries.includes(country) ? 'de' : 'en'
     } catch (error) {
-        console.error('Failed to fetch IP location:', error)
-        return 'de' // Default to 'en' in case of error
+        return 'en' // Default to 'en' in case of error
     }
 }
 
 export default async function RootLayout({ children }: Readonly<Props>) {
     const locale = await getLocaleFromIP()
     const messages: any = locale === 'de' ? de : en
-    console.log('ayushayush', messages)
 
     const logo = `${process.env['HOST']}/webwunder-icon.png`
     const host = process.env['HOST']
