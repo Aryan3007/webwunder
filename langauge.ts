@@ -36,7 +36,6 @@ export const languageData = {
             signup: 'Anmelden',
         },
         en: {
-
             benefits: 'Benefits',
             yourWebsite: 'Your Website',
             prices: 'Prices',
@@ -47,20 +46,41 @@ export const languageData = {
             signup: 'Sign up',
         },
     },
+    mobNavFooter: {
+        de: {
+            links: {
+                getInTouch: 'Kontakt aufnehmen',
+                email: 'E-Mail schreiben',
+                message: 'Nachricht senden ',
+                call: 'Anruf buchen',
+                watsapp: ' WhatsApp-Chat',
+                followUs: 'Folgen Sie uns',
+            },
+        },
+        en: {
+            links: {
+                getInTouch: 'Get in touch',
+                email: 'Write an Email',
+                message: 'Send a Message',
+                call: 'Book a call',
+                watsapp: 'Chat on WatsApp',
+                followUs: 'Follow Us',
+            },
+        },
+    },
     mobnavItems: {
         de: {
-            home: 'Home',
+            home: 'Startseite',
             benefits: 'Vorteile',
             yourWebsite: 'Ihre Website',
             prices: 'Preise',
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Kontakt',
-            login: 'Einloggen',
-            signup: 'Anmelden',
+            login: 'Login',
+            signup: 'Registrieren',
         },
         en: {
-
             home: 'Home',
             benefits: 'Benefits',
             yourWebsite: 'Your Website',
@@ -216,7 +236,7 @@ export const languageData = {
                 cta: 'Drei Schritte',
                 title: 'Ihre Website in drei einfachen Schritten',
                 description:
-                    "Keine Lust auf endlose Meetings? Wir auch nicht—deshalb haben wir sie auf ein Minimum reduziert. In weniger als einer Stunde Ihrer wertvollen Zeit machen wir erfolgreiche Unternehmen noch erfolgreicher. So funktioniert’s:",
+                    'Keine Lust auf endlose Meetings? Wir auch nicht—deshalb haben wir sie auf ein Minimum reduziert. In weniger als einer Stunde Ihrer wertvollen Zeit machen wir erfolgreiche Unternehmen noch erfolgreicher. So funktioniert’s:',
                 steps: [
                     {
                         step: 'Schritt 1',
@@ -347,7 +367,7 @@ export const languageData = {
                 {
                     title: 'Scale',
                     price: 690,
-                    setupFee: "2000 Einrichtungsgebühr",
+                    setupFee: '2000 Einrichtungsgebühr',
                     description:
                         'Entwickelt für wachsende Unternehmen, die erweiterte Funktionen und zusätzlichen Design-Support benötigen.',
                     signMeUp: 'Ich bin dabei!',
@@ -359,13 +379,13 @@ export const languageData = {
                         'Design-Refresh alle 36 Monate',
                         'Zwei Designaufgaben pro Monat für mehr Flexibilität',
                         'Erweiterte Website-Funktionen zur Unterstützung Ihres Unternehmenswachstums',
-                        "Jederzeit kündbar"
+                        'Jederzeit kündbar',
                     ],
                 },
                 {
                     title: 'Pro',
                     price: 990,
-                    setupFee: "2000 Einrichtungsgebühr",
+                    setupFee: '2000 Einrichtungsgebühr',
                     signMeUp: 'Ich bin dabei!',
                     description:
                         'Für Unternehmen, die erstklassige Leistung und umfassenden Support für maximalen Erfolg suchen.',
@@ -380,14 +400,13 @@ export const languageData = {
                         'Drei Designaufgaben pro Monat für kontinuierliche Kreativität',
                         'Unterstützung beim Social-Media-Posting und -Management',
                         'Mehr monatliche Zeit für Ihr Projekt, um Spitzenleistungen zu gewährleisten',
-                        "Jederzeit kündbar"
+                        'Jederzeit kündbar',
                     ],
-
                 },
                 {
                     title: 'Unlimited Design',
                     price: 4990,
-                    setupFee: "2000 Einrichtungsgebühr",
+                    setupFee: '2000 Einrichtungsgebühr',
                     description:
                         'Für Unternehmen, die das Beste im Design verlangen – nur eine begrenzte Anzahl an Plätzen verfügbar.',
                     features: [
@@ -396,14 +415,14 @@ export const languageData = {
                         'Unterstützung für mehrere Marken',
                         'Vollständiges Eigentum an allen Designs',
                         'Exklusiver, top-priorisierter Service',
-                        "Jederzeit kündbar"
+                        'Jederzeit kündbar',
                     ],
                     signMeUp: 'Ich bin dabei!',
                 },
                 {
                     title: 'Start',
                     price: 490,
-                    setupFee: "2000 Einrichtungsgebühr",
+                    setupFee: '2000 Einrichtungsgebühr',
 
                     description:
                         'Perfekt für Startups und kleine Projekte, die eine starke Online-Basis brauchen.',
@@ -414,17 +433,17 @@ export const languageData = {
                         'Professionelles Copywriting und Branding',
                         'Eine monatliche Designaufgabe',
                         'Design-Refresh alle 36 Monate',
-                        "Jederzeit kündbar"
+                        'Jederzeit kündbar',
                     ],
                     signMeUp: 'Ich bin dabei!',
                 },
-
-
-
             ],
+            signMeUp: 'Ich bin dabei!',
 
             cancelAnytime: 'Jederzeit kündbar',
             priceTag: 'Monat',
+            booked: 'Derzeit ausgebucht',
+            booked2: 'melden Sie sich per E-Mail für die Warteliste an!',
             setupFeetag: 'Einrichtungsgebühr',
         },
         en: {
@@ -438,7 +457,7 @@ export const languageData = {
                 {
                     title: 'Scale',
                     price: 690,
-                    setupFee: "2000 Setup Fee",
+                    setupFee: '2000 Setup Fee',
                     description:
                         'Designed for growing businesses that need advanced features and additional design support.',
                     features: [
@@ -449,14 +468,14 @@ export const languageData = {
                         'Design refresh every 36 months',
                         'Two design tasks per month for enhanced flexibility',
                         'More extensive site capabilities to support your business growth',
-                        'Cancel anytime'
+                        'Cancel anytime',
                     ],
                     signMeUp: 'Sign Me Up!',
                 },
                 {
                     title: 'Pro',
                     price: 990,
-                    setupFee: "2000 Setup Fee",
+                    setupFee: '2000 Setup Fee',
 
                     description:
                         'For businesses seeking top-tier performance and comprehensive support for maximum impact.',
@@ -471,17 +490,15 @@ export const languageData = {
                         'Three design tasks per month for continuous creativity',
                         'Social media posting and management support',
                         'Extra time dedicated monthly to your project for top-tier performance',
-                        'Cancel anytime'
+                        'Cancel anytime',
                     ],
                     signMeUp: ' Me Up!',
                 },
 
-
-
                 {
                     title: 'Unlimited Design',
                     price: 4990,
-                    setupFee: "2000 Setup Fee",
+                    setupFee: '2000 Setup Fee',
                     description:
                         'For businesses that demand the best in design—only a limited number of slots available.',
                     features: [
@@ -490,14 +507,14 @@ export const languageData = {
                         'Support for multiple brands',
                         'Full ownership of all designs',
                         'Exclusive, top-priority service',
-                        'Cancel anytime'
+                        'Cancel anytime',
                     ],
                     signMeUp: 'Sign Me Up!',
                 },
                 {
                     title: 'Start',
                     price: 490,
-                    setupFee: "2000 Setup Fee",
+                    setupFee: '2000 Setup Fee',
                     description:
                         'Perfect for startups and small projects that need a strong online foundation.',
                     features: [
@@ -507,15 +524,19 @@ export const languageData = {
                         'Professional copywriting and branding',
                         'One monthly design task',
                         'Design refresh every 36 months',
-                        'Cancel anytime'
+                        'Cancel anytime',
                     ],
                     signMeUp: 'Sign Me Up!',
                 },
             ],
 
+            signMeUp: 'Sign Me Up!',
+
             cancelAnytime: 'Cancel Anytime',
             priceTag: 'Month',
             setupFeetag: 'Setup Fee',
+            booked: 'Currently fully booked',
+            booked2: 'Email us to join the waiting list!',
         },
     },
     contactUs: {

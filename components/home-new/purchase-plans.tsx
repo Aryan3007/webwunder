@@ -18,6 +18,7 @@ interface PlanProps {
     signMeUp: string
     features: string[]
     ctaText?: string
+    isBooked?: boolean
 }
 
 /**
@@ -92,7 +93,10 @@ const MobilePurchasePlans: React.FC = () => {
             features:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.features,
             signMeUp:
-                languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.signMeUp
+                languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.signMeUp,
+
+                isBooked: true,
+
         },
         {
             icon: '/images/home/purchase-plans/icon-4.png',
@@ -205,7 +209,9 @@ const DesktopPurchasePlans: React.FC = () => {
             features:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.features,
             signMeUp:
-                languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.signMeUp
+                languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.signMeUp,
+                isBooked: true,
+
 
         },
         {
