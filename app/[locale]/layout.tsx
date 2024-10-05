@@ -6,8 +6,6 @@ import '@/assets/styles/scss/globals.scss'
 import { Toaster } from '@/components/ui/toaster'
 import en from '@/messages/en.json'
 import de from '@/messages/de.json'
-import { loadGetInitialProps } from 'next/dist/shared/lib/utils'
-
 interface Props {
     children: React.ReactNode
 }
@@ -34,90 +32,69 @@ const figtree = Figtree({
 })
 
 // Function to fetch locale based on IP
-async function getLocaleFromIP(): Promise<'en' | 'de'> {
+
+export async function generateMetadata() {
     try {
+        // Fetch the user's country information based on IP
         const response = await axios.get('https://ipapi.co/json/')
         const country = response.data.country_code
 
-        // Use 'de' for Germany, Belgium, Austria, and Switzerland, otherwise use 'en'
+        // Determine locale based on the country code
         const germanSpeakingCountries = ['DE', 'BE', 'AT', 'CH']
+        const locale = germanSpeakingCountries.includes(country) ? 'de' : 'en'
 
-        return germanSpeakingCountries.includes(country) ? 'de' : 'en'
+        // Initialize metadata based on locale
+        let title = 'Not Available'
+        let description = ''
+        let imageUrl =
+            'https://res.cloudinary.com/dacn52tbe/image/upload/v1728158034/centerimage_t4imck.png'
+
+        if (locale === 'de') {
+            // Set German metadata
+            title = de.global['site-title']
+            description = de.global['site-desc']
+        } else {
+            // Set English metadata
+            title = en.global['site-title']
+            description = en.global['site-desc']
+        }
+        console.log('localelocale', country)
+
+        // Return metadata for the page
+        return {
+            title: title,
+            description: description,
+            openGraph: {
+                title: title,
+                description: description,
+                images: [
+                    {
+                        url: imageUrl,
+                        alt: 'Default Image',
+                    },
+                ],
+            },
+            twitter: {
+                card: 'summary_large_image',
+                title: title,
+                description: description,
+                images: [imageUrl],
+            },
+        }
     } catch (error) {
-        return 'en' // Default to 'en' in case of error
+        console.error('Error generating metadata:', error)
+        return {
+            title: 'Not Available',
+            description: 'Not available',
+        }
     }
 }
 
 export default async function RootLayout({ children }: Readonly<Props>) {
-    const locale = await getLocaleFromIP()
-    const messages: any = locale === 'de' ? de : en
-
-    const logo = `${process.env['HOST']}/webwunder-icon.png`
-    const host = process.env['HOST']
+    const locale = 'en'
 
     return (
         <html lang={locale} suppressHydrationWarning={true}>
-            <head>
-                <link rel="icon" href="/favicon.ico" sizes="any" />
-                <link
-                    rel="apple-touch-icon"
-                    sizes="180x180"
-                    href="/apple-touch-icon.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="32x32"
-                    href="/favicon-32x32.png"
-                />
-                <link
-                    rel="icon"
-                    type="image/png"
-                    sizes="16x16"
-                    href="/favicon-16x16.png"
-                />
-                <link rel="manifest" href="/site.webmanifest" />
-
-                {/* SEO */}
-                <link rel="canonical" href={host} />
-                <meta
-                    name="description"
-                    content={messages.global['site-desc']}
-                />
-                <meta
-                    name="keywords"
-                    content="WebWunder, subscription website, web design, boost revenue, reduce costs, website management, SEO, design services, affordable web design, business website design"
-                />
-                <meta name="robots" content="max-image-preview:large" />
-                <meta property="og:locale" content={locale} />
-                <meta
-                    property="og:site_name"
-                    content={messages.global['site-title']}
-                />
-                <meta property="og:type" content="article" />
-                <meta
-                    property="og:title"
-                    content={messages.global['site-title']}
-                />
-                <meta
-                    property="og:description"
-                    content={messages.global['site-desc']}
-                />
-                <meta property="og:url" content={host} />
-                <meta property="og:image" content={logo} />
-                <meta property="og:image:secure_url" content={logo} />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta
-                    name="twitter:title"
-                    content={messages.global['site-title']}
-                />
-                <meta
-                    name="twitter:description"
-                    content={messages.global['site-desc']}
-                />
-                <meta name="twitter:image" content={logo} />
-                {/* SEO */}
-            </head>
             <body
                 className={`${dmSans.variable} ${archivo.variable} ${inter.variable} antialiased`}
                 suppressHydrationWarning={true}
