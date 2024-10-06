@@ -17,10 +17,10 @@ interface TestimonialProps {
 const Testimonial: React.FC<TestimonialProps> = ({ icon, content, title }) => (
     <div className="keen-slider__slide">
         <div className="p-2">
-            <div className="flex h-[280px] lg:h-[265px] min-h-56 w-fit flex-col justify-between overflow-hidden rounded-3xl bg-[#191919] p-4 lg:px-5">
+            <div className="flex h-[280px] lg:h-[245px] min-h-56 w-fit flex-col justify-between overflow-hidden rounded-3xl bg-[#191919] p-4 lg:px-5">
                 <div className="flex flex-col gap-4 px-2">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#29292F]">
-                        <Image src={icon} alt={title} width={25} height={25} />
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#29292F]">
+                        <Image src={icon} alt={title} width={50} height={50} />
                     </div>
                     <h3 className="mt-2 text-xl font-bold leading-none text-white">
                         {title}
@@ -85,7 +85,7 @@ const JoinUsSection: React.FC = () => {
     const items = [
         {
             id: 1,
-            icon: '/images/home/join-us/join-us-icon-1.png',
+            icon: '/images/home/join-us/i1.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[0].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[0]
@@ -93,7 +93,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 2,
-            icon: '/images/home/join-us/join-us-icon-6.png',
+            icon: '/images/home/join-us/i2.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[1].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[1]
@@ -101,7 +101,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 3,
-            icon: '/images/home/join-us/join-us-icon-3.png',
+            icon: '/images/home/join-us/i3.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[2].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[2]
@@ -109,7 +109,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 4,
-            icon: '/images/home/join-us/join-us-icon-4.png',
+            icon: '/images/home/join-us/i4.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[3].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[3]
@@ -117,7 +117,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 5,
-            icon: '/images/home/join-us/join-us-icon-1.png',
+            icon: '/images/home/join-us/i4.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[4].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[4]
@@ -125,7 +125,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 6,
-            icon: '/images/home/join-us/join-us-icon-6.png',
+            icon: '/images/home/join-us/i6.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[5].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[5]
@@ -156,7 +156,7 @@ const JoinUsSection: React.FC = () => {
                                     ?.description
                             }
                         </h2>
-                        <div className="my-1 flex items-start justify-start gap-2 lg:my-2 lg:gap-3">
+                        <div className="my-1 flex lg:scale-100 scale-90 items-start justify-start gap-2 lg:my-2 lg:gap-3">
                             <Link href="#purchase-plans">
                                 <button
                                     className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
@@ -232,12 +232,12 @@ const JoinUsSection: React.FC = () => {
                                 />
                             ))}
                         </div>
-                        <div className="mt-8 flex h-4 w-96 justify-between">
+                        <div className="mt-8 flex h-4 lg:w-96 w-72 justify-between">
                             {/* Pagination discs */}
                             {[...Array(items.length)].map((_, idx) => (
                                 <div
                                     key={idx}
-                                    className={`mx-2 h-1 w-16 rounded-full ${idx === currentSlide ? 'bg-[#5D59E1]' : 'bg-zinc-400'}`}
+                                    className={`mx-2 h-1 lg:w-16 w-12 rounded-full ${idx === currentSlide ? 'bg-[#5D59E1]' : 'bg-zinc-400'}`}
                                 />
                             ))}
                         </div>

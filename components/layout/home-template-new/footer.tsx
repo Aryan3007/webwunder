@@ -10,6 +10,8 @@ import { languageData } from '@/langauge'
 import Logo from '@/public/assets/webwunder-logo.png'
 import { paths } from '@/paths'
 
+
+
 const paymentMethods = [
     { image: '/images/paypal.png', height: 50, width: 60 },
     { image: '/images/applepay.png', height: 50, width: 50 },
@@ -200,8 +202,9 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="row-span-2 lg:min-w-max">
+                                <h1 className='h-6'></h1>
                                
-                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-8 lg:flex-col lg:items-start lg:gap-y-3">
+                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
                                         target="_blank"
                                         href="https://dribbble.com/web_wunder"
@@ -254,8 +257,8 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="row-span-2 lg:min-w-max">
-                                
-                                <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-8 lg:flex-col lg:items-start lg:gap-y-3">
+                                <h1 className='h-6'></h1>
+                                <div className=" mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
                                         
                                         href="#faqs"
@@ -268,18 +271,18 @@ const Footer = () => {
                                     >
                                         {changeData?.links?.contact}
                                     </a>
-                                    <a
-                                        target="_blank"
+                                    <Link
+                                        href="/signup"
                                        
                                     >
                                         {changeData?.links?.signUp}
-                                    </a>
-                                     <a
-                                        target="_blank"
+                                    </Link>
+                                     <Link
+                                        href="/login"
                                         
                                     >
                                         {changeData?.links?.signIn}
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="col-start-1 row-span-2 ps-4 lg:min-w-max lg:ps-0">

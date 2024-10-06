@@ -50,8 +50,8 @@ export const languageData = {
         de: {
             links: {
                 getInTouch: 'Kontakt aufnehmen',
-                email: 'E-Mail schreiben',
-                message: 'Nachricht senden ',
+                email: 'Nachricht senden',
+              
                 call: 'Anruf buchen',
                 watsapp: ' WhatsApp-Chat',
                 followUs: 'Folgen Sie uns',
@@ -61,7 +61,7 @@ export const languageData = {
             links: {
                 getInTouch: 'Get in touch',
                 email: 'Write an Email',
-                message: 'Send a Message',
+               
                 call: 'Book a call',
                 watsapp: 'Chat on WatsApp',
                 followUs: 'Follow Us',
@@ -92,6 +92,61 @@ export const languageData = {
             signup: 'Sign up',
         },
     },
+
+     menuLinks :{
+        de: {
+            home: '/',
+            benefits: '/#join-us',
+            yourWebsite: '/#all-in-one',
+            prices: '/#purchase-plans',
+            portfolio: '/portfolio',
+            faqs: '/#faqs',
+            contact: '/#contact-us',
+            login: '/login',
+            signup: '/signup',
+        },
+        en: {
+            home: '/',
+            benefits: '/#join-us',
+            yourWebsite: '/#all-in-one',
+            prices: '/#purchase-plans',
+            portfolio: '/portfolio',
+            faqs: '/#faqs',
+            contact: '/#contact-us',
+            login: '/login',
+            signup: '/signup',
+        },
+    }, 
+        mobmenufooterLinks :{
+        de: {
+            writeEmail: 'mailto:info@webwunder.de ',
+            sandAMessage: 'https://wa.me/c/4915114039455 ',
+            BookACall: 'https://tidycal.com/skylumina/webwunder',
+           
+            Instagram: 'https://www.instagram.com/web_wunder/',
+            Twitter: 'https://x.com/web_wunder',
+            Facebook: '/de/kontakt',
+            Youtube: 'https://www.youtube.com/@web_wunder',
+            Dribble: 'https://dribbble.com/web_wunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
+            behance: 'https://www.behance.net/webwunder',
+        },
+        en: {
+    
+            writeEmail: 'mailto:info@webwunder.de ',
+            sandAMessage: 'https://wa.me/c/4915114039455 ',
+            BookACall: 'https://tidycal.com/skylumina/webwunder',
+           
+            Instagram: 'https://www.instagram.com/web_wunder/',
+            Twitter: 'https://x.com/web_wunder',
+            Facebook: 'https://www.facebook.com/profile.php?id=61559097817136',
+            Youtube: 'https://www.youtube.com/@web_wunder',
+            Dribble: 'https://dribbble.com/web_wunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
+            behance: 'https://www.behance.net/webwunder',
+        },
+    },
+    
     additionalSection: {
         de: {
             designedToDominate: 'Entwickelt, um zu dominieren',
@@ -1874,24 +1929,24 @@ export const languageData = {
             winningSupport:
                 'Unbesiegbare Webseiten. Unerschütterlicher Support.',
             getInTouch: 'Kontaktieren Sie uns',
-            quickConnect: 'Schnelle Verbindung',
+            quickConnect: 'Angebot',
             weAccept: 'Wir akzeptieren',
             legalPages: 'Rechtliche Seiten',
             followUs: 'Folgen Sie uns',
             links: {
-                writeEmail: 'Eine E-Mail schreiben',
+                writeEmail: 'Nachricht schreiben',
                 sendMessage: 'Nachricht senden',
                 bookCall: 'Anruf buchen',
-                chatWhatsApp: 'Chat auf WhatsApp',
+                chatWhatsApp: 'WhatsApp Chat',
                 signUp: 'Anmelden',
                 pricing: 'Preise',
                 signIn: 'Einloggen',
                 portfolio: 'Portfolio',
                 services: 'Dienstleistungen',
                 faqs: 'FAQs',
-                contact: 'Contact',
+                contact: 'Kontakt',
                 benefits: 'Vorteile',
-                yourwebsite: 'Your Website',
+                yourwebsite: 'Ihre Website',
                 privacyPolicy: 'Datenschutz-Bestimmungen',
                 terms: 'Geschäftsbedingungen',
                 imprint: 'Impressum',

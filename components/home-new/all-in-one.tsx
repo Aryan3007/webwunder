@@ -136,18 +136,18 @@ const AllInOne = () => {
                 ease: 'power2.out',
             })
 
-            gsap.to(main, {
-                scale: 0.9,
-                scrollTrigger: {
-                    trigger: '.images',
-                    start: 'top 50%', // Start when the top of the container reaches 75% of the viewport
-                    end: 'bottom 25%', // End when the bottom of the container reaches 25% of the viewport
-                    scrub: 1, // Smooth scrubbing
-                },
-                duration: 0.5,
-                stagger: 0.1, // Stagger animation by 0.1 seconds for each letter
-                ease: 'power2.out',
-            })
+            // gsap.to(main, {
+            //     scale: 1.2,
+            //     scrollTrigger: {
+            //         trigger: '.images',
+            //         start: 'top 50%', // Start when the top of the container reaches 75% of the viewport
+            //         end: 'bottom 25%', // End when the bottom of the container reaches 25% of the viewport
+            //         scrub: 1, // Smooth scrubbing
+            //     },
+            //     duration: 0.5,
+            //     stagger: 0.1, // Stagger animation by 0.1 seconds for each letter
+            //     ease: 'power2.out',
+            // })
         }, 300) // Delay of 300ms
 
         return () => clearTimeout(timeoutId) // Cleanup timeout on component unmount
@@ -245,36 +245,36 @@ const AllInOne = () => {
                     <div className="images relative mt-10 hidden translate-y-[142px] md:mt-6 lg:flex">
                         <Image
                             ref={image1Ref}
-                            className="main  z-20 scale-110"
-                            src="/images/home/all-in-one/allnew.png"
+                            className="main  z-20"
+                            src="/images/home/all-in-one/m1.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
                         />
                         <Image
                             className="screen1 absolute bottom-56 left-16 h-64 w-80"
-                            src="/images/home/all-in-one/s1.png"
+                            src="/images/home/all-in-one/m5.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
                         />
                         <Image
                             className="screen2 absolute left-36 -top-24 h-64 w-80"
-                            src="/images/home/all-in-one/s2.png"
+                            src="/images/home/all-in-one/m4.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
                         />{' '}
                         <Image
                             className="screen3 absolute -top-20 right-44 h-64 w-80"
-                            src="/images/home/all-in-one/s3.png"
+                            src="/images/home/all-in-one/m3.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
                         />
                         <Image
                             className="screen4 absolute bottom-56 right-16 h-64 w-80"
-                            src="/images/home/all-in-one/s4.png"
+                            src="/images/home/all-in-one/m2.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
@@ -283,7 +283,7 @@ const AllInOne = () => {
 
                     <Image
                             className='pt-16 translate-y-12 lg:hidden flex'
-                            src="/images/home/all-in-one/allnewmob.png"
+                            src="/images/home/all-in-one/allinonemob.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}

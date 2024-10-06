@@ -50,8 +50,8 @@ const MobilePurchasePlans: React.FC = () => {
 
     const plans: PlanProps[] = [
         {
-            icon: '/images/home/purchase-plans/icon-1.png',
-            iconBg: 'bg-[#FFDC26]',
+            icon: '/images/home/purchase-plans/icon-2.png',
+            iconBg: 'bg-[#27dab7]',
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[0]
@@ -61,12 +61,13 @@ const MobilePurchasePlans: React.FC = () => {
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.setupFee,
             features:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.features,
+            ctaText: 'Best Seller',
             signMeUp:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.signMeUp
         },
         {
-            icon: '/images/home/purchase-plans/icon-2.png',
-            iconBg: 'bg-[#27DAB7]',
+            icon: '/images/home/purchase-plans/icon-3.png',
+            iconBg: 'bg-[#FB421F]',
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]
@@ -76,14 +77,15 @@ const MobilePurchasePlans: React.FC = () => {
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.setupFee,
             features:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.features,
-            ctaText: 'Best Seller',
             signMeUp:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.signMeUp,
-                isBooked: true,
+        
+
+
         },
         {
-            icon: '/images/home/purchase-plans/icon-3.png',
-            iconBg: 'bg-[#FB421F]',
+            icon: '/images/home/purchase-plans/icon-4.png',
+            iconBg: 'bg-[#5D59E1]',
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]
@@ -95,13 +97,11 @@ const MobilePurchasePlans: React.FC = () => {
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.features,
             signMeUp:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.signMeUp,
-
-               
-
+                isBooked: true,
         },
         {
-            icon: '/images/home/purchase-plans/icon-4.png',
-            iconBg: 'bg-[#5D59E1]',
+            icon: '/images/home/purchase-plans/icon-1.png',
+            iconBg: 'bg-[#ffdc26]',
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[3]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[3]
@@ -112,8 +112,7 @@ const MobilePurchasePlans: React.FC = () => {
             features:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[3]?.features,
             signMeUp:
-                languageData?.paymentsCard?.[changeLanguage]?.tabs[3]?.signMeUp,
-               
+                languageData?.paymentsCard?.[changeLanguage]?.tabs[3]?.signMeUp
         },
     ]
 
@@ -212,7 +211,7 @@ const DesktopPurchasePlans: React.FC = () => {
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.features,
             signMeUp:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.signMeUp,
-                isBooked: true,
+        
 
 
         },
@@ -229,7 +228,8 @@ const DesktopPurchasePlans: React.FC = () => {
             features:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.features,
             signMeUp:
-                languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.signMeUp
+                languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.signMeUp,
+                isBooked: true,
         },
         {
             icon: '/images/home/purchase-plans/icon-1.png',
