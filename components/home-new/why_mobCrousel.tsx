@@ -36,7 +36,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
         <div className="keen-slider__slide">
             <div className="h-[370px] w-[calc(100vw-40px)] overflow-hidden rounded-xl border-2 bg-white md:w-full">
                 <Image
-                    className="h-56"
+                    className="h-56 object-cover"
                     src={image}
                     alt={title}
                     width={1000}
@@ -81,8 +81,7 @@ const Why_mobCrousel: React.FC = () => {
     const mainItems = [
         {
             cardWidth: 'lg:w-[700px] w-full',
-            image: '/images/home/why-webwunder/why-webwunder-1.png',
-            smallImage: '/images/home/why-webwunder/why-webwunder-1-small.png',
+            image: '/images/home/why-webwunder/f1.svg',
             imgWidth: 700,
             title: languageData?.additionalSection?.[changeLanguage]?.tabs[0]
                 .title,
@@ -92,7 +91,7 @@ const Why_mobCrousel: React.FC = () => {
         },
         {
             cardWidth: 'lg:w-[350px] w-full',
-            image: '/images/home/why-webwunder/why-webwunder-2.png',
+            image: '/images/home/why-webwunder/f2.svg',
             imgWidth: 350,
             title: languageData?.additionalSection?.[changeLanguage]?.tabs[1]
                 .title,
@@ -102,7 +101,7 @@ const Why_mobCrousel: React.FC = () => {
         },
         {
             cardWidth: 'lg:w-[350px] w-full',
-            image: '/images/home/why-webwunder/why-webwunder-3.png',
+            image: '/images/home/why-webwunder/f3.svg',
             imgWidth: 350,
             title: languageData?.additionalSection?.[changeLanguage]?.tabs[2]
                 .title,
@@ -112,7 +111,7 @@ const Why_mobCrousel: React.FC = () => {
         },
         {
             cardWidth: 'lg:w-[350px] w-full',
-            image: '/images/home/why-webwunder/why-webwunder-4.png',
+            image: '/images/home/why-webwunder/f4.svg',
             imgWidth: 350,
             title: languageData?.additionalSection?.[changeLanguage]?.tabs[3]
                 .title,
@@ -122,7 +121,7 @@ const Why_mobCrousel: React.FC = () => {
         },
         {
             cardWidth: 'lg:w-[350px] w-fit',
-            image: '/images/home/why-webwunder/why-webwunder-5.png',
+            image: '/images/home/why-webwunder/f5.svg',
             imgWidth: 350,
             title: languageData?.additionalSection?.[changeLanguage]?.tabs[4]
                 .title,

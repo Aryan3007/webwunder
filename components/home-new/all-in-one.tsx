@@ -283,7 +283,7 @@ const AllInOne = () => {
 
                     <Image
                             className='pt-16 translate-y-12 lg:hidden flex'
-                            src="/images/home/all-in-one/allnewmob.png"
+                            src="/images/home/all-in-one/allinonemob.svg"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
