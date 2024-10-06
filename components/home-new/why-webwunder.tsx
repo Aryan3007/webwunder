@@ -243,7 +243,7 @@ const WhyWebWunder = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className="my-4 flex items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                <div className="my-4 flex  items-center justify-center gap-2 lg:my-2 lg:gap-3">
                     <Link href="#purchase-plans">
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}

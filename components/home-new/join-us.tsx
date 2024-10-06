@@ -345,7 +345,7 @@ const JoinUs: React.FC = () => {
                 <Image
 
                     className='translate-y-6 scale-95 pt-6 lg:hidden flex'
-                    src="/images/home/join-us/joinusMob.png"
+                    src="/images/home/join-us/joinusmob.svg"
                     alt="All in one agency"
                     width={4000}
                     height={4000}

@@ -175,7 +175,7 @@ const Why_mobCrousel: React.FC = () => {
                 </p>
 
                 {/* Buttons */}
-                <div className="mb-7 mt-2 flex items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                <div className="mb-7 mt-2 lg:scale-100 scale-90 flex items-center justify-center gap-2 lg:my-2 lg:gap-3">
                     <Link href="#purchase-plans">
                         {' '}
                         <button
@@ -233,12 +233,12 @@ const Why_mobCrousel: React.FC = () => {
                                 <Testimonial key={index} {...testimonial} />
                             ))}
                         </div>
-                        <div className="mt-8 flex h-4 w-96 justify-between">
+                        <div className="mt-8 flex h-4 lg:w-96 w-72 justify-between">
                             {/* Pagination discs */}
                             {[...Array(mainItems.length)].map((_, idx) => (
                                 <div
                                     key={idx}
-                                    className={`h-1 w-16 rounded-full ${idx === currentSlide ? 'bg-[#5D59E1]' : 'bg-zinc-400'}`}
+                                    className={`h-1 lg:w-16 w-12 rounded-full ${idx === currentSlide ? 'bg-[#5D59E1]' : 'bg-zinc-400'}`}
                                 />
                             ))}
                         </div>

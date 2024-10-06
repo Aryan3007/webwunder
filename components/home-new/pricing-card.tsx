@@ -53,7 +53,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
     }, [])
     return (
         <Card
-            className={` flex h-[750px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
+            className={` flex h-[810px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
                 isCenter
                     ? ` ${changeLanguage === 'de' ? 'lg:h-[970px]' : 'lg:h-[920px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
                     : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[920px]' : 'xl:h-[850px]'}`
@@ -142,13 +142,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
                     >
                         <Link href={'mailto:info@webwunder.de'} target="_blank">
                             {/* Sign Me Up! */}
-                            <div className="text-lg font-bold">
+                            <div className="lg:text-lg font-bold">
                                 {
                                     languageData?.paymentsCard?.[changeLanguage]
                                         ?.booked
                                 }
                             </div>
-                            <div className="">
+                            <div className="text-sm lg:text-base">
                                 {
                                     languageData?.paymentsCard?.[changeLanguage]
                                         ?.booked2

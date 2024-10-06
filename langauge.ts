@@ -95,15 +95,15 @@ export const languageData = {
 
      menuLinks :{
         de: {
-            home: '/de/startseite',
-            benefits: '/de/vorteile',
-            yourWebsite: '/de/ihre-website',
-            prices: '/de/preise',
+            home: '/',
+            benefits: '/#join-us',
+            yourWebsite: '/#all-in-one',
+            prices: '/#purchase-plans',
             portfolio: '/portfolio',
-            faqs: '/de/faqs',
-            contact: '/de/kontakt',
-            login: '/de/login',
-            signup: '/de/registrieren',
+            faqs: '/#faqs',
+            contact: '/#contact-us',
+            login: '/login',
+            signup: '/signup',
         },
         en: {
             home: '/',
@@ -115,6 +115,35 @@ export const languageData = {
             contact: '/#contact-us',
             login: '/login',
             signup: '/signup',
+        },
+    }, 
+        mobmenufooterLinks :{
+        de: {
+            writeEmail: 'mailto:info@webwunder.de ',
+            sandAMessage: 'https://wa.me/c/4915114039455 ',
+            BookACall: 'https://tidycal.com/skylumina/webwunder',
+           
+            Instagram: 'https://www.instagram.com/web_wunder/',
+            Twitter: 'https://x.com/web_wunder',
+            Facebook: '/de/kontakt',
+            Youtube: 'https://www.youtube.com/@web_wunder',
+            Dribble: 'https://dribbble.com/web_wunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
+            behance: 'https://www.behance.net/webwunder',
+        },
+        en: {
+    
+            writeEmail: 'mailto:info@webwunder.de ',
+            sandAMessage: 'https://wa.me/c/4915114039455 ',
+            BookACall: 'https://tidycal.com/skylumina/webwunder',
+           
+            Instagram: 'https://www.instagram.com/web_wunder/',
+            Twitter: 'https://x.com/web_wunder',
+            Facebook: 'https://www.facebook.com/profile.php?id=61559097817136',
+            Youtube: 'https://www.youtube.com/@web_wunder',
+            Dribble: 'https://dribbble.com/web_wunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
+            behance: 'https://www.behance.net/webwunder',
         },
     },
     

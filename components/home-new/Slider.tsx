@@ -156,7 +156,7 @@ const JoinUsSection: React.FC = () => {
                                     ?.description
                             }
                         </h2>
-                        <div className="my-1 flex items-start justify-start gap-2 lg:my-2 lg:gap-3">
+                        <div className="my-1 flex lg:scale-100 scale-90 items-start justify-start gap-2 lg:my-2 lg:gap-3">
                             <Link href="#purchase-plans">
                                 <button
                                     className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
@@ -232,12 +232,12 @@ const JoinUsSection: React.FC = () => {
                                 />
                             ))}
                         </div>
-                        <div className="mt-8 flex h-4 w-96 justify-between">
+                        <div className="mt-8 flex h-4 lg:w-96 w-72 justify-between">
                             {/* Pagination discs */}
                             {[...Array(items.length)].map((_, idx) => (
                                 <div
                                     key={idx}
-                                    className={`mx-2 h-1 w-16 rounded-full ${idx === currentSlide ? 'bg-[#5D59E1]' : 'bg-zinc-400'}`}
+                                    className={`mx-2 h-1 lg:w-16 w-12 rounded-full ${idx === currentSlide ? 'bg-[#5D59E1]' : 'bg-zinc-400'}`}
                                 />
                             ))}
                         </div>

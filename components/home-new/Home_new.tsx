@@ -140,7 +140,7 @@ const Home_new = () => {
                         </p>
                     </div>
 
-                    <div className="my-4 flex md:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                    <div className="my-4 flex scale-90 md:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] px-2 transition-all hover:scale-95`}
                         >
@@ -252,7 +252,7 @@ const Home_new = () => {
                     <Image
                             src="/images/heromob.svg"
                             alt="Hero"
-                            className=' block md:hidden w-screen'
+                            className=' block -translate-y-7 md:hidden w-screen'
                             width={100}
                             height={100}
                         />
