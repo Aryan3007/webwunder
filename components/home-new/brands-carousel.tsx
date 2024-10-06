@@ -11,15 +11,15 @@ interface CarouselItemType {
 }
 
 const carouselItems: CarouselItemType[] = [
-    { src: '/images/brands/i1.svg', width: 43, height: 42 },
-    { src: '/images/brands/figma.png', width: 91, height: 41 },
-    { src: '/images/brands/webflow.png', width: 113, height: 19 },
-    { src: '/images/brands/nextjs.png', width: 62, height: 37 },
-    { src: '/images/brands/reactjs.png', width: 76, height: 24 },
-    { src: '/images/brands/stripe.png', width: 64, height: 26 },
-    { src: '/images/brands/wordpress.png', width: 140, height: 31 },
-    { src: '/images/brands/cloudflare-pages.png', width: 35, height: 48 },
-    { src: '/images/brands/cloudflare.png', width: 88, height: 29 },
+    { src: '/images/brands/l1.svg', width: 43, height: 42 },
+    { src: '/images/brands/l2.svg', width: 91, height: 41 },
+    { src: '/images/brands/l3.svg', width: 113, height: 19 },
+    { src: '/images/brands/l4.svg', width: 62, height: 37 },
+    { src: '/images/brands/l5.svg', width: 76, height: 24 },
+    { src: '/images/brands/l6.svg', width: 64, height: 26 },
+    { src: '/images/brands/l7.svg', width: 140, height: 31 },
+    { src: '/images/brands/l8.svg', width: 35, height: 48 },
+    { src: '/images/brands/l9.svg', width: 88, height: 29 },
 ]
 
 interface CarouselItemProps {
@@ -41,7 +41,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ item, index }) => (
 const BrandsCarousel: React.FC = () => {
     return (
         <div
-            className="relative bottom-8 z-50 lg:h-20 h-16 bg-[#5D59E1]"
+            className="relative bottom-8 lg:h-20 h-16 bg-[#5D59E1]"
             style={{ transform: 'rotate(-1.55deg)' }}
         >
             <div className="flex h-full w-full items-center justify-center bg-[#5D59E1]">

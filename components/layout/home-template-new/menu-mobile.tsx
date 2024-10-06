@@ -47,6 +47,8 @@ export default function SidebarMenu() {
         }
     }, [])
     const menuitems = languageData?.mobnavItems?.[changeLanguage]
+    const links = languageData?.menuLinks?.[changeLanguage];
+    console.log(links);
     // console.log(menuitems)
     const contactMethods = [
         languageData?.mobNavFooter?.[changeLanguage]?.links?.email,
@@ -109,18 +111,14 @@ export default function SidebarMenu() {
 
                                     <ul className="flex flex-col justify-evenly space-y-2 text-center text-xl md:text-2xl">
                                         {menuitems &&
-                                            Object.entries(menuitems).map(
-                                                ([key, value]) => (
-                                                    <li key={key}>
-                                                        <Link
-                                                            href="#"
-                                                            className="block py-1"
-                                                        >
-                                                            {value}
-                                                        </Link>
-                                                    </li>
-                                                ),
-                                            )}
+                                            Object.entries(menuitems).map(([key, value]) => (
+                                                <li key={key}>
+                                                    <Link href={links[key]} className="block py-1" onClick={closeMenu}>
+                                                        {value}
+                                                    </Link>
+                                                </li>
+                                            ))
+                                        }
                                     </ul>
 
                                     <div className="text-center">
@@ -143,9 +141,9 @@ export default function SidebarMenu() {
                                                         </Link>
                                                         {index <
                                                             contactMethods.length -
-                                                                1 && (
-                                                            <span>|</span>
-                                                        )}
+                                                            1 && (
+                                                                <span>|</span>
+                                                            )}
                                                     </React.Fragment>
                                                 ),
                                             )}
@@ -168,9 +166,9 @@ export default function SidebarMenu() {
                                                         </Link>
                                                         {index <
                                                             socialMedia.length -
-                                                                1 && (
-                                                            <span>|</span>
-                                                        )}
+                                                            1 && (
+                                                                <span>|</span>
+                                                            )}
                                                     </React.Fragment>
                                                 ),
                                             )}

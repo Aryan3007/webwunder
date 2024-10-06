@@ -92,6 +92,32 @@ export const languageData = {
             signup: 'Sign up',
         },
     },
+
+     menuLinks :{
+        de: {
+            home: '/de/startseite',
+            benefits: '/de/vorteile',
+            yourWebsite: '/de/ihre-website',
+            prices: '/de/preise',
+            portfolio: '/portfolio',
+            faqs: '/de/faqs',
+            contact: '/de/kontakt',
+            login: '/de/login',
+            signup: '/de/registrieren',
+        },
+        en: {
+            home: '/',
+            benefits: '/#join-us',
+            yourWebsite: '/#all-in-one',
+            prices: '/#purchase-plans',
+            portfolio: '/portfolio',
+            faqs: '/#faqs',
+            contact: '/#contact-us',
+            login: '/login',
+            signup: '/signup',
+        },
+    },
+    
     additionalSection: {
         de: {
             designedToDominate: 'Entwickelt, um zu dominieren',

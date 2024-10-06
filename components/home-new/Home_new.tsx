@@ -10,6 +10,8 @@ import BrandsCarousel from './brands-carousel'
 import SidebarMenu from '../layout/home-template-new/menu-mobile'
 import Logo from '../common/logo'
 import { gsap, ScrollTrigger } from 'gsap/all'
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 const Home_new = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
 
@@ -99,7 +101,7 @@ const Home_new = () => {
 
     return (
         <>
-            <div className="xl:min-h-screen  h-full lg:bg-white lg:p-5">
+            <div id='home' className="xl:min-h-screen  h-full lg:bg-white lg:p-5">
                 <div className="relative sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-t-2xl">
 
                     {/* Header */}
@@ -136,6 +138,56 @@ const Home_new = () => {
                                 Proven to Boost Sales and Cut Costs.
                             </span>
                         </p>
+                    </div>
+
+                    <div className="my-4 flex md:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                        <button
+                            className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] px-2 transition-all hover:scale-95`}
+                        >
+                            <a href="https://youtu.be/1g0oik5droE">
+
+                            <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
+                                {
+                                    languageData?.heroSection?.[changeLanguage]
+                                    ?.watchVideo
+                                }
+                            </p>
+                                </a>
+                            <div
+                                className={`flex ${changeLanguage === 'de' ? 'h-10 w-12' : 'h-8 w-8'} items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8`}
+                            >
+                                <ArrowRight
+                                    size={18}
+                                    fontWeight={100}
+                                    className="text-[#24252A]"
+                                />
+                            </div>
+                        </button>
+
+                        <button
+                            className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] px-2 transition-all hover:scale-95`}
+                        >
+                            <Link
+                                target="_blank"
+                                href="https://tidycal.com/skylumina/webwunder"
+                                className="flex flex-row items-center justify-between gap-4"
+                            >
+                                <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
+                                    {
+                                        languageData?.additionalSection?.[
+                                            changeLanguage
+                                        ]?.bookCall
+                                    }
+                                </p>
+                                <div className="flex h-6 w-6 items-center justify-center rounded-full lg:h-8 lg:w-8">
+                                    <ArrowRight
+                                        size={18}
+                                        fontWeight={100}
+                                        className="text-[#24252A]"
+                                    />
+                                </div>
+                            </Link>
+                        </button>
                     </div>
 
 

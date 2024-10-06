@@ -10,6 +10,8 @@ import { languageData } from '@/langauge'
 import Logo from '@/public/assets/webwunder-logo.png'
 import { paths } from '@/paths'
 
+
+
 const paymentMethods = [
     { image: '/images/paypal.png', height: 50, width: 60 },
     { image: '/images/applepay.png', height: 50, width: 50 },
@@ -269,18 +271,18 @@ const Footer = () => {
                                     >
                                         {changeData?.links?.contact}
                                     </a>
-                                    <a
-                                        target="_blank"
+                                    <Link
+                                        href="/signup"
                                        
                                     >
                                         {changeData?.links?.signUp}
-                                    </a>
-                                     <a
-                                        target="_blank"
+                                    </Link>
+                                     <Link
+                                        href="/login"
                                         
                                     >
                                         {changeData?.links?.signIn}
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="col-start-1 row-span-2 ps-4 lg:min-w-max lg:ps-0">

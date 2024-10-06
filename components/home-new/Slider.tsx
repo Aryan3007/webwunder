@@ -19,7 +19,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ icon, content, title }) => (
         <div className="p-2">
             <div className="flex h-[280px] lg:h-[245px] min-h-56 w-fit flex-col justify-between overflow-hidden rounded-3xl bg-[#191919] p-4 lg:px-5">
                 <div className="flex flex-col gap-4 px-2">
-                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#29292F]">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#29292F]">
                         <Image src={icon} alt={title} width={50} height={50} />
                     </div>
                     <h3 className="mt-2 text-xl font-bold leading-none text-white">
@@ -85,7 +85,7 @@ const JoinUsSection: React.FC = () => {
     const items = [
         {
             id: 1,
-            icon: '/images/home/join-us/join-us-icon-1.png',
+            icon: '/images/home/join-us/i1.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[0].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[0]
@@ -93,7 +93,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 2,
-            icon: '/images/home/join-us/join-us-icon-6.png',
+            icon: '/images/home/join-us/i2.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[1].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[1]
@@ -101,7 +101,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 3,
-            icon: '/images/home/join-us/join-us-icon-3.png',
+            icon: '/images/home/join-us/i3.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[2].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[2]
@@ -109,7 +109,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 4,
-            icon: '/images/home/join-us/join-us-icon-4.png',
+            icon: '/images/home/join-us/i4.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[3].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[3]
@@ -117,7 +117,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 5,
-            icon: '/images/home/join-us/join-us-icon-1.png',
+            icon: '/images/home/join-us/i4.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[4].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[4]
@@ -125,7 +125,7 @@ const JoinUsSection: React.FC = () => {
         },
         {
             id: 6,
-            icon: '/images/home/join-us/join-us-icon-6.png',
+            icon: '/images/home/join-us/i6.svg',
             title: languageData?.joinUsSection?.[changeLanguage]?.tabs[5].title,
             content:
                 languageData?.joinUsSection?.[changeLanguage]?.tabs[5]

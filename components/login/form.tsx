@@ -132,12 +132,11 @@ export default function LoginPage() {
                 </div>
                 <div className="absolute left-4 top-4 z-10 hidden cursor-pointer px-6 py-8 lg:block">
                     <Link href={'/'}>
-                        <Image
-                            src={'/assets/webwunder-logo.png'}
-                            alt="WebWunder Logo"
-                            width={342}
-                            height={60}
-                        />
+                    <Image src="./images/logo.svg"
+                
+                alt="WebWunder Logo"
+                width="225"
+                height="17" />
                     </Link>
                 </div>
                 <div className="absolute inset-x-0 bottom-0 z-10 space-y-3 bg-gradient-to-t from-black to-transparent p-6 px-10 text-white">
