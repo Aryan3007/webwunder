@@ -8,6 +8,16 @@ import Link from 'next/link'
 import Logo from '@/components/common/logo'
 import { languageData } from '@/langauge'
 
+import {
+    Select,
+    SelectContent,
+    SelectLabel,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select'
+
 const menuItems = [
     'Home',
     'Benefits',
@@ -72,6 +82,18 @@ export default function SidebarMenu() {
         'Pinterest',
     ]
 
+    const handleLanguageChange = (value: string) => {
+        const newLang = value === 'german' ? 'de' : 'en'
+        setChangeLanguage(newLang)
+        localStorage.setItem('lang', newLang)
+        location.reload()
+    }
+
+    const getLanguageIcon = (lang: 'de' | 'en') => {
+        return lang === 'de' ? '/images/germany.png' : '/images/united-kingdom.png'
+    }
+
+
 
     return (
         <>
@@ -125,6 +147,27 @@ export default function SidebarMenu() {
                                             &times;
                                         </button>
                                     </div>
+<div className='flex justify-center'>
+
+                                    <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                        <SelectTrigger className="w-28 rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
+                                            <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
+                                            <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup className="flex flex-row justify-around">
+                                                <SelectItem value="english" className="flex items-center gap-2">
+                                                    <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
+                                                    <span>EN</span>
+                                                </SelectItem>
+                                                <SelectItem value="german" className="flex items-center gap-2">
+                                                    <Image src="/images/germany.png" alt='German' width={25} height={25} />
+                                                    <span>DE</span>
+                                                </SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
+</div>
 
                                     <ul className="flex flex-col justify-evenly space-y-2 text-center text-xl md:text-2xl">
                                         {Object.entries(menuitems).map(([key, value]) => {

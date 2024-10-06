@@ -50,8 +50,8 @@ export const languageData = {
         de: {
             links: {
                 getInTouch: 'Kontakt aufnehmen',
-                email: 'E-Mail schreiben',
-                message: 'Nachricht senden ',
+                email: 'Nachricht senden',
+              
                 call: 'Anruf buchen',
                 watsapp: ' WhatsApp-Chat',
                 followUs: 'Folgen Sie uns',
@@ -61,7 +61,7 @@ export const languageData = {
             links: {
                 getInTouch: 'Get in touch',
                 email: 'Write an Email',
-                message: 'Send a Message',
+               
                 call: 'Book a call',
                 watsapp: 'Chat on WatsApp',
                 followUs: 'Follow Us',
