@@ -360,14 +360,14 @@ const JoinUs: React.FC = () => {
                 />
                 <Image
                     className='ph1 absolute left-8 lg:flex hidden top-80 h-[450px] w-96'
-                    src="/images/home/join-us/ph1.png"
+                    src="/images/home/join-us/ph1.svg"
                     alt="Three steps"
                     height={1000}
                     width={imageWidth}
                 />
                 <Image
                     className='ph2 absolute -top-12 lg:flex hidden left-[350px] h-[450px] w-80'
-                    src="/images/home/join-us/ph2.png"
+                    src="/images/home/join-us/phone.svg"
                     alt="Three steps"
                     height={1000}
                     width={imageWidth}

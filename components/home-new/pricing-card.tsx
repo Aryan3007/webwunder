@@ -53,10 +53,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
     }, [])
     return (
         <Card
-            className={` flex h-[730px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
+            className={` flex h-[750px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
                 isCenter
                     ? ` ${changeLanguage === 'de' ? 'lg:h-[970px]' : 'lg:h-[920px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
-                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[910px]' : 'xl:h-[850px]'}`
+                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[920px]' : 'xl:h-[850px]'}`
             }`}
             onClick={onCardClick}
         >
@@ -65,7 +65,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
                     <div className="flex items-start justify-between">
                         <div className="flex flex-col items-start space-y-2">
                             <div
-                                className={`flex h-fit w-fit rounded-full p-2 ${iconBg}`}
+                                className={`flex h-12 justify-center items-center w-12 rounded-full p-2 ${iconBg}`}
                             >
                                 <Image
                                     src={icon}

@@ -19,7 +19,7 @@ export default function Logo({ className }: Props) {
     const classn = cn(['', className])
     return (
         <Link href={`/`}>
-            <Image src={`${logo.src}`}
+            <Image src="./images/logo.svg"
                 className={classn}
                 alt="WebWunder Logo"
                 width="225"

@@ -270,10 +270,7 @@ const WhyWebWunder = () => {
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] p-2 transition-all hover:scale-95`}
                         >
-                            <Link
-                                href="#"
-                                className="flex flex-row items-center justify-between gap-4"
-                            >
+                            
                                 <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
                                     {
                                         languageData?.additionalSection?.[
@@ -288,7 +285,7 @@ const WhyWebWunder = () => {
                                         className="text-[#24252A]"
                                     />
                                 </div>
-                            </Link>
+                            
                         </button>
                     </Link>
                 </div>
