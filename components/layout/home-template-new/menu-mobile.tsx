@@ -48,7 +48,8 @@ export default function SidebarMenu() {
     }, [])
     const menuitems = languageData?.mobnavItems?.[changeLanguage]
     const links = languageData?.menuLinks?.[changeLanguage];
-    console.log(links);
+    type MenuKey = keyof typeof menuitems & keyof typeof links;
+    // console.log(links);
     // console.log(menuitems)
     const contactMethods = [
         languageData?.mobNavFooter?.[changeLanguage]?.links?.email,
@@ -110,15 +111,17 @@ export default function SidebarMenu() {
                                     </div>
 
                                     <ul className="flex flex-col justify-evenly space-y-2 text-center text-xl md:text-2xl">
-                                        {menuitems &&
-                                            Object.entries(menuitems).map(([key, value]) => (
-                                                <li key={key}>
-                                                    <Link href={links[key]} className="block py-1" onClick={closeMenu}>
-                                                        {value}
-                                                    </Link>
-                                                </li>
-                                            ))
-                                        }
+                                    {Object.entries(menuitems).map(([key, value]) => {
+                    // Type assertion to ensure key is of type MenuKey
+                    const menuKey = key as MenuKey;
+                    return (
+                        <li key={menuKey}>
+                            <Link href={links[menuKey]} className="block py-1" onClick={closeMenu}>
+                                {value}
+                            </Link>
+                        </li>
+                    );
+                })}
                                     </ul>
 
                                     <div className="text-center">
