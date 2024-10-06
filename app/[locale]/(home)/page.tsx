@@ -26,7 +26,7 @@ export default function HomePage() {
                
                 <HeroSection/>
              
-                <BrandsCarousel />
+              
                 <div className="hidden lg:flex">
                     <WhyWebWunder />
                 </div>

@@ -82,7 +82,7 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(text, {
-            y: 50, 
+            y: 50,
             duration: 0.5,
             ease: 'power2.out',
             scrollTrigger: {
@@ -99,7 +99,7 @@ const Home_new = () => {
 
     return (
         <>
-            <div className="lg:min-h-screen  h-full lg:bg-white lg:p-5">
+            <div className="xl:min-h-screen  h-full lg:bg-white lg:p-5">
                 <div className="relative sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-t-2xl">
 
                     {/* Header */}
@@ -140,63 +140,74 @@ const Home_new = () => {
 
 
                     {/* Cloud Left */}
+                    <div className='hidden md:block'>
+
+                        <Image
+                            src="/images/newhome/cloudleft.svg"
+                            alt="Cloud Left"
+                            className='absolute clouds bottom-28 md:bottom-36 lg:bottom-44 z-10 -left-24'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Cloud Right */}
+
+                        <Image
+                            src="/images/newhome/cloud_right.svg"
+                            alt="Cloud Right"
+                            className='absolute clouds bottom-24 md:bottom-36 lg::bottom-56 2xl:bottom-80 z-30 w-2/3 -right-16'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Rock Phone Left */}
+
+                        <Image
+                            src="/images/newhome/rock_phone_left.svg"
+                            alt="Rock Phone Left"
+                            className='absolute mobiles z-40 bottom-24 md:bottom-24 lg:bottom-40 xl:bottom-44 2xl:bottom-44 w-3/5 left-0'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Right Phone */}
+
+                        <Image
+                            src="/images/newhome/right_phone.svg"
+                            alt="Right Phone"
+                            className='absolute mobiles z-40 bottom-20 md:bottom-24 2xl:bottom-32 w-2/3 right-0'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Hero Image */}
+
+                        <Image
+                            src="/images/newhome/newlaptop.svg"
+                            alt="Hero"
+                            className='relative laptop md:-bottom-24 z-50 w-screen'
+                            width={100}
+                            height={100}
+                        />
+
+                    </div>
+
 
                     <Image
-                        src="/images/newhome/cloudleft.svg"
-                        alt="Cloud Left"
-                        className='absolute clouds bottom-28 md:bottom-36 lg:bottom-44 z-10 -left-24'
-                        width={5000}
-                        height={5000}
-                    />
-
-
-                    {/* Cloud Right */}
-
-                    <Image
-                        src="/images/newhome/cloud_right.svg"
-                        alt="Cloud Right"
-                        className='absolute clouds bottom-24 md:bottom-36 lg::bottom-56 z-30 w-2/3 -right-16'
-                        width={5000}
-                        height={5000}
-                    />
-
-
-                    {/* Rock Phone Left */}
-
-                    <Image
-                        src="/images/newhome/rock_phone_left.svg"
-                        alt="Rock Phone Left"
-                        className='absolute mobiles z-40 bottom-24 md:bottom-24 lg:bottom-44 w-3/5 left-0'
-                        width={5000}
-                        height={5000}
-                    />
-
-
-                    {/* Right Phone */}
-
-                    <Image
-                        src="/images/newhome/right_phone.svg"
-                        alt="Right Phone"
-                        className='absolute mobiles z-40 bottom-20 md:bottom-24 w-2/3 right-0'
-                        width={5000}
-                        height={5000}
-                    />
-
-
-                    {/* Hero Image */}
-
-                    <Image
-                        src="/images/newhome/newlaptop.svg"
-                        alt="Hero"
-                        className='relative laptop -bottom-24 z-50 w-screen'
-                        width={100}
-                        height={100}
-                    />
-
+                            src="/images/heromob.svg"
+                            alt="Hero"
+                            className=' block md:hidden w-screen'
+                            width={100}
+                            height={100}
+                        />
 
                 </div>
             </div>
-            {/* <BrandsCarousel /> */}
+            <BrandsCarousel />
         </>
     )
 }

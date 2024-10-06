@@ -56,9 +56,9 @@ export default function SidebarMenu() {
     ]
     return (
         <>
-            <div className="z-50 flex cursor-pointer p-0 pe-0 lg:hidden">
+            <div className="z- flex cursor-pointer p-0 pe-0 lg:hidden">
                 <div className="flex items-center justify-center">
-                    <div onClick={openMenu} className="rounded-lg">
+                    <div onClick={openMenu} className="rounded-lg ">
                         <Image
                             className="w-5"
                             src="/menu.svg"
