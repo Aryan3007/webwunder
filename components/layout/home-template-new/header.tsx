@@ -9,24 +9,9 @@ import { languageData } from '@/langauge'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { motion } from 'framer-motion'
-import { useEffect, useRef, useState } from 'react'
-import { ArrowDown, CircleUserRound, Flag, MoveUpRight } from 'lucide-react'
-
-import { useTranslations } from 'next-intl'
-import {
-    Select,
-    SelectContent,
-    SelectLabel,
-    SelectGroup,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select'
-import Image from 'next/image'
+import { useEffect, useRef } from 'react'
 import React from 'react'
 export default function Header() {
-    const t = useTranslations('home')
-
     const viewHolder = useRef(null)
     const init = useRef(false)
     useEffect(() => {
@@ -96,11 +81,10 @@ export default function Header() {
                     {...animDivProps}
                     className={`z-20 flex w-full flex-col bg-transparent ${isScrolling ? 'fixed top-2 lg:top-2' : ''}`}
                 >
-                    <div
-                        className={`p-3 px-4`}
-                    >
-                        <div className={`flex w-full items-center justify-evenly rounded-xl bg-transparent ${isScrolling ? 'backdrop-blur-sm' : ''}`}>
-                            <div className='w-96 flex justify-center items-center'>
+                    <div className={`p-3 px-4`}>
+                        <div
+                            className={`flex w-full items-center justify-between rounded-xl bg-transparent lg:justify-around ${isScrolling ? 'backdrop-blur-sm' : ''}`}
+                        >
                             <Logo />
                             </div>
 
