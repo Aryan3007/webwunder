@@ -46,6 +46,7 @@ export async function generateMetadata() {
         // Initialize metadata based on locale
         let title = 'Not Available'
         let description = ''
+        let keywords = ''
         let imageUrl =
             'https://res.cloudinary.com/dacn52tbe/image/upload/v1728158034/centerimage_t4imck.png'
 
@@ -53,17 +54,19 @@ export async function generateMetadata() {
             // Set German metadata
             title = de.global['site-title']
             description = de.global['site-desc']
+            keywords = de.global['keywords']
         } else {
             // Set English metadata
             title = en.global['site-title']
             description = en.global['site-desc']
+            keywords = en.global['keywords']
         }
-        console.log('localelocale', country)
 
         // Return metadata for the page
         return {
             title: title,
             description: description,
+            keywords: keywords,
             openGraph: {
                 title: title,
                 description: description,
@@ -82,14 +85,18 @@ export async function generateMetadata() {
             },
         }
     } catch (error) {
+        console.error('Error generating metadata:', error)
+
         let title = de.global['site-title']
         let description = de.global['site-desc']
+        let keywords = de.global['keywords']
         let imageUrl =
             'https://res.cloudinary.com/dacn52tbe/image/upload/v1728158034/centerimage_t4imck.png'
 
         return {
             title: title,
             description: description,
+            keywords: keywords,
             openGraph: {
                 title: title,
                 description: description,
