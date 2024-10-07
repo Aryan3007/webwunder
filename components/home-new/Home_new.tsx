@@ -201,7 +201,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"
-                            className='absolute clouds bottom-28 md:bottom-36 lg:bottom-44 2xl:bottom-64 z-10 -left-24'
+                            className='absolute clouds bottom-28 md:bottom-36 lg:bottom-44 z-10 -left-24'
                             width={5000}
                             height={5000}
 
@@ -213,7 +213,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-2.webp"
                             alt="Cloud Right"
-                            className='absolute clouds bottom-24 md:bottom-36 lg::bottom-56 2xl:bottom-[450px] z-30 w-2/3 -right-16'
+                            className='absolute clouds bottom-24 md:bottom-36 lg::bottom-56 2xl:bottom-80 z-30 w-2/3 -right-16'
                             width={5000}
                             height={5000}
                         />
@@ -224,7 +224,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-2.webp"
                             alt="Rock Phone Left"
-                            className='absolute mobiles z-40 bottom-24 md:bottom-24 lg:bottom-40 xl:bottom-44 2xl:bottom-80 w-3/5 left-0'
+                            className='absolute mobiles z-40 bottom-24 md:bottom-24 lg:bottom-40 xl:bottom-44 2xl:bottom-44 w-3/5 left-0'
                             width={5000}
                             height={5000}
                         />
@@ -235,7 +235,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-3.webp"
                             alt="Right Phone"
-                            className='absolute mobiles z-40 bottom-20 md:bottom-24 2xl:bottom-64 w-2/3 right-0'
+                            className='absolute mobiles z-40 bottom-20 md:bottom-24 2xl:bottom-32 w-2/3 right-0'
                             width={5000}
                             height={5000}
                         />
