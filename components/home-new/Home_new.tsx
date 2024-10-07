@@ -102,7 +102,7 @@ const Home_new = () => {
 
     return (
         <>
-            <div id='home' className="xl:min-h-screen  h-full lg:bg-white lg:p-5">
+            <div id='home' className="2xl:min-h-screen  h-full lg:bg-white lg:p-5">
                 <div className="relative bg-fixed sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-t-2xl">
 
                     {/* Header */}
