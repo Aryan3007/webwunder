@@ -211,9 +211,9 @@ const JoinUs: React.FC = () => {
             gsap.to(s1, {
                 y: -80,
                 scrollTrigger: {
-                    trigger: ".ph1",
-                    start: 'top 90%', // Start when the top of the container reaches 75% of the viewport
-                    end: 'bottom 50%', // End when the bottom of the container reaches 25% of the viewport
+                    trigger: ".newtrig",
+                    start: 'top 70%', // Start when the top of the container reaches 75% of the viewport
+                    end: 'bottom 30%', // End when the bottom of the container reaches 25% of the viewport
                     scrub: 1, // Smooth scrubbing
                     // markers:true
 
@@ -227,9 +227,9 @@ const JoinUs: React.FC = () => {
 
                 x: 60,
                 scrollTrigger: {
-                    trigger: ".ph1",
-                    start: 'top 90%', // Start when the top of the container reaches 75% of the viewport
-                    end: 'bottom 50%', // End when the bottom of the container reaches 25% of the viewport
+                    trigger: ".newtrig",
+                    start: 'top 70%', // Start when the top of the container reaches 75% of the viewport
+                    end: 'bottom 30%', // End when the bottom of the container reaches 25% of the viewport
                     scrub: 1, // Smooth scrubbing
                     // markers: true
                 },
@@ -243,9 +243,9 @@ const JoinUs: React.FC = () => {
                 y: 60,
 
                 scrollTrigger: {
-                    trigger: ".ph1",
-                    start: 'top 90%', // Start when the top of the container reaches 75% of the viewport
-                    end: 'bottom 50%', // End when the bottom of the container reaches 25% of the viewport
+                    trigger: ".newtrig",
+                    start: 'top 70%', // Start when the top of the container reaches 75% of the viewport
+                    end: 'bottom 30%', // End when the bottom of the container reaches 25% of the viewport
                     scrub: 1, // Smooth scrubbing
                     // markers: true
                 },
@@ -264,7 +264,7 @@ const JoinUs: React.FC = () => {
     return (
         <div id='join-us' className="flex h-fit flex-col items-center justify-center gap-5 bg-[#020202] text-white lg:pt-16">
             <Slider />
-            <div className="md:-mt-44 flex w-full lg:scale-75 flex-col items-center justify-between px-4 lg:mt-0 lg:flex-row lg:gap-44 2xl:gap-0 2xl:px-28">
+            <div className="md:-mt-44 newtrig flex w-full lg:scale-75 flex-col items-center justify-between px-4 lg:mt-0 lg:flex-row lg:gap-44 2xl:gap-0 2xl:px-28">
                 <div className="flex flex-col items-center gap-4 lg:hidden">
                     <Badge className="w-fit bg-[#5D59E1] font-archivo text-sm font-normal">
                         {
@@ -344,33 +344,37 @@ const JoinUs: React.FC = () => {
 
                 <Image
 
-                    className='translate-y-6 scale-95 pt-6 lg:hidden flex'
-                    src="/images/home/join-us/joinusmob.svg"
+                    className='translate-y-6 py-6 lg:hidden flex'
+                    src="/images/home/join-us/newjoinus.svg"
                     alt="All in one agency"
                     width={4000}
                     height={4000}
+                    priority={false}
                 />
 
                 <Image
                     className='rock lg:flex hidden'
-                    src="/images/home/join-us/rock.png"
+                    src="/images/home/join-us/three-steps-rock.webp"
                     alt="Three steps"
                     height={800}
                     width={imageWidth}
+                    priority={false}
                 />
                 <Image
                     className='ph1 absolute left-8 lg:flex hidden top-80 h-[450px] w-96'
-                    src="/images/home/join-us/ph1.svg"
+                    src="/images/home/join-us/three-steps-phone-1.webp"
                     alt="Three steps"
                     height={1000}
                     width={imageWidth}
+                    priority={false}
                 />
                 <Image
                     className='ph2 absolute -top-12 lg:flex hidden left-[350px] h-[450px] w-80'
-                    src="/images/home/join-us/phone.svg"
+                    src="/images/home/join-us/three-steps-phone-2.webp"
                     alt="Three steps"
                     height={1000}
                     width={imageWidth}
+                    priority={false}
                 />
 
                 <div className="flex flex-col items-center lg:items-center lg:justify-between">

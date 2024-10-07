@@ -11,75 +11,52 @@ import { languageData } from '@/langauge'
 import {
     Select,
     SelectContent,
-    SelectLabel,
     SelectGroup,
     SelectItem,
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select'
 
-const menuItems = [
-    'Home',
-    'Benefits',
-    'Your Website',
-    'Prices',
-    'Portfolio',
-    'FAQs',
-    'Contact',
-    'Sign In',
-    'Sign Up',
-]
-
-const socialMedia = [
-    'Instagram',
-    'Twitter',
-    'Facebook',
-    'Youtube',
-    'Dribbble',
-    'Behance',
-    'Pinterest',
-]
-
 export default function SidebarMenu() {
     const [isShown, setShown] = useState(false)
-
-    const openMenu = () => setShown(true)
-    const closeMenu = () => setShown(false)
-
-    const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en') // Initialize with default value
+    const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const storedLang = localStorage.getItem('lang') as 'de' | 'en'
             if (storedLang) {
-                setChangeLanguage(storedLang) // Set state from localStorage after component mounts
+                setChangeLanguage(storedLang)
             }
         }
     }, [])
+
+    const openMenu = () => setShown(true)
+    const closeMenu = () => setShown(false)
+
     const menuitems = languageData?.mobnavItems?.[changeLanguage]
-    const links = languageData?.menuLinks?.[changeLanguage];
-    type MenuKey = keyof typeof menuitems & keyof typeof links;
+    const links = languageData?.menuLinks?.[changeLanguage]
+    type MenuKey = keyof typeof menuitems & keyof typeof links
+
     const footerLinks = languageData?.mobmenufooterLinks?.[changeLanguage] || {}
+    const footerLinks2 = languageData?.mobmenufooterLinks2?.[changeLanguage] || {}
     type FooterLinkKey = keyof typeof footerLinks
-    // console.log(links);
-    // console.log(menuitems)
+    type FooterLinkKey2 = keyof typeof footerLinks2
+
     const contactMethods = [
         languageData?.mobNavFooter?.[changeLanguage]?.links?.email,
         languageData?.mobNavFooter?.[changeLanguage]?.links?.call,
         languageData?.mobNavFooter?.[changeLanguage]?.links?.watsapp,
     ]
-
-
-    const contactMethodKeys: FooterLinkKey[] = ['writeEmail', 'sandAMessage', 'BookACall']
+    const contactMethodKeys: FooterLinkKey[] = ['writeEmail', 'BookACall', 'sandAMessage']
 
     const socialMedia = [
-        'Instagram',
-        'Twitter',
-        'Facebook',
-        'Youtube',
-        'Dribble',
-        'Behance',
-        'Pinterest',
+        { name: 'Instagram', key: 'Instagram' },
+        { name: 'Twitter', key: 'Twitter' },
+        { name: 'Facebook', key: 'Facebook' },
+        { name: 'Youtube', key: 'Youtube' },
+        { name: 'Dribbble', key: 'Dribble' },
+        { name: 'Behance', key: 'behance' },
+        { name: 'Pinterest', key: 'pinterest' },
     ]
 
     const handleLanguageChange = (value: string) => {
@@ -93,14 +70,33 @@ export default function SidebarMenu() {
         return lang === 'de' ? '/images/germany.png' : '/images/united-kingdom.png'
     }
 
-
-
     return (
         <>
-            <div className="z- flex cursor-pointer p-0 pe-0 lg:hidden">
+            <div className="flex cursor-pointer p-0 pe-0 lg:hidden">
                 <div className="flex items-center justify-center">
-                    <div onClick={openMenu} className="rounded-lg ">
+                    <div className="rounded-lg flex ">
+                    <div className='flex justify-center'>
+                                        <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                            <SelectTrigger className="lg:w-28 scale-75 rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
+                                                <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
+                                                <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
+                                            </SelectTrigger>
+                                            <SelectContent>
+                                                <SelectGroup className="flex flex-row justify-around">
+                                                    <SelectItem value="english" className="flex items-center gap-2">
+                                                        <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
+                                                        <span>EN</span>
+                                                    </SelectItem>
+                                                    <SelectItem value="german" className="flex items-center gap-2">
+                                                        <Image src="/images/germany.png" alt='German' width={25} height={25} />
+                                                        <span>DE</span>
+                                                    </SelectItem>
+                                                </SelectGroup>
+                                            </SelectContent>
+                                        </Select>
+                                    </div>
                         <Image
+                         onClick={openMenu}
                             className="w-5"
                             src="/menu.svg"
                             alt="menu"
@@ -147,31 +143,10 @@ export default function SidebarMenu() {
                                             &times;
                                         </button>
                                     </div>
-<div className='flex justify-center'>
-
-                                    <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
-                                        <SelectTrigger className="w-28 rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
-                                            <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
-                                            <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectGroup className="flex flex-row justify-around">
-                                                <SelectItem value="english" className="flex items-center gap-2">
-                                                    <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
-                                                    <span>EN</span>
-                                                </SelectItem>
-                                                <SelectItem value="german" className="flex items-center gap-2">
-                                                    <Image src="/images/germany.png" alt='German' width={25} height={25} />
-                                                    <span>DE</span>
-                                                </SelectItem>
-                                            </SelectGroup>
-                                        </SelectContent>
-                                    </Select>
-</div>
+                                    
 
                                     <ul className="flex flex-col justify-evenly space-y-2 text-center text-xl md:text-2xl">
                                         {Object.entries(menuitems).map(([key, value]) => {
-                                            // Type assertion to ensure key is of type MenuKey
                                             const menuKey = key as MenuKey;
                                             return (
                                                 <li key={menuKey}>
@@ -185,12 +160,7 @@ export default function SidebarMenu() {
 
                                     <div className="text-center">
                                         <p className="mb-2 font-semibold text-zinc-500">
-                                            {/* Get in touch */}
-                                            {
-                                                languageData?.mobNavFooter?.[
-                                                    changeLanguage
-                                                ]?.links?.getInTouch
-                                            }
+                                            {languageData?.mobNavFooter?.[changeLanguage]?.links?.getInTouch}
                                         </p>
                                         <div className="mb-4 flex flex-wrap items-center justify-center gap-2 text-center text-sm">
                                             {contactMethods.map((method, index) => (
@@ -203,24 +173,17 @@ export default function SidebarMenu() {
                                             ))}
                                         </div>
                                         <p className="mb-2 font-semibold text-zinc-500">
-                                            {
-                                                languageData?.mobNavFooter?.[
-                                                    changeLanguage
-                                                ]?.links?.followUs
-                                            }
+                                            {languageData?.mobNavFooter?.[changeLanguage]?.links?.followUs}
                                         </p>
                                         <div className="flex flex-wrap items-center justify-center gap-2 pb-6 text-center text-sm">
-                                            {socialMedia.map((platform, index) => {
-                                                const platformKey = platform.toLowerCase() as FooterLinkKey
-                                                return (
-                                                    <React.Fragment key={platform}>
-                                                        <Link href={footerLinks[platformKey] || '#'}>
-                                                            {platform}
-                                                        </Link>
-                                                        {index < socialMedia.length - 1 && <span>|</span>}
-                                                    </React.Fragment>
-                                                )
-                                            })}
+                                            {socialMedia.map((platform, index) => (
+                                                <React.Fragment key={platform.name}>
+                                                    <Link href={footerLinks2[platform.key as FooterLinkKey2] || '#'}>
+                                                        {platform.name}
+                                                    </Link>
+                                                    {index < socialMedia.length - 1 && <span>|</span>}
+                                                </React.Fragment>
+                                            ))}
                                         </div>
                                     </div>
                                 </motion.div>

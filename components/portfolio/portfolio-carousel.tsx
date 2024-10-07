@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
+import Marquee from 'react-fast-marquee';
 
 const carouselItems: string[] = [
     'Web Design',
@@ -29,42 +30,19 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ item, index }) => (
 );
 
 const PortfolioCarousel: React.FC = () => {
-    const [position, setPosition] = useState<number>(0);
-    const containerRef = useRef<HTMLDivElement | null>(null);
-
-    useEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
-
-        const animateCarousel = () => {
-            setPosition((prevPosition) => {
-                const newPosition = prevPosition + 2; // Increased speed
-                const maxPosition = container.scrollWidth / 2;
-                return newPosition >= maxPosition ? 0 : newPosition;
-            });
-        };
-
-        const intervalId = setInterval(animateCarousel, 16); // Faster interval
-
-        return () => clearInterval(intervalId);
-    }, []);
-
     return (
-        <div className="mb-6 lg:mb-14 relative bottom-8 z-10 bg-white h-16 lg:h-20" style={{ transform: 'rotate(-1.55deg)' }}>
-            <div 
-                ref={containerRef}
-                className="flex h-full w-fit flex-row items-center lg:gap-20 gap-5 bg-[#5D59E1] whitespace-nowrap"
-                style={{ 
-                    transform: `translateX(-${position}px)`,
-                    transition: 'transform 0.03s linear',
-                }}
-            >
-                {carouselItems.map((item, index) => (
-                    <CarouselItem key={index} item={item} index={index} />
-                ))}
-                {carouselItems.map((item, index) => (
-                    <CarouselItem key={`duplicate-${index}`} item={item} index={`duplicate-${index}`} />
-                ))}
+        <div className="relative bottom-8 z-50 lg:h-20 h-16 bg-[#5D59E1]" style={{ transform: 'rotate(-1.55deg)' }}>
+            <div className="flex h-full w-full items-center justify-center bg-[#5D59E1]">
+                <Marquee className="w-full" speed={50} gradient={false}>
+                    <div className="flex flex-row items-center lg:gap-20 gap-5">
+                        {carouselItems.map((item, index) => (
+                            <CarouselItem key={index} item={item} index={index} />
+                        ))}
+                        {carouselItems.map((item, index) => (
+                            <CarouselItem key={`duplicate-${index}`} item={item} index={`duplicate-${index}`} />
+                        ))}
+                    </div>
+                </Marquee>
             </div>
         </div>
     );

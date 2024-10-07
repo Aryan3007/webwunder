@@ -77,9 +77,7 @@ const Footer = () => {
                                     <Link href={`mailto: info@webwunder.de`}>
                                         {changeData?.links?.writeEmail} |
                                     </Link>
-                                    <Link href={paths.pages.getInTouch.href}>
-                                        {changeData?.links?.sendMessage} |
-                                    </Link>
+                                   
                                     <Link href={paths.pages.bookCall.href}>
                                         {changeData?.links?.bookCall} |
                                     </Link>

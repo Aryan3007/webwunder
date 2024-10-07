@@ -36,32 +36,33 @@ const Home_new = () => {
 
 
 
-        // Animate each letter into view
         gsap.to(laptop, {
-            y: -80,
+            y: -100,
             duration: 0.5,
+
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: laptop, // The container for the text
-                start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
-                end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
-                scrub: 1, // Smooth scrubbing
+                start: 'top 60%', // Start when the top of the container reaches 60% of the viewport
+                end: 'bottom 20%', // End when the bottom of the container reaches 20% of the viewport
+                scrub: 2, // Smooth scrubbing
                 // markers: true, // Enable markers for debugging (optional)
             },
         });
 
 
 
+
         // Animate each letter into view
         gsap.to(mobile, {
-            y: 80, // Start 30px below
+            y: 100, // Start 30px below
             duration: 0.5,
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: laptop, // The container for the text
                 start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
                 end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
-                scrub: 1, // Smooth scrubbing
+                scrub: 2, // Smooth scrubbing
                 // markers: true, // Enable markers for debugging (optional)
             },
         });
@@ -69,8 +70,8 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(clouds, {
-            y: 20, // Start 30px below
-            duration: 0.5,
+            y: 200, // Start 30px below
+            duration: 3,
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: laptop, // The container for the text
@@ -102,7 +103,7 @@ const Home_new = () => {
     return (
         <>
             <div id='home' className="xl:min-h-screen  h-full lg:bg-white lg:p-5">
-                <div className="relative sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-t-2xl">
+                <div className="relative bg-fixed sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-t-2xl">
 
                     {/* Header */}
 
@@ -131,28 +132,28 @@ const Home_new = () => {
                                 {languageData?.heroSection?.[changeLanguage]?.subHeadline}
                             </p>
                         </div>
-                        <p className="text-center font-archivo text-sm mb-12 font-bold text-white lg:text-lg">
+                        <p className="text-center font-archivo text-base mb-12 font-bold text-white lg:text-lg">
                             {languageData?.heroSection?.[changeLanguage]?.description}
                             <br />
-                            <span className='font-light text-[18px] text-white'>
+                            <span className='font-light text-sm lg:text-[18px] text-white'>
                                 Proven to Boost Sales and Cut Costs.
                             </span>
                         </p>
                     </div>
 
-                    <div className="my-4 flex scale-90 md:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                    <div className="mt-4 flex scale-90 lg:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] px-2 transition-all hover:scale-95`}
                         >
                             <a href="https://youtu.be/1g0oik5droE">
 
-                            <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
-                                {
-                                    languageData?.heroSection?.[changeLanguage]
-                                    ?.watchVideo
-                                }
-                            </p>
-                                </a>
+                                <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
+                                    {
+                                        languageData?.heroSection?.[changeLanguage]
+                                            ?.watchVideo
+                                    }
+                                </p>
+                            </a>
                             <div
                                 className={`flex ${changeLanguage === 'de' ? 'h-10 w-12' : 'h-8 w-8'} items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8`}
                             >
@@ -189,24 +190,28 @@ const Home_new = () => {
                             </Link>
                         </button>
                     </div>
+                    <p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
+                        Hundreds of perfect projects delivered to hundreds of  thrilled customers.
 
+                    </p>
 
                     {/* Cloud Left */}
                     <div className='hidden md:block'>
 
                         <Image
-                            src="/images/newhome/cloudleft.svg"
+                            src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"
                             className='absolute clouds bottom-28 md:bottom-36 lg:bottom-44 z-10 -left-24'
                             width={5000}
                             height={5000}
+
                         />
 
 
                         {/* Cloud Right */}
 
                         <Image
-                            src="/images/newhome/cloud_right.svg"
+                            src="/images/home/hero/clouds-2.webp"
                             alt="Cloud Right"
                             className='absolute clouds bottom-24 md:bottom-36 lg::bottom-56 2xl:bottom-80 z-30 w-2/3 -right-16'
                             width={5000}
@@ -217,7 +222,7 @@ const Home_new = () => {
                         {/* Rock Phone Left */}
 
                         <Image
-                            src="/images/newhome/rock_phone_left.svg"
+                            src="/images/home/hero/hero-img-2.webp"
                             alt="Rock Phone Left"
                             className='absolute mobiles z-40 bottom-24 md:bottom-24 lg:bottom-40 xl:bottom-44 2xl:bottom-44 w-3/5 left-0'
                             width={5000}
@@ -228,7 +233,7 @@ const Home_new = () => {
                         {/* Right Phone */}
 
                         <Image
-                            src="/images/newhome/right_phone.svg"
+                            src="/images/home/hero/hero-img-3.webp"
                             alt="Right Phone"
                             className='absolute mobiles z-40 bottom-20 md:bottom-24 2xl:bottom-32 w-2/3 right-0'
                             width={5000}
@@ -239,23 +244,23 @@ const Home_new = () => {
                         {/* Hero Image */}
 
                         <Image
-                            src="/images/newhome/newlaptop.svg"
+                            src="/images/newhome/newlaptop.webp"
                             alt="Hero"
                             className='relative laptop md:-bottom-24 z-50 w-screen'
-                            width={100}
-                            height={100}
+                            width={5000}
+                            height={5000}
                         />
 
                     </div>
 
 
                     <Image
-                            src="/images/heromob.svg"
-                            alt="Hero"
-                            className=' block -translate-y-7 md:hidden w-screen'
-                            width={100}
-                            height={100}
-                        />
+                        src="/images/newhome/homemob.png"
+                        alt="Hero"
+                        className=' block -translate-y-7 md:hidden w-screen'
+                        width={5000}
+                        height={5000}
+                    />
 
                 </div>
             </div>

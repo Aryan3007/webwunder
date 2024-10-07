@@ -41,7 +41,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ item, index }) => (
 const BrandsCarousel: React.FC = () => {
     return (
         <div
-            className="relative bottom-8 lg:h-20 h-16 bg-[#5D59E1]"
+            className="relative bottom-8 z-50 lg:h-20 h-16 bg-[#5D59E1]"
             style={{ transform: 'rotate(-1.55deg)' }}
         >
             <div className="flex h-full w-full items-center justify-center bg-[#5D59E1]">

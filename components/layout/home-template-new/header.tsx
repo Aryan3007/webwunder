@@ -105,7 +105,7 @@ export default function Header() {
                                 <Menu />
                             </div>
 
-                            <div className='flex gap-2 items-center w-96'>
+                            <div className='flex gap-2 items-center min-w-96'>
                                 <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
                                     <SelectTrigger className="w-28 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
                                         <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />

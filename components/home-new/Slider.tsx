@@ -15,9 +15,9 @@ interface TestimonialProps {
 }
 
 const Testimonial: React.FC<TestimonialProps> = ({ icon, content, title }) => (
-    <div className="keen-slider__slide">
+    <div  className="keen-slider__slide">
         <div className="p-2">
-            <div className="flex h-[280px] lg:h-[245px] min-h-56 w-fit flex-col justify-between overflow-hidden rounded-3xl bg-[#191919] p-4 lg:px-5">
+            <div className="flex h-[270px] lg:h-[245px] min-h-56 w-fit flex-col justify-between overflow-hidden rounded-3xl bg-[#191919] p-4 lg:px-5">
                 <div className="flex flex-col gap-4 px-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#29292F]">
                         <Image src={icon} alt={title} width={50} height={50} />
@@ -25,7 +25,7 @@ const Testimonial: React.FC<TestimonialProps> = ({ icon, content, title }) => (
                     <h3 className="mt-2 text-xl font-bold leading-none text-white">
                         {title}
                     </h3>
-                    <p className="mt-2 text-sm text-white/70">{content}</p>
+                    <p className="mt-2 lg:text-sm text-base text-white/70">{content}</p>
                 </div>
             </div>
         </div>
@@ -134,7 +134,7 @@ const JoinUsSection: React.FC = () => {
     ]
 
     return (
-        <section className="bg-black py-12 text-white lg:pl-32">
+        <section id='benefits' className="bg-black py-12 text-white lg:pl-32">
             <div className="mx-auto px-4 sm:px-6 lg:px-0">
                 <div className="grid grid-cols-1 items-center lg:grid-cols-3">
                     <div className="flex flex-col items-center justify-center lg:col-span-1 lg:items-start lg:pl-20">

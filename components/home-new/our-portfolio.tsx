@@ -10,12 +10,13 @@ import axios from 'axios'
 import Link from 'next/link'
 
 const galleryImages = [
-    '/images/home/our-portfolio/p1.jpg',
-    '/images/home/our-portfolio/p7.jpg',
-    '/images/home/our-portfolio/p3.jpg',
-    '/images/home/our-portfolio/p4.jpg',
-    '/images/home/our-portfolio/p5.jpg',
-    '/images/home/our-portfolio/p8.jpg',
+    '/images/home/our-portfolio/portfolio-images-1.webp',
+    '/images/home/our-portfolio/portfolio-images-2.webp',
+    '/images/home/our-portfolio/portfolio-images-3.webp',
+    '/images/home/our-portfolio/portfolio-images-4.webp',
+    '/images/home/our-portfolio/portfolio-images-5.webp',
+    '/images/home/our-portfolio/portfolio-images-6.webp',
+    
 ]
 
 const OurPortfolio = () => {
@@ -183,6 +184,7 @@ const OurPortfolio = () => {
                             width={500}
                             height={300}
                             // fill
+                            priority={false}
                             className="rounded-3xl"
                         />
                     </motion.div>

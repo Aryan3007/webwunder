@@ -51,7 +51,7 @@ export const languageData = {
             links: {
                 getInTouch: 'Kontakt aufnehmen',
                 email: 'Nachricht senden',
-              
+
                 call: 'Anruf buchen',
                 watsapp: ' WhatsApp-Chat',
                 followUs: 'Folgen Sie uns',
@@ -61,7 +61,7 @@ export const languageData = {
             links: {
                 getInTouch: 'Get in touch',
                 email: 'Write an Email',
-               
+
                 call: 'Book a call',
                 watsapp: 'Chat on WatsApp',
                 followUs: 'Follow Us',
@@ -92,8 +92,7 @@ export const languageData = {
             signup: 'Sign up',
         },
     },
-
-     menuLinks :{
+    menuLinks: {
         de: {
             home: '/',
             benefits: '/#join-us',
@@ -116,37 +115,57 @@ export const languageData = {
             login: '/login',
             signup: '/signup',
         },
-    }, 
-        mobmenufooterLinks :{
+    },
+    mobmenufooterLinks: {
         de: {
             writeEmail: 'mailto:info@webwunder.de ',
-            sandAMessage: 'https://wa.me/c/4915114039455 ',
             BookACall: 'https://tidycal.com/skylumina/webwunder',
-           
+            sandAMessage: 'https://wa.me/c/4915114039455 ',
+
             Instagram: 'https://www.instagram.com/web_wunder/',
             Twitter: 'https://x.com/web_wunder',
             Facebook: '/de/kontakt',
             Youtube: 'https://www.youtube.com/@web_wunder',
             Dribble: 'https://dribbble.com/web_wunder',
-            pinterest: 'https://www.pinterest.com/webwunderde/',
             behance: 'https://www.behance.net/webwunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
         },
         en: {
-    
+
             writeEmail: 'mailto:info@webwunder.de ',
-            sandAMessage: 'https://wa.me/c/4915114039455 ',
             BookACall: 'https://tidycal.com/skylumina/webwunder',
-           
+            sandAMessage: 'https://wa.me/c/4915114039455 ',
             Instagram: 'https://www.instagram.com/web_wunder/',
             Twitter: 'https://x.com/web_wunder',
             Facebook: 'https://www.facebook.com/profile.php?id=61559097817136',
             Youtube: 'https://www.youtube.com/@web_wunder',
             Dribble: 'https://dribbble.com/web_wunder',
-            pinterest: 'https://www.pinterest.com/webwunderde/',
             behance: 'https://www.behance.net/webwunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
+        },
+    }, mobmenufooterLinks2: {
+        de: {
+
+
+            Instagram: 'https://www.instagram.com/web_wunder/',
+            Twitter: 'https://x.com/web_wunder',
+            Facebook: '/de/kontakt',
+            Youtube: 'https://www.youtube.com/@web_wunder',
+            Dribble: 'https://dribbble.com/web_wunder',
+            behance: 'https://www.behance.net/webwunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
+        },
+        en: {
+
+            Instagram: 'https://www.instagram.com/web_wunder/',
+            Twitter: 'https://x.com/web_wunder',
+            Facebook: 'https://www.facebook.com/profile.php?id=61559097817136',
+            Youtube: 'https://www.youtube.com/@web_wunder',
+            Dribble: 'https://dribbble.com/web_wunder',
+            behance: 'https://www.behance.net/webwunder',
+            pinterest: 'https://www.pinterest.com/webwunderde/',
         },
     },
-    
     additionalSection: {
         de: {
             designedToDominate: 'Entwickelt, um zu dominieren',
@@ -684,16 +703,25 @@ export const languageData = {
             whatClientsSay: 'Was unsere Kunden sagen',
             testimonials: [
                 {
-                    text: "We've found great value in TeamWave's customization and automation features. Being able to tailor the platform to our unique needs and create custom boosted our productivity.",
-                    name: 'Johnny Depp',
+                    text: "Webwunder hat unser Branding perfekt umgesetzt und uns dabei rundum begeistert. Schnell, effizient und genau auf den Punkt!",
+                    name: 'HarzPlus GmbH',
                 },
                 {
-                    text: "We've found great value in TeamWave's customization and automation features. Being able to tailor the platform to our unique needs and create custom boosted our productivity.",
-                    name: 'Nicole Kidman',
+                    text: "Webwunder hat unsere Website modern gestaltet, und wir bekommen durchweg positive Rückmeldungen. Der Service ist top – schnell, zuverlässig und unkompliziert!",
+                    name: 'Praxis Kattan',
                 },
                 {
-                    text: "We've found great value in TeamWave's customization and automation features. Being able to tailor the platform to our unique needs and create custom boosted our productivity.",
-                    name: 'Amy Adams',
+                    text: "Webwunder hat unsere Vision sofort verstanden und übertroffen. Der gesamte Prozess war absolut reibungslos und das Ergebnis beeindruckend!",
+                    name: 'EVS Energy GmbH',
+                }, {
+                    text: "Webwunder hat unser Rebranding zu Wladimir-Magic nicht nur professionell, sondern auch mit großem Feingefühl umgesetzt. Für alle, die höchste Qualität suchen, die perfekte Wahl!",
+                    name: 'Wladimir-Magic.de',
+                }, {
+                    text: "Webwunder hat unser Branding auf ein neues Level gehoben. Die neue Website spiegelt unsere Marke perfekt wider – wir sind begeistert!",
+                    name: 'Forza Lighting',
+                }, {
+                    text: "Webwunder hat unsere Vorstellungen übertroffen. Die kreative Umsetzung und der schnelle Support machen sie zur besten und einzigen Agentur, die man für alles braucht!",
+                    name: 'Skylumina GmbH',
                 },
             ],
             reviewPrompt:
@@ -707,16 +735,25 @@ export const languageData = {
             whatClientsSay: 'What Our Clients Say',
             testimonials: [
                 {
-                    text: "We've found great value in TeamWave's customization and automation features. Being able to tailor the platform to our unique needs and create custom boosted our productivity.",
-                    name: 'Johnny Depp',
+                    text: "Webwunder brought our branding to life perfectly and exceeded our expectations. Fast, efficient, and spot-on!",
+                    name: 'HarzPlus GmbH',
                 },
                 {
-                    text: "We've found great value in TeamWave's customization and automation features. Being able to tailor the platform to our unique needs and create custom boosted our productivity.",
-                    name: 'Nicole Kidman',
+                    text: "Webwunder created a modern website for us, and the feedback has been fantastic. Their service is top-notch – fast, reliable, and hassle-free!",
+                    name: 'Praxis Kattan',
                 },
                 {
-                    text: "We've found great value in TeamWave's customization and automation features. Being able to tailor the platform to our unique needs and create custom boosted our productivity.",
-                    name: 'Amy Adams',
+                    text: "Webwunder instantly understood and exceeded our vision. The entire process was seamless, and the result is impressive!",
+                    name: 'EVS Energy GmbH',
+                }, {
+                    text: "Webwunder handled our Wladimir-Magic rebranding not just professionally, but with great attention to detail. If you're looking for top quality, they're the perfect choice!",
+                    name: 'Wladimir-Magic.de',
+                }, {
+                    text: "Webwunder took our branding to the next level. The new website perfectly reflects our brand – we’re thrilled!",
+                    name: 'Forza Lighting',
+                }, {
+                    text: "Webwunder exceeded our expectations. Their creative execution and fast support make them the best and only agency you'll ever need for everything!",
+                    name: 'Skylumina GmbH',
                 },
             ],
             reviewPrompt: 'Tell us your WebWunder experience',
@@ -1898,7 +1935,7 @@ export const languageData = {
             followUs: 'Follow us',
             links: {
                 writeEmail: 'Write an Email',
-                sendMessage: 'Send a Message',
+                
                 bookCall: 'Book a call',
                 chatWhatsApp: 'Chat on WhatsApp',
                 signUp: 'Sign up',
@@ -1935,7 +1972,6 @@ export const languageData = {
             followUs: 'Folgen Sie uns',
             links: {
                 writeEmail: 'Nachricht schreiben',
-                sendMessage: 'Nachricht senden',
                 bookCall: 'Anruf buchen',
                 chatWhatsApp: 'WhatsApp Chat',
                 signUp: 'Anmelden',
@@ -1947,7 +1983,7 @@ export const languageData = {
                 contact: 'Kontakt',
                 benefits: 'Vorteile',
                 yourwebsite: 'Ihre Website',
-                privacyPolicy: 'Datenschutz-Bestimmungen',
+                privacyPolicy: 'Datenschutz',
                 terms: 'Geschäftsbedingungen',
                 imprint: 'Impressum',
                 instagram: 'Instagram',

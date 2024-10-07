@@ -82,8 +82,8 @@ const AllInOne = () => {
         const timeoutId = setTimeout(() => {
             // Animate each letter into view
             gsap.to(s1, {
-                y: -200,
-                x: -200,
+                y: -50,
+                x: -25,
                 scrollTrigger: {
                     trigger: '.images',
                     start: 'top 50%', // Start when the top of the container reaches 75% of the viewport
@@ -96,8 +96,8 @@ const AllInOne = () => {
             })
 
             gsap.to(s2, {
-                y: -300,
-                x: -100,
+                y: -70,
+                x: -25,
                 scrollTrigger: {
                     trigger: '.images',
                     start: 'top 50%', // Start when the top of the container reaches 75% of the viewport
@@ -109,8 +109,8 @@ const AllInOne = () => {
                 ease: 'power2.out',
             })
             gsap.to(s3, {
-                y: -300,
-                x: 100,
+                y: -70,
+                x: 25,
                 scrollTrigger: {
                     trigger: '.images',
                     start: 'top 50%', // Start when the top of the container reaches 75% of the viewport
@@ -123,8 +123,8 @@ const AllInOne = () => {
             })
 
             gsap.to(s4, {
-                y: -200,
-                x: 200,
+                y: -50,
+                x:25,
                 scrollTrigger: {
                     trigger: '.images',
                     start: 'top 50%', // Start when the top of the container reaches 75% of the viewport
@@ -246,44 +246,49 @@ const AllInOne = () => {
                         <Image
                             ref={image1Ref}
                             className="main  z-20"
-                            src="/images/home/all-in-one/m1.svg"
+                            src="/images/home/all-in-one/all-in-one-agency-screen-main.webp"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
+                            priority={false}
                         />
                         <Image
-                            className="screen1 absolute bottom-56 left-16 h-64 w-80"
-                            src="/images/home/all-in-one/m5.svg"
+                            className="screen1 absolute bottom-44 left-16 h-64 w-80"
+                             src="/images/home/all-in-one/all-in-one-agency-screen-1.webp"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
+                            priority={false}
                         />
                         <Image
                             className="screen2 absolute left-36 -top-24 h-64 w-80"
-                            src="/images/home/all-in-one/m4.svg"
+                            src="/images/home/all-in-one/all-in-one-agency-screen-2.webp"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
+                            priority={false}
                         />{' '}
                         <Image
                             className="screen3 absolute -top-20 right-44 h-64 w-80"
-                            src="/images/home/all-in-one/m3.svg"
+                             src="/images/home/all-in-one/all-in-one-agency-screen-3.webp"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
+                            priority={false}
                         />
                         <Image
-                            className="screen4 absolute bottom-56 right-16 h-64 w-80"
-                            src="/images/home/all-in-one/m2.svg"
+                            className="screen4 absolute bottom-44 right-16 h-64 w-80"
+                            src="/images/home/all-in-one/all-in-one-agency-screen-34.webp"
                             alt="All in one agency"
                             width={4000}
                             height={4000}
+                            priority={false}
                         />
                     </div>
 
                     <Image
-                            className='pt-16 translate-y-12 lg:hidden flex'
-                            src="/images/home/all-in-one/allinonemob.svg"
+                            className='pt-1 translate-y-12 lg:hidden flex'
+                            src="/images/home/all-in-one/newmob.png"
                             alt="All in one agency"
                             width={4000}
                             height={4000}

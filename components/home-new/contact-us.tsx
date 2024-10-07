@@ -51,7 +51,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
                     {description}
                 </p>
             </div>
-            <Link target='_blank' href={buttonTarget}>
+            <a target='_blank' href={buttonTarget}>
                 <button className="flex w-fit mt-4 flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95">
                     <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
                         {buttonText}
@@ -64,7 +64,7 @@ const ContactCard: React.FC<ContactCardProps> = ({
                         />
                     </div>
                 </button>
-            </Link>
+            </a>
         </div>
     )
 }
@@ -102,7 +102,7 @@ const ContactUs = () => {
                 languageData?.contactUs?.[changeLanguage]?.chatDescription,
             buttonText:
                 languageData?.contactUs?.[changeLanguage]?.chatOnWhatsApp,
-            buttonTarget: 'href="https://wa.me/+4915114039455"',
+            buttonTarget: 'https://wa.me/c/4915114039455',
         },
         {
             id: 3,

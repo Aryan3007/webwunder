@@ -41,6 +41,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
                     alt={title}
                     width={1000}
                     height={1000}
+                    priority={false}
                 />
                 <div className="p-2">
                     <h1 className="text-xl font-bold">{title}</h1>

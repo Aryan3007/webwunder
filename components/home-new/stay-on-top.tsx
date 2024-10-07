@@ -203,12 +203,12 @@ const StayOnTop = () => {
                     className="block w-full max-w-full self-end lg:w-[60vw]" // Ensure image responsiveness
                 >
                     <Image
-                        src="/images/home/stay-on-top/unlimited-design-img.png"
+                        src="/images/home/stay-on-top/unlimited-design-img4.webp"
                         alt="Unlimited Design"
                         layout="responsive"
                         width={800}
                         height={1000}
-                        priority // Ensures it's visible faster
+                        priority={false}
                     />
                 </div>
             </div>

@@ -88,47 +88,47 @@ export function HeroCardsLeft() {
 // Image items for both components
 const imageItems = [
   {
-    imageSrc: '/images/home/stay-on-top/s1.svg',
+    imageSrc: '/images/home/stay-on-top/portfolio-slider-1.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s2.svg',
+    imageSrc: '/images/home/stay-on-top/portfolio-slider-2.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s3.svg',
+     imageSrc: '/images/home/stay-on-top/portfolio-slider-3.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s4.svg',
+     imageSrc: '/images/home/stay-on-top/portfolio-slider-4.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s5.svg',
+    imageSrc: '/images/home/stay-on-top/portfolio-slider-5.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s6.svg',
+        imageSrc: '/images/home/stay-on-top/portfolio-slider-6.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s7.svg',
+    imageSrc: '/images/home/stay-on-top/portfolio-slider-7.webp',
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/s8.svg',
+    imageSrc: '/images/home/stay-on-top/portfolio-slider-8.webp',
     altText: 'Stay on top',
   }, {
-    imageSrc: '/images/home/stay-on-top/s9.svg',
+       imageSrc: '/images/home/stay-on-top/portfolio-slider-9.webp',
     altText: 'Stay on top',
   }, {
-    imageSrc: '/images/home/stay-on-top/s10.svg',
+       imageSrc: '/images/home/stay-on-top/portfolio-slider-10.webp',
     altText: 'Stay on top',
   }, {
-    imageSrc: '/images/home/stay-on-top/s11.svg',
+      imageSrc: '/images/home/stay-on-top/portfolio-slider-11.webp',
     altText: 'Stay on top',
   }, {
-    imageSrc: '/images/home/stay-on-top/s12.svg',
+       imageSrc: '/images/home/stay-on-top/portfolio-slider-12.webp',
     altText: 'Stay on top',
   },
 ]
