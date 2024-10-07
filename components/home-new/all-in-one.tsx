@@ -192,7 +192,7 @@ const AllInOne = () => {
                             }{' '}
                         </p>
 
-                        <div className="flex items-center justify-center gap-3 sm:gap-5 2xl:translate-y-0">
+                        <div className="flex items-center lg:scale-100 scale-90 justify-center gap-3 sm:gap-5 2xl:translate-y-0">
                             <Link href="#purchase-plans">
                                 <button
                                     className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
@@ -288,7 +288,7 @@ const AllInOne = () => {
 
                     <Image
                             className='pt-1 translate-y-12 lg:hidden flex'
-                            src="/images/home/all-in-one/newmob.png"
+                            src="/images/home/all-in-one/newall.png"
                             alt="All in one agency"
                             width={4000}
                             height={4000}

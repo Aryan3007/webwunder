@@ -52,11 +52,11 @@ const ContactCard: React.FC<ContactCardProps> = ({
                 </p>
             </div>
             <a target='_blank' href={buttonTarget}>
-                <button className="flex w-fit mt-4 flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95">
-                    <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
+                <button className="flex w-fit mt-4 flex-row items-center justify-between gap-4 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95">
+                    <p className="ml-4 font-archivo text-left text-sm font-medium text-white lg:text-[15px]">
                         {buttonText}
                     </p>
-                    <div className="flex h-6 w-6 items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8">
                         <ArrowRight
                             size={18}
                             fontWeight={100}

@@ -255,7 +255,7 @@ const Home_new = () => {
 
 
                     <Image
-                        src="/images/newhome/homemob.png"
+                        src="/images/newhome/newhome.png"
                         alt="Hero"
                         className=' block -translate-y-7 md:hidden w-screen'
                         width={5000}
