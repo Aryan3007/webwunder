@@ -122,9 +122,9 @@ const PortfolioMainContent = () => {
                             ?.getInTouchSection?.description
                     }
                 </p>
-                <button className="flex w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] px-2 py-1 transition-all hover:scale-95 md:p-2 lg:mt-2">
-                    <Link
-                        href="#"
+                <button className="flex w-fit z-40 flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] px-2 py-1 transition-all hover:scale-95 md:p-2 lg:mt-2">
+                    <a
+                        href="https://tidycal.com/skylumina/webwunder "
                         className="flex flex-row items-center justify-between gap-4"
                     >
                         <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
@@ -141,7 +141,7 @@ const PortfolioMainContent = () => {
                                 className="text-[#24252A]"
                             />
                         </div>
-                    </Link>
+                    </a>
                 </button>
             </div>
         </div>

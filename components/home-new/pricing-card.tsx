@@ -12,6 +12,7 @@ import Link from 'next/link'
 
 export interface PricingCardProps {
     icon: string
+    color: string
     iconBg: string
     title: string
     description: string
@@ -29,6 +30,7 @@ export interface PricingCardProps {
 const PricingCard: React.FC<PricingCardProps> = ({
     icon,
     iconBg,
+    color,
     title,
     description,
     price,
@@ -53,9 +55,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
     }, [])
     return (
         <Card
-            className={` flex h-[670px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${isCenter
-                    ? ` ${changeLanguage === 'de' ? 'lg:h-[870px]' : 'lg:h-[800px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
-                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[820px]' : 'xl:h-[720px]'}`
+            className={` flex h-[700px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${isCenter
+                ? ` ${changeLanguage === 'de' ? 'lg:h-[870px]' : 'lg:h-[800px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
+                : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[820px]' : 'xl:h-[720px]'}`
                 }`}
             onClick={onCardClick}
         >
@@ -76,19 +78,20 @@ const PricingCard: React.FC<PricingCardProps> = ({
                             <p className="font-inter text-base font-semibold text-white lg:text-2xl">
                                 {title}
                             </p>
-                            <div className="pb-1  font-inter text-lg font-semibold text-white  lg:text-xl">
+                            <div style={{ color }} className="pb-1 font-inter text-base font-semibold lg:text-xl">
                                 €{setupFee}
                             </div>
+
                         </div>
 
                     </div>
 
                     <div className="leading-none flex flex-col items-end justify-start">
-                        <div className="font-inter text-[45px] font-semibold text-white lg:text-[70px]">
+                        <div className="font-inter text-[35px] font-semibold text-white lg:text-[70px]">
                             €{price}
 
                         </div>
-                        <span className="font-inter text-base font-normal text-white">
+                        <span style={{ color }} className="font-inter text-base font-normal text-white">
                             per {" "}
                             {
                                 languageData?.paymentsCard?.[changeLanguage]
