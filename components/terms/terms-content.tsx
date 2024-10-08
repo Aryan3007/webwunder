@@ -16,7 +16,7 @@ const TermsContent = () => {
             <div className="mx-auto lg:max-w-5xl 2xl:max-w-7xl">
                 {languageData?.termsData[changeLanguage].map((term, index) => (
                     <div key={index} className="mb-12">
-                        <h1 className="mb-2 font-archivo text-[25px] font-bold text-white">
+                        <h1 className="mb-2 font-archivo lg:text- text-[25px] font-bold text-white">
                             {term.title}
                         </h1>
                         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-14">

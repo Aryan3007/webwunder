@@ -34,7 +34,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
     }, [])
     return (
         <div className="keen-slider__slide">
-            <div className="h-[370px] w-[calc(100vw-40px)] overflow-hidden rounded-xl border-2 bg-white md:w-full">
+            <div className="h-[420px] w-[calc(100vw-40px)] overflow-hidden rounded-xl border-2 bg-white md:w-full">
                 <Image
                     className="h-56 object-cover"
                     src={image}
@@ -84,50 +84,50 @@ const Why_mobCrousel: React.FC = () => {
             cardWidth: 'lg:w-[700px] w-full',
             image: '/images/home/why-webwunder/f1.svg',
             imgWidth: 700,
-            title: languageData?.additionalSection?.[changeLanguage]?.tabs[0]
+            title: languageData?.additionalSection2?.[changeLanguage]?.tabs[0]
                 .title,
             description:
-                languageData?.additionalSection?.[changeLanguage]?.tabs[0]
+                languageData?.additionalSection2?.[changeLanguage]?.tabs[0]
                     .description,
         },
         {
             cardWidth: 'lg:w-[350px] w-full',
             image: '/images/home/why-webwunder/f2.svg',
             imgWidth: 350,
-            title: languageData?.additionalSection?.[changeLanguage]?.tabs[1]
+            title: languageData?.additionalSection2?.[changeLanguage]?.tabs[1]
                 .title,
             description:
-                languageData?.additionalSection?.[changeLanguage]?.tabs[1]
+                languageData?.additionalSection2?.[changeLanguage]?.tabs[1]
                     .description,
         },
         {
             cardWidth: 'lg:w-[350px] w-full',
             image: '/images/home/why-webwunder/f3.svg',
             imgWidth: 350,
-            title: languageData?.additionalSection?.[changeLanguage]?.tabs[2]
+            title: languageData?.additionalSection2?.[changeLanguage]?.tabs[2]
                 .title,
             description:
-                languageData?.additionalSection?.[changeLanguage]?.tabs[2]
+                languageData?.additionalSection2?.[changeLanguage]?.tabs[2]
                     .description,
         },
         {
             cardWidth: 'lg:w-[350px] w-full',
             image: '/images/home/why-webwunder/f4.svg',
             imgWidth: 350,
-            title: languageData?.additionalSection?.[changeLanguage]?.tabs[3]
+            title: languageData?.additionalSection2?.[changeLanguage]?.tabs[3]
                 .title,
             description:
-                languageData?.additionalSection?.[changeLanguage]?.tabs[3]
+                languageData?.additionalSection2?.[changeLanguage]?.tabs[3]
                     .description,
         },
         {
             cardWidth: 'lg:w-[350px] w-fit',
             image: '/images/home/why-webwunder/f5.svg',
             imgWidth: 350,
-            title: languageData?.additionalSection?.[changeLanguage]?.tabs[4]
+            title: languageData?.additionalSection2?.[changeLanguage]?.tabs[4]
                 .title,
             description:
-                languageData?.additionalSection?.[changeLanguage]?.tabs[4]
+                languageData?.additionalSection2?.[changeLanguage]?.tabs[4]
                     .description,
         },
     ]
