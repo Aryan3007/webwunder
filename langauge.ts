@@ -414,7 +414,7 @@ export const languageData = {
             title: 'Unlimited Design',
             description:
                 'Wir haben das Unlimited Design-Paket für Unternehmen entwickelt, die nicht genug von unserer außergewöhnlichen Designarbeit bekommen können. Mit begrenzten Plätzen bietet dieses exklusive Paket unbegrenzte Anfragen, schnelle Lieferung und 100% Eigentum an allen Designs. Interessiert? Kommen Sie zu uns!',
-            seePlans: 'Abonnements',
+            seePlans: 'Mehr Info',
             bookCall: 'Kostenloses Erstgespräch',
         },
         en: {
@@ -425,7 +425,7 @@ export const languageData = {
             title: 'Unlimited Design',
             description:
                 'We’ve created the Unlimited Design Package for businesses that just can’t get enough of our exceptional design work. With limited spots available, this exclusive package offers unlimited requests, fast delivery, and 100% design ownership. Interested? Let’s talk!',
-            seePlans: 'See Plans',
+            seePlans: 'More Info',
             bookCall: 'Book a Call',
         },
     },
@@ -515,7 +515,7 @@ export const languageData = {
             signMeUp: 'Ich bin dabei!',
 
             cancelAnytime: 'Jederzeit kündbar',
-            priceTag: 'Monat',
+            priceTag: 'pro Monat',
             booked: 'Derzeit ausgebucht',
             booked2: 'melden Sie sich per E-Mail für die Warteliste an!',
             setupFeetag: 'Einrichtungsgebühr',
@@ -607,7 +607,7 @@ export const languageData = {
             signMeUp: 'Sign Me Up!',
 
             cancelAnytime: 'Cancel Anytime',
-            priceTag: 'Month',
+           priceTag: 'per month', 
             setupFeetag: 'Setup Fee',
             booked: 'Currently fully booked',
             booked2: 'Email us to join the waiting list!',
@@ -994,9 +994,9 @@ export const languageData = {
         de: {
             title: 'Auf Leistung ausgelegt',
             subtitle:
-                'Unternehmerisches Gespür und Präzision, die Unternehmen in Erfolgsgeschichten verwandeln',
+                'Unternehmerisches Gespür und Präzision – wir verwandeln Unternehmen in Erfolgsgeschichten',
             description:
-                'Konzepte, Marken, Web, Social Media und mehr. Entdecken Sie, wie wir etablierten Unternehmen und Startups gleichermaßen geholfen haben, die perfekte Balance zwischen mutiger Kreativität und strategischem Marketing zu finden, indem wir Websites entworfen haben, die ihre Angebote aufwerten und in allen Bereichen überzeugende Ergebnisse liefern.',
+                'Konzepte, Marken, Webdesign, Social Media und mehr. Entdecken Sie, wie wir etablierten Unternehmen und Start-ups geholfen haben, die perfekte Balance zwischen mutiger Kreativität und strategischem Marketing zu finden, indem wir Websites gestalten, die ihre Angebote aufwerten und überzeugende Ergebnisse liefern.',
             portfolioHeading: 'Unser Portfolio',
             portfolioSubHeading:
                 'Erfahren Sie, wie wir erfolgreiche Marken aufbauen',

@@ -13,14 +13,14 @@ import { paths } from '@/paths'
 
 
 const paymentMethods = [
-    { image: '/images/paypal.png', height: 50, width: 60 },
-    { image: '/images/applepay.png', height: 50, width: 50 },
-    { image: '/images/mastercard.png', height: 50, width: 50 },
-    { image: '/images/americanexpress.png', height: 50, width: 50 },
-    { image: '/images/googleplay.png', height: 50, width: 70 },
-    { image: '/images/visa.png', height: 50, width: 50 },
-    { image: '/images/bancontact.png', height: 50, width: 50 },
-    { image: '/images/sepa.png', height: 50, width: 50 },
+    { image: '/images/i1.svg', height: 200, width: 200 },
+    { image: '/images/i2.svg', height: 50, width: 50 },
+    { image: '/images/i3.svg', height: 50, width: 50 },
+    { image: '/images/i4.svg', height: 50, width: 50 },
+    { image: '/images/i5.svg', height: 200, width: 200 },
+    { image: '/images/i6.svg', height: 50, width: 50 },
+    { image: '/images/i7.svg', height: 50, width: 50 },
+    { image: '/images/i8.svg', height: 50, width: 50 },
 ]
 
 const Footer = () => {
@@ -59,6 +59,7 @@ const Footer = () => {
                         <div className="mb-8 grid grid-cols-8 place-items-center gap-4">
                             {paymentMethods.map((item, index) => (
                                 <Image
+                            
                                     key={index}
                                     src={item.image}
                                     alt="Payment"
@@ -190,6 +191,7 @@ const Footer = () => {
                                 <div className="mt-3 grid grid-cols-4 place-items-center gap-5">
                                     {paymentMethods.map((item, index) => (
                                         <Image
+                                        className=''
                                             key={index}
                                             src={item.image}
                                             alt="Payment"

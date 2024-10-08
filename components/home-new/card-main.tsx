@@ -26,7 +26,7 @@ const MainCard: React.FC<MainCardProps> = ({
 
     return (
         <div className={`overflow-hidden rounded-xl ${cardWidth} h-full`}>
-            <Card className="h-[430px]">
+            <Card className="h-[455px] overflow-hidden">
                 <CardHeader className="p-0">
                     <div className="relative w-full h-full">
                         {smallImage ? (
@@ -66,12 +66,12 @@ const MainCard: React.FC<MainCardProps> = ({
                             </>
                         ) : (
                             <Image
-                                className="rounded-t-xl w-full"
+                                className="rounded-t-xl w-full min-h-80"
                                 src={image}
                                 alt={title}
                                 layout="responsive"
                                 width={100}
-                                height={75}
+                                height={100}
                                 objectFit="cover"
                             />
                         )}

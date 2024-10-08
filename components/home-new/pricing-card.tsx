@@ -15,6 +15,7 @@ export interface PricingCardProps {
     color: string
     iconBg: string
     title: string
+    id:string
     description: string
     price: number
     setupFee: string
@@ -31,6 +32,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
     icon,
     iconBg,
     color,
+    id,
     title,
     description,
     price,
@@ -54,7 +56,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         }
     }, [])
     return (
-        <Card
+        <Card id={id}
             className={` flex h-[700px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${isCenter
                 ? ` ${changeLanguage === 'de' ? 'lg:h-[870px]' : 'lg:h-[800px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
                 : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[820px]' : 'xl:h-[720px]'}`
@@ -87,12 +89,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
                     </div>
 
                     <div className="leading-none flex flex-col items-end justify-start">
-                        <div className="font-inter text-[35px] font-semibold text-white lg:text-[70px]">
+                        <div className="font-inter text-[35px] font-semibold text-white lg:text-[60px]">
                             €{price}
 
                         </div>
                         <span style={{ color }} className="font-inter text-base font-normal text-white">
-                            per {" "}
+                           
                             {
                                 languageData?.paymentsCard?.[changeLanguage]
                                     ?.priceTag

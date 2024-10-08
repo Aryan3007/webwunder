@@ -186,7 +186,7 @@ const JoinUsSection: React.FC = () => {
                                     href="https://tidycal.com/skylumina/webwunder"
                                     className="flex flex-row items-center justify-between gap-4"
                                 >
-                                    <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
+                                    <p className="ml-4 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
                                         {
                                             languageData?.additionalSection?.[
                                                 changeLanguage

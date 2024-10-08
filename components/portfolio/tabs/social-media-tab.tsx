@@ -19,7 +19,7 @@ const tabItems = [
     },
     {
         width: 'lg:w-[35rem] xl:w-[40rem] w-full',
-        img: '/images/portfolio/social-media/social4.png',
+        img: '/images/portfolio/social-media/social4.svg',
         bgProps: 'bg-cover bg-center bg-no-repeat',
     },
     {

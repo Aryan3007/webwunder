@@ -81,7 +81,7 @@ const Reviews = () => {
                                 size={'base'}
                                 className="flex items-center justify-between gap-3 bg-[#FFDC26] transition-all hover:scale-95"
                             >
-                                <p className="font-archivo text-[15px] font-medium text-[#24252A]">
+                                <p className="font-archivo ml-2 text-[15px] font-medium text-[#24252A]">
                                     {
                                         languageData?.ourClient?.[
                                             changeLanguage

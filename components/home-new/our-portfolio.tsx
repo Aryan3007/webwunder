@@ -205,7 +205,7 @@ const OurPortfolio = () => {
                                 href="/portfolio"
                                 className="flex flex-row items-center justify-between gap-4"
                             >
-                                <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
+                                <p className="ml-4 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
                                     {
                                         languageData?.userPortfolio?.[
                                             changeLanguage

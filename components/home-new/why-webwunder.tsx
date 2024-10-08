@@ -141,7 +141,7 @@ const WhyWebWunder = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
     const mainItems = [
         {
-            cardWidth: 'lg:w-[700px] w-full',
+            cardWidth: 'lg:w-[715px] w-full',
             image: '/images/home/why-webwunder/why-webwunder-1.png',
             smallImage: '/images/home/why-webwunder/why-webwunder-1-small.png',
             imgWidth: 700,
@@ -271,7 +271,7 @@ const WhyWebWunder = () => {
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] p-2 transition-all hover:scale-95`}
                         >
                             
-                                <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
+                                <p className="ml-4 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
                                     {
                                         languageData?.additionalSection?.[
                                             changeLanguage
@@ -344,7 +344,7 @@ const WhyWebWunder = () => {
                 ) : (
                     <div className="flex flex-wrap justify-center gap-16 lg:gap-4">
                         {/* First row - 2 items */}
-                        <div className="flex h-full w-full flex-wrap justify-center gap-16 lg:gap-4 xl:gap-6">
+                        <div className="flex h-full w-full flex-wrap justify-center gap-16 lg:gap-4 ">
                             {mainItems.slice(0, 2).map((item, index) => (
                                 <div key={index} className="upperdiv trig">
                                     <MainCard

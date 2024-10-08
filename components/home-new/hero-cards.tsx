@@ -112,7 +112,7 @@ const imageItems = [
     altText: 'Stay on top',
   },
   {
-    imageSrc: '/images/home/stay-on-top/portfolio-slider-7.webp',
+    imageSrc: '/images/home/stay-on-top/portfolio-slider-5.svg',
     altText: 'Stay on top',
   },
   {

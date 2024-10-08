@@ -12,6 +12,7 @@ interface PlanProps {
     icon: string
     color: string
     iconBg: string
+    id:string,
 
     title: string
     description: string
@@ -55,6 +56,8 @@ const MobilePurchasePlans: React.FC = () => {
             icon: '/images/home/purchase-plans/icon-2.png',
             iconBg: 'bg-[#27dab7]',
             color: '#27dab7',
+            id:"",
+
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[0]
@@ -72,6 +75,7 @@ const MobilePurchasePlans: React.FC = () => {
             icon: '/images/home/purchase-plans/icon-3.png',
             iconBg: 'bg-[#FB421F]',
             color: '#FB421F',
+            id:"",
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]
@@ -90,7 +94,7 @@ const MobilePurchasePlans: React.FC = () => {
         {
             icon: '/images/home/purchase-plans/icon-4.png',
             iconBg: 'bg-[#5D59E1]',
-            color: '#5D59E1',
+            color: '#5D59E1', id:"",
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]
@@ -108,6 +112,7 @@ const MobilePurchasePlans: React.FC = () => {
             icon: '/images/home/purchase-plans/icon-1.png',
             iconBg: 'bg-[#ffdc26]',
             color: '#ffdc26',
+            id:"",
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[3]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[3]
@@ -191,6 +196,7 @@ const DesktopPurchasePlans: React.FC = () => {
             icon: '/images/home/purchase-plans/icon-2.png',
             iconBg: 'bg-[#27dab7]',
             color: '#27dab7',
+            id:"",
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[0]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[0]
@@ -208,6 +214,7 @@ const DesktopPurchasePlans: React.FC = () => {
             icon: '/images/home/purchase-plans/icon-3.png',
             iconBg: 'bg-[#FB421F]',
             color: '#FB421F',
+            id:"",
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[1]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[1]
@@ -227,6 +234,7 @@ const DesktopPurchasePlans: React.FC = () => {
             icon: '/images/home/purchase-plans/icon-4.png',
             iconBg: 'bg-[#5D59E1]',
             color: '#5D59E1',
+            id:"unlimited",
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[2]?.title,
             description:
                 languageData?.paymentsCard?.[changeLanguage]?.tabs[2]
@@ -243,6 +251,7 @@ const DesktopPurchasePlans: React.FC = () => {
         {
             icon: '/images/home/purchase-plans/icon-1.png',
             iconBg: 'bg-[#ffdc26]',
+            id:"",
             color: '#ffdc26',
             title: languageData?.paymentsCard?.[changeLanguage]?.tabs[3]?.title,
             description:

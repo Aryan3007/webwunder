@@ -199,9 +199,18 @@ const Home_new = () => {
                         <p className="text-center font-archivo text-base mb-12 font-bold text-white lg:text-lg">
                             {languageData?.heroSection?.[changeLanguage]?.description}
                             <br />
-                            <span className='font-light text-sm lg:text-[18px] text-white'>
+
+                            {
+                                changeLanguage === 'de' ?( <span className='font-light text-sm lg:text-[18px] text-white'>
+                            Mehr Erfolg. Weniger Kosten. Garantiert.
+
+                            </span>):(<span className='font-light text-sm lg:text-[18px] text-white'>
                                 Proven to Boost Sales and Cut Costs.
-                            </span>
+                            </span>)
+                            }
+                            
+                            
+                           
                         </p>
                     </div>
 
@@ -237,7 +246,7 @@ const Home_new = () => {
                                 href="https://tidycal.com/skylumina/webwunder"
                                 className="flex flex-row items-center justify-between gap-4"
                             >
-                                <p className="ml-2 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
+                                <p className="ml-4 font-inter text-sm font-medium text-[#24252A] lg:text-[15px]">
                                     {
                                         languageData?.additionalSection?.[
                                             changeLanguage
@@ -254,10 +263,18 @@ const Home_new = () => {
                             </Link>
                         </button>
                     </div>
-                    <p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
+
+                    {
+
+                        changeLanguage ==="de" ? (<p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
+                    Hunderte erfolgreicher Projekte für hunderte zufriedener Kunden realisiert.
+
+                    </p>):( <p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
                         Hundreds of perfect projects delivered to hundreds of  thrilled customers.
 
-                    </p>
+                    </p> )
+                    }
+                   
 
                     {/* Cloud Left */}
                     <div className='hidden md:block'>
