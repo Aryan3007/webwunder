@@ -376,7 +376,7 @@ const Home_new = () => {
 
                 </div>
             </div>
-            {/* <BrandsCarousel /> */}
+            <BrandsCarousel />
         </>
     )
 }
