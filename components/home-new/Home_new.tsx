@@ -99,6 +99,70 @@ const Home_new = () => {
 
 
     }, []);
+    
+    
+    useEffect(() => {
+        // Register GSAP plugins
+        gsap.registerPlugin(ScrollTrigger)
+        // Get all heading elements you want to animate
+        const laptop = document.querySelectorAll('.laptop2');
+        const clouds = document.querySelectorAll('.clouds2');
+        const mobile = document.querySelectorAll('.mobiles2');
+
+
+
+
+        gsap.to(laptop, {
+            y: -10,
+            duration: 0.5,
+
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: laptop, // The container for the text
+                start: 'top 60%', // Start when the top of the container reaches 60% of the viewport
+                end: 'bottom 20%', // End when the bottom of the container reaches 20% of the viewport
+                scrub: 2, // Smooth scrubbing
+                markers: true, // Enable markers for debugging (optional)
+            },
+        });
+
+
+
+
+        // Animate each letter into view
+        gsap.to(mobile, {
+            y: 40, // Start 30px below
+            duration: 0.5,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: laptop, // The container for the text
+                start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
+                end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
+                scrub: 2, // Smooth scrubbing
+                markers: true, // Enable markers for debugging (optional)
+            },
+        });
+
+
+        // Animate each letter into view
+        gsap.to(clouds, {
+            y: 60, // Start 30px below
+            duration: 3,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: laptop, // The container for the text
+                start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
+                end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
+                scrub: 1, // Smooth scrubbing
+                markers: true, // Enable markers for debugging (optional)
+            },
+        });
+
+
+       
+
+
+    }, []);
 
     return (
         <>
@@ -253,18 +317,66 @@ const Home_new = () => {
 
                     </div>
 
+                    <div className=' md:hidden flex  mt-12'>
 
-                    <Image
-                        src="/images/newhome/newhome.png"
-                        alt="Hero"
-                        className=' block -translate-y-7 md:hidden w-screen'
-                        width={5000}
-                        height={5000}
-                    />
+                        <Image
+                            src="/images/home/hero/clouds-1.webp"
+                            alt="Cloud Left"
+                            className='absolute clouds2 bottom-24 z-10 -left-24'
+                            width={5000}
+                            height={5000}
+
+                        />
+
+
+                        {/* Cloud Right */}
+
+                        <Image
+                            src="/images/home/hero/clouds-2.webp"
+                            alt="Cloud Right"
+                            className='absolute clouds2 bottom-24  z-30 w-2/3 -right-16'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Rock Phone Left */}
+
+                        <Image
+                            src="/images/home/hero/hero-img-2.webp"
+                            alt="Rock Phone Left"
+                            className='absolute mobiles2 z-40 bottom-16 w-3/5 left-0'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Right Phone */}
+
+                        <Image
+                            src="/images/home/hero/hero-img-3.webp"
+                            alt="Right Phone"
+                            className='absolute mobiles2 z-40 bottom-12 w-2/3 right-0'
+                            width={5000}
+                            height={5000}
+                        />
+
+
+                        {/* Hero Image */}
+
+                        <Image
+                            src="/images/newhome/newlaptop.webp"
+                            alt="Hero"
+                            className='relative laptop2 -bottom-3 z-50 w-screen'
+                            width={5000}
+                            height={5000}
+                        />
+
+                    </div>
 
                 </div>
             </div>
-            <BrandsCarousel />
+            {/* <BrandsCarousel /> */}
         </>
     )
 }
