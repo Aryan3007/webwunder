@@ -122,7 +122,7 @@ const Home_new = () => {
                 start: 'top 60%', // Start when the top of the container reaches 60% of the viewport
                 end: 'bottom 20%', // End when the bottom of the container reaches 20% of the viewport
                 scrub: 2, // Smooth scrubbing
-                markers: true, // Enable markers for debugging (optional)
+                // markers: true, // Enable markers for debugging (optional)
             },
         });
 
@@ -139,7 +139,7 @@ const Home_new = () => {
                 start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
                 end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
                 scrub: 2, // Smooth scrubbing
-                markers: true, // Enable markers for debugging (optional)
+                // markers: true, // Enable markers for debugging (optional)
             },
         });
 
@@ -154,7 +154,7 @@ const Home_new = () => {
                 start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
                 end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
                 scrub: 1, // Smooth scrubbing
-                markers: true, // Enable markers for debugging (optional)
+                // markers: true, // Enable markers for debugging (optional)
             },
         });
 
@@ -345,7 +345,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-2.webp"
                             alt="Rock Phone Left"
-                            className='absolute mobiles2 z-40 bottom-16 w-3/5 left-0'
+                            className='absolute mobiles2 z-40 bottom-12 w-3/5 left-0'
                             width={5000}
                             height={5000}
                         />
