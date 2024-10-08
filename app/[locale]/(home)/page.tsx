@@ -18,6 +18,7 @@ import BrandsCarousel from '@/components/home-new/brands-carousel'
 import HeroSection from '@/components/home-new/Home_new'
 
 export default function HomePage() {
+    
     return (
         <LangLayout>
             <div className="overflow-hidden">

@@ -54,13 +54,9 @@ const Reviews = () => {
                 {languageData?.ourClient?.[changeLanguage]?.whatClientsSay}{' '}
             </p>
             <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md antialiased">
-                <InfiniteMovingCards
-                    items={testimonials}
-                    direction="left"
-                    speed="slow"
-                />
+            <InfiniteMovingCards items={testimonials} direction="left" speed="normal" pauseOnHover={true} />
             </div>{' '}
-            {/* <div className="relative -my-28 flex scale-50 flex-col items-center justify-center overflow-hidden rounded-md antialiased md:hidden">
+            {/* <div className="relative hidden -my-28 scale-50 flex-col items-center justify-center overflow-hidden rounded-md antialiased lg:flex">
                 <InfiniteMovingCards
                     items={testimonials}
                     direction="left"
