@@ -81,7 +81,7 @@ export const InfiniteMovingCards = ({
                                 background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900))',
                             }}
                         >
-                            <div className='h-56 flex justify-between flex-col'>
+                            <div className='lg:h-64 h-56 flex justify-between flex-col'>
                                 <div
                                     aria-hidden="true"
                                     className="user-select-none pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%+_4px)] w-[calc(100%+_4px)] rounded-3xl bg-[#191919]"
@@ -89,7 +89,7 @@ export const InfiniteMovingCards = ({
                                 <div className="relative h-44 z-20 font-figtree text-base font-semibold leading-normal text-white md:mb-1 md:text-[22px] md:leading-[1.6]">
                                     &quot;{item.content}&quot;
                                 </div>
-                                <div className="relative z-20 mt-6 flex flex-col items-start">
+                                <div className="relative z-20 lg:mt-6 mt-2 flex flex-col items-start">
                                     <span className="mb-1 font-figtree text-sm font-normal leading-[1.6] text-white/50 md:mb-3">
                                         {item.writer}
                                     </span>
