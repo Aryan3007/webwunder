@@ -76,12 +76,12 @@ export const InfiniteMovingCards = ({
                     {items.concat(items).map((item, idx) => (
                         <div
                             key={`${item.writer}-${idx}`}
-                            className="relative h-[300px] w-[250px] max-w-full flex-shrink-0 rounded-3xl p-5 sm:w-[300px] md:h-auto md:w-[500px] md:px-8 md:py-10 mx-2 overflow-hidden"
+                            className="relative h-[270px] w-[250px] max-w-full flex-shrink-0 rounded-3xl p-5 sm:w-[300px] md:h-auto md:w-[500px] md:px-8 md:py-10 mx-2 overflow-hidden"
                             style={{
                                 background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900))',
                             }}
                         >
-                            <div className='h-64 flex justify-between flex-col'>
+                            <div className='h-56 flex justify-between flex-col'>
                                 <div
                                     aria-hidden="true"
                                     className="user-select-none pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%+_4px)] w-[calc(100%+_4px)] rounded-3xl bg-[#191919]"
