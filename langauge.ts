@@ -293,7 +293,7 @@ export const languageData = {
                 {
                     title: 'Von Unternehmern für Unternehmer',
                     description:
-                        'Wir verstehen Ihr Geschäft. Mit WebWunder bekommen Sie eine leistungsstarke Website in weniger als einer Stunde. Über 100 erfolgreiche Projekte sprechen für sich.',
+                        'Wir verstehen Ihr Geschäft. Mit WebWunder erhalten Sie in weniger als einer Stunde Ihrer Zeit eine leistungsstarke Website. Wir haben den Prozess perfektioniert—über 100 Projekte erfolgreich abgeschlossen.',
                 },
                 {
                     title: 'Kostenlose Updates und Design-Refreshes',
@@ -361,7 +361,7 @@ export const languageData = {
                 {
                     title: 'Built by Entrepreneurs, for Entrepreneurs',
                     description:
-                        'We understand the hustle. With WebWunder, get a powerhouse website in under an hour. We’ve perfected the process—100+ projects perfected.',
+                        "We understand the hustle. With WebWunder, get a powerhouse website in under an hour of your time. We've perfected the process—over 100 projects successfully completed."
                 },
                 {
                     title: 'Free Updates and Design Refreshes',
@@ -524,7 +524,7 @@ export const languageData = {
             headline: 'Market-Conquering Business Solutions',
             subheadline: 'No Contracts, Just Results',
             description:
-                'Experience the power of a WebWunder website, perfectly tailored to your business. Choose from three subscriptions or our Unlimited Design Package. 100% flexible and cancel anytime. But be warned: You’ll feel so comfortable, you’ll never want to leave. After us, you won’t need another agency – and neither will your current one!',
+                "Experience the power of a WebWunder website, perfectly tailored to your business. Choose from three subscriptions or our Unlimited Design Package. 100% flexible and cancel anytime. But be warned: You’ll feel so comfortable, you’ll never want to leave. After working with us, you'll have found the only agency you’ll ever need!",
             whatYouGet: 'What You Get:',
 
             tabs: [
@@ -539,8 +539,8 @@ export const languageData = {
                         'Continuous updates, plug-ins, and AI-powered SEO',
                         'Secure hosting, backups, and full Google indexing',
                         'Professional copywriting and branding',
-                        'Design refresh every 36 months',
                         'Two design tasks per month for enhanced flexibility',
+                        'Design refresh every 36 months',
                         'More extensive site capabilities to support your business growth',
                         'Cancel anytime',
                     ],
@@ -554,14 +554,14 @@ export const languageData = {
                     description:
                         'For businesses seeking top-tier performance and comprehensive support for maximum impact.',
                     features: [
-                        'Fully responsive, optimized for all devices',
+                        'Fully responsive, device-optimized website',
                         'Continuous updates, plug-ins, and AI-powered SEO',
                         'Secure hosting, backups, and full Google indexing',
                         'Professional copywriting and branding',
-                        'Design refresh every 36 months',
-                        'Two design tasks per month for enhanced flexibility',
-                        'More extensive site capabilities to support your business growth',
                         'Three design tasks per month for continuous creativity',
+                        'Design refresh every 36 months',
+                        'More extensive site capabilities to support your business growth',
+                        
                         'Social media posting and management support',
                         'Extra time dedicated monthly to your project for top-tier performance',
                         'Cancel anytime',
@@ -592,7 +592,7 @@ export const languageData = {
                     description:
                         'Perfect for startups and small projects that need a strong online foundation.',
                     features: [
-                        'Fully responsive, optimized for all devices',
+                        'Fully responsive, device-optimized website',
                         'Continuous updates, plug-ins, and AI-powered SEO',
                         'Secure hosting, backups, and full Google indexing',
                         'Professional copywriting and branding',
@@ -821,7 +821,7 @@ export const languageData = {
             subtitle: 'Got Questions?',
             description: 'Here are some quick answers.',
             description2: 'Need more? Just reach out!',
-            bookCall: 'Book a Call',
+            bookCall: 'WhatsApp Chat',
             questions: [
                 {
                     question:
@@ -1930,7 +1930,7 @@ export const languageData = {
 
             getInTouch: 'Get in touch',
             quickConnect: 'Quick connect',
-            weAccept: 'We Accept',
+            weAccept: 'We Accept:',
             legalPages: 'Legal Pages',
             followUs: 'Follow us',
             links: {
@@ -1960,14 +1960,14 @@ export const languageData = {
             },
             copyright1: 'Copyright © 2024. WebWunder ',
             copyright2: '. All Rights Reserved.',
-            webwunder: 'WebWunder',
+            webwunder: 'Webwunder',
         },
         de: {
             winningSupport:
                 'Unbesiegbare Webseiten. Unerschütterlicher Support.',
             getInTouch: 'Kontaktieren Sie uns',
             quickConnect: 'Angebot',
-            weAccept: 'Wir akzeptieren',
+            weAccept: 'Wir akzeptieren:',
             legalPages: 'Rechtliche Seiten',
             followUs: 'Folgen Sie uns',
             links: {
@@ -1995,7 +1995,7 @@ export const languageData = {
                 youtube: 'YouTube',
             },
             copyright1: 'Urheberrecht © 2024. ',
-            webwunder: 'WebWunder',
+            webwunder: 'Webwunder',
             copyright2: '. Alle Rechte vorbehalten.',
         },
     },

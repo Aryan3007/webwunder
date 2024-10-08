@@ -28,7 +28,7 @@ const PrivacyPolicyBreadcrumb = () => {
                         className="font-dm-sans text-base font-normal text-white hover:font-semibold hover:text-white"
                         href="/"
                     >
-                          {lang === 'de' ? 'Heim' : 'Home'}
+                          {lang === 'de' ? 'Home' : 'Home'}
                     </BreadcrumbLink>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />

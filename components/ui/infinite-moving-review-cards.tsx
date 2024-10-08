@@ -111,20 +111,7 @@ export const InfiniteMovingCards = ({
                     ))}
                 </Marquee>
             </div>
-            <button
-                onClick={() => handleScroll(-300)}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors z-10"
-                aria-label="Scroll left"
-            >
-                <ChevronLeft className="w-6 h-6 text-white" />
-            </button>
-            <button
-                onClick={() => handleScroll(300)}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/10 p-2 rounded-full hover:bg-white/20 transition-colors z-10"
-                aria-label="Scroll right"
-            >
-                <ChevronRight className="w-6 h-6 text-white" />
-            </button>
+           
         </div>
     )
 }

@@ -40,7 +40,7 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ item, index }) => (
 
 const BrandsCarousel: React.FC = () => {
   return (
-      <Marquee  style={{ transform: 'rotate(-1.55deg)' }} className="w-full   mb-4  bottom-5 z-50 lg:h-16 h-16 bg-[#5D59E1]" speed={50} gradient={false}>
+      <Marquee  style={{ transform: 'rotate(-1.55deg)' }} className="w-full -translate-y-4  mb-4  bottom-5 z-50 lg:h-16 h-16 bg-[#5D59E1]" speed={50} gradient={false}>
     <div   className="relative flex items-center">
       <div 
         className="absolute inset-0 h-full"

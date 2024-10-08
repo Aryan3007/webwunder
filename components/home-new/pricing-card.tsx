@@ -53,17 +53,16 @@ const PricingCard: React.FC<PricingCardProps> = ({
     }, [])
     return (
         <Card
-            className={` flex h-[830px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${
-                isCenter
-                    ? ` ${changeLanguage === 'de' ? 'lg:h-[970px]' : 'lg:h-[920px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
-                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[920px]' : 'xl:h-[850px]'}`
-            }`}
+            className={` flex h-[670px] cursor-grab flex-col justify-between rounded-[32px] border-2 border-white bg-[#191919] text-white transition-all duration-300 lg:w-[500px] lg:scale-[87%] lg:border lg:border-[#D9D9D9] xl:w-[700px] ${isCenter
+                    ? ` ${changeLanguage === 'de' ? 'lg:h-[870px]' : 'lg:h-[800px]'} lg:-translate-y-10 lg:scale-[200%] lg:border-[5px] lg:border-white xl:scale-90`
+                    : `lg:h-[880px] ${changeLanguage === 'de' ? 'xl:h-[820px]' : 'xl:h-[720px]'}`
+                }`}
             onClick={onCardClick}
         >
             <div className="flex flex-col">
-                <CardHeader className="space-y-4">
+                <CardHeader className="flex p-6 pb-0 flex-row justify-between">
                     <div className="flex items-start justify-between">
-                        <div className="flex flex-col items-start space-y-2">
+                        <div className="flex flex-col items-centers space-y-2">
                             <div
                                 className={`flex h-12 justify-center items-center w-12 rounded-full p-2 ${iconBg}`}
                             >
@@ -77,32 +76,32 @@ const PricingCard: React.FC<PricingCardProps> = ({
                             <p className="font-inter text-base font-semibold text-white lg:text-2xl">
                                 {title}
                             </p>
+                            <div className="pb-1  font-inter text-lg font-semibold text-white  lg:text-xl">
+                                €{setupFee}
+                            </div>
                         </div>
-                        {ctaText && (
-                            <Badge className="rounded-full bg-[#5D59E1] px-2 font-archivo text-sm font-normal text-white">
-                                {ctaText}
-                            </Badge>
-                        )}
+
+                    </div>
+
+                    <div className="leading-none flex flex-col items-end justify-start">
+                        <div className="font-inter text-[45px] font-semibold text-white lg:text-[70px]">
+                            €{price}
+
+                        </div>
+                        <span className="font-inter text-base font-normal text-white">
+                            per {" "}
+                            {
+                                languageData?.paymentsCard?.[changeLanguage]
+                                    ?.priceTag
+                            }
+                        </span>
+
                     </div>
                 </CardHeader>
 
-                <CardContent className="flex-grow space-y-2">
-                    <div className="leading-none">
-                        <div className="font-inter text-[45px] font-semibold text-white lg:text-[70px]">
-                            €{price}
-                            <span className="font-inter text-base font-normal text-white">
-                                /{' '}
-                                {
-                                    languageData?.paymentsCard?.[changeLanguage]
-                                        ?.priceTag
-                                }
-                            </span>
-                        </div>
-                        <div className="pb-1 pt-1 font-inter text-lg font-semibold text-white lg:pb-2 lg:pt-0 lg:text-xl">
-                            €{setupFee}
-                        </div>
-                    </div>
-                    <p className="pb-2 font-inter text-sm font-normal text-white/50 lg:text-base">
+                <CardContent className="flex-grow ">
+
+                    <p className=" font-inter py-2 text-sm font-normal text-white/50 lg:text-base">
                         {description}
                     </p>
                     <div className="space-y-2">
