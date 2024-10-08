@@ -184,7 +184,7 @@ const Home_new = () => {
 
                     {/* Text Content */}
 
-                    <div className="mx-auto text flex max-w-6xl md:mb-12 lg:mb-0 mb-12 mt-6 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
@@ -205,7 +205,7 @@ const Home_new = () => {
                         </p>
                     </div>
 
-                    <div className="mt-4 flex scale-90 lg:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                    <div className=" flex scale-90 lg:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] px-2 transition-all hover:scale-95`}
                         >
@@ -334,7 +334,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-2.webp"
                             alt="Cloud Right"
-                            className='absolute clouds2 bottom-24  z-30 w-2/3 -right-16'
+                            className='absolute clouds2 bottom-24  z-20 w-2/3 -right-16'
                             width={5000}
                             height={5000}
                         />
@@ -345,7 +345,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-2.webp"
                             alt="Rock Phone Left"
-                            className='absolute mobiles2 z-40 bottom-12 w-3/5 left-0'
+                            className='absolute mobiles2 z-30 bottom-12 w-3/5 left-0'
                             width={5000}
                             height={5000}
                         />
@@ -356,7 +356,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-3.webp"
                             alt="Right Phone"
-                            className='absolute mobiles2 z-40 bottom-12 w-2/3 right-0'
+                            className='absolute mobiles2 z-30 bottom-12 w-2/3 right-0'
                             width={5000}
                             height={5000}
                         />
@@ -367,7 +367,7 @@ const Home_new = () => {
                         <Image
                             src="/images/newhome/newlaptop.webp"
                             alt="Hero"
-                            className='relative laptop2 -bottom-3 z-50 w-screen'
+                            className='relative laptop2 -bottom-3 z-40 w-screen'
                             width={5000}
                             height={5000}
                         />
@@ -376,6 +376,7 @@ const Home_new = () => {
 
                 </div>
             </div>
+            
             <BrandsCarousel />
         </>
     )

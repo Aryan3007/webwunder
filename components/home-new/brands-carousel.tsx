@@ -40,13 +40,13 @@ const CarouselItem: React.FC<CarouselItemProps> = ({ item, index }) => (
 
 const BrandsCarousel: React.FC = () => {
   return (
-    <div   style={{ transform: 'rotate(-1.55deg)' }} className="relative bg-[#5D59E1]  lg:h-16 h-16 bottom-8 z-50 mb-4">
+    <div   style={{ transform: 'rotate(-1.55deg)' }} className="relative flex items-center bg-[#5D59E1] bottom-5 z-50 lg:h-16 h-16  mb-4">
+      <Marquee className="w-full " speed={50} gradient={false}>
       <div 
         className="absolute inset-0 h-full"
       
       ></div>
       <div className="relative flex h-full items-center justify-center">
-        <Marquee className="w-full" speed={50} gradient={false}>
           <div className="flex flex-row items-center justify-center gap-x-12">
             {carouselItems.map((item, index) => (
               <CarouselItem key={index} item={item} index={index} />
@@ -56,8 +56,8 @@ const BrandsCarousel: React.FC = () => {
               <CarouselItem key={`duplicate-${index}`} item={item} index={`duplicate-${index}`} />
             ))}
           </div>
-        </Marquee>
       </div>
+        </Marquee>
     </div>
   )
 }
