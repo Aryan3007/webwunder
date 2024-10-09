@@ -612,6 +612,7 @@ export const languageData = {
                     title: 'Scale',
                     price: 690,
                     setupFee: '2000 Setup Fee',
+                    
                     description:
                         'Designed for growing businesses that need advanced features and additional design support.',
                     features: [

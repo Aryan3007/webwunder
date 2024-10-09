@@ -9,17 +9,27 @@
     width: 8px;
 }
 
+.toggle-background {
+    transition: background-color 0.3s;
+}
+
+.toggle-circle {
+    transition: transform 0.3s;
+}
 
 
-  ::-webkit-scrollbar:horizontal {
+.imagesss{
+    filter: contrast(1.5);
+}
+
+::-webkit-scrollbar:horizontal {
     display: none;
-  }
-  
-  ::-webkit-scrollbar-button {
-    display: none;
-  }
+}
 
-  
+::-webkit-scrollbar-button {
+    display: none;
+}
+
 ::-webkit-scrollbar:vertical {
     height: 8px;
 }

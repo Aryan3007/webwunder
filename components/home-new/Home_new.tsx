@@ -85,22 +85,22 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(text, {
-            y: 50,
-            duration: 0.5,
+            y: 250,
+            
             ease: 'power2.out',
             scrollTrigger: {
                 trigger: laptop, // The container for the text
-                start: 'top 60%', // Start when the top of the container reaches 75% of the viewport
+                start: 'top 70%', // Start when the top of the container reaches 75% of the viewport
                 end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
-                scrub: 1, // Smooth scrubbing
+                scrub: 2, // Smooth scrubbing
                 // markers: true, // Enable markers for debugging (optional)
             },
         });
 
 
     }, []);
-    
-    
+
+
     useEffect(() => {
         // Register GSAP plugins
         gsap.registerPlugin(ScrollTrigger)
@@ -108,6 +108,8 @@ const Home_new = () => {
         const laptop = document.querySelectorAll('.laptop2');
         const clouds = document.querySelectorAll('.clouds2');
         const mobile = document.querySelectorAll('.mobiles2');
+        const text = document.querySelectorAll('.text2');
+
 
 
 
@@ -159,7 +161,7 @@ const Home_new = () => {
         });
 
 
-       
+
 
 
     }, []);
@@ -167,8 +169,8 @@ const Home_new = () => {
     return (
         <>
             <div id='home' className=" lg:h-full  h-full lg:bg-white lg:p-5">
-                <div className="relative bg-fixed sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-t-2xl">
-
+                <div className="relative bg-fixed sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-2xl">
+ 
                     {/* Header */}
 
                     <div className='lg:flex hidden'>
@@ -181,10 +183,11 @@ const Home_new = () => {
                     </div>
 
 
+          
 
                     {/* Text Content */}
 
-                    <div className="mx-auto text flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
@@ -201,16 +204,46 @@ const Home_new = () => {
                             <br />
 
                             {
-                                changeLanguage === 'de' ?( <span className='font-light text-sm lg:text-[18px] text-white'>
-                            Mehr Erfolg. Weniger Kosten. Garantiert.
+                                changeLanguage === 'de' ? (<span className='font-light text-sm lg:text-[18px] text-white'>
+                                    Mehr Erfolg. Weniger Kosten. Garantiert.
 
-                            </span>):(<span className='font-light text-sm lg:text-[18px] text-white'>
-                                Proven to Boost Sales and Cut Costs.
-                            </span>)
+                                </span>) : (<span className='font-light text-sm lg:text-[18px] text-white'>
+                                    Proven to Boost Sales and Cut Costs.
+                                </span>)
                             }
-                            
-                            
-                           
+
+
+
+                        </p>
+                    </div>  
+                    
+                    <div className="mx-auto text2 flex lg:hidden max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
+                        <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
+                            {languageData?.heroSection?.[changeLanguage]?.badge}
+                        </Badge>
+                        <div className="heading">
+                            <p className="overflow-hidden text-center font-archivo text-[35px] font-bold leading-none text-white lg:text-5xl">
+                                {languageData?.heroSection?.[changeLanguage]?.headline}
+                            </p>
+                            <p className="overflow-hidden text-center font-archivo text-[28px] font-bold leading-none text-[#9DFF50] lg:text-4xl">
+                                {languageData?.heroSection?.[changeLanguage]?.subHeadline}
+                            </p>
+                        </div>
+                        <p className="text-center font-archivo text-base mb-12 font-bold text-white lg:text-lg">
+                            {languageData?.heroSection?.[changeLanguage]?.description}
+                            <br />
+
+                            {
+                                changeLanguage === 'de' ? (<span className='font-light text-sm lg:text-[18px] text-white'>
+                                    Mehr Erfolg. Weniger Kosten. Garantiert.
+
+                                </span>) : (<span className='font-light text-sm lg:text-[18px] text-white'>
+                                    Proven to Boost Sales and Cut Costs.
+                                </span>)
+                            }
+
+
+
                         </p>
                     </div>
 
@@ -266,15 +299,15 @@ const Home_new = () => {
 
                     {
 
-                        changeLanguage ==="de" ? (<p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
-                    Hunderte erfolgreicher Projekte für hunderte zufriedener Kunden realisiert.
+                        changeLanguage === "de" ? (<p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
+                            Hunderte erfolgreicher Projekte für hunderte zufriedener Kunden realisiert.
 
-                    </p>):( <p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
-                        Hundreds of perfect projects delivered to hundreds of  thrilled customers.
+                        </p>) : (<p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
+                            Hundreds of perfect projects delivered to hundreds of  thrilled customers.
 
-                    </p> )
+                        </p>)
                     }
-                   
+
 
                     {/* Cloud Left */}
                     <div className='hidden md:block'>
@@ -393,10 +426,15 @@ const Home_new = () => {
 
                 </div>
             </div>
-            
-        
+
+
         </>
+
     )
+
 }
+
+
+
 
 export default Home_new

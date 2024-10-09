@@ -45,10 +45,10 @@ const ContentCard: React.FC<PortfolioProps> = ({
             }}
         >
             {isGradient && (
-                <div className={`absolute inset-0 z-10 ${bgGradient}`} />
+                <div className={`absolute  inset-0 z-10 ${bgGradient}`} />
             )}
             <div
-                className={`absolute inset-0 flex w-full items-end ${bgProps}`}
+                className={`absolute inset-0 imagesss flex w-full items-end ${bgProps}`}
                 style={{ backgroundImage: `url(${img})` }}
             />
             <div className="absolute bottom-0 flex flex-col items-start gap-3 p-10">

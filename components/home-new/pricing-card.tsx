@@ -66,7 +66,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <div className="flex flex-col">
                 <CardHeader className="flex p-6 pb-0 flex-row justify-between">
                     <div className="flex items-start justify-between">
-                        <div className="flex flex-col items-centers space-y-2">
+                        <div className="flex flex-col items-centers justify-between h-full">
                             <div
                                 className={`flex h-12 justify-center items-center w-12 rounded-full p-2 ${iconBg}`}
                             >
@@ -77,19 +77,25 @@ const PricingCard: React.FC<PricingCardProps> = ({
                                     height={25}
                                 />
                             </div>
+
+                            <div className='flex flex-col'>
+
                             <p className="font-inter text-base font-semibold text-white lg:text-2xl">
                                 {title}
                             </p>
-                            <div style={{ color }} className="pb-1 font-inter text-base font-semibold lg:text-xl">
+                            <div style={{ color }} className=" font-inter text-base font-semibold lg:text-xl">
                                 €{setupFee}
+                            </div>
                             </div>
 
                         </div>
 
                     </div>
 
-                    <div className="leading-none flex flex-col items-end justify-start">
-                        <div className="font-inter text-[35px] font-semibold text-white lg:text-[60px]">
+                    <div className="leading-none flex flex-col items-end justify-between">
+                        <div className='flex flex-col items-end'>
+
+                        <div className="font-inter text-[35px] font-semibold text-white lg:text-[55px]">
                             €{price}
 
                         </div>
@@ -97,14 +103,20 @@ const PricingCard: React.FC<PricingCardProps> = ({
                            
                             {
                                 languageData?.paymentsCard?.[changeLanguage]
-                                    ?.priceTag
+                                ?.priceTag
                             }
                         </span>
+                                </div>
 
+                        {ctaText && (
+                            <Badge className="rounded-full bg-[#5D59E1] my-2 font-archivo text-sm font-normal text-white">
+                                {ctaText}
+                            </Badge>
+                        )}
                     </div>
                 </CardHeader>
 
-                <CardContent className="flex-grow ">
+                <CardContent className="flex-grow pt-4">
 
                     <p className=" font-inter py-2 text-sm font-normal text-white/50 lg:text-base">
                         {description}

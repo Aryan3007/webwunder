@@ -66,8 +66,8 @@ const WebDesignTab = () => {
         },
         {
             width: 'lg:w-[30rem] xl:w-[35rem] w-full',
-            img: '/images/portfolio/skylumina.png',
-            bgColor: '#FF6531',
+            img: '/images/portfolio/i2.svg',
+            bgColor: '#00E4FF',
             tags: [
                 {
                     tagName:
@@ -103,8 +103,8 @@ const WebDesignTab = () => {
         },
         {
             width: 'lg:w-[35rem] xl:w-[40rem] w-full',
-            img: '/images/portfolio/rentstate.png',
-            bgColor: '#0ECECE',
+            img: '/images/portfolio/i3.svg',
+            bgColor: '#ff6606',
             tags: [
                 {
                     tagName:

@@ -25,6 +25,7 @@ import {
     SelectValue,
 } from '@/components/ui/select'
 import Image from 'next/image'
+import LanguageToggle from '@/components/LanguageToggle'
 export default function Header() {
     const viewHolder = useRef(null)
     const init = useRef(false)
@@ -67,18 +68,22 @@ export default function Header() {
         }
     }, [])
 
+
+    useEffect(() => {
+        const savedLang = localStorage.getItem('lang') as 'en' | 'de' | null;
+        if (savedLang) {
+            setChangeLanguage(savedLang);
+        }
+    }, []);
+
     const handleLanguageChange = (value: string) => {
-        const newLang = value === 'german' ? 'de' : 'en'
-        setChangeLanguage(newLang)
-        localStorage.setItem('lang', newLang)
-        location.reload()
-    }
+        const newLang = value === 'german' ? 'de' : 'en';
+        setChangeLanguage(newLang);
+        localStorage.setItem('lang', newLang);
+        location.reload();
+    };
 
-    const getLanguageIcon = (lang: 'de' | 'en') => {
-        return lang === 'de' ? '/images/germany.png' : '/images/united-kingdom.png'
-    }
 
-   
 
     return (
         <>
@@ -96,9 +101,9 @@ export default function Header() {
                     className={`z-20 flex w-full flex-col bg-transparent ${isScrolling ? 'fixed top-2 lg:top-2' : ''}`}
                 >
                     <div className={`p-3 px-4`}>
-                    <div className={`flex w-full items-center justify-evenly rounded-xl bg-transparent ${isScrolling ? 'backdrop-blur-sm' : ''}`}>
+                        <div className={`flex w-full items-center justify-evenly rounded-xl bg-transparent ${isScrolling ? 'backdrop-blur-sm' : ''}`}>
                             <div className='w-96 flex justify-center items-center'>
-                            <Logo />
+                                <Logo />
                             </div>
 
                             <div className=" flex justify-center">
@@ -106,7 +111,7 @@ export default function Header() {
                             </div>
 
                             <div className='flex gap-2 items-center min-w-96'>
-                                <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                {/* <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
                                     <SelectTrigger className="w-28 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
                                         <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
                                         <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
@@ -123,8 +128,11 @@ export default function Header() {
                                             </SelectItem>
                                         </SelectGroup>
                                     </SelectContent>
-                                </Select>
-
+                                </Select> */}
+                                <LanguageToggle
+                                    language={changeLanguage}
+                                    onToggle={handleLanguageChange}
+                                />
                                 {process.env.NEXT_PUBLIC_DISABLE_SIGNUP !== 'true' && (
                                     <>
                                         <Button

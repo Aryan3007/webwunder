@@ -16,6 +16,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select'
+import LanguageToggle from '@/components/LanguageToggle'
 
 export default function SidebarMenu() {
     const [isShown, setShown] = useState(false)
@@ -59,44 +60,40 @@ export default function SidebarMenu() {
         { name: 'Pinterest', key: 'pinterest' },
     ]
 
-    const handleLanguageChange = (value: string) => {
-        const newLang = value === 'german' ? 'de' : 'en'
-        setChangeLanguage(newLang)
-        localStorage.setItem('lang', newLang)
-        location.reload()
-    }
 
     const getLanguageIcon = (lang: 'de' | 'en') => {
         return lang === 'de' ? '/images/germany.png' : '/images/united-kingdom.png'
     }
+
+
+    useEffect(() => {
+        const savedLang = localStorage.getItem('lang') as 'en' | 'de' | null;
+        if (savedLang) {
+            setChangeLanguage(savedLang);
+        }
+    }, []);
+
+    const handleLanguageChange = (value: string) => {
+        const newLang = value === 'german' ? 'de' : 'en';
+        setChangeLanguage(newLang);
+        localStorage.setItem('lang', newLang);
+        location.reload();
+    };
+
 
     return (
         <>
             <div className="flex cursor-pointer p-0 pe-0 lg:hidden">
                 <div className="flex items-center justify-center">
                     <div className="rounded-lg flex ">
-                    <div className='flex justify-center'>
-                                        <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
-                                            <SelectTrigger className="lg:w-28 scale-75 rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
-                                                <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
-                                                <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectGroup className="flex flex-row justify-around">
-                                                    <SelectItem value="english" className="flex items-center gap-2">
-                                                        <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
-                                                        <span>EN</span>
-                                                    </SelectItem>
-                                                    <SelectItem value="german" className="flex items-center gap-2">
-                                                        <Image src="/images/germany.png" alt='German' width={25} height={25} />
-                                                        <span>DE</span>
-                                                    </SelectItem>
-                                                </SelectGroup>
-                                            </SelectContent>
-                                        </Select>
-                                    </div>
+                        <div className='flex  scale-75 justify-center'>
+                            <LanguageToggle
+                                language={changeLanguage}
+                                onToggle={handleLanguageChange}
+                            />
+                        </div>
                         <Image
-                         onClick={openMenu}
+                            onClick={openMenu}
                             className="w-5"
                             src="/menu.svg"
                             alt="menu"
@@ -143,7 +140,7 @@ export default function SidebarMenu() {
                                             &times;
                                         </button>
                                     </div>
-                                    
+
 
                                     <ul className="flex flex-col justify-evenly space-y-2 text-center text-xl md:text-2xl">
                                         {Object.entries(menuitems).map(([key, value]) => {
