@@ -2,8 +2,8 @@ export const languageData = {
     heroSection: {
         de: {
             badge: 'Felsenfester Geschäftserfolg',
-            headline: 'Unbesiegbare Webseiten',
-            subHeadline: 'Unerschütterlicher Support',
+            headline: 'Starke Webseiten',
+            subHeadline: 'Support Für Immer',
             shortDescription:
                 'Erprobt, um Umsatz zu steigern und Kosten zu reduzieren.',
             description: 'Webseiten von Unternehmern für Unternehmer.',
@@ -257,29 +257,29 @@ export const languageData = {
             bookCall: 'Kostenloses Erstgespräch',
             tabs: [
                 {
-                    title: 'Steigern Sie Ihren Umsatz mit strategischen, conversionstarken Lösungen',
+                    title: 'Umsatz Steigern',
                     description:
-                        'Verwandeln Sie Besucher in treue Kunden mit Designs, die langfristigen Erfolg sichern.',
+                        'Strategische Lösungen, die Ihre Verkäufe ankurbeln und Ihr Geschäft schnell auf das nächste Level bringen.',
                 },
                 {
                     title: 'Zielgerichtetes Design',
                     description:
-                        'Unsere strategischen Designs stärken Ihre Marke, ermöglichen Premiumpreise und steigern die Profitabilität.',
+                        'Stärken Sie Ihre Marke mit wirkungsvollem Design, das Ihr Publikum begeistert und nachhaltig beeindruckt.',
                 },
                 {
-                    title: 'Umfassende Services für Design, SEO und kontinuierliche Optimierung',
+                    title: 'Umfassende Services',
                     description:
-                        'Von Design über SEO bis hin zu Content-Erstellung und AI-gesteuerten Updates – wir kümmern uns um alles, damit Sie es nicht müssen.',
+                        'Wir übernehmen alles—Design, SEO, Content-Erstellung, KI-gesteuerte Updates—alles aus einer Hand.',
                 },
                 {
-                    title: 'Kosteneffiziente Lösung zur Optimierung Ihrer Lead-Generierung',
+                    title: 'Optimierte Lead-Generierung',
                     description:
-                        'Optimieren Sie Ihre Kundenansprache, gewinnen Sie qualifizierte Leads und sparen Sie wertvolle Zeit durch effiziente Kommunikation.',
+                        'Gewinnen Sie effizient mehr qualifizierte Leads und sparen Sie wertvolle Zeit mit unseren cleveren Strategien.',
                 },
                 {
-                    title: 'Individuelle Marketingunterstützung für mehr Markenbekanntheit und Wachstum',
+                    title: 'Individuelle Marketingunterstützung',
                     description:
-                        'Unser umfassender Support – von Branding bis Social Media – sorgt dafür, dass Ihr Unternehmen auffällt und wächst.',
+                        'Steigern Sie Markenbekanntheit und Wachstum mit maßgeschneiderten Marketinglösungen für Ihr Unternehmen.',
                 },
                 // {
                 //     // title: 'Results-Driven Web Designs',
@@ -298,29 +298,29 @@ export const languageData = {
             bookCall: 'Book a Call',
             tabs: [
                 {
-                    title: 'Boost Revenue with Strategic, Conversion-Optimized Solutions',
+                    title: 'Boost Revenue Now',
                     description:
-                        'Turn visitors into loyal customers with designs that drive lasting success.',
+                        '   Strategic solutions crafted to skyrocket your sales and rapidly elevate your business to new heights.',
                 },
                 {
                     title: 'Purpose-Driven Design',
                     description:
-                        'Our strategic designs empower your brand to command premium pricing and boost profitability.',
+                        'Empower your brand with impactful designs that captivate your audience and leave a lasting impression.',
                 },
                 {
-                    title: 'All-Inclusive Services for Design, SEO, and Continuous Optimization',
+                    title: 'All-Inclusive Services',
                     description:
-                        'From design to SEO, content creation, and AI-driven updates, we take care of everything—so you don’t have to.',
+                        'We handle everything—design, SEO, content creation, AI-driven updates—all you need in one place.',
                 },
                 {
-                    title: 'Cost-Effective Solution That Streamlines Lead Generation',
+                    title: 'Streamlined Lead Generation',
                     description:
-                        'Streamline your customer journey, attract qualified leads, and save valuable time with efficient communication.',
+                        'Efficiently attract more qualified leads and save valuable time with our smart, effective strategies.',
                 },
                 {
-                    title: 'Tailored Marketing Support to Enhance Brand Visibility and Growth',
+                    title: 'Tailored Marketing Support',
                     description:
-                        'Comprehensive support, covering everything from branding to social media, guarantees your business stands out and grows.',
+                        'Enhance brand visibility and accelerate growth with customized marketing solutions made just for you.',
                 },
             ],
         },
@@ -2045,7 +2045,7 @@ export const languageData = {
         },
         de: {
             winningSupport:
-                'Unbesiegbare Webseiten. Unerschütterlicher Support.',
+                'Starke Webseiten. Support Für Immer.',
             getInTouch: 'Kontaktieren Sie uns',
             quickConnect: 'Angebot',
             weAccept: 'Wir akzeptieren:',

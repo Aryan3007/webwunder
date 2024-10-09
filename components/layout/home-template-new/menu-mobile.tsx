@@ -86,7 +86,7 @@ export default function SidebarMenu() {
             <div className="flex cursor-pointer p-0 pe-0 lg:hidden">
                 <div className="flex items-center justify-center">
                     <div className="rounded-lg flex ">
-                        <div className='flex  scale-75 justify-center'>
+                        <div className='flex translate-x-4 scale-50 justify-center'>
                             <LanguageToggle
                                 language={changeLanguage}
                                 onToggle={handleLanguageChange}
