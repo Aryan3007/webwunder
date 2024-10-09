@@ -9,7 +9,15 @@ import Link from 'next/link'
 import { languageData } from '@/langauge'
 import Logo from '@/public/assets/webwunder-logo.png'
 import { paths } from '@/paths'
-
+import {
+    Select,
+    SelectContent,
+    SelectLabel,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select'
 
 
 const paymentMethods = [
@@ -35,6 +43,18 @@ const Footer = () => {
         }
     }, [])
 
+
+    const handleLanguageChange = (value: string) => {
+        const newLang = value === 'german' ? 'de' : 'en'
+        setChangeLanguage(newLang)
+        localStorage.setItem('lang', newLang)
+        location.reload()
+    }
+
+    const getLanguageIcon = (lang: 'de' | 'en') => {
+        return lang === 'de' ? '/images/germany.png' : '/images/united-kingdom.png'
+    }
+
     const changeData = languageData?.footerSections?.[changeLanguage]
     return (
         <footer className="bg-black px-2 py-6 lg:px-20 lg:pb-8 2xl:pl-0 2xl:pr-36">
@@ -59,7 +79,7 @@ const Footer = () => {
                         <div className="mb-8 grid grid-cols-8 place-items-center gap-4">
                             {paymentMethods.map((item, index) => (
                                 <Image
-                            
+
                                     key={index}
                                     src={item.image}
                                     alt="Payment"
@@ -78,7 +98,7 @@ const Footer = () => {
                                     <Link href={`mailto: info@webwunder.de`}>
                                         {changeData?.links?.writeEmail} |
                                     </Link>
-                                   
+
                                     <Link href={paths.pages.bookCall.href}>
                                         {changeData?.links?.bookCall} |
                                     </Link>
@@ -160,6 +180,29 @@ const Footer = () => {
                                     {changeData?.links?.imprint}
                                 </Link>
                             </div>
+                            <div className='flex justify-center items-center scale-75'>
+
+                                <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                    <SelectTrigger className="w-fit rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
+                                        <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
+                                        <p className='text-white'>{changeLanguage === 'de' ? 'Deutsch' : 'English'}</p>
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectGroup className="flex flex-row justify-around">
+                                            <SelectItem value="english" className="flex items-center gap-2">
+                                                <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
+                                                <span>EN</span>
+                                            </SelectItem>
+                                            <SelectItem value="german" className="flex items-center gap-2">
+                                                <Image src="/images/germany.png" alt='German' width={25} height={25} />
+                                                <span>DE</span>
+                                            </SelectItem>
+                                        </SelectGroup>
+                                    </SelectContent>
+                                </Select>
+                            </div>
+                                    <div className='bg-zinc-700 h-[1px]' />
+
                             <p className="text-white/50">
                                 {changeData?.copyright1}{' '}
                                 <span className="text-[#5D59E1]">
@@ -181,7 +224,7 @@ const Footer = () => {
                                         alt="WebWunder Logo"
                                     />
                                 </Link>
-                                <p className="font-dm-sans text-[18px] font-normal text-gray-500 text-white/50 lg:w-60 lg:text-end">
+                                <p className="font-dm-sans text-[18px] font-normal text-gray-500 text-white/50 lg:w- lg:text-end">
                                     {changeData?.winningSupport}
                                     {/* winningSupport */}
                                 </p>
@@ -191,7 +234,7 @@ const Footer = () => {
                                 <div className="mt-3 grid grid-cols-4 place-items-center gap-5">
                                     {paymentMethods.map((item, index) => (
                                         <Image
-                                        className=''
+                                            className=''
                                             key={index}
                                             src={item.image}
                                             alt="Payment"
@@ -200,10 +243,33 @@ const Footer = () => {
                                         />
                                     ))}
                                 </div>
+                                <div className='translate-y-6'>
+
+                                    <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                        <SelectTrigger className="w-24 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
+                                            <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
+                                            <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup className="flex flex-row justify-around">
+                                                <SelectItem value="english" className="flex items-center gap-2">
+                                                    <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
+                                                    <span>EN</span>
+                                                </SelectItem>
+                                                <SelectItem value="german" className="flex items-center gap-2">
+                                                    <Image src="/images/germany.png" alt='German' width={25} height={25} />
+                                                    <span>DE</span>
+                                                </SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+
+
                             </div>
                             <div className="row-span-2 lg:min-w-max">
                                 <h1 className='h-6'></h1>
-                               
+
                                 <div className="mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
                                         target="_blank"
@@ -260,26 +326,26 @@ const Footer = () => {
                                 <h1 className='h-6'></h1>
                                 <div className=" mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
-                                        
+
                                         href="#faqs"
                                     >
                                         {changeData?.links?.faqs}
                                     </a>
                                     <a
-                                        
+
                                         href="#contact-us"
                                     >
                                         {changeData?.links?.contact}
                                     </a>
                                     <Link
                                         href="/signup"
-                                       
+
                                     >
                                         {changeData?.links?.signUp}
                                     </Link>
-                                     <Link
+                                    <Link
                                         href="/login"
-                                        
+
                                     >
                                         {changeData?.links?.signIn}
                                     </Link>
@@ -315,7 +381,7 @@ const Footer = () => {
                                     >
                                         {changeData?.links?.writeEmail}
                                     </Link>
-                                   
+
                                     <Link
                                         target="_blank"
                                         href={paths.pages.bookCall.href}

@@ -84,18 +84,18 @@ const Home_new = () => {
 
 
         // Animate each letter into view
-        gsap.to(text, {
-            y: 250,
+        // gsap.to(text, {
+        //     y: 160,
             
-            ease: 'power2.out',
-            scrollTrigger: {
-                trigger: laptop, // The container for the text
-                start: 'top 70%', // Start when the top of the container reaches 75% of the viewport
-                end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
-                scrub: 2, // Smooth scrubbing
-                // markers: true, // Enable markers for debugging (optional)
-            },
-        });
+        //     ease: 'power2.out',
+        //     scrollTrigger: {
+        //         trigger: laptop, // The container for the text
+        //         start: 'top 70%', // Start when the top of the container reaches 75% of the viewport
+        //         end: 'bottom 20%', // End when the bottom of the container reaches 25% of the viewport
+        //         scrub: 2, // Smooth scrubbing
+        //         // markers: true, // Enable markers for debugging (optional)
+        //     },
+        // });
 
 
     }, []);

@@ -277,9 +277,9 @@ export const languageData = {
                         'Gewinnen Sie effizient mehr qualifizierte Leads und sparen Sie wertvolle Zeit mit unseren cleveren Strategien.',
                 },
                 {
-                    title: 'Individuelle Marketingunterstützung',
+                    title: 'Gezielte Marketingunterstützung',
                     description:
-                        'Steigern Sie Markenbekanntheit und Wachstum mit maßgeschneiderten Marketinglösungen für Ihr Unternehmen.',
+                        '  Steigern Sie Markenbekanntheit und Wachstum mit maßgeschneiderten Marketinglösungen.',
                 },
                 // {
                 //     // title: 'Results-Driven Web Designs',
@@ -1096,7 +1096,7 @@ export const languageData = {
                                 'SEO',
                                 'Social Media',
                             ],
-                            title: 'Skylumina Website',
+                            title: 'Skylumina',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1106,7 +1106,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'LeapX Website',
+                            title: 'LeapX ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1116,7 +1116,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Rentstate Website',
+                            title: 'Rentstate ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1128,7 +1128,7 @@ export const languageData = {
                                 'SEO',
                                 'Social Media',
                             ],
-                            title: 'Praxis Kattan Website',
+                            title: 'Praxis Kattan ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1138,7 +1138,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Fitflex Website',
+                            title: 'Fitflex ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1148,7 +1148,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Fitflex Website',
+                            title: 'Fitflex ',
                             cta: 'Projekt ansehen',
                         },
                     ],
@@ -1163,7 +1163,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'Monina Branding',
+                            title: 'Monina ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1173,7 +1173,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'Skylumina Branding',
+                            title: 'Skylumina ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1183,7 +1183,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'T-Vent Branding',
+                            title: 'T-Vent ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1193,7 +1193,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'Praxis Kattan Branding',
+                            title: 'Praxis Kattan ',
                             cta: 'Projekt ansehen',
                         },
                     ],
@@ -1230,7 +1230,7 @@ export const languageData = {
                                 'SEO',
                                 'Social Media',
                             ],
-                            title: 'Skylumina Website',
+                            title: 'Skylumina',
                             cta: 'View Project',
                         },
                         {
@@ -1240,7 +1240,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'LeapX Website',
+                            title: 'LeapX',
                             cta: 'View Project',
                         },
                         {
@@ -1250,7 +1250,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Rentstate Website',
+                            title: 'Rentstate ',
                             cta: 'View Project',
                         },
                         {
@@ -1262,7 +1262,7 @@ export const languageData = {
                                 'SEO',
                                 'Social Media',
                             ],
-                            title: 'Praxis Kattan Website',
+                            title: 'Praxis Kattan ',
                             cta: 'View Project',
                         },
                         {
@@ -1272,7 +1272,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Fitsync Website',
+                            title: 'Fitsync ',
                             cta: 'View Project',
                         },
                         {
@@ -1282,7 +1282,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Fitflex Website',
+                            title: 'Fitflex ',
                             cta: 'Projekt ansehen',
                         },
                     ],
@@ -1297,7 +1297,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'Monina Branding',
+                            title: 'Monina',
                             cta: 'View Project',
                         },
                         {
@@ -1307,7 +1307,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'Skylumina Branding',
+                            title: 'Skylumina',
                             cta: 'View Project',
                         },
                         {
@@ -1317,7 +1317,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'T-Vent Branding',
+                            title: 'T-Vent',
                             cta: 'View Project',
                         },
                         {
@@ -1327,7 +1327,7 @@ export const languageData = {
                                 'Slide Decks',
                                 'Brochures',
                             ],
-                            title: 'Praxis Kattan Branding',
+                            title: 'Praxis Kattan',
                             cta: 'View Project',
                         },
                     ],

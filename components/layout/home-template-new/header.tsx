@@ -77,13 +77,15 @@ export default function Header() {
     }, []);
 
     const handleLanguageChange = (value: string) => {
-        const newLang = value === 'german' ? 'de' : 'en';
-        setChangeLanguage(newLang);
-        localStorage.setItem('lang', newLang);
-        location.reload();
-    };
+        const newLang = value === 'german' ? 'de' : 'en'
+        setChangeLanguage(newLang)
+        localStorage.setItem('lang', newLang)
+        location.reload()
+    }
 
-
+    const getLanguageIcon = (lang: 'de' | 'en') => {
+        return lang === 'de' ? '/images/germany.png' : '/images/united-kingdom.png'
+    }
 
     return (
         <>
@@ -111,8 +113,8 @@ export default function Header() {
                             </div>
 
                             <div className='flex gap-2 items-center min-w-96'>
-                                {/* <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
-                                    <SelectTrigger className="w-28 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
+                                <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                    <SelectTrigger className="w-24 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
                                         <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
                                         <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
                                     </SelectTrigger>
@@ -128,11 +130,11 @@ export default function Header() {
                                             </SelectItem>
                                         </SelectGroup>
                                     </SelectContent>
-                                </Select> */}
-                                <LanguageToggle
+                                </Select>
+                                {/* <LanguageToggle
                                     language={changeLanguage}
                                     onToggle={handleLanguageChange}
-                                />
+                                /> */}
                                 {process.env.NEXT_PUBLIC_DISABLE_SIGNUP !== 'true' && (
                                     <>
                                         <Button

@@ -13,6 +13,7 @@ interface TagProps {
 interface PortfolioProps {
     width: string
     img: string
+    links: string
     bgColor?: string
     tags?: TagProps[]
     title?: string
@@ -27,6 +28,7 @@ const ContentCard: React.FC<PortfolioProps> = ({
     width,
     img,
     bgColor,
+    links,
     tags,
     title,
     project,
@@ -48,7 +50,7 @@ const ContentCard: React.FC<PortfolioProps> = ({
                 <div className={`absolute  inset-0 z-10 ${bgGradient}`} />
             )}
             <div
-                className={`absolute inset-0 imagesss flex w-full items-end ${bgProps}`}
+                className={`absolute inset-0 flex w-full items-end ${bgProps}`}
                 style={{ backgroundImage: `url(${img})` }}
             />
             <div className="absolute bottom-0 flex flex-col items-start gap-3 p-10">
@@ -67,18 +69,21 @@ const ContentCard: React.FC<PortfolioProps> = ({
                     {title}
                 </p>
                 {isBtnVisible && (
-                    <button className="z-20 flex w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2">
-                        <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
-                            View Project
-                        </p>
-                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white lg:h-8 lg:w-8">
-                            <ArrowRight
-                                size={18}
-                                fontWeight={100}
-                                className="text-[#24252A]"
-                            />
-                        </div>
-                    </button>
+                    <Link href={links} className="z-20">
+
+                        <button className="z-20 flex w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2">
+                            <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
+                                View Project
+                            </p>
+                            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white lg:h-8 lg:w-8">
+                                <ArrowRight
+                                    size={18}
+                                    fontWeight={100}
+                                    className="text-[#24252A]"
+                                />
+                            </div>
+                        </button>
+                    </Link>
                 )}
             </div>
             {/* </div> */}

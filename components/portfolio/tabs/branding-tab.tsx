@@ -18,6 +18,7 @@ const BrandingTab = () => {
         {
             width: 'lg:w-[35rem] xl:w-[40rem] w-full',
             img: '/images/portfolio/branding/monina.png',
+            links:"https://www.figma.com/proto/RYJntVicd98O2KhtCVqz7c/Monina?page-id=0%3A1&node-id=1-351&node-type=canvas&viewport=718%2C527%2C0.11&t=1wx3GJinbv4mPxC8-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A351",
             bgColor: '#E92A79',
             tags: [
                 {
@@ -55,6 +56,7 @@ const BrandingTab = () => {
             width: 'lg:w-[30rem] xl:w-[35rem] w-full',
             img: '/images/portfolio/branding/skylumina.png',
             bgColor: '#5B57DB',
+            links:"https://www.figma.com/proto/Kn42TIHrdWiLrxHbtEMXl4/Skylumina-Branding?page-id=0%3A1&node-id=1-3&node-type=frame&viewport=690%2C902%2C0.31&t=tAZ42HdM5cxPr4a8-1&scaling=contain&content-scaling=fixed&starting-point-node-id=1%3A255",
             tags: [
                 {
                     tagName:
@@ -91,6 +93,7 @@ const BrandingTab = () => {
             width: 'lg:w-[30rem] xl:w-[35rem] w-full',
             img: '/images/portfolio/branding/t-vent.png',
             bgColor: '#4359F0',
+            links:"https://www.figma.com/proto/j6WzkYJUmxO6ZJL7p7ojaZ/TVent?page-id=0%3A1&node-id=66-293&node-type=canvas&viewport=265%2C151%2C0.13&t=1YtQZkiyNtJMVXZt-1&scaling=contain&content-scaling=fixed&starting-point-node-id=66%3A293",
             tags: [
                 {
                     tagName:
@@ -127,6 +130,7 @@ const BrandingTab = () => {
             width: 'lg:w-[35rem] xl:w-[40rem] w-full',
             img: '/images/portfolio/branding/praxis-kattan.png',
             bgColor: '#04C472',
+            links:"https://www.figma.com/proto/j6WzkYJUmxO6ZJL7p7ojaZ/TVent?page-id=0%3A1&node-id=66-293&node-type=canvas&viewport=265%2C151%2C0.13&t=1YtQZkiyNtJMVXZt-1&scaling=contain&content-scaling=fixed&starting-point-node-id=66%3A293 ",
             tags: [
                 {
                     tagName:
@@ -166,6 +170,7 @@ const BrandingTab = () => {
                 <ContentCard
                     key={index}
                     width={item.width}
+                    links={item.links}
                     img={item.img}
                     bgColor={item.bgColor}
                     tags={item.tags}

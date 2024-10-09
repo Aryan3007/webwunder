@@ -86,12 +86,34 @@ export default function SidebarMenu() {
             <div className="flex cursor-pointer p-0 pe-0 lg:hidden">
                 <div className="flex items-center justify-center">
                     <div className="rounded-lg flex ">
-                        <div className='flex translate-x-4 scale-50 justify-center'>
+                        {/* <div className='flex translate-x-4 scale-50 justify-center'>
                             <LanguageToggle
                                 language={changeLanguage}
                                 onToggle={handleLanguageChange}
                             />
-                        </div>
+                        </div> */}
+
+                        <div className='scale-75 translate-x-'>
+
+                        <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                    <SelectTrigger className="w-24 rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
+                                        <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
+                                        <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectGroup className="flex flex-row justify-around">
+                                            <SelectItem value="english" className="flex items-center gap-2">
+                                                <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
+                                                <span>EN</span>
+                                            </SelectItem>
+                                            <SelectItem value="german" className="flex items-center gap-2">
+                                                <Image src="/images/germany.png" alt='German' width={25} height={25} />
+                                                <span>DE</span>
+                                            </SelectItem>
+                                        </SelectGroup>
+                                    </SelectContent>
+                                </Select>
+                                </div>
                         <Image
                             onClick={openMenu}
                             className="w-5"
