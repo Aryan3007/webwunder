@@ -25,7 +25,7 @@ import {
     SelectValue,
 } from '@/components/ui/select'
 import Image from 'next/image'
-import LanguageToggle from '@/components/LanguageToggle'
+import LanguageToggle from '@/components/CustomLanguageDropdown'
 export default function Header() {
     const viewHolder = useRef(null)
     const init = useRef(false)

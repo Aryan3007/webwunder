@@ -69,7 +69,7 @@ const ContentCard: React.FC<PortfolioProps> = ({
                     {title}
                 </p>
                 {isBtnVisible && (
-                    <Link href={links} className="z-20">
+                    <Link href={links} target='_blank' className="z-20">
 
                         <button className="z-20 flex w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2">
                             <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">

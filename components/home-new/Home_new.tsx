@@ -12,6 +12,9 @@ import Logo from '../common/logo'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import New_Header from '../layout/home-template-new/New_Header'
+import MobileMenu from '../layout/home-template-new/MobileMenu'
+import MenuComponent from '../layout/home-template-new/MenuComponent'
 const Home_new = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
 
@@ -86,7 +89,7 @@ const Home_new = () => {
         // Animate each letter into view
         // gsap.to(text, {
         //     y: 160,
-            
+
         //     ease: 'power2.out',
         //     scrollTrigger: {
         //         trigger: laptop, // The container for the text
@@ -166,28 +169,28 @@ const Home_new = () => {
 
     }, []);
 
+
+
     return (
         <>
             <div id='home' className=" lg:h-full  h-full lg:bg-white lg:p-5">
                 <div className="relative bg-fixed sm:min-h-[480px] h-[100%] overflow-hidden bg-[url('/images/home/home-landing-img.png')] bg-cover bg-center lg:rounded-2xl">
- 
+
                     {/* Header */}
 
-                    <div className='lg:flex hidden'>
-                        <Header />
+                    {/* <div className='menu fixed hidden lg:flex items-center justify-center bottom-2 w-full z-[99]'>
+                        <New_Header />
                     </div>
 
-                    <div className='lg:hidden w-full justify-between items-center p-4 flex'>
-                        <Logo />
-                        <SidebarMenu />
-                    </div>
+                    <div className='lg:hidden fixed bottom-5 z-[99] w-full justify-between items-center px-6 flex'>
+                        <MobileMenu />
+                    </div> */}
 
-
-          
+                    <MenuComponent />
 
                     {/* Text Content */}
 
-                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-32 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
@@ -215,8 +218,8 @@ const Home_new = () => {
 
 
                         </p>
-                    </div>  
-                    
+                    </div>
+
                     <div className="mx-auto text2 flex lg:hidden max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}

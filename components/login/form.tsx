@@ -9,6 +9,7 @@ import Header from '../layout/home-template-new/header'
 import { LoginForm } from './form/fields'
 import { languageData } from '@/langauge'
 import axios from 'axios'
+import CustomLanguageDropdown from '../CustomLanguageDropdown'
 
 export default function LoginPage() {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -104,173 +105,149 @@ export default function LoginPage() {
     ]
 
     return (
-        <div className="flex min-h-screen flex-col overflow-hidden  bg-black lg:flex-row">
-            <div className="block md:hidden">
-                <Header />
-            </div>
-            {/* Left side with carousel */}
-            <div className="relative h-[50vh] rounded-3xl w-full overflow-hidden lg:ml-4 lg:mt-4 lg:h-[91vh] lg:w-[60%]">
-                <div className="absolute  inset-0">
-                    {slides.map((slide, index) => (
-                        <div
-                            key={index}
-                            className={`absolute inset-0 transition-transform duration-500 ease-in-out ${getSlideClass(index)}`}
-                        >
-                            {/* Wrap the Image in a div with padding */}
-                            <div className="h-full w-full rounded-3xl">
-                                <Link href="/">
-                                    <Image
-                                        className="rounded-3xl p-4 lg:p-0"
-                                        src={slide.image}
-                                        alt={`Slide ${index + 1}`}
-                                        fill
-                                    />
-                                </Link>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="absolute left-4 top-4 z-10 hidden cursor-pointer px-6 py-8 lg:block">
-                    <Link href={'/'}>
-                    <Image src="./images/logo.svg"
-                
-                alt="WebWunder Logo"
-                width="225"
-                height="17" />
+        <div className="p-4 min-h-screen overflow-hidden">
+            <div style={{ backgroundImage: "url('/signupbg.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }} className='flex rounded-2xl  flex-col   bg-black lg:flex-col'>
+
+
+                <div className="p-4 z-40 w-full flex  items-center justify-between">
+                    <Link href={`/`}>
+                        <Image src="./images/logo.svg"
+
+                            alt="WebWunder Logo"
+                            width="225"
+                            height="17" />
                     </Link>
+
+                    <CustomLanguageDropdown />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 z-10 space-y-3 bg-gradient-to-t from-black to-transparent p-6 px-10 text-white">
-                    <h1 className="text-xl font-bold leading-none md:text-2xl lg:text-3xl xl:text-2xl">
-                        {slides[currentSlide].title}
-                    </h1>
-                    <p className="text-sm text-white/70 lg:w-4/5 xl:text-base">
-                        {slides[currentSlide].description}
-                    </p>
-                    <div className="flex items-center justify-between pt-2">
-                        <div className="flex space-x-2 text-sm">
-                            <span className="text-white/40">
-                                {currentSlide + 1}
-                            </span>
-                            <span className="text-white">of</span>
-                            <span className="text-white">{slides.length}</span>
+                {/* Left side with carousel */}
+
+
+                {/* Right side with form */}
+                <div className={`m-auto  lg:w-[40%] lg:h-[91vh] flex flex-col ${scale} items-center justify-center px-3 py-8 bg-cover bg-center`}
+                    
+
+
+                >
+                    <div className="z-10 w-full max-w-lg lg:space-y-4 space-y-10 lg:min-w-[30rem]">
+                        <div className={`space-y-2 lg:ml-0 mx-auto text-center ${changeLanguage === 'de' ? 'ml-8' : 'ml-0'}`}>
+                            <h2 className={`font-archivo text-center leading-none text-[45px] lg:w-full ${changeLanguage === 'de' ? 'w-3/4' : 'w-full'} font-bold text-white`}>
+                                {
+                                    languageData?.loginPage?.[changeLanguage]
+                                        ?.welcomeBack
+                                }
+                            </h2>
+                            <p className="font-archivo  text-center text-base font-normal text-white">
+                                {languageData?.loginPage?.[changeLanguage]?.newTo}{' '}
+                                <Link href="/signup" className="text-[#5D59E1]">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.signUp
+                                    }{' '}
+                                </Link>
+                            </p>
                         </div>
-                        <div className="flex space-x-2">
-                            <button
-                                onClick={prevSlide}
-                                className="rounded-full border border-white/40 bg-transparent p-2 text-white hover:bg-white/20"
-                            >
-                                <ArrowLeft size={16} />
-                            </button>
-                            <button
-                                onClick={nextSlide}
-                                className="rounded-full border border-white bg-transparent p-2 text-white hover:bg-white/20"
-                            >
-                                <ArrowRight size={16} />
-                            </button>
+
+                        <LoginForm />
+
+                        <div className="text-center">
+                            <p className="mb-4 font-archivo text-base font-normal text-white">
+                                {
+                                    languageData?.loginPage?.[changeLanguage]
+                                        ?.orSignInwith
+                                }{' '}
+                            </p>
+                           
                         </div>
-                    </div>
-                </div>
-            </div>
 
-            {/* Right side with form */}
-            <div className={`m-auto  lg:w-[40%] lg:h-[91vh] flex flex-col ${scale} items-center justify-center px-3 py-8 bg-cover bg-center`}
-               style={{ backgroundImage: "url('/images/login-bg-main.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                        <div className='flex text-zinc-500 flex-col gap-3'>
+                                <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-            
-             >
-                <div className="z-10 w-full max-w-lg lg:space-y-4 space-y-10 lg:min-w-[30rem]">
-                    <div className={`space-y-2 lg:ml-0 mx-auto lg:text-left ${changeLanguage === 'de' ? 'ml-8' : 'ml-0'}`}>
-                        <h2 className={`font-archivo lg:text-start text-center leading-none text-[45px] lg:w-full ${changeLanguage === 'de' ? 'w-3/4' : 'w-full'} font-bold text-white`}>
-                            {
-                                languageData?.loginPage?.[changeLanguage]
-                                    ?.welcomeBack
-                            }
-                        </h2>
-                        <p className="font-archivo lg:text-start text-center text-base font-normal text-white">
-                            {languageData?.loginPage?.[changeLanguage]?.newTo}{' '}
-                            <Link href="/signup" className="text-[#5D59E1]">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.signUp
-                                }{' '}
-                            </Link>
-                        </p>
-                    </div>
+                                    <Image src="/google.svg" alt="Logo" width={25} height={25} />
+                                    <button className='capitalize'>
+                                    {languageData?.logintypes?.[changeLanguage]?.google}
+                                    </button>
+                                </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                    <LoginForm />
+                                    <Image src="/window.svg" alt="Logo" width={25} height={25} />
+                                    <button className='capitalize'>
+                                    {languageData?.logintypes?.[changeLanguage]?.microsoft}
+                                    </button>
+                                </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                    <div className="text-center">
-                        <p className="mb-4 font-archivo text-base font-normal text-white">
-                            {
-                                languageData?.loginPage?.[changeLanguage]
-                                    ?.orSignInwith
-                            }{' '}
-                        </p>
-                        <Socials />
-                    </div>
+                                    <Image src="/apple.svg" alt="Logo" width={25} height={25} />
+                                    <button className='capitalize'>
+                                    {languageData?.logintypes?.[changeLanguage]?.apple}
+                                    </button>
+                                </div>
 
-                    <div className="space-y-16 text-center text-xs text-white/70">
-                        <div className="flex flex-wrap justify-center space-x-4 font-archivo text-sm font-normal text-white">
-                            <a
-                                href="/privacy-policy"
-                                className="hover:text-white"
-                            >
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.privacyPolicy
-                                }{' '}
-                            </a>
-                            <a href="/terms" className="hover:text-white">
-                                {/* Terms & Conditions */}
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.termsConditions
-                                }{' '}
-                            </a>
-                            <a href="/imprint" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.imprint
-                                }{' '}
-                            </a>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-4 font-inter text-sm font-normal text-white">
-                            <a href="#" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.navLinks[0]
-                                }{' '}
-                            </a>
-                            <a href="#" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.navLinks[1]
-                                }{' '}
-                            </a>
-                            <a href="#" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.navLinks[2]
-                                }{' '}
-                            </a>
-                            <a href="#" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.navLinks[3]
-                                }{' '}
-                            </a>
-                            <a href="#" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.navLinks[4]
-                                }{' '}
-                            </a>
-                            <a href="#" className="hover:text-white">
-                                {
-                                    languageData?.loginPage?.[changeLanguage]
-                                        ?.navLinks[5]
-                                }{' '}
-                            </a>
+                            </div>
+
+
+
+                        <div className="space-y-16 text-center text-xs text-white/70">
+                            <div className="flex flex-wrap justify-center space-x-4 font-archivo text-sm font-normal text-white">
+                                <a
+                                    href="/privacy-policy"
+                                    className="hover:text-white"
+                                >
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.privacyPolicy
+                                    }{' '}
+                                </a>
+                                <a href="/terms" className="hover:text-white">
+                                    {/* Terms & Conditions */}
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.termsConditions
+                                    }{' '}
+                                </a>
+                                <a href="/imprint" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.imprint
+                                    }{' '}
+                                </a>
+                            </div>
+                            <div className="flex flex-wrap justify-center gap-4 font-inter text-sm font-normal text-white">
+                                <a href="#" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.navLinks[0]
+                                    }{' '}
+                                </a>
+                                <a href="#" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.navLinks[1]
+                                    }{' '}
+                                </a>
+                                <a href="#" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.navLinks[2]
+                                    }{' '}
+                                </a>
+                                <a href="#" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.navLinks[3]
+                                    }{' '}
+                                </a>
+                                <a href="#" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.navLinks[4]
+                                    }{' '}
+                                </a>
+                                <a href="#" className="hover:text-white">
+                                    {
+                                        languageData?.loginPage?.[changeLanguage]
+                                            ?.navLinks[5]
+                                    }{' '}
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

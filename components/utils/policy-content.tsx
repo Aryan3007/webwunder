@@ -3,9 +3,11 @@ import Header from '../layout/home-template-new/header'
 import Footer from '../layout/home-template-new/footer'
 import { Badge } from '../ui/badge'
 import { Button } from '../ui/button'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import { languageData } from '@/langauge'
+import SidebarMenu from '../layout/home-template-new/menu-mobile'
+import Logo from '../common/logo'
 
 interface PolicyProps {
     title: string
@@ -30,20 +32,41 @@ const PolicyContent: React.FC<PolicyProps> = ({
     }, [])
     return (
         <div className="bg-gradient-to-br from-[#100013] via-0% to-[#000000] lg:p-6">
-            <div className="relative h-[65vh] overflow-hidden rounded-t-lg bg-black">
-                <div className="absolute inset-0 bg-[url('/images/main-hero-small.png')] bg-cover bg-center lg:bg-[url('/images/imprintnew.png')]"></div>
-                <div className="relative z-10">
+            <div className="relative h-[75vh] lg:h-[70vh] overflow-hidden rounded-t-lg bg-black">
+
+
+
+
+                <div className='lg:flex hidden'>
                     <Header />
                 </div>
-                <div className="relative z-10 flex h-full flex-col items-center justify-center">
-                    <div className="mb-80 flex flex-col items-center justify-center text-center lg:mb-40">
-                        <div className="xl:text[80px] max-w-[38.1rem] text-center font-archivo text-[25px] font-bold text-white">
-                            {title}
+
+                <div className=' z-[99] w-full justify-between items-center p-4 flex'>
+                    <Logo />
+                    <SidebarMenu />
+                </div>
+
+
+
+                <div className="absolute inset-0 h-full flex justify-center items-center bg-[url('/images/main-hero-small.png')] bg-cover bg-center lg:bg-[url('/images/imprintnew.png')]">
+
+
+                    <div>
+                        <h1 className="lg:text-[40px] text-center font-archivo text-[20px] font-bold text-white">
+                            Terms and Conditions (AGB) of <br />Skylumina GmbH, Trading as WebWunder
+                        </h1>
+                        <div className='flex justify-center items-center gap-2'>
+                            <h1 className='text-[16px] text-white'>Home</h1>
+                            <ChevronRight className='text-white text-sm' />
+                            <h1 className='text-[16px] text-[#5D59E1]'>Terms and Conditions</h1>
                         </div>
 
-                        {breadcrumb}
+
                     </div>
                 </div>
+
+
+
             </div>
             <div className="rounded-b-lg bg-gradient-to-r from-[#858585]/40 via-[#858585]/20 to-[#858585]/60 text-white">
                 {content}

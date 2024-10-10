@@ -149,7 +149,7 @@ export const SignupForm = () => {
             <button
                 disabled={formState.isSubmitting}
                 type="submit"
-                className="w-full rounded-full bg-[#5D59E1] py-3 font-archivo text-base font-normal text-white transition duration-300 hover:bg-[#4a47d1]"
+                className="w-full rounded-lg bg-[#5D59E1] py-3 font-archivo text-base font-normal text-white hover:bg-[#4a47d1] hover:scale-95 transition-all duration-100"
             >
                 <div className="flex items-center justify-center">
                     {languageData?.signupPage?.[changeLanguage]?.signUpButton}

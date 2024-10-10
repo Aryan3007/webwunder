@@ -174,7 +174,7 @@ export const LoginForm = () => {
             <button
                 disabled={formState.isSubmitting || isRedirecting}
                 type="submit"
-                className="w-full rounded-full bg-[#5D59E1] py-3 font-archivo text-base font-normal text-white transition duration-300 hover:bg-[#4a47d1]"
+                className="w-full rounded-lg hover:scale-95  bg-[#5D59E1] py-3 font-archivo text-base font-normal text-white transition duration-300 hover:bg-[#4a47d1]"
             >
                 {languageData?.loginPage?.[changeLanguage]?.loginButton}
             </button>

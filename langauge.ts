@@ -32,8 +32,8 @@ export const languageData = {
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Kontakt',
-            login: 'Einloggen',
-            signup: 'Anmelden',
+            bookcall:'Jetzt 15-min call buchen!'
+
         },
         en: {
             benefits: 'Benefits',
@@ -42,8 +42,7 @@ export const languageData = {
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Contact',
-            login: 'Log in',
-            signup: 'Sign up',
+            bookcall:'Book a 15-min call now!'
         },
     },
     mobNavFooter: {
@@ -1009,6 +1008,18 @@ export const languageData = {
             ],
         },
     },
+    logintypes:{
+de:{
+    google:"weiter mit Google",
+    microsoft:"weiter mit Microsoft Account",
+    apple:"weiter mit Apple",
+},
+en:{
+    google:"Continue with Google",
+    microsoft:"Continue with Microsoft Account",
+    apple:"Continue with Apple",
+}
+    },
     signupPage: {
         de: {
             title: 'Ihre Website in drei einfachen Schritten',
@@ -1106,7 +1117,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'LeapX ',
+                            title: 'Wladimir Magic ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1116,7 +1127,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Rentstate ',
+                            title: 'ClownWowa ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1138,7 +1149,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Fitflex ',
+                            title: 'Fitsync ',
                             cta: 'Projekt ansehen',
                         },
                         {
@@ -1240,7 +1251,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'LeapX',
+                            title: 'Wladimir Magic ',
                             cta: 'View Project',
                         },
                         {
@@ -1250,7 +1261,7 @@ export const languageData = {
                                 'Graphic Design',
                                 'Web Development',
                             ],
-                            title: 'Rentstate ',
+                            title: 'ClownWowa ',
                             cta: 'View Project',
                         },
                         {

@@ -21,14 +21,14 @@ const PortfolioLanding = () => {
     return (
         <div className="bg-white  lg:p-4">
             <div className="bg-[url('/images/portfolio/portfolio-bg.png')] bg-center bg-cover lg:rounded-2xl lg:p-0">
-            <div className='lg:flex hidden'>
-                        <Header />
-                    </div>
+                <div className='lg:flex hidden'>
+                    <Header />
+                </div>
 
-                    <div className='lg:hidden w-full justify-between items-center p-4 flex'>
-                        <Logo />
-                        <SidebarMenu />
-                    </div>
+                <div className='lg:hidden w-full justify-between items-center p-4 flex'>
+                    <Logo />
+                    <SidebarMenu />
+                </div>
                 <div className="mx-auto lg:pt-16 flex max-w-6xl flex-col items-center justify-center gap-4 p-4 pt-4">
                     <Badge
                         data-aos="fade-up"
