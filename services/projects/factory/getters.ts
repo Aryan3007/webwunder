@@ -1,7 +1,7 @@
 import { SupabaseClient } from '@supabase/supabase-js'
 
 export function allProjectsFactory(
-    supabase: SupabaseClient<Database, 'public', Database['public']>,
+    supabase: SupabaseClient<Database, 'public'>,
 ) {
     return async () => {
         const { data, error } = await supabase
@@ -14,7 +14,7 @@ export function allProjectsFactory(
 }
 
 export function myProjectsFactory(
-    supabase: SupabaseClient<Database, 'public', Database['public']>,
+    supabase: SupabaseClient<Database, 'public'>,
 ) {
     return async () => {
         const { data, error } = await supabase
@@ -27,7 +27,7 @@ export function myProjectsFactory(
 }
 
 export function myProjectFactory(
-    supabase: SupabaseClient<Database, 'public', Database['public']>,
+    supabase: SupabaseClient<Database, 'public'>,
 ) {
     return async (packageId: string) => {
         const { data, error } = await supabase
