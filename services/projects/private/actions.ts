@@ -3,7 +3,7 @@ import { formatDate } from '@/lib/utils'
 import { type SupabaseClient } from '@supabase/supabase-js'
 
 const getProjectFromDB = async (
-    supabase: SupabaseClient<Database, 'public', Database['public']>,
+    supabase: SupabaseClient<Database, 'public'>,
     payload: ProjectDetails,
 ) => {
     return await supabase
@@ -15,7 +15,7 @@ const getProjectFromDB = async (
 }
 
 const insertProjectToDB = async (
-    supabase: SupabaseClient<Database, 'public', Database['public']>,
+    supabase: SupabaseClient<Database, 'public'>,
     payload: ProjectDetails,
     paymentStatus: Database['public']['Enums']['payment_status'],
 ) => {
@@ -40,7 +40,7 @@ const insertProjectToDB = async (
 }
 
 const upsertProjectToDB = async (
-    supabase: SupabaseClient<Database, 'public', Database['public']>,
+    supabase: SupabaseClient<Database, 'public'>,
     payload: ProjectDetails,
     paymentStatus: Database['public']['Enums']['payment_status'],
 ) => {
