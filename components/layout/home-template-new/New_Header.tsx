@@ -25,7 +25,7 @@ const New_Header: React.FC = () => {
             <div className="flex items-center">
                 <Link href="/" passHref>
                     <Image
-                        src="/logo.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+                        src="./logo.svg" // Replace this with the correct logo path (or import your image from the file if needed)
                         alt="WebWunder Logo"
                         width={30}
                         height={30}
