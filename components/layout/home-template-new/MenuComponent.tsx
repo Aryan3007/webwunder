@@ -28,7 +28,7 @@ const MenuComponent: React.FC = () => {
     <>
       {/* Desktop menu */}
       <div
-        className={`menu hidden fixed md:flex items-center justify-center bottom-2 w-full z-[99] transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
+        className={`menu hidden fixed lg:flex items-center justify-center bottom-2 w-full z-[99] transition-opacity duration-300 ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
       >
         <New_Header />
       </div>

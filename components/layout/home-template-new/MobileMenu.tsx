@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import CustomLanguageDropdown2 from '@/components/CustomLanguageDropdown2';
 import { languageData } from '@/langauge'
+import { ArrowRight } from 'lucide-react';
 
 
 // Animation variants for the menu opening
@@ -65,12 +66,16 @@ const MobileMenu: React.FC = () => {
                 </button>
 
                 {/* Booking Button */}
-                <Link href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-40 bg-white rounded-full text-xs   text-black px-3 py-2 ' passHref>
+                <Link href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-40 bg-white rounded-full text-[10px] md:w-56 text-black px-3 py-2 ' passHref>
                     <button className="text-left uppercase font-bold ml-2">
                     {languageData?.navItems?.[changeLanguage]?.bookcall}
                     </button>
                     <div className='h-6 w-6 flex justify-center items-center rounded-full '>
-                    <Image src="/images/vector.svg" alt="Logo" width={25} height={25} />
+                    <ArrowRight
+                                    size={18}
+                                    fontWeight={100}
+                                    className="text-[#24252A]"
+                                />
                     </div>
                 </Link>
 

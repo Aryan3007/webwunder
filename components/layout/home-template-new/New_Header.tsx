@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import CustomLanguageDropdown2 from '@/components/CustomLanguageDropdown2';
 import { languageData } from '@/langauge'
+import { ArrowRight } from 'lucide-react';
 
 const New_Header: React.FC = () => {
 
@@ -54,7 +55,11 @@ const New_Header: React.FC = () => {
                     {languageData?.navItems?.[changeLanguage]?.bookcall}
                     </button>
                     <div className='h-5 w-5 flex justify-center items-center rounded-full '>
-                        <Image src="/images/vector.svg" alt="Logo" width={25} height={25} />
+                    <ArrowRight
+                                    size={18}
+                                    fontWeight={100}
+                                    className="text-[#24252A]"
+                                />
                     </div>
                 </Link>
 
