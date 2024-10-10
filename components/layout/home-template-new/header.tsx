@@ -144,7 +144,7 @@ export default function Header() {
                                         >
                                             <Link href={paths.pages.login.href}>
                                                 <div className="font-inter text-sm">
-                                                    {languageData?.navItems?.[changeLanguage]?.login}
+                                                  
                                                 </div>
                                                 <CircleUserRound />
                                             </Link>
@@ -156,7 +156,7 @@ export default function Header() {
                                         >
                                             <Link href={paths.pages.login.href}>
                                                 <p className="font-inter text-sm">
-                                                    {languageData?.navItems?.[changeLanguage]?.signup}
+                                                    
                                                 </p>
                                                 <MoveUpRight className="text-gray-500" />
                                             </Link>
