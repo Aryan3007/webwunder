@@ -118,7 +118,10 @@ export default function LoginPage() {
                             height="17" />
                     </Link>
 
+<div className=' scale-75'>
+
                     <CustomLanguageDropdown />
+</div>
                 </div>
                 {/* Left side with carousel */}
 

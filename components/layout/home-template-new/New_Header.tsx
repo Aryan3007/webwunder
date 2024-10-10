@@ -54,7 +54,7 @@ const New_Header: React.FC = () => {
                     {languageData?.navItems?.[changeLanguage]?.bookcall}
                     </button>
                     <div className='h-5 w-5 flex justify-center items-center rounded-full '>
-                        <Image src="./vector.svg" alt="Logo" width={25} height={25} />
+                        <Image src="/images/vector.svg" alt="Logo" width={25} height={25} />
                     </div>
                 </Link>
 

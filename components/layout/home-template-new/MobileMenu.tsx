@@ -70,7 +70,7 @@ const MobileMenu: React.FC = () => {
                     {languageData?.navItems?.[changeLanguage]?.bookcall}
                     </button>
                     <div className='h-6 w-6 flex justify-center items-center rounded-full '>
-                        <Image src="./vector.svg" alt="Logo" width={30} height={30} />
+                    <Image src="/images/vector.svg" alt="Logo" width={25} height={25} />
                     </div>
                 </Link>
 

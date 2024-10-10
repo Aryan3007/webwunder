@@ -122,7 +122,10 @@ export default function SignupPage() {
                             height="17" />
                     </Link>
 
+<div className='scale-75'>
+
                     <CustomLanguageDropdown />
+</div>
                 </div>
                 {/* Left side with carousel */}
 
@@ -166,19 +169,19 @@ export default function SignupPage() {
                                 <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
                                     <Image src="/google.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize'>
+                                    <button className='capitalize text-left'>
                                     {languageData?.logintypes?.[changeLanguage]?.google}
                                     </button>
                                 </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
                                     <Image src="/window.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize'>
+                                    <button className='capitalize text-left'>
                                     {languageData?.logintypes?.[changeLanguage]?.microsoft}
                                     </button>
                                 </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
                                     <Image src="/apple.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize'>
+                                    <button className='capitalize text-left'>
                                     {languageData?.logintypes?.[changeLanguage]?.apple}
                                     </button>
                                 </div>
