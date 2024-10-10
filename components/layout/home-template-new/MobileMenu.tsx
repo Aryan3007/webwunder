@@ -78,9 +78,16 @@ const MobileMenu: React.FC = () => {
                 <CustomLanguageDropdown2/>
 
                 {/* Arrow Up Button */}
-                <button className="rounded-full bg-[#2a2a2a] w-10 h-10 flex items-center justify-center">
-                    <span className="text-white">↑</span>
-                </button>
+                <div className="flex items-center justify-center rounded-full p-3.5 bg-[#2a2a2a] w-10 h-10">
+                        <Link href="/login" passHref>
+                            <Image
+                                src="/arrowup.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+                                alt="WebWunder Logo"
+                                width={30}
+                                height={30}
+                            />
+                        </Link>
+                    </div>
 
             </div>
             {/* Menu - Animated Dropdown Opening Above */}

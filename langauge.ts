@@ -596,7 +596,7 @@ export const languageData = {
             cancelAnytime: 'Jederzeit kündbar',
             priceTag: 'pro Monat',
             booked: 'Derzeit ausgebucht',
-            booked2: 'melden Sie sich per E-Mail für die Warteliste an!',
+            booked2: 'Ausgebucht. Warteliste hier.',
             setupFeetag: 'Einrichtungsgebühr',
         },
         en: {
@@ -690,7 +690,7 @@ export const languageData = {
            priceTag: 'per month', 
             setupFeetag: 'Setup Fee',
             booked: 'Currently fully booked',
-            booked2: 'Email us to join the waiting list!',
+            booked2: 'Fully booked. Waitlist here.',
         },
     },
     contactUs: {

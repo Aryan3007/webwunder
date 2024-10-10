@@ -48,10 +48,14 @@ const New_Header: React.FC = () => {
             {/* Right side: Book a call button and Language selector */}
             <div className="flex items-center w-fit space-x-4">
                 {/* Book a call button */}
-                <Link href="https://tidycal.com/skylumina/webwunder" passHref>
-                    <button className="rounded-full uppercase bg-white text-black px-4 py-2 font-semibold">
+                
+                <Link className=' bg-white flex justify-between items-center rounded-full gap-4 px-4 py-2' href="https://tidycal.com/skylumina/webwunder" passHref>
+                    <button className="uppercase text-black  font-semibold">
                     {languageData?.navItems?.[changeLanguage]?.bookcall}
                     </button>
+                    <div className='h-5 w-5 flex justify-center items-center rounded-full '>
+                        <Image src="./vector.svg" alt="Logo" width={25} height={25} />
+                    </div>
                 </Link>
 
                 {/* Language and Up arrow icons */}

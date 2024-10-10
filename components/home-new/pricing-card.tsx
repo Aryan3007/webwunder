@@ -153,17 +153,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <CardFooter className="flex flex-col gap-2 space-y-2 text-white">
                 {isBooked ? (
                     <button
-                        className="w-full px-2 cursor-pointer rounded-full bg-[#C2C2C2] py-2 font-inter text-sm font-semibold text-black transition-all duration-200 hover:scale-95"
+                       className="w-full rounded-full bg-[#c2c2c2] py-4 font-inter text-base text-black font-bold transition-all duration-200 hover:scale-95"
                         onClick={onSignUp}
                     >
                         <Link href={'mailto:info@webwunder.de'} target="_blank">
                             {/* Sign Me Up! */}
-                            <div className="lg:text-lg font-bold">
-                                {
-                                    languageData?.paymentsCard?.[changeLanguage]
-                                        ?.booked
-                                }
-                            </div>
+                            
                             <div className="text-sm lg:text-base">
                                 {
                                     languageData?.paymentsCard?.[changeLanguage]
