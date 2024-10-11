@@ -12,7 +12,7 @@ export async function getLoggedInUser() {
     if (authUser.error) throw authUser.error
     else if (profileUser.error) throw profileUser.error
     else {
-        const isAdmin = !!profileUser.data.roles.find((e) => e.role === 'admin')
+        const isAdmin = !!profileUser.data.roles.find((e : any) => e.role === 'admin')
         return { auth: authUser.data, profile: profileUser, isAdmin }
     }
 }

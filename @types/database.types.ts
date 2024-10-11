@@ -45,6 +45,7 @@ export type Database = {
           id: string
           last_name: string | null
           mobile: string | null
+          aaddress? : string | null
         }
         Insert: {
           created_at?: string
@@ -54,6 +55,7 @@ export type Database = {
           id: string
           last_name?: string | null
           mobile?: string | null
+          aaddress? : string | null
         }
         Update: {
           created_at?: string
@@ -63,6 +65,7 @@ export type Database = {
           id?: string
           last_name?: string | null
           mobile?: string | null
+          aaddress? : string | null
         }
         Relationships: [
           {
@@ -96,6 +99,7 @@ export type Database = {
           user_id: string
           user_friendly_email?: string | null; // Add this here
           invoice_url? : string | null
+          user_notes? : string[] | null;
 
         }
         Insert: {
@@ -118,6 +122,7 @@ export type Database = {
           title?: string | null
           user_id: string
           userFriendlyEmail?: string | null; // Add this here
+          user_notes? : string[] | null;
 
         }
         Update: {
@@ -140,6 +145,7 @@ export type Database = {
           title?: string | null
           user_id?: string
           userFriendlyEmail?: string | null; // Add this here
+          user_notes? : string[] | null;
 
         }
         Relationships: []
@@ -179,7 +185,55 @@ export type Database = {
             referencedColumns: ["id"]
           },
         ]
-      }
+      },
+      messages: {
+        Row: {
+          id: number;
+          customer_id: string;
+          message_body: string;
+          is_read : boolean;
+          admin_id: string;
+        
+          // Add other fields present in the messages table
+        };
+        insert: {
+          id: number;
+          customer_id: string;
+          message_body: string;
+          is_read : boolean;
+          admin_id: string;
+          // Add other fields required for insertion
+        };
+        Update: {
+          id: number;
+          customer_id: string;
+          message_body: string;
+          is_read : boolean;
+          admin_id: string;
+          // Add other fields that can be updated
+        };
+      };
+      files : {
+        Row: {
+          id: number;
+          user_id: string; // UUID for the user (customer)
+          file_name: string; // Name of the file
+          file_url: string; // URL where the file is stored
+          uploaded_at: string; // Timestamp for when the file was uploaded
+        };
+        Insert: {
+          user_id: string; // Required for inserting a new file
+          file_name: string; // Required name of the file
+          file_url: string; // Required URL of the file
+          uploaded_at?: string; // Optional, defaults to the current timestamp if not provided
+        };
+        Update: {
+          id: number; // Required to identify which file to update
+          file_name?: string; // Optional, can update the name of the file
+          file_url?: string; // Optional, can update the file's URL
+          uploaded_at?: string; // Optional, can update the timestamp for when the file was uploaded
+        };
+      };
     }
     Views: {
       [_ in never]: never
