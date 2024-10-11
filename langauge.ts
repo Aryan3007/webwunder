@@ -32,7 +32,7 @@ export const languageData = {
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Kontakt',
-            bookcall:'Call buchen!',
+            bookcall: 'Call buchen!',
             login: 'Einloggen',
             signup: 'Anmelden',
         },
@@ -43,7 +43,7 @@ export const languageData = {
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Contact',
-            bookcall:'BOOK A CALL!',
+            bookcall: 'BOOK A CALL!',
             login: 'Log in',
             signup: 'Sign up',
         },
@@ -247,7 +247,7 @@ export const languageData = {
             ],
         },
     },
-    
+
     additionalSection2: {
         de: {
             designedToDominate: 'Entwickelt, um zu dominieren',
@@ -528,13 +528,13 @@ export const languageData = {
                         'Entwickelt für wachsende Unternehmen, die erweiterte Funktionen und zusätzlichen Design-Support benötigen.',
                     signMeUp: 'Ich bin dabei!',
                     features: [
-                        'Vollständig responsiv, optimiert für alle Geräte',
-                        'Laufende Updates, Plug-ins und KI-gestütztes SEO',
-                        'Sicheres Hosting, Backups und vollständige Google-Indexierung',
+                        'Vollständig responsives, geräteoptimiertes Design',
+                        'Kontinuierliche Updates, Plugins und KI-gestützte SEO',
+                        'Sicheres Hosting, Backups und vollständige Google-Indizierung',
                         'Professionelles Copywriting und Branding',
-                        'Design-Refresh alle 36 Monate',
                         'Zwei Designaufgaben pro Monat für mehr Flexibilität',
-                        'Erweiterte Website-Funktionen zur Unterstützung Ihres Unternehmenswachstums',
+                        'Design-Auffrischung alle 36 Monate',
+                        'Umfangreichere Website-Funktionen zur Unterstützung Ihres Unternehmenswachstums',
                         'Jederzeit kündbar',
                     ],
                 },
@@ -546,16 +546,15 @@ export const languageData = {
                     description:
                         'Für Unternehmen, die erstklassige Leistung und umfassenden Support für maximalen Erfolg suchen.',
                     features: [
-                        'Vollständig responsiv, optimiert für alle Geräte',
-                        'Laufende Updates, Plug-ins und KI-gestütztes SEO',
-                        'Sicheres Hosting, Backups und vollständige Google-Indexierung',
+                        'Vollständig responsives, geräteoptimiertes Design',
+                        'Kontinuierliche Updates, Plugins und KI-gestützte SEO',
+                        'Sicheres Hosting, Backups und vollständige Google-Indizierung',
                         'Professionelles Copywriting und Branding',
-                        'Design-Refresh alle 36 Monate',
-                        'Zwei Designaufgaben pro Monat für mehr Flexibilität',
-                        'Erweiterte Website-Funktionen zur Unterstützung Ihres Unternehmenswachstums',
                         'Drei Designaufgaben pro Monat für kontinuierliche Kreativität',
+                        'Design-Auffrischung alle 36 Monate',
+                        'Umfangreichere Website-Funktionen zur Unterstützung Ihres Unternehmenswachstums',
                         'Unterstützung beim Social-Media-Posting und -Management',
-                        'Mehr monatliche Zeit für Ihr Projekt, um Spitzenleistungen zu gewährleisten',
+                        'Extra monatliche Zeit für Ihr Projekt für Spitzenleistung',
                         'Jederzeit kündbar',
                     ],
                 },
@@ -569,8 +568,8 @@ export const languageData = {
                         'Unbegrenzte Designanfragen (eine nach der anderen)',
                         'Priorisierte Lieferung (ca. 72 Stunden)',
                         'Unterstützung für mehrere Marken',
-                        'Vollständiges Eigentum an allen Designs',
-                        'Exklusiver, top-priorisierter Service',
+                        'Volles Eigentum an allen Designs',
+                        'Exklusiver Premium-Service',
                         'Jederzeit kündbar',
                     ],
                     signMeUp: 'Ich bin dabei!',
@@ -583,12 +582,12 @@ export const languageData = {
                     description:
                         'Perfekt für Startups und kleine Projekte, die eine starke Online-Basis brauchen.',
                     features: [
-                        'Vollständig responsiv, optimiert für alle Geräte',
-                        'Laufende Updates, Plug-ins und KI-gestütztes SEO',
-                        'Sicheres Hosting, Backups und vollständige Google-Indexierung',
+                        'Vollständig responsives, geräteoptimiertes Design',
+                        'Kontinuierliche Updates, Plugins und KI-gestützte SEO',
+                        'Sicheres Hosting, Backups und vollständige Google-Indizierung',
                         'Professionelles Copywriting und Branding',
                         'Eine monatliche Designaufgabe',
-                        'Design-Refresh alle 36 Monate',
+                        'Design-Auffrischung alle 36 Monate',
                         'Jederzeit kündbar',
                     ],
                     signMeUp: 'Ich bin dabei!',
@@ -614,7 +613,7 @@ export const languageData = {
                     title: 'Scale',
                     price: 690,
                     setupFee: '2000 Setup Fee',
-                    
+
                     description:
                         'Designed for growing businesses that need advanced features and additional design support.',
                     features: [
@@ -644,7 +643,7 @@ export const languageData = {
                         'Three design tasks per month for continuous creativity',
                         'Design refresh every 36 months',
                         'More extensive site capabilities to support your business growth',
-                        
+
                         'Social media posting and management support',
                         'Extra time dedicated monthly to your project for top-tier performance',
                         'Cancel anytime',
@@ -690,7 +689,7 @@ export const languageData = {
             signMeUp: 'Sign Me Up!',
 
             cancelAnytime: 'Cancel Anytime',
-           priceTag: 'per month', 
+            priceTag: 'per month',
             setupFeetag: 'Setup Fee',
             booked: 'Currently fully booked',
             booked2: 'Fully booked. Waitlist here.',
@@ -1011,17 +1010,17 @@ export const languageData = {
             ],
         },
     },
-    logintypes:{
-de:{
-    google:"weiter mit Google",
-    microsoft:"weiter mit Microsoft Account",
-    apple:"weiter mit Apple",
-},
-en:{
-    google:"Continue with Google",
-    microsoft:"Continue with Microsoft Account",
-    apple:"Continue with Apple",
-}
+    logintypes: {
+        de: {
+            google: "weiter mit Google",
+            microsoft: "weiter mit Microsoft Account",
+            apple: "weiter mit Apple",
+        },
+        en: {
+            google: "Continue with Google",
+            microsoft: "Continue with Microsoft Account",
+            apple: "Continue with Apple",
+        }
     },
     signupPage: {
         de: {
@@ -2030,7 +2029,7 @@ en:{
             followUs: 'Follow us',
             links: {
                 writeEmail: 'Write an Email',
-                
+
                 bookCall: 'Book a call',
                 chatWhatsApp: 'Chat on WhatsApp',
                 signUp: 'Sign up',
