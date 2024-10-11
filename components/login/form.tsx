@@ -105,8 +105,8 @@ export default function LoginPage() {
     ]
 
     return (
-        <div className="p-4 min-h-screen overflow-hidden">
-            <div style={{ backgroundImage: "url('/signupbg.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }} className='flex rounded-2xl  flex-col   bg-black lg:flex-col'>
+        <div className="lg:p-4 min-h-screen overflow-hidden">
+            <div style={{ backgroundImage: "url('/signupbg.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }} className='flex lg:rounded-2xl rounded-none  flex-col   bg-black lg:flex-col'>
 
 
                 <div className="p-4 z-40 w-full flex  items-center justify-between">
@@ -118,17 +118,17 @@ export default function LoginPage() {
                             height="17" />
                     </Link>
 
-<div className=' scale-75'>
+                    <div className=' scale-75'>
 
-                    <CustomLanguageDropdown />
-</div>
+                        <CustomLanguageDropdown />
+                    </div>
                 </div>
                 {/* Left side with carousel */}
 
 
                 {/* Right side with form */}
                 <div className={`m-auto  lg:w-[40%] lg:h-[91vh] flex flex-col ${scale} items-center justify-center px-3 py-8 bg-cover bg-center`}
-                    
+
 
 
                 >
@@ -160,31 +160,31 @@ export default function LoginPage() {
                                         ?.orSignInwith
                                 }{' '}
                             </p>
-                           
+
                         </div>
 
                         <div className='flex text-zinc-500 flex-col gap-3'>
-                                <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
+                            <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                                    <Image src="/google.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize text-left'>
+                                <Image src="/google.svg" alt="Logo" width={25} height={25} />
+                                <button className='capitalize text-left'>
                                     {languageData?.logintypes?.[changeLanguage]?.google}
-                                    </button>
-                                </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
+                                </button>
+                            </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                                    <Image src="/window.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize text-left'>
+                                <Image src="/window.svg" alt="Logo" width={25} height={25} />
+                                <button className='capitalize text-left'>
                                     {languageData?.logintypes?.[changeLanguage]?.microsoft}
-                                    </button>
-                                </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
+                                </button>
+                            </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                                    <Image src="/apple.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize text-left'>
+                                <Image src="/apple.svg" alt="Logo" width={25} height={25} />
+                                <button className='capitalize text-left'>
                                     {languageData?.logintypes?.[changeLanguage]?.apple}
-                                    </button>
-                                </div>
-
+                                </button>
                             </div>
+
+                        </div>
 
 
 
@@ -213,44 +213,7 @@ export default function LoginPage() {
                                     }{' '}
                                 </a>
                             </div>
-                            <div className="flex flex-wrap justify-center gap-4 font-inter text-sm font-normal text-white">
-                                <a href="#" className="hover:text-white">
-                                    {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.navLinks[0]
-                                    }{' '}
-                                </a>
-                                <a href="#" className="hover:text-white">
-                                    {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.navLinks[1]
-                                    }{' '}
-                                </a>
-                                <a href="#" className="hover:text-white">
-                                    {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.navLinks[2]
-                                    }{' '}
-                                </a>
-                                <a href="#" className="hover:text-white">
-                                    {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.navLinks[3]
-                                    }{' '}
-                                </a>
-                                <a href="#" className="hover:text-white">
-                                    {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.navLinks[4]
-                                    }{' '}
-                                </a>
-                                <a href="#" className="hover:text-white">
-                                    {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.navLinks[5]
-                                    }{' '}
-                                </a>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>

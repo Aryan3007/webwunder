@@ -84,7 +84,7 @@ const MobileMenu: React.FC = () => {
 
                 {/* Arrow Up Button */}
                 <div className="flex items-center justify-center rounded-full p-3.5 bg-[#2a2a2a] w-10 h-10">
-                        <Link href="/login" passHref>
+                        <Link href="#home" passHref>
                             <Image
                                 src="/arrowup.svg" // Replace this with the correct logo path (or import your image from the file if needed)
                                 alt="WebWunder Logo"
@@ -104,22 +104,22 @@ const MobileMenu: React.FC = () => {
                 className="absolute bottom-6 z-20 pb-16 left-0 right-0 bg-[#191919] rounded-xl shadow-lg p-4"
             >
                 <nav className="flex flex-col items-center space-y-4 text-white">
-                    <Link href="/benefits" onClick={toggleMenu}>
+                    <Link href="/#join-us" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.benefits}
                     </Link>
-                    <Link href="/your-website" onClick={toggleMenu}>
+                    <Link href="#all-in-one" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.yourWebsite}
                     </Link>
-                    <Link href="/prices" onClick={toggleMenu}>
+                    <Link href="#purchase-plans" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.prices}
                     </Link>
                     <Link href="/portfolio" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.portfolio}
                     </Link>
-                    <Link href="/faqs" onClick={toggleMenu}>
+                    <Link href="#faqs" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.faqs}
                     </Link>
-                    <Link href="/contact" onClick={toggleMenu}>
+                    <Link href="#contact-us" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.contact}
                     </Link>
                 </nav>

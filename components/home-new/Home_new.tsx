@@ -178,13 +178,14 @@ const Home_new = () => {
 
                     {/* Header */}
 
-                    {/* <div className='menu fixed hidden lg:flex items-center justify-center bottom-2 w-full z-[99]'>
-                        <New_Header />
+                    <div className='menu hidden lg:flex items-center justify-center top-2 w-full z-[99]'>
+                        <Header />
                     </div>
 
-                    <div className='lg:hidden fixed bottom-5 z-[99] w-full justify-between items-center px-6 flex'>
-                        <MobileMenu />
-                    </div> */}
+                    <div className='lg:hidden  top-5 z-[999] w-full justify-between items-center px-6 flex'>
+                        <Logo/>
+                        <SidebarMenu />
+                    </div>
 
                     <MenuComponent />
 

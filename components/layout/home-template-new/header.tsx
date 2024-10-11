@@ -26,6 +26,7 @@ import {
 } from '@/components/ui/select'
 import Image from 'next/image'
 import LanguageToggle from '@/components/CustomLanguageDropdown'
+import CustomLanguageDropdown from '@/components/CustomLanguageDropdown'
 export default function Header() {
     const viewHolder = useRef(null)
     const init = useRef(false)
@@ -113,24 +114,7 @@ export default function Header() {
                             </div>
 
                             <div className='flex gap-2 items-center min-w-96'>
-                                <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
-                                    <SelectTrigger className="w-24 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
-                                        <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
-                                        <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
-                                    </SelectTrigger>
-                                    <SelectContent>
-                                        <SelectGroup className="flex flex-row justify-around">
-                                            <SelectItem value="english" className="flex items-center gap-2">
-                                                <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
-                                                <span>EN</span>
-                                            </SelectItem>
-                                            <SelectItem value="german" className="flex items-center gap-2">
-                                                <Image src="/images/germany.png" alt='German' width={25} height={25} />
-                                                <span>DE</span>
-                                            </SelectItem>
-                                        </SelectGroup>
-                                    </SelectContent>
-                                </Select>
+                                <CustomLanguageDropdown/>
                                 {/* <LanguageToggle
                                     language={changeLanguage}
                                     onToggle={handleLanguageChange}
@@ -144,7 +128,7 @@ export default function Header() {
                                         >
                                             <Link href={paths.pages.login.href}>
                                                 <div className="font-inter text-sm">
-                                                  
+                                                {languageData?.navItems?.[changeLanguage]?.login}
                                                 </div>
                                                 <CircleUserRound />
                                             </Link>
@@ -154,9 +138,9 @@ export default function Header() {
                                             className="hidden gap-3 rounded-full bg-white p-5 text-base font-medium lg:flex"
                                             asChild
                                         >
-                                            <Link href={paths.pages.login.href}>
+                                            <Link href="/signup">
                                                 <p className="font-inter text-sm">
-                                                    
+                                                {languageData?.navItems?.[changeLanguage]?.signup}
                                                 </p>
                                                 <MoveUpRight className="text-gray-500" />
                                             </Link>

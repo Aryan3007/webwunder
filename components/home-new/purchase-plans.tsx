@@ -13,7 +13,6 @@ interface PlanProps {
     color: string
     iconBg: string
     id:string,
-
     title: string
     description: string
     price: number
@@ -48,6 +47,7 @@ const MobilePurchasePlans: React.FC = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        autoplay: true,
         beforeChange: (current: number, next: number) => setCurrentIndex(next),
     }
 

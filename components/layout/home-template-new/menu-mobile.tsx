@@ -17,6 +17,7 @@ import {
     SelectValue,
 } from '@/components/ui/select'
 import LanguageToggle from '@/components/CustomLanguageDropdown'
+import CustomLanguageDropdown from '@/components/CustomLanguageDropdown'
 
 export default function SidebarMenu() {
     const [isShown, setShown] = useState(false)
@@ -95,24 +96,7 @@ export default function SidebarMenu() {
 
                         <div className='scale-75 translate-x-'>
 
-                            <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
-                                <SelectTrigger className="w-24 rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
-                                    <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
-                                    <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
-                                </SelectTrigger>
-                                <SelectContent>
-                                    <SelectGroup className="flex flex-row justify-around">
-                                        <SelectItem value="english" className="flex items-center gap-2">
-                                            <Image src="/images/united-kingdom.png" alt='English' width={25} height={25} />
-                                            <span>EN</span>
-                                        </SelectItem>
-                                        <SelectItem value="german" className="flex items-center gap-2">
-                                            <Image src="/images/germany.png" alt='German' width={25} height={25} />
-                                            <span>DE</span>
-                                        </SelectItem>
-                                    </SelectGroup>
-                                </SelectContent>
-                            </Select>
+                        <CustomLanguageDropdown/>
                         </div>
                         <Image
                             onClick={openMenu}

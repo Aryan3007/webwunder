@@ -36,7 +36,7 @@ const New_Header: React.FC = () => {
 
             {/* Center: Links */}
             <nav className="flex space-x-6 text-sm text-white">
-                <Link href="/benefits">
+                <Link href="/#join-us">
                     {languageData?.navItems?.[changeLanguage]?.benefits}
                 </Link>
                 <Link href="#all-in-one"> {languageData?.navItems?.[changeLanguage]?.yourWebsite}</Link>
@@ -69,7 +69,7 @@ const New_Header: React.FC = () => {
 
                     {/* Up arrow button */}
                     <div className="flex items-center justify-center rounded-full p-3.5 bg-[#2a2a2a] w-10 h-10">
-                        <Link href="/login" passHref>
+                        <Link href="#home" passHref>
                             <Image
                                 src="/arrowup.svg" // Replace this with the correct logo path (or import your image from the file if needed)
                                 alt="WebWunder Logo"

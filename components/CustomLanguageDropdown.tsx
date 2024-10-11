@@ -39,7 +39,7 @@ const CustomLanguageDropdown: React.FC = () => {
     <div className="relative inline-block text-left">
       {/* Button to toggle dropdown */}
       <button
-        className="flex items-center gap-2 bg-[#2a2a2a] px-4 p-3 rounded-full text-white"
+        className="flex items-center gap-2 bg-[#676667] px-4 py-2  rounded-full text-white"
         onClick={toggleDropdown}
       >
         <Image src={getLanguageIcon(changeLanguage)} alt="Language" width={25} height={25} />
@@ -52,7 +52,7 @@ const CustomLanguageDropdown: React.FC = () => {
         animate={isOpen ? 'visible' : 'hidden'}
         variants={dropdownVariants}
         transition={{ duration: 0.3 }}
-        className="absolute mt-3 w-36 right-0 rounded-3xl shadow-lg bg-[#191919]"
+        className="absolute mt-3 w-36 right-0 rounded-3xl shadow-lg bg-[#676667]"
       >
         <ul className="py-1">
           <li

@@ -32,8 +32,9 @@ export const languageData = {
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Kontakt',
-            bookcall:'Jetzt 15-min call buchen!'
-
+            bookcall:'Call buchen!',
+            login: 'Einloggen',
+            signup: 'Anmelden',
         },
         en: {
             benefits: 'Benefits',
@@ -42,7 +43,9 @@ export const languageData = {
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Contact',
-            bookcall:'Book a 15-min call now!'
+            bookcall:'BOOK A CALL!',
+            login: 'Log in',
+            signup: 'Sign up',
         },
     },
     mobNavFooter: {

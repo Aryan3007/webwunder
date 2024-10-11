@@ -109,9 +109,9 @@ export default function SignupPage() {
         },
     ]
     return (
-        <div className="p-6 min-h-screen">
+        <div className="lg:p-6 p-0 min-h-screen">
 
-            <div className="flex rounded-2xl  h-full bg-[url('/signupbg.svg')] bg-center bg-no-repeat bg-cover bg-black flex-col overflow-x-hidden">
+            <div className="flex rounded-none lg:rounded-2xl  h-full bg-[url('/signupbg.svg')] bg-center bg-no-repeat bg-cover bg-black flex-col overflow-x-hidden">
 
                 <div className="p-4 z-40 w-full items-center flex justify-between">
                     <Link href={`/`}>
