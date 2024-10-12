@@ -265,7 +265,7 @@ const JoinUs: React.FC = () => {
         <div id='join-us' className="flex h-fit flex-col items-center justify-center gap-5 bg-[#020202] text-white lg:pt-16">
             <Slider />
             <div className="md:-mt-44 newtrig flex w-full lg:scale-90 flex-col items-center justify-between px-4 lg:mt-0 lg:flex-row lg:gap-44 2xl:gap-0 2xl:px-28">
-                <div className="flex flex-col items-center gap-4 lg:hidden">
+                <div id='easySteps' className="flex flex-col items-center gap-4 lg:hidden">
                     <Badge className="w-fit bg-[#5D59E1] font-archivo text-sm font-normal">
                         {
                             languageData?.joinUsSection?.[changeLanguage]?.steps

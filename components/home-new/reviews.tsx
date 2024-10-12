@@ -63,7 +63,7 @@ const Reviews = () => {
                     speed="slow"
                 />
             </div> */}
-            <div className="flex flex-col items-center gap-2 lg:items-center lg:justify-between lg:px-10 2xl:w-[1450px] 2xl:items-center 2xl:px-0">
+            <div className="flex flex-col  mt-12  items-center gap-2 lg:items-center lg:justify-between lg:px-10 2xl:w-[1450px] 2xl:items-center 2xl:px-0">
                 <p className="text-center font-archivo text-lg font-bold text-white lg:self-start lg:text-[26px]">
                     {languageData?.ourClient?.[changeLanguage]?.reviewPrompt}
                 </p>
@@ -75,7 +75,7 @@ const Reviews = () => {
                                 ?.reviewDescription
                         }
                     </p>
-                    <div className="my-5 flex items-center justify-center lg:my-0">
+                    <div className="my-5flex items-center justify-center lg:my-0">
                         <Link href="https://g.page/r/CUIwk9NM4ejJEBM/review">
                             <Button
                                 size={'base'}

@@ -27,17 +27,19 @@ export const languageData = {
     navItems: {
         de: {
             benefits: 'Vorteile',
+            Process:"Prozess",
             yourWebsite: 'Ihre Website',
             prices: 'Preise',
             portfolio: 'Portfolio',
             faqs: 'FAQs',
             contact: 'Kontakt',
-            bookcall: 'Call buchen!',
+            bookcall: 'ANRUF BUCHEN!',
             login: 'Einloggen',
             signup: 'Anmelden',
         },
         en: {
             benefits: 'Benefits',
+            Process:"Process",
             yourWebsite: 'Your Website',
             prices: 'Prices',
             portfolio: 'Portfolio',
@@ -74,6 +76,7 @@ export const languageData = {
         de: {
             home: 'Startseite',
             benefits: 'Vorteile',
+            Process:"Prozess",
             yourWebsite: 'Ihre Website',
             prices: 'Preise',
             portfolio: 'Portfolio',
@@ -85,6 +88,7 @@ export const languageData = {
         en: {
             home: 'Home',
             benefits: 'Benefits',
+            Process:"Process",
             yourWebsite: 'Your Website',
             prices: 'Prices',
             portfolio: 'Portfolio',
@@ -98,6 +102,7 @@ export const languageData = {
         de: {
             home: '/',
             benefits: '/#join-us',
+            Process:"#easySteps",
             yourWebsite: '/#all-in-one',
             prices: '/#purchase-plans',
             portfolio: '/portfolio',
@@ -109,6 +114,7 @@ export const languageData = {
         en: {
             home: '/',
             benefits: '/#join-us',
+            Process:"#easySteps",
             yourWebsite: '/#all-in-one',
             prices: '/#purchase-plans',
             portfolio: '/portfolio',
@@ -171,7 +177,7 @@ export const languageData = {
     additionalSection: {
         de: {
             designedToDominate: 'Entwickelt, um zu dominieren',
-            whyWebWunder: 'Warum WebWunder?',
+            whyWebWunder: 'Warum Webwunder?',
             weMakeItClear: 'Damit es läuft.',
             businessDeservesMore:
                 'Ihr Unternehmen verdient mehr als nur eine Website – es verdient einen echten Game-Changer.',
@@ -212,7 +218,7 @@ export const languageData = {
         },
         en: {
             designedToDominate: 'Designed to Dominate',
-            whyWebWunder: 'Why WebWunder?',
+            whyWebWunder: 'Why Webwunder?',
             weMakeItClear: 'We Make it Clear.',
             businessDeservesMore:
                 'Your business deserves more than just a website—it deserves a game-changer.',
@@ -251,7 +257,7 @@ export const languageData = {
     additionalSection2: {
         de: {
             designedToDominate: 'Entwickelt, um zu dominieren',
-            whyWebWunder: 'Warum WebWunder?',
+            whyWebWunder: 'Warum Webwunder?',
             weMakeItClear: 'Damit es läuft.',
             businessDeservesMore:
                 'Ihr Unternehmen verdient mehr als nur eine Website – es verdient einen echten Game-Changer.',
@@ -292,7 +298,7 @@ export const languageData = {
         },
         en: {
             designedToDominate: 'Designed to Dominate',
-            whyWebWunder: 'Why WebWunder?',
+            whyWebWunder: 'Why Webwunder?',
             weMakeItClear: 'We Make it Clear.',
             businessDeservesMore:
                 'Your business deserves more than just a website—it deserves a game-changer.',
@@ -330,7 +336,7 @@ export const languageData = {
     allInOnePage: {
         de: {
             title: 'All-in-one Agentur',
-            header: 'Mit WebWunder brauchen Sie nie wieder eine andere Agentur.',
+            header: 'Mit Webwunder brauchen Sie nie wieder eine andere Agentur.',
             description:
                 'Mit WebWunder brauchen Sie nie wieder eine andere Agentur. Unsere umfassende All-in-one-Lösung deckt alle Aspekte Ihrer digitalen Präsenz ab – vom Webdesign bis hin zu Marketingstrategien. So müssen Sie nie wieder auf eine andere Agentur zurückgreifen. Wir kümmern uns um alles, damit Sie sich voll und ganz auf das Wachstum Ihres Unternehmens konzentrieren können.',
             finalNote: 'Abonnements',
@@ -340,7 +346,7 @@ export const languageData = {
         },
         en: {
             title: 'All-in-one Agency',
-            header: "With WebWunder, You'll Never Need Another Agency. Ever.",
+            header: "With Webwunder, You'll Never Need Another Agency. Ever.",
             description:
                 'Our comprehensive, all-in-one solution that addresses every facet of your digital presence, from website design to marketing strategies, ensuring you’ll never need to rely on another agency again. We handle it all, so you can focus on growing your business with confidence.',
             finalNote: 'Subscriptions',
@@ -959,7 +965,7 @@ export const languageData = {
             description2:
                 'Keine Lust auf endlose Meetings? Wir auch nicht—deshalb haben wir sie auf ein Minimum reduziert. In weniger als einer Stunde Ihrer wertvollen Zeit machen wir erfolgreiche Unternehmen noch erfolgreicher.',
             welcomeBack: 'Willkommen zurück',
-            newTo: 'Neu bei WebWunder?',
+            newTo: 'Neu bei Webwunder?',
             signUp: 'Anmelden',
             emailLabel: 'E-Mail-Adresse',
             emailPlaceholder: 'Geben Sie Ihre E-Mail-Adresse ein',
@@ -987,7 +993,7 @@ export const languageData = {
             title2: 'Get Your Website in Three Easy Steps',
             description2: `Hate meetings? Us too—that’s why we've minimized them. In under an hour of your valuable time, we elp successful businesses become even more successful.`,
             welcomeBack: 'Welcome Back',
-            newTo: 'New to WebWunder?',
+            newTo: 'New to Webwunder?',
             signUp: 'Sign Up',
             emailLabel: 'Email Address',
             emailPlaceholder: 'Enter your email address',
@@ -1028,7 +1034,7 @@ export const languageData = {
             description:
                 'Keine Lust auf endlose Meetings? Wir auch nicht—deshalb haben wir sie auf ein Minimum reduziert. In weniger als einer Stunde Ihrer wertvollen Zeit machen wir erfolgreiche Unternehmen noch erfolgreicher.',
             createAccount: 'Neues Konto erstellen',
-            alreadyHaveAccount: 'Haben Sie bereits ein Konto?',
+            alreadyHaveAccount: 'Haben Sie bereits ein Konto? ',
             signIn: 'Einloggen',
             firstName: 'Vorname',
             lastName: 'Nachname',
@@ -1354,6 +1360,20 @@ export const languageData = {
                 cta: 'Book a Call',
             },
         },
+    },
+
+    termspagehead: {
+        en: {
+            imprint: 'Imprint',
+            tandc: 'Terms and Conditions (AGB) of Skylumina GmbH, Trading as WebWunde',
+            ppc: 'Privacy Policy'
+        },
+        de: {
+            imprint: 'Impressum',
+            tandc: 'Allgemeine Geschäftsbedingungen (AGB) der Skylumina GmbH, handelnd als WebWunder',
+            ppc: 'Datenschutzerklärung'
+        }
+
     },
     imprintPage: {
         en: {

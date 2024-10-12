@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { languageData } from '@/langauge'
 import SidebarMenu from '../layout/home-template-new/menu-mobile'
 import Logo from '../common/logo'
+import Image from 'next/image'
 
 interface PolicyProps {
     title: string
@@ -32,7 +33,7 @@ const PolicyContent: React.FC<PolicyProps> = ({
     }, [])
     return (
         <div className="bg-gradient-to-br from-[#100013] via-0% to-[#000000] lg:p-6">
-            <div className="relative h-[75vh] lg:h-[70vh] overflow-hidden rounded-t-lg bg-black">
+            <div className="relative h-[75vh] lg:h-[55vh] overflow-hidden rounded-t-lg bg-black">
 
 
 
@@ -41,8 +42,14 @@ const PolicyContent: React.FC<PolicyProps> = ({
                     <Header />
                 </div>
 
-                <div className=' z-[99] w-full justify-between items-center p-4 flex'>
-                    <Logo />
+                <div className='relative lg:hidden pt-2 z-[50] w-full justify-between items-center px-6 flex'>
+                    <Link href={`/`}>
+                        <Image src="./images/logo.svg"
+
+                            alt="WebWunder Logo"
+                            width="225"
+                            height="17" />
+                    </Link>
                     <SidebarMenu />
                 </div>
 
@@ -51,17 +58,16 @@ const PolicyContent: React.FC<PolicyProps> = ({
                 <div className="absolute inset-0 h-full flex justify-center items-center bg-[url('/images/main-hero-small.png')] bg-cover bg-center lg:bg-[url('/images/imprintnew.png')]">
 
 
-                    <div>
-                        <h1 className="lg:text-[40px] text-center font-archivo text-[20px] font-bold text-white">
-                            Terms and Conditions (AGB) of <br />Skylumina GmbH, Trading as WebWunder
-                        </h1>
-                        <div className='flex justify-center items-center gap-2'>
-                            <h1 className='text-[16px] text-white'>Home</h1>
-                            <ChevronRight className='text-white text-sm' />
-                            <h1 className='text-[16px] text-[#5D59E1]'>Terms and Conditions</h1>
+                    <div className="relative z-10 flex h-full flex-col items-center justify-center">
+                        <div className=" flex flex-col items-center justify-center text-center">
+                            <div className="xl:text[80px] max-w-[38.1rem] text-center font-archivo text-[25px] font-bold text-white">
+                                {title}
+                            </div>
+                            <div className='mx-auto max-w-80'>
+
+                                {breadcrumb}
+                            </div>
                         </div>
-
-
                     </div>
                 </div>
 

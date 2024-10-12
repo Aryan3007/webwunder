@@ -39,6 +39,9 @@ const New_Header: React.FC = () => {
                 <Link href="/#join-us">
                     {languageData?.navItems?.[changeLanguage]?.benefits}
                 </Link>
+                <Link href="/#easySteps">
+                    {languageData?.navItems?.[changeLanguage]?.Process}
+                    </Link>
                 <Link href="#all-in-one"> {languageData?.navItems?.[changeLanguage]?.yourWebsite}</Link>
                 <Link href="#purchase-plans"> {languageData?.navItems?.[changeLanguage]?.prices}</Link>
                 <Link href='/portfolio'>   {languageData?.navItems?.[changeLanguage]?.portfolio}</Link>
@@ -49,17 +52,25 @@ const New_Header: React.FC = () => {
             {/* Right side: Book a call button and Language selector */}
             <div className="flex items-center w-fit space-x-4">
                 {/* Book a call button */}
-                
-                <Link className=' bg-white flex justify-between items-center rounded-full gap-4 px-4 py-2' href="https://tidycal.com/skylumina/webwunder" passHref>
-                    <button className="uppercase text-black  font-semibold">
-                    {languageData?.navItems?.[changeLanguage]?.bookcall}
+
+                <Link className=' bg-white hover:bg-[#303030] border-2 border-white duration-100 transition-all hover:text-white text-black  flex justify-between items-center rounded-full gap-4 px-4 py-2' href="https://tidycal.com/skylumina/webwunder" passHref>
+                    <button className="uppercase flex justify-center items-center gap-2  font-semibold">
+                        <Image
+                            src="/images/emoji.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+                            alt="WebWunder Logo"
+                            width={25}
+                            height={25}
+                        />
+                        <h1>
+                            {languageData?.navItems?.[changeLanguage]?.bookcall}
+                        </h1>
                     </button>
                     <div className='h-5 w-5 flex justify-center items-center rounded-full '>
-                    <ArrowRight
-                                    size={18}
-                                    fontWeight={100}
-                                    className="text-[#24252A]"
-                                />
+                        <ArrowRight
+                            size={18}
+                            fontWeight={100}
+                           
+                        />
                     </div>
                 </Link>
 
@@ -72,6 +83,17 @@ const New_Header: React.FC = () => {
                         <Link href="#home" passHref>
                             <Image
                                 src="/arrowup.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+                                alt="WebWunder Logo"
+                                width={30}
+                                height={30}
+                            />
+                        </Link>
+                    </div>
+                    
+                    <div className="flex items-center justify-center rounded-full p-2 bg-[#2a2a2a] w-10 h-10">
+                        <Link href="#home" passHref>
+                            <Image
+                                src="/images/cookies.svg" // Replace this with the correct logo path (or import your image from the file if needed)
                                 alt="WebWunder Logo"
                                 width={30}
                                 height={30}

@@ -1,3 +1,5 @@
+'use client'
+
 import { useState, useEffect } from 'react';
 import New_Header from './New_Header';
 import MobileMenu from './MobileMenu';
@@ -46,31 +48,31 @@ const MenuComponent: React.FC = () => {
     // Keep the mobile menu visible for 5 seconds after a click
     mobileMenuTimeout = setTimeout(() => {
       setIsMenuClicked(false);
-    }, 1000); // 5 seconds of visibility after a tap
+    }, 1000); // 1 second of visibility after a tap
   };
 
   return (
     <>
       {/* Desktop menu */}
-      <div
-        className={`menu hidden fixed lg:flex items-center justify-center bottom-2 w-full z-[80] transition-opacity duration-300 ${
-          isScrolled && (isScrolling || isHovered) ? 'opacity-100' : 'opacity-0 -z-50'
-        }`}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <New_Header />
-      </div>
+      {isScrolled && isScrolling && (
+        <div
+          className="menu hidden fixed lg:flex items-center justify-center bottom-2 w-full z-[100]"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          <New_Header />
+        </div>
+      )}
 
       {/* Mobile menu */}
-      <div
-        className={`lg:hidden fixed bottom-5 z-[100] w-full justify-between items-center px-6 flex transition-opacity duration-300 ${
-          isScrolled && (isScrolling || isMenuClicked) ? 'opacity-100' : 'opacity-0'
-        }`}
-        onClick={handleMobileMenuClick} // Handle taps on the mobile menu
-      >
-        <MobileMenu />
-      </div>
+      {isScrolled && (isScrolling || isMenuClicked) && (
+        <div
+          className="lg:hidden fixed bottom-5 z-[100] w-full justify-between items-center px-6 flex"
+          onClick={handleMobileMenuClick} // Handle taps on the mobile menu
+        >
+          <MobileMenu />
+        </div>
+      )}
     </>
   );
 };

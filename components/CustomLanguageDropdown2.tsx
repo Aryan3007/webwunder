@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { ArrowBigDown } from 'lucide-react';
 
 const CustomLanguageDropdown2: React.FC = () => {
   const [changeLanguage, setChangeLanguage] = useState('en'); // Default language is 'en'
@@ -39,11 +40,17 @@ const CustomLanguageDropdown2: React.FC = () => {
     <div className="relative inline-block text-left">
       {/* Button to toggle dropdown */}
       <button
-        className="flex items-center gap-2 bg-[#2a2a2a] px-4 p-3 rounded-full text-white"
+        className="flex items-center gap-2 bg-[#2a2a2a] lg:px-4 p-2 lg:p-3 rounded-full text-white"
         onClick={toggleDropdown}
       >
         <Image src={getLanguageIcon(changeLanguage)} alt="Language" width={25} height={25} />
-        <span>{changeLanguage === 'de' ? 'DE' : 'EN'}</span>
+        <span className='lg:flex hidden'>{changeLanguage === 'de' ? 'DE' : 'EN'}</span>
+        <Image className='lg:flex hidden'
+          src="/images/arrowdown.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+          alt="WebWunder Logo"
+          width={10}
+          height={10}
+        />
       </button>
 
       {/* Dropdown menu with animation - positioned above */}

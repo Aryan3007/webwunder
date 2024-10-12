@@ -164,11 +164,18 @@ export const LoginForm = () => {
             </div>
             <div className="">
                 <div
-                    onClick={sendResetPassword}
-                    className="cursor-pointer font-archivo text-base font-semibold text-[#5D59E1]"
+
+                    className="cursor-pointer mb-4 flex justify-between w-full font-archivo text-base font-semibold text-[#5D59E1]"
                 >
+                    <div className='flex justify-center gap-2 items-center'>
+                        <input className='h-4 w-4 border-[#5a5064]' type="checkbox" name="" id="" />
+                        <h1>Remember me</h1>
+                    </div>
                     {' '}
-                    {languageData?.loginPage?.[changeLanguage]?.forgotPassword}
+                    <h1 onClick={sendResetPassword}>
+
+                        {languageData?.loginPage?.[changeLanguage]?.forgotPassword}
+                    </h1>
                 </div>
             </div>
             <button

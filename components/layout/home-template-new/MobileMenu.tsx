@@ -66,8 +66,8 @@ const MobileMenu: React.FC = () => {
                 </button>
 
                 {/* Booking Button */}
-                <Link href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-40 bg-white rounded-full text-[10px] md:w-56 text-black px-3 py-2 ' passHref>
-                    <button className="text-left uppercase font-bold ml-2">
+                <Link href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-32 bg-white rounded-full text-[10px] md:w-56 text-black px-3 py-2 ' passHref>
+                    <button className="text-left uppercase font-bold">
                     {languageData?.navItems?.[changeLanguage]?.bookcall}
                     </button>
                     <div className='h-6 w-6 flex justify-center items-center rounded-full '>
@@ -93,6 +93,16 @@ const MobileMenu: React.FC = () => {
                             />
                         </Link>
                     </div>
+                    <div className="flex items-center justify-center rounded-full p-2 bg-[#2a2a2a] w-10 h-10">
+                        <Link href="#home" passHref>
+                            <Image
+                                src="/images/cookies.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+                                alt="WebWunder Logo"
+                                width={30}
+                                height={30}
+                            />
+                        </Link>
+                    </div>
 
             </div>
             {/* Menu - Animated Dropdown Opening Above */}
@@ -106,6 +116,9 @@ const MobileMenu: React.FC = () => {
                 <nav className="flex flex-col items-center space-y-4 text-white">
                     <Link href="/#join-us" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.benefits}
+                    </Link>
+                     <Link href="/#easySteps" onClick={toggleMenu}>
+                    {languageData?.navItems?.[changeLanguage]?.Process}
                     </Link>
                     <Link href="#all-in-one" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.yourWebsite}

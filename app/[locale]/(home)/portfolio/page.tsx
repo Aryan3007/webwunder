@@ -8,6 +8,7 @@
 
 import Footer from '@/components/layout/home-template-new/footer';
 import Header from '@/components/layout/home-template-new/header'
+import MenuComponent from '@/components/layout/home-template-new/MenuComponent';
 import PortfolioCarousel from '@/components/portfolio/portfolio-carousel';
 import PortfolioLanding from '@/components/portfolio/portfolio-landing';
 import PortfolioMainContent from '@/components/portfolio/portfolio-tabs-main';
@@ -37,6 +38,7 @@ export default function PortfolioPage() {
         <PortfolioLanding />
         <PortfolioCarousel />
         <PortfolioMainContent />
+        <MenuComponent />
         <Footer />
       </div>
     );

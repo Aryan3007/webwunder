@@ -18,6 +18,8 @@ import {
     SelectTrigger,
     SelectValue,
 } from '@/components/ui/select'
+import CustomLanguageDropdown2 from '@/components/CustomLanguageDropdown2'
+import CustomLanguageDropdown from '@/components/CustomLanguageDropdown'
 
 
 const paymentMethods = [
@@ -182,7 +184,7 @@ const Footer = () => {
                             </div>
                             <div className='flex justify-center items-center scale-75'>
 
-                                <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                {/* <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
                                     <SelectTrigger className="w-fit rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
                                         <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
                                         <p className='text-white'>{changeLanguage === 'de' ? 'Deutsch' : 'English'}</p>
@@ -199,7 +201,9 @@ const Footer = () => {
                                             </SelectItem>
                                         </SelectGroup>
                                     </SelectContent>
-                                </Select>
+                                </Select> */}
+
+                                <CustomLanguageDropdown/>
                             </div>
                                     <div className='bg-zinc-700 h-[1px]' />
 
@@ -245,7 +249,7 @@ const Footer = () => {
                                 </div>
                                 <div className='translate-y-6'>
 
-                                    <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
+                                    {/* <Select onValueChange={handleLanguageChange} value={changeLanguage === 'de' ? 'german' : 'english'}>
                                         <SelectTrigger className="w-24 hidden rounded-full bg-white/20 p-3 gap-2 text-base font-medium text-white border-none hover:text-white lg:flex">
                                             <Image src={getLanguageIcon(changeLanguage)} alt='Language' width={25} height={25} />
                                             <p className='text-white'>{changeLanguage === 'de' ? 'DE' : 'EN'}</p>
@@ -262,7 +266,9 @@ const Footer = () => {
                                                 </SelectItem>
                                             </SelectGroup>
                                         </SelectContent>
-                                    </Select>
+                                    </Select> */}
+
+<CustomLanguageDropdown/>
                                 </div>
 
 

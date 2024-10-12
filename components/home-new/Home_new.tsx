@@ -183,7 +183,7 @@ const Home_new = () => {
                     </div>
 
                     <div className='lg:hidden  top-5 z-[999] w-full justify-between items-center px-6 flex'>
-                        <Logo/>
+                        <Logo />
                         <SidebarMenu />
                     </div>
 
@@ -191,7 +191,7 @@ const Home_new = () => {
 
                     {/* Text Content */}
 
-                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-32 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-24 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
