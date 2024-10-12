@@ -75,7 +75,7 @@ const Reviews = () => {
                                 ?.reviewDescription
                         }
                     </p>
-                    <div className="my-5flex items-center justify-center lg:my-0">
+                    <div className="my-5 flex items-center justify-center lg:my-0">
                         <Link href="https://g.page/r/CUIwk9NM4ejJEBM/review">
                             <Button
                                 size={'base'}
