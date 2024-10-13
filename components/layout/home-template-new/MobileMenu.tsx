@@ -67,8 +67,17 @@ const MobileMenu: React.FC = () => {
 
                 {/* Booking Button */}
                 <Link href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-32 bg-white rounded-full text-[10px] md:w-56 text-black px-3 py-2 ' passHref>
-                    <button className="text-left uppercase font-bold">
-                    {languageData?.navItems?.[changeLanguage]?.bookcall}
+                    <button className="text-left flex items-center justify-center gap-2 uppercase font-bold">
+                    <Image
+                            src="/images/emoji.svg" // Replace this with the correct logo path (or import your image from the file if needed)
+                            alt="WebWunder Logo"
+                            width={25}
+                            height={25}
+                        />
+
+                    <h1>
+                            {languageData?.navItems?.[changeLanguage]?.bookcall}
+                        </h1>
                     </button>
                     <div className='h-6 w-6 flex justify-center items-center rounded-full '>
                     <ArrowRight
