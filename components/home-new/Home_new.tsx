@@ -189,6 +189,8 @@ const Home_new = () => {
 
                     <MenuComponent />
 
+                    
+
                     {/* Text Content */}
 
                     <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-24 flex-col items-center justify-center gap-4 ">
@@ -221,7 +223,7 @@ const Home_new = () => {
                         </p>
                     </div>
 
-                    <div className="mx-auto text2 flex lg:hidden max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-6 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text2 flex lg:hidden max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-12 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
@@ -233,7 +235,7 @@ const Home_new = () => {
                                 {languageData?.heroSection?.[changeLanguage]?.subHeadline}
                             </p>
                         </div>
-                        <p className="text-center font-archivo text-base mb-12 font-bold text-white lg:text-lg">
+                        <p className="text-center font-archivo text-base font-bold text-white lg:text-lg">
                             {languageData?.heroSection?.[changeLanguage]?.description}
                             <br />
 
@@ -251,7 +253,7 @@ const Home_new = () => {
                         </p>
                     </div>
 
-                    <div className=" flex scale-90 lg:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                    {/* <div className=" flex scale-90 lg:hidden items-center justify-center gap-2 lg:my-2 lg:gap-3">
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] px-2 transition-all hover:scale-95`}
                         >
@@ -299,11 +301,11 @@ const Home_new = () => {
                                 </div>
                             </Link>
                         </button>
-                    </div>
+                    </div> */}
 
                     {
 
-                        changeLanguage === "de" ? (<p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
+                        changeLanguage === "de" ? (<p className=" font-archivo block md:hidden text-sm px-4 text-center text-white lg:text-lg">
                             Hunderte erfolgreicher Projekte für hunderte zufriedener Kunden realisiert.
 
                         </p>) : (<p className=" font-archivo block md:hidden text-sm px-4 text-center mt-3 text-white lg:text-lg">
@@ -315,7 +317,7 @@ const Home_new = () => {
 
                     {/* Cloud Left */}
                     <div className='hidden md:block'>
-
+                    
                         <Image
                             src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"

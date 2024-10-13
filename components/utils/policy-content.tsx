@@ -32,7 +32,7 @@ const PolicyContent: React.FC<PolicyProps> = ({
         }
     }, [])
     return (
-        <div className="bg-gradient-to-br from-[#100013] via-0% to-[#000000] lg:p-6">
+        <div className="bg-gradient-to-br w-screen overflow-hidden from-[#100013] via-0% to-[#000000] lg:p-6">
             <div className="relative h-[75vh] lg:h-[55vh] overflow-hidden rounded-t-lg bg-black">
 
 
