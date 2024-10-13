@@ -11,12 +11,16 @@ import SidebarMenu from '../layout/home-template-new/menu-mobile'
 import Logo from '../common/logo'
 import { gsap, ScrollTrigger } from 'gsap/all'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, X } from 'lucide-react'
 import New_Header from '../layout/home-template-new/New_Header'
 import MobileMenu from '../layout/home-template-new/MobileMenu'
 import MenuComponent from '../layout/home-template-new/MenuComponent'
 const Home_new = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+
+    const openPopup = () => setIsPopupOpen(true)
+    const closePopup = () => setIsPopupOpen(false)
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -189,11 +193,11 @@ const Home_new = () => {
 
                     <MenuComponent />
 
-                    
+
 
                     {/* Text Content */}
 
-                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-24 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-12 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
@@ -317,7 +321,7 @@ const Home_new = () => {
 
                     {/* Cloud Left */}
                     <div className='hidden md:block'>
-                    
+
                         <Image
                             src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"
@@ -360,19 +364,30 @@ const Home_new = () => {
                             height={5000}
                         />
 
-
                         {/* Hero Image */}
-
                         <Image
-                            src="/images/newhome/newlaptop.webp"
+                            src="/images/herbut.webp"
                             alt="Hero"
-                            className='relative laptop md:-bottom-24 z-50 w-screen'
+                            className='relative laptop md:-bottom-44 z-50 w-screen'
                             width={5000}
                             height={5000}
+                            onClick={openPopup}
                         />
 
-                    </div>
+{isPopupOpen && (
+        <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
+          <button
+            onClick={closePopup}
+            className="absolute top-8 right-8 text-white hover:text-gray-300 transition-colors"
+            aria-label="Close video"
+          >
+            <X size={24} />
+          </button>
+          <iframe width="960" height="615" src="https://www.youtube.com/embed/1g0oik5droE?si=TgB8WLpCXZYb-box" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      )}
 
+                    </div>
                     <div className=' md:hidden flex  mt-12'>
 
                         <Image

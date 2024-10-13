@@ -21,7 +21,7 @@ const New_Header: React.FC = () => {
         }
     }, [])
     return (
-        <div className="w-[80%] rounded-full bg-[#191919] shadow-lg h-16 flex items-center justify-between px-6">
+        <div className=" lg:w-[100%] xl:w-[80%] rounded-full bg-[#191919] shadow-lg h-16 flex items-center justify-between px-6">
             {/* Left side: Logo */}
             <div className="flex items-center">
                 <Link href="/" passHref>
