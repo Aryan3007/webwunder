@@ -436,12 +436,26 @@ const Home_new = () => {
                         {/* Hero Image */}
 
                         <Image
-                            src="/images/newhome/newlaptop.webp"
+                            src="/images/herbut.webp"
                             alt="Hero"
-                            className='relative laptop2 -bottom-3 z-40 w-screen'
+                            className='relative laptop2 -bottom-8 z-40 w-screen'
                             width={5000}
                             height={5000}
+                            onClick={openPopup}
                         />
+
+{isPopupOpen && (
+        <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
+          <button
+            onClick={closePopup}
+            className="absolute top-8 right-8 text-white hover:text-gray-300 transition-colors"
+            aria-label="Close video"
+          >
+            <X size={24} />
+          </button>
+          <iframe width="350" height="315" src="https://www.youtube.com/embed/1g0oik5droE?si=TgB8WLpCXZYb-box" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      )}
 
                     </div>
 
