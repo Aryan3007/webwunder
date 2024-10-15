@@ -9,6 +9,7 @@ import { gsap, ScrollTrigger } from 'gsap/all'
 import { languageData } from '@/langauge'
 import axios from 'axios'
 import LangLayout from '@/app/[locale]/langLayout'
+import Image from 'next/image'
 
 // Container and Item Animations
 const container = {
@@ -256,13 +257,16 @@ const WhyWebWunder = () => {
                                 }
                             </p>
                             <div
-                                className={`flex ${changeLanguage === 'de' ? 'h-8 w-10' : 'h-8 w-8'} items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8`}
+                                className={`flex items-center justify-center rounded-full lg:h-9 lg:w-9`}
                             >
-                                <ArrowRight
-                                    size={18}
-                                    fontWeight={100}
-                                    className="text-[#24252A]"
-                                />
+                                <Image
+                            src="/images/vid.svg"
+                            alt="Cloud Left"
+                           
+                            width={50}
+                            height={50}
+
+                        />
                             </div>
                         </button>
                     </Link>

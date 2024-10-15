@@ -179,7 +179,7 @@ const Why_mobCrousel: React.FC = () => {
                     <Link href="#purchase-plans">
                         {' '}
                         <button
-                            className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
+                            className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-3 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
                         >
                             <p className="ml-4 font-archivo text-sm font-medium text-white lg:text-[15px]">
                                 {
@@ -189,13 +189,16 @@ const Why_mobCrousel: React.FC = () => {
                                 }
                             </p>
                             <div
-                                className={`flex ${changeLanguage === 'de' ? 'h-10 w-10' : 'h-8 w-8'} items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8`}
+                                className={`flex items-center justify-center rounded-full h-9 w-9`}
                             >
-                                <ArrowRight
-                                    size={18}
-                                    fontWeight={100}
-                                    className="text-[#24252A]"
-                                />
+                                <Image
+                            src="/images/vid.svg"
+                            alt="Cloud Left"
+                           
+                            width={50}
+                            height={50}
+
+                        />
                             </div>
                         </button>
                     </Link>

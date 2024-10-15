@@ -68,7 +68,7 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(mobile, {
-            y: 100, // Start 30px below
+            y: 50, // Start 30px below
             duration: 0.5,
             ease: 'power2.out',
             scrollTrigger: {
@@ -83,7 +83,7 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(clouds, {
-            y: 200, // Start 30px below
+            y: 150, // Start 30px below
             duration: 3,
             ease: 'power2.out',
             scrollTrigger: {
@@ -313,7 +313,7 @@ const Home_new = () => {
                         </button>
                     </div> */}
 
-                    {
+                    {/* {
 
                         changeLanguage === "de" ? (<p className=" font-archivo block md:hidden text-sm px-4 text-center text-white lg:text-lg">
                             Hunderte erfolgreicher Projekte für hunderte zufriedener Kunden realisiert.
@@ -322,7 +322,7 @@ const Home_new = () => {
                             Hundreds of perfect projects delivered to hundreds of  thrilled customers.
 
                         </p>)
-                    }
+                    } */}
 
 
                     {/* Cloud Left */}

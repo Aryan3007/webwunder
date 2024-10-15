@@ -21,20 +21,27 @@ import Image from 'next/image'
 import { languageData } from '@/langauge'
 import Link from 'next/link'
 
+const TWENTY_FOUR_HOURS = 24 * 60 * 60 * 1000 // 24 hours in milliseconds
+
 export default function HomePage() {
     const [isVisible, setIsVisible] = useState(false)
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
+
     useEffect(() => {
-        const timer = setTimeout(() => setIsVisible(true), 1000)
-        return () => clearTimeout(timer)
+        const lastPopupTime = localStorage.getItem('popupTimestamp')
+        const now = new Date().getTime()
+
+        if (!lastPopupTime || now - parseInt(lastPopupTime) >= TWENTY_FOUR_HOURS) {
+            // Show popup if it hasn't been shown in the last 24 hours
+            setIsVisible(true)
+            localStorage.setItem('popupTimestamp', now.toString())
+        }
     }, [])
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const storedLang = localStorage.getItem('lang') as 'de' | 'en'
-            if (storedLang) {
-                setChangeLanguage(storedLang) // Set state from localStorage after component mounts
-            }
+            if (storedLang) setChangeLanguage(storedLang)
         }
     }, [])
 
@@ -53,71 +60,52 @@ export default function HomePage() {
                             <div className="flex justify-between flex-col lg:flex-row">
                                 <div className="relative lg:w-2/3 lg:h-96 h-48 overflow-hidden w-full">
                                     <Image
-                                        src="/images/popupimg.svg"
+                                        src="/images/popupimg.webp"
                                         alt="Cloud Left"
-                                        layout="fill" // Makes the image cover the parent div
-                                        objectFit="cover" // Ensures the image covers without distortion
+                                        layout="fill"
+                                        objectFit="cover"
                                         className="absolute inset-0"
-
                                     />
                                 </div>
-                                <div className="lg:w-3/4 w-full flex  px-4 flex-col justify-center lg:px-8">
-                                    <h2 className="lg:text-4xl text-lg font-bold text-left mb-4">{
-                                        languageData?.popup?.[
-                                            changeLanguage
-                                        ]?.Heading
-                                    }</h2>
+                                <div className="lg:w-3/4 w-full flex px-4 flex-col justify-center lg:px-8">
+                                    <h2 className="lg:text-4xl text-lg font-bold text-left mb-4">
+                                        {languageData?.popup?.[changeLanguage]?.Heading}
+                                    </h2>
                                     <p className="text-gray-600 text-xs lg:text-base mb-6">
-                                        {
-                                            languageData?.popup?.[
-                                                changeLanguage
-                                            ]?.text
-                                        }
+                                        {languageData?.popup?.[changeLanguage]?.text}
                                     </p>
                                     <div className="flex space-x-4">
-                                        <div className="my-4 flex  items-center justify-center gap-2 lg:my-2 lg:gap-3">
-                                            <Link target='_blank' href='https://wa.me/c/4915114039455'>
+                                        <div className="my-4 flex items-center justify-center gap-2 lg:my-2 lg:gap-3">
+                                            <Link target="_blank" href="https://wa.me/c/4915114039455">
                                                 <button
-                                                    className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
+                                                    className={`flex ${
+                                                        changeLanguage === 'de' ? 'h-14' : 'h-12'
+                                                    } w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
                                                 >
                                                     <p className="ml-4 font-archivo text-xs font-medium text-white lg:text-[13px]">
-                                                        {
-                                                            languageData?.contactUs?.[
-                                                                changeLanguage
-                                                            ]?.chatOnWhatsApp
-                                                        }
+                                                        {languageData?.contactUs?.[changeLanguage]?.chatOnWhatsApp}
                                                     </p>
                                                     <div
-                                                        className={`flex ${changeLanguage === 'de' ? 'h-8 w-10' : 'h-8 w-8'} items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8`}
+                                                        className={`flex ${
+                                                            changeLanguage === 'de' ? 'h-8 w-10' : 'h-8 w-8'
+                                                        } items-center justify-center rounded-full bg-[#fefffe] lg:h-8 lg:w-8`}
                                                     >
-                                                        <ArrowRight
-                                                            size={18}
-                                                            fontWeight={100}
-                                                            className="text-[#24252A]"
-                                                        />
+                                                        <ArrowRight size={18} fontWeight={100} className="text-[#24252A]" />
                                                     </div>
                                                 </button>
                                             </Link>
-                                            <Link target='_blank' href='mailto:info@webwunder.de'>
+                                            <Link target="_blank" href="mailto:info@webwunder.de">
                                                 <button
-                                                    className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] p-2 transition-all hover:scale-95`}
+                                                    className={`flex ${
+                                                        changeLanguage === 'de' ? 'h-14' : 'h-12'
+                                                    } w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] p-2 transition-all hover:scale-95`}
                                                 >
-
                                                     <p className="ml-4 font-inter text-xs font-medium text-[#24252A] lg:text-[13px]">
-                                                        {
-                                                            languageData?.contactUs?.[
-                                                                changeLanguage
-                                                            ]?.sendMessage
-                                                        }
+                                                        {languageData?.contactUs?.[changeLanguage]?.sendMessage}
                                                     </p>
                                                     <div className="flex h-6 w-6 items-center justify-center rounded-full lg:h-8 lg:w-8">
-                                                        <ArrowRight
-                                                            size={18}
-                                                            fontWeight={100}
-                                                            className="text-[#24252A]"
-                                                        />
+                                                        <ArrowRight size={18} fontWeight={100} className="text-[#24252A]" />
                                                     </div>
-
                                                 </button>
                                             </Link>
                                         </div>
@@ -146,7 +134,7 @@ export default function HomePage() {
                 <Reviews />
                 <FAQs />
                 <GetInTouch />
-                <div className='bg-black'>
+                <div className="bg-black">
                     <Footer />
                 </div>
             </div>

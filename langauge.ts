@@ -192,7 +192,7 @@ en:{
             weMakeItClear: 'Damit es läuft.',
             businessDeservesMore:
                 'Ihr Unternehmen verdient mehr als nur eine Website – es verdient einen echten Game-Changer.',
-            explorePlans: 'Abonnements',
+            explorePlans: 'Video Ansehen',
             bookCall: 'Kostenloses Erstgespräch',
             tabs: [
                 {
@@ -233,7 +233,7 @@ en:{
             weMakeItClear: 'We Make it Clear.',
             businessDeservesMore:
                 'Your business deserves more than just a website—it deserves a game-changer.',
-            explorePlans: 'Explore Plans',
+            explorePlans: 'Watch Video',
             bookCall: 'Book a Call',
             tabs: [
                 {
@@ -2085,7 +2085,7 @@ en:{
             },
             copyright1: 'Copyright © 2024. ',
             copyright2: '. All Rights Reserved.',
-            webwunder: 'Webwunder',
+            webwunder: 'Webwunder®',
         },
         de: {
             winningSupport:
