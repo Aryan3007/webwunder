@@ -51,28 +51,28 @@ export default function HomePage() {
                                 <X className="h-6 w-6" />
                             </button>
                             <div className="flex justify-between flex-col lg:flex-row">
-                                <div className="lg:w-2/3 lg:h-full h-48 overflow-hidden w-full">
+                                <div className="relative lg:w-2/3 lg:h-96 h-48 overflow-hidden w-full">
                                     <Image
                                         src="/images/popupimg.svg"
                                         alt="Cloud Left"
-className='h-full'
-                                        width={5000}
-                                        height={5000}
+                                        layout="fill" // Makes the image cover the parent div
+                                        objectFit="cover" // Ensures the image covers without distortion
+                                        className="absolute inset-0"
 
                                     />
                                 </div>
                                 <div className="lg:w-3/4 w-full flex items-center px-4 flex-col justify-center lg:px-8">
                                     <h2 className="lg:text-4xl text-lg font-bold mb-4">{
-                                                            languageData?.popup?.[
-                                                                changeLanguage
-                                                            ]?.Heading
-                                                        }</h2>
+                                        languageData?.popup?.[
+                                            changeLanguage
+                                        ]?.Heading
+                                    }</h2>
                                     <p className="text-gray-600 text-xs lg:text-base mb-6">
-                                    {
-                                                            languageData?.popup?.[
-                                                                changeLanguage
-                                                            ]?.text
-                                                        }
+                                        {
+                                            languageData?.popup?.[
+                                                changeLanguage
+                                            ]?.text
+                                        }
                                     </p>
                                     <div className="flex space-x-4">
                                         <div className="my-4 flex  items-center justify-center gap-2 lg:my-2 lg:gap-3">
