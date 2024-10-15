@@ -59,7 +59,7 @@ const Footer = () => {
 
     const changeData = languageData?.footerSections?.[changeLanguage]
     return (
-        <footer className="bg-black px-2 py-6 lg:px-20 lg:pb-8 2xl:pl-0 2xl:pr-36">
+        <footer className=" px-2 py-6 lg:px-20 lg:pb-8 2xl:pl-0 2xl:pr-36">
             <FadeIn>
                 <div className="container mx-auto">
                     {/* Mobile Layout */}

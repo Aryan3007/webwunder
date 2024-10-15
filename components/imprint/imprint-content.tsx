@@ -16,7 +16,7 @@ const ImprintContent = () => {
     const imprintData = languageData?.imprintPage?.[changeLanguage];
 
     return (
-        <div className="flex flex-col px-6 py-12 bg-[url('/images/imprint.jpg')] bg-center bg-cover bg-no-repeat text-white lg:flex-row lg:px-40 lg:py-24">
+        <div className="flex flex-col px-6 py-12t text-white lg:flex-row lg:px-40 lg:py-24">
             <div className="mb-8 lg:mb-0 lg:w-1/2 lg:pr-4">
                 <h2 className="mb-4 font-archivo text-[25px] font-bold">
                     {imprintData?.title}

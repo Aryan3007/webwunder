@@ -32,8 +32,8 @@ const PolicyContent: React.FC<PolicyProps> = ({
         }
     }, [])
     return (
-        <div className="bg-gradient-to-br w-screen overflow-hidden from-[#100013] via-0% to-[#000000] lg:p-6">
-            <div className="relative h-[75vh] lg:h-[55vh] overflow-hidden rounded-t-lg bg-black">
+        <div className=" bg-[url('/images/imprint.svg')] bg-cover bg-center  w-screen overflow-hidden lg:p-6">
+           
 
 
 
@@ -54,13 +54,14 @@ const PolicyContent: React.FC<PolicyProps> = ({
                 </div>
 
 
+            <div className="">
 
-                <div className="absolute inset-0 h-full flex justify-center items-center bg-[url('/images/main-hero-small.png')] bg-cover bg-center lg:bg-[url('/images/imprintnew.png')]">
+                <div className="my-6 inset-0 h-44 flex justify-center items-center ">
 
 
-                    <div className="relative z-10 flex h-full flex-col items-center justify-center">
+                    <div className=" z-10 flex h-full flex-col items-center  justify-center">
                         <div className=" flex flex-col items-center justify-center text-center">
-                            <div className="xl:text[80px] max-w-[38.1rem] text-center font-archivo text-[25px] font-bold text-white">
+                            <div className="xl:text[80px] max-w-[38.1rem] p-3  text-center font-archivo text-[25px] font-bold text-white">
                                 {title}
                             </div>
                             <div className='mx-auto max-w-80'>
@@ -73,11 +74,14 @@ const PolicyContent: React.FC<PolicyProps> = ({
 
 
 
-            </div>
-            <div className="rounded-b-lg bg-gradient-to-r from-[#858585]/40 via-[#858585]/20 to-[#858585]/60 text-white">
+            <div className="rounded-b-lg bg-transparent  text-white">
                 {content}
             </div>
-            <div className="relative h-[400px] bg-black">
+
+
+
+            </div>
+            {/* <div className="relative h-[400px] bg-black">
                 <div
                     className="absolute inset-0 scale-150"
                     style={{
@@ -96,7 +100,7 @@ const PolicyContent: React.FC<PolicyProps> = ({
                         {languageData?.faqPage?.[changeLanguage]?.contactCta}
                     </Badge>
                     <h2 className="font-archivo text-[25px] font-bold leading-none text-white lg:text-[45px]">
-                        {/* Leave the Competition Behind! */}
+                       
                         {languageData?.faqPage?.[changeLanguage]?.contactTitle}
                     </h2>
                     <p className="max-w-xl font-archivo text-sm font-normal text-gray-400 md:text-[16px] lg:text-base">
@@ -127,7 +131,7 @@ const PolicyContent: React.FC<PolicyProps> = ({
                         </Link>
                     </button>
                 </div>
-            </div>
+            </div> */}
             <div className="mt-8">
                 <Footer />
             </div>

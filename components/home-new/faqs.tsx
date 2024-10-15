@@ -81,7 +81,7 @@ const FAQs = () => {
                     <p className="font-archivo text-sm font-normal leading-none text-gray-300 lg:text-base lg:leading-normal">
                         {languageData?.faqPage?.[changeLanguage]?.description2}
                     </p>
-                    <Link href="https://wa.me/c/4915114039455">
+                    <Link target='_blank' href="https://wa.me/c/4915114039455">
                         <Button
                             size={'base'}
                             className="hidden items-center justify-between gap-3 bg-white transition-all hover:scale-95 md:flex"

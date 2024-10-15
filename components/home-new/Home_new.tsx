@@ -22,6 +22,12 @@ const Home_new = () => {
     const openPopup = () => setIsPopupOpen(true)
     const closePopup = () => setIsPopupOpen(false)
 
+    const videoSrc =
+    changeLanguage === 'de'
+      ? "https://www.youtube.com/embed/Bf3eMuBdwRM?si=LteYkcoWKQbdbLb3" // Replace with German video URL
+      : "https://www.youtube.com/embed/qDqq2aDheHU?si=tw-933PIwfroN9WK" ; // English video URL
+
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const storedLang = localStorage.getItem('lang') as 'de' | 'en'
@@ -197,7 +203,7 @@ const Home_new = () => {
 
                     {/* Text Content */}
 
-                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 mt-12 flex-col items-center justify-center gap-4 ">
+                    <div className="mx-auto text hidden lg:flex max-w-6xl md:mb-12 lg:mb-0 mb-8 translate-y-24 flex-col items-center justify-center gap-4 ">
                         <Badge className="w-fit rounded-full bg-[#5D59E1] px-5 py-1 font-archivo text-xs font-light text-white sm:text-sm">
                             {languageData?.heroSection?.[changeLanguage]?.badge}
                         </Badge>
@@ -374,18 +380,18 @@ const Home_new = () => {
                             onClick={openPopup}
                         />
 
-{isPopupOpen && (
-        <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
-          <button
-            onClick={closePopup}
-            className="absolute top-8 right-8 text-white hover:text-gray-300 transition-colors"
-            aria-label="Close video"
-          >
-            <X size={24} />
-          </button>
-          <iframe width="960" height="615" src="https://www.youtube.com/embed/1g0oik5droE?si=TgB8WLpCXZYb-box" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-        </div>
-      )}
+                        {isPopupOpen && (
+                            <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
+                                <button
+                                    onClick={closePopup}
+                                    className="absolute top-8 right-8 text-white hover:text-gray-300 transition-colors"
+                                    aria-label="Close video"
+                                >
+                                    <X size={24} />
+                                </button>
+                                <iframe width="960" height="615" src={videoSrc} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                            </div>
+                        )}
 
                     </div>
                     <div className=' md:hidden flex  mt-12'>
@@ -444,18 +450,18 @@ const Home_new = () => {
                             onClick={openPopup}
                         />
 
-{isPopupOpen && (
-        <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
-          <button
-            onClick={closePopup}
-            className="absolute top-8 right-8 text-white hover:text-gray-300 transition-colors"
-            aria-label="Close video"
-          >
-            <X size={24} />
-          </button>
-          <iframe width="350" height="315" src="https://www.youtube.com/embed/1g0oik5droE?si=TgB8WLpCXZYb-box" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
-        </div>
-      )}
+                        {isPopupOpen && (
+                            <div className="fixed inset-0 bg-black z-[100] flex items-center justify-center">
+                                <button
+                                    onClick={closePopup}
+                                    className="absolute top-8 right-8 text-white hover:text-gray-300 transition-colors"
+                                    aria-label="Close video"
+                                >
+                                    <X size={24} />
+                                </button>
+                                <iframe width="350" height="315" src={videoSrc} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                            </div>
+                        )}
 
                     </div>
 

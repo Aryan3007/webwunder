@@ -76,7 +76,7 @@ const Reviews = () => {
                         }
                     </p>
                     <div className="my-5 flex items-center justify-center lg:my-0">
-                        <Link href="https://g.page/r/CUIwk9NM4ejJEBM/review">
+                        <Link target='_blank' href="https://g.page/r/CUIwk9NM4ejJEBM/review">
                             <Button
                                 size={'base'}
                                 className="flex items-center justify-between gap-3 bg-[#FFDC26] transition-all hover:scale-95"

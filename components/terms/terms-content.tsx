@@ -12,7 +12,7 @@ const TermsContent = () => {
     }, [])
 
     return (
-        <div className="p-8 font-sans bg-[url('/images/terms.png')] bg-center bg-cover bg-no-repeat text-gray-300">
+        <div className="p-8 font-sans bg-center bg-cover bg-no-repeat text-gray-300">
             <div className="mx-auto lg:max-w-5xl 2xl:max-w-7xl">
                 {languageData?.termsData[changeLanguage].map((term, index) => (
                     <div key={index} className="mb-12">

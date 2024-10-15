@@ -41,19 +41,19 @@ const New_Header: React.FC = () => {
                 </Link>
                 <Link href="/#easySteps">
                     {languageData?.navItems?.[changeLanguage]?.Process}
-                    </Link>
-                <Link href="#all-in-one"> {languageData?.navItems?.[changeLanguage]?.yourWebsite}</Link>
-                <Link href="#purchase-plans"> {languageData?.navItems?.[changeLanguage]?.prices}</Link>
+                </Link>
+                <Link href="/#all-in-one"> {languageData?.navItems?.[changeLanguage]?.yourWebsite}</Link>
+                <Link href="/#purchase-plans"> {languageData?.navItems?.[changeLanguage]?.prices}</Link>
                 <Link href='/portfolio'>   {languageData?.navItems?.[changeLanguage]?.portfolio}</Link>
-                <Link href="#faqs"> {languageData?.navItems?.[changeLanguage]?.faqs}</Link>
-                <Link href="#contact-us"> {languageData?.navItems?.[changeLanguage]?.contact}</Link>
+                <Link href="/#faqs"> {languageData?.navItems?.[changeLanguage]?.faqs}</Link>
+                <Link href="/#contact-us"> {languageData?.navItems?.[changeLanguage]?.contact}</Link>
             </nav>
 
             {/* Right side: Book a call button and Language selector */}
             <div className="flex items-center w-fit space-x-4">
                 {/* Book a call button */}
 
-                <Link className=' bg-white hover:bg-[#303030] border-2 border-white duration-100 transition-all hover:text-white text-black  flex justify-between items-center rounded-full gap-4 px-4 py-2' href="https://tidycal.com/skylumina/webwunder" passHref>
+                <Link className=' bg-white hover:bg-[#303030] border-2 border-white duration-100 transition-all hover:text-white text-black  flex justify-between items-center rounded-full gap-4 px-4 py-2' target='_blank' href="https://tidycal.com/skylumina/webwunder" passHref>
                     <button className="uppercase flex justify-center items-center gap-2  font-semibold">
                         <Image
                             src="/images/emoji.svg" // Replace this with the correct logo path (or import your image from the file if needed)
@@ -69,7 +69,7 @@ const New_Header: React.FC = () => {
                         <ArrowRight
                             size={18}
                             fontWeight={100}
-                           
+
                         />
                     </div>
                 </Link>
@@ -89,7 +89,7 @@ const New_Header: React.FC = () => {
                             />
                         </Link>
                     </div>
-                    
+
                     <div className="flex items-center justify-center rounded-full p-2 bg-[#2a2a2a] w-10 h-10">
                         <Link href="#home" passHref>
                             <Image

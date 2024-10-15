@@ -47,6 +47,7 @@ const GetInTouch = () => {
                 </p>
                 <button className="flex w-fit flex-row items-center justify-between gap-6 rounded-full border bg-[#ffffff] px-2 py-1 transition-all hover:scale-95 md:p-2">
                     <Link
+                    target='_blank'
                         href="https://tidycal.com/skylumina/webwunder"
                         className="flex flex-row items-center justify-between gap-4"
                     >

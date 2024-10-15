@@ -66,7 +66,7 @@ const MobileMenu: React.FC = () => {
                 </button>
 
                 {/* Booking Button */}
-                <Link href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-32 bg-white rounded-full text-[10px] md:w-56 text-black px-3 py-2 ' passHref>
+                <Link target='_blank'  href="https://tidycal.com/skylumina/webwunder" className='flex justify-center items-center gap-2 w-32 bg-white rounded-full text-[10px] md:w-56 text-black px-3 py-2 ' passHref>
                     <button className="text-left flex items-center justify-center gap-2 uppercase font-bold">
                     <Image
                             src="/images/emoji.svg" // Replace this with the correct logo path (or import your image from the file if needed)
@@ -129,19 +129,19 @@ const MobileMenu: React.FC = () => {
                      <Link href="/#easySteps" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.Process}
                     </Link>
-                    <Link href="#all-in-one" onClick={toggleMenu}>
+                    <Link href="/#all-in-one" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.yourWebsite}
                     </Link>
-                    <Link href="#purchase-plans" onClick={toggleMenu}>
+                    <Link href="/#purchase-plans" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.prices}
                     </Link>
                     <Link href="/portfolio" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.portfolio}
                     </Link>
-                    <Link href="#faqs" onClick={toggleMenu}>
+                    <Link href="/#faqs" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.faqs}
                     </Link>
-                    <Link href="#contact-us" onClick={toggleMenu}>
+                    <Link href="/#contact-us" onClick={toggleMenu}>
                     {languageData?.navItems?.[changeLanguage]?.contact}
                     </Link>
                 </nav>

@@ -50,6 +50,17 @@ export const languageData = {
             signup: 'Sign up',
         },
     },
+
+    popup:{
+de:{
+    Heading:"Upgrade für eine bessere Experience",
+    text:"Wir überarbeiten unser Kundenbackend, um Ihre Experience und den Support für unsere Webprojekte zu verbessern. Daher sind Buchungen, Neuanmeldungen und Logins vorübergehend nicht möglich. Alle Funktionen stehen mit neuen Erweiterungen Ende des Monats wieder zur Verfügung. Bei Fragen kontaktieren Sie uns bitte per E-Mail oder WhatsApp. Vielen Dank für Ihr Verständnis!"
+},
+en:{
+    Heading:"Upgrading for a Better Experience",
+    text:"We’re currently upgrading our customer backend to enhance your experience and support for our web projects. As a result, bookings, new registrations, and sign-ins are temporarily unavailable. All functions will be back with new features by the end of the month. For any questions, please contact us via email or WhatsApp. Thank you for your understanding!"
+}
+    },
     mobNavFooter: {
         de: {
             links: {
@@ -2072,7 +2083,7 @@ export const languageData = {
                 pinterest: 'Pinterest',
                 youtube: 'YouTube',
             },
-            copyright1: 'Copyright © 2024. WebWunder ',
+            copyright1: 'Copyright © 2024. ',
             copyright2: '. All Rights Reserved.',
             webwunder: 'Webwunder',
         },
