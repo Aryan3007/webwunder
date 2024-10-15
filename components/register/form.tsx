@@ -111,7 +111,7 @@ export default function SignupPage() {
     return (
         <div className="lg:p-6 p-0 min-h-screen">
 
-            <div className="flex rounded-none lg:rounded-2xl  h-screen bg-[url('/signupbg.svg')] bg-center bg-no-repeat bg-cover bg-black flex-col overflow-x-hidden">
+            <div className="flex rounded-none lg:rounded-2xl  min-h-screen bg-[url('/signupbg.svg')] bg-center bg-no-repeat bg-cover bg-black flex-col overflow-x-hidden">
 
                 <div className="p-4 z-40 w-full items-center flex justify-between">
                     <Link href={`/`}>
@@ -122,103 +122,103 @@ export default function SignupPage() {
                             height="17" />
                     </Link>
 
-<div className='scale-75'>
+                    <div className='scale-75'>
 
-                    <CustomLanguageDropdown />
-</div>
+                        <CustomLanguageDropdown />
+                    </div>
                 </div>
                 {/* Left side with carousel */}
 
-<div className='flex justify-center items-center h-full w-full'>
+                <div className='flex justify-center items-center h-full w-full'>
 
 
-                {/* Right side with form */}
-                <div
-                    className={`flex w-full flex-col ${scale} items-center justify-center px-6 py-8lg:py-0`}
-                >
-                    <div className="w-full max-w-lg lg:space-y-4 space-y-10">
-                        <div className="space-y-2 text-left">
-                            <h2 className="font-archivo  text-center text-[45px] font-bold leading-none text-white">
-                                {
-                                    languageData?.signupPage?.[changeLanguage]
-                                        ?.createAccount
-                                }
-                            </h2>
-                            <p className="font-archivo text-center text-base font-normal text-white">
-                                {
-                                    languageData?.signupPage?.[changeLanguage]
-                                        ?.alreadyHaveAccount
-                                }
-                                <Link href="/login" className="text-[#5D59E1]">
+                    {/* Right side with form */}
+                    <div
+                        className={`flex w-full flex-col ${scale} items-center justify-center px-6 py-8 lg:py-0`}
+                    >
+                        <div className="w-full max-w-lg lg:space-y-4 space-y-10">
+                            <div className="space-y-2 text-left">
+                                <h2 className="font-archivo  text-center text-[45px] font-bold leading-none text-white">
                                     {
                                         languageData?.signupPage?.[changeLanguage]
-                                            ?.signIn
+                                            ?.createAccount
                                     }
-                                </Link>
-                            </p>
-                        </div>
+                                </h2>
+                                <p className="font-archivo text-center text-base font-normal text-white">
+                                    {
+                                        languageData?.signupPage?.[changeLanguage]
+                                            ?.alreadyHaveAccount
+                                    }
+                                    <Link href="/login" className="text-[#5D59E1]">
+                                        {
+                                            languageData?.signupPage?.[changeLanguage]
+                                                ?.signIn
+                                        }
+                                    </Link>
+                                </p>
+                            </div>
 
-                        <SignupForm />
+                            <SignupForm />
 
-                        <div className="text-center">
-                            <p className="mb-4 font-archivo text-base font-normal text-white">
-                                {
-                                    languageData?.signupPage?.[changeLanguage]
-                                        ?.orSignUpwith
-                                }
-                            </p>
-                            <div className='flex text-zinc-500 flex-col gap-3'>
-                                <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
+                            <div className="text-center">
+                                <p className="mb-4 font-archivo text-base font-normal text-white">
+                                    {
+                                        languageData?.signupPage?.[changeLanguage]
+                                            ?.orSignUpwith
+                                    }
+                                </p>
+                                <div className='flex text-zinc-500 flex-col gap-3'>
+                                    <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                                    <Image src="/google.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize text-left'>
-                                    {languageData?.logintypes?.[changeLanguage]?.google}
-                                    </button>
-                                </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
+                                        <Image src="/google.svg" alt="Logo" width={25} height={25} />
+                                        <button className='capitalize text-left'>
+                                            {languageData?.logintypes?.[changeLanguage]?.google}
+                                        </button>
+                                    </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                                    <Image src="/window.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize text-left'>
-                                    {languageData?.logintypes?.[changeLanguage]?.microsoft}
-                                    </button>
-                                </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
+                                        <Image src="/window.svg" alt="Logo" width={25} height={25} />
+                                        <button className='capitalize text-left'>
+                                            {languageData?.logintypes?.[changeLanguage]?.microsoft}
+                                        </button>
+                                    </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
 
-                                    <Image src="/apple.svg" alt="Logo" width={25} height={25} />
-                                    <button className='capitalize text-left'>
-                                    {languageData?.logintypes?.[changeLanguage]?.apple}
-                                    </button>
+                                        <Image src="/apple.svg" alt="Logo" width={25} height={25} />
+                                        <button className='capitalize text-left'>
+                                            {languageData?.logintypes?.[changeLanguage]?.apple}
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div className="space-y-16 pb-4 text-center text-xs text-white/70">
+                                <div className="flex flex-wrap justify-center space-x-4 font-archivo text-sm font-normal text-white">
+                                    <a
+                                        href="/privacy-policy"
+                                        className="hover:text-white"
+                                    >
+                                        {
+                                            languageData?.signupPage?.[changeLanguage]
+                                                ?.privacyPolicy
+                                        }
+                                    </a>
+                                    <a href="/terms" className="hover:text-white">
+                                        {
+                                            languageData?.signupPage?.[changeLanguage]
+                                                ?.termsConditions
+                                        }
+                                    </a>
+                                    <a href="/imprint" className="hover:text-white">
+                                        {
+                                            languageData?.signupPage?.[changeLanguage]
+                                                ?.imprint
+                                        }
+                                    </a>
                                 </div>
 
                             </div>
                         </div>
-
-                        <div className="space-y-16 pb-4 text-center text-xs text-white/70">
-                            <div className="flex flex-wrap justify-center space-x-4 font-archivo text-sm font-normal text-white">
-                                <a
-                                    href="/privacy-policy"
-                                    className="hover:text-white"
-                                >
-                                    {
-                                        languageData?.signupPage?.[changeLanguage]
-                                            ?.privacyPolicy
-                                    }
-                                </a>
-                                <a href="/terms" className="hover:text-white">
-                                    {
-                                        languageData?.signupPage?.[changeLanguage]
-                                            ?.termsConditions
-                                    }
-                                </a>
-                                <a href="/imprint" className="hover:text-white">
-                                    {
-                                        languageData?.signupPage?.[changeLanguage]
-                                            ?.imprint
-                                    }
-                                </a>
-                            </div>
-
-                        </div>
                     </div>
-                </div>
                 </div>
 
             </div>

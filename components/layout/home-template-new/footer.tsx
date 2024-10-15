@@ -64,13 +64,13 @@ const Footer = () => {
                 <div className="container mx-auto">
                     {/* Mobile Layout */}
                     <div className="flex flex-col items-center lg:hidden">
-                        <Link href="/" className="mb-4">
-                            <Image
-                                src={Logo}
-                                className="w-48 object-contain"
-                                alt="WebWunder Logo"
-                            />
-                        </Link>
+                    <Link href={`/`}>
+            <Image src="./images/logo.svg"
+                className="mb-4"
+                alt="WebWunder Logo"
+                width="225"
+                height="17" />
+        </Link>
                         <p className="mb-6 text-center text-base text-white/50">
                             {/* Winning Websites. Unshakable Support. */}
                             {changeData?.winningSupport}
@@ -221,13 +221,13 @@ const Footer = () => {
                     <div className="hidden lg:block 2xl:w-[1450px]">
                         <div className="grid grid-flow-dense grid-cols-2 gap-y-8 lg:flex lg:flex-row-reverse lg:justify-between">
                             <div className="col-span-2 mb-4 flex flex-col text-center lg:w-[400px] lg:items-end">
-                                <Link className="mb-4" href={`/`}>
-                                    <Image
-                                        src={Logo}
-                                        className="mx-auto w-[336px] object-contain"
-                                        alt="WebWunder Logo"
-                                    />
-                                </Link>
+                            <Link href={`/`}>
+            <Image src="./images/logo.svg"
+                className="mb-4"
+                alt="WebWunder Logo"
+                width="225"
+                height="17" />
+        </Link>
                                 <p className="font-dm-sans text-[18px] font-normal text-gray-500 text-white/50 lg:w- lg:text-end">
                                     {changeData?.winningSupport}
                                     {/* winningSupport */}

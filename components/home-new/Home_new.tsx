@@ -146,7 +146,7 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(mobile, {
-            y: 40, // Start 30px below
+            y: 60, // Start 30px below
             duration: 0.5,
             ease: 'power2.out',
             scrollTrigger: {
@@ -161,7 +161,7 @@ const Home_new = () => {
 
         // Animate each letter into view
         gsap.to(clouds, {
-            y: 60, // Start 30px below
+            y: 80, // Start 30px below
             duration: 3,
             ease: 'power2.out',
             scrollTrigger: {
@@ -399,7 +399,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"
-                            className='absolute clouds2 bottom-24 z-10 -left-24'
+                            className='absolute clouds2 bottom-28 z-10 -left-24'
                             width={5000}
                             height={5000}
 
@@ -411,7 +411,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-2.webp"
                             alt="Cloud Right"
-                            className='absolute clouds2 bottom-24  z-20 w-2/3 -right-16'
+                            className='absolute clouds2 bottom-28  z-20 w-2/3 -right-16'
                             width={5000}
                             height={5000}
                         />
@@ -422,7 +422,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-2.webp"
                             alt="Rock Phone Left"
-                            className='absolute mobiles2 z-30 bottom-12 w-3/5 left-0'
+                            className='absolute mobiles2 z-30 bottom-16 w-3/5 left-0'
                             width={5000}
                             height={5000}
                         />
@@ -433,7 +433,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-3.webp"
                             alt="Right Phone"
-                            className='absolute mobiles2 z-30 bottom-12 w-2/3 right-0'
+                            className='absolute mobiles2 z-30 bottom-16 w-2/3 right-0'
                             width={5000}
                             height={5000}
                         />

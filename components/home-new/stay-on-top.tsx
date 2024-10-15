@@ -138,28 +138,28 @@ const StayOnTop = () => {
                     <div className="flex lg:hidden">
                         <Image
                             className="absolute left-4 top-4 animate-heartbeat lg:left-48 lg:top-12 xl:left-48 xl:top-12"
-                            src="/images/home/stay-on-top/icon-3.png"
+                            src="/images/home/stay-on-top/i4.svg"
                             alt="Unlimited Design"
                             width={75.56}
                             height={79.07}
                         />
                         <Image
                             className="absolute right-4 top-4 animate-heartbeat lg:bottom-44 lg:left-12 xl:bottom-44 xl:left-12"
-                            src="/images/home/stay-on-top/icon-5.png"
+                            src="/images/home/stay-on-top/i1.svg"
                             alt="Unlimited Design"
                             width={50}
                             height={50}
                         />
                         <Image
                             className="absolute left-8 top-96 animate-heartbeat lg:right-12 lg:top-12 xl:right-12 xl:top-12"
-                            src="/images/home/stay-on-top/icon-1.png"
+                            src="/images/home/stay-on-top/i2.svg"
                             alt="Unlimited Design"
                             width={76}
                             height={79}
                         />
                         <Image
                             className="absolute bottom-80 right-12 animate-heartbeat lg:bottom-16 lg:left-[43%] xl:bottom-44 xl:left-[48%]"
-                            src="/images/home/stay-on-top/icon-4.png"
+                            src="/images/home/stay-on-top/i4.svg"
                             alt="Unlimited Design"
                             width={32.26}
                             height={33.76}
