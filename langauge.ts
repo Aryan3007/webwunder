@@ -2120,7 +2120,7 @@ en:{
                 youtube: 'YouTube',
             },
             copyright1: 'Urheberrecht © 2024. ',
-            webwunder: 'Webwunder',
+            webwunder: 'Webwunder®',
             copyright2: '. Alle Rechte vorbehalten.',
         },
     },
