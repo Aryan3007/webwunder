@@ -189,7 +189,7 @@ export default function LoginPage() {
 
 
                         <div className="space-y-16 text-center text-xs text-white/70">
-                            <div className="flex flex-wrap justify-center space-x-4 font-archivo text-sm font-normal text-white">
+                            <div className="flex flex-wrap justify-center space-x-8 font-archivo text-sm font-normal text-white">
                                 <a
                                     href="/privacy-policy"
                                     className="hover:text-white"

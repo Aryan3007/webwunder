@@ -53,7 +53,7 @@ const Reviews = () => {
             <p className="font-archivo text-[25px] font-bold text-white lg:text-[45px]">
                 {languageData?.ourClient?.[changeLanguage]?.whatClientsSay}{' '}
             </p>
-            <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md antialiased">
+            <div className="relative flex flex-col items-center justify-center overflow-hidden rounded-md antialiased [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]">
             <InfiniteMovingCards items={testimonials} direction="left" speed="normal" pauseOnHover={true} />
             </div>{' '}
             {/* <div className="relative hidden -my-28 scale-50 flex-col items-center justify-center overflow-hidden rounded-md antialiased lg:flex">

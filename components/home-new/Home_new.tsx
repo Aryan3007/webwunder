@@ -24,8 +24,8 @@ const Home_new = () => {
 
     const videoSrc =
     changeLanguage === 'de'
-      ? "https://www.youtube.com/embed/Bf3eMuBdwRM?si=LteYkcoWKQbdbLb3" // Replace with German video URL
-      : "https://www.youtube.com/embed/qDqq2aDheHU?si=tw-933PIwfroN9WK" ; // English video URL
+      ? "https://www.youtube.com/embed/mdaxGJFxj3g?si=Kplkw-MGBSzfqmud"  // Replace with German video URL
+      : "https://www.youtube.com/embed/j6SZoN30F84?si=FzioD18NYkjKuotN" ; // English video URL
 
 
     useEffect(() => {
@@ -331,7 +331,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"
-                            className='absolute clouds bottom-28 md:bottom-36 lg:bottom-44 z-10 -left-24'
+                            className='absolute clouds bottom-28 md:bottom-36 lg:bottom-64 z-10 -left-24'
                             width={5000}
                             height={5000}
 
@@ -343,7 +343,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-2.webp"
                             alt="Cloud Right"
-                            className='absolute clouds bottom-24 md:bottom-36 lg::bottom-56 2xl:bottom-80 z-30 w-2/3 -right-16'
+                            className='absolute clouds bottom-24 md:bottom-36 lg:bottom-72 2xl:bottom-96 z-30 w-2/3 -right-16'
                             width={5000}
                             height={5000}
                         />
@@ -399,7 +399,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-1.webp"
                             alt="Cloud Left"
-                            className='absolute clouds2 bottom-28 z-10 -left-24'
+                            className='absolute clouds2 bottom-36 z-10 -left-24'
                             width={5000}
                             height={5000}
 
@@ -411,7 +411,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/clouds-2.webp"
                             alt="Cloud Right"
-                            className='absolute clouds2 bottom-28  z-20 w-2/3 -right-16'
+                            className='absolute clouds2 bottom-36  z-20 w-2/3 -right-16'
                             width={5000}
                             height={5000}
                         />
@@ -422,7 +422,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-2.webp"
                             alt="Rock Phone Left"
-                            className='absolute mobiles2 z-30 bottom-16 w-3/5 left-0'
+                            className='absolute mobiles2 z-30 bottom-20 w-3/5 left-0'
                             width={5000}
                             height={5000}
                         />
@@ -433,7 +433,7 @@ const Home_new = () => {
                         <Image
                             src="/images/home/hero/hero-img-3.webp"
                             alt="Right Phone"
-                            className='absolute mobiles2 z-30 bottom-16 w-2/3 right-0'
+                            className='absolute mobiles2 z-30 bottom-20 w-2/3 right-0'
                             width={5000}
                             height={5000}
                         />

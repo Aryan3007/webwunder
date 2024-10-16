@@ -68,10 +68,10 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <div className="lg:w-3/4 w-full flex px-4 flex-col justify-center lg:px-8">
-                                    <h2 className="lg:text-4xl text-lg font-bold text-left mb-4">
+                                    <h2 className="lg:text-4xl text-lg font-bold text-left mb-2 pt-3 lg:pt-6">
                                         {languageData?.popup?.[changeLanguage]?.Heading}
                                     </h2>
-                                    <p className="text-gray-600 text-xs lg:text-base mb-6">
+                                    <p className="text-gray-600 text-xs lg:text-base mb-2">
                                         {languageData?.popup?.[changeLanguage]?.text}
                                     </p>
                                     <div className="flex space-x-4">

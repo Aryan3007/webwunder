@@ -26,7 +26,7 @@ const PortfolioMainContent = () => {
         }
     }, [])
     return (
-        <div className="flex flex-col items-center gap-4">
+        <div className="flex flex-col lg:pt-16 items-center gap-4">
             <div className="flex flex-col items-center gap-4">
                 <Badge className="w-fit self-center rounded-full bg-[#5D59E1] px-3 py-1 font-archivo text-sm font-normal">
                     {

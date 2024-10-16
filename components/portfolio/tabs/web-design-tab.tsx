@@ -18,7 +18,7 @@ const WebDesignTab = () => {
     const tabItems = [
         {
             width: 'lg:w-[35rem] xl:w-[40rem] w-full',
-            img: '/images/portfolio/leapx.png',
+            img: '/images/portfolio/pp1.svg',
             bgColor: '#6366f1',
             links:"https://www.figma.com/proto/5KAwngx06wyLU40cF3JZ7l/Skylumina?page-id=0%3A1&node-id=1-6&node-type=canvas&viewport=364%2C206%2C0.49&t=m4z6WE11kFiTXxlM-1&scaling=scale-down&content-scaling=fixed",
             tags: [
@@ -154,7 +154,7 @@ const WebDesignTab = () => {
         },
         {
             width: 'lg:w-[30rem] xl:w-[35rem] w-full',
-            img: '/images/portfolio/praxiskattan.png',
+            img: '/images/portfolio/pp2.svg',
             links:"https://www.figma.com/proto/c9qeS5AnXek7i4LMr8OOnM/Praxis-Kattan?page-id=0%3A1&node-id=1-42&node-type=canvas&viewport=678%2C258%2C0.31&t=ce6guX1xNAfFhrhX-1&scaling=scale-down&content-scaling=fixed",
             bgColor: '#04CA76',
             tags: [
@@ -191,7 +191,7 @@ const WebDesignTab = () => {
         },
         {
             width: 'lg:w-[35rem] xl:w-[40rem] w-full',
-            img: '/images/portfolio/fitsync.png',
+            img: '/images/portfolio/pp3.svg',
             links:"https://www.figma.com/proto/HXU4vmzYG58pBHd0owgoyh/FITSYNC---Gym-Fitness-Landing-Page?page-id=0%3A1&node-id=32-2450&node-type=canvas&viewport=-1607%2C2052%2C0.9&t=Xhk2h5LLX5CAPadU-1&scaling=scale-down&content-scaling=fixed",
             bgColor: '#D0F651',
             tags: [

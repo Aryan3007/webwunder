@@ -194,6 +194,12 @@ const WhyWebWunder = () => {
         },
     ]
 
+
+    const youtubeLink =
+        changeLanguage === 'de'
+            ? 'https://youtu.be/mdaxGJFxj3g' // German
+            : 'https://youtu.be/j6SZoN30F84'; // English
+
     useEffect(() => {
         if (typeof window !== 'undefined') {
             const storedLang = localStorage.getItem('lang') as 'de' | 'en'
@@ -245,7 +251,7 @@ const WhyWebWunder = () => {
 
                 {/* Buttons */}
                 <div className="my-4 flex  items-center justify-center gap-2 lg:my-2 lg:gap-3">
-                    <Link href="#purchase-plans">
+                    <Link href={youtubeLink} target="_blank" rel="noopener noreferrer">
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-6 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
                         >

@@ -57,7 +57,7 @@ const PrivacyPolicyContent = () => {
 
     return (
         <div className="lg:px-20 px-6 py-8">
-            <div className="grid grid-cols-1  gap-6 md:grid-cols-2">
+            <div className="grid grid-cols-1 mx-auto lg:max-w-5xl 2xl:max-w-7xl gap-6 md:grid-cols-2">
                 {languageData?.policySections?.[changeLanguage].map(
                     (section, index) => (
                         <PolicySection

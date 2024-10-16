@@ -405,7 +405,7 @@ const Footer = () => {
                         </div>
                         <div className="mb-6 mt-12 w-full border-b opacity-60"></div>
                         <div className="flex flex-col items-center justify-between gap-5 lg:flex-row">
-                            <div className="flex flex-row items-center gap-4 font-dm-sans text-[18px] font-normal text-white">
+                            <div className="flex flex-row items-center gap-10 font-dm-sans text-[18px] font-normal text-white">
                                 <Link href="/privacy-policy">
                                     {changeData?.links?.privacyPolicy}
                                 </Link>
