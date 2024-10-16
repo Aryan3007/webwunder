@@ -117,7 +117,7 @@ const Footer = () => {
                                     <Link href="/signup">
                                         {changeData?.links?.signUp} |
                                     </Link>
-                                    <Link href="#purchase-plans">
+                                    <Link href="/#purchase-plans">
                                         {changeData?.links?.pricing} |
                                     </Link>
                                     <Link href="/login">
@@ -129,7 +129,7 @@ const Footer = () => {
                                     <Link href={paths.pages.service.href}>
                                         {changeData?.links?.services} |
                                     </Link>
-                                    <Link href="#faqs">
+                                    <Link href="/#faqs">
                                         {changeData?.links?.faqs} |
                                     </Link>
                                     <Link href={paths.pages.benefits.href}>
@@ -333,13 +333,13 @@ const Footer = () => {
                                 <div className=" mt-3 flex flex-col gap-x-4 gap-y-3 font-dm-sans text-[18px] font-normal text-white lg:mt-3 lg:flex-col lg:items-start lg:gap-y-3">
                                     <a
 
-                                        href="#faqs"
+                                        href="/#faqs"
                                     >
                                         {changeData?.links?.faqs}
                                     </a>
                                     <a
 
-                                        href="#contact-us"
+                                        href="/#contact-us"
                                     >
                                         {changeData?.links?.contact}
                                     </a>
@@ -365,10 +365,10 @@ const Footer = () => {
                                     <Link href={paths.pages.benefits.href}>
                                         {changeData?.links?.benefits}
                                     </Link>
-                                    <a href="#all-in-one">
+                                    <a href="/#all-in-one">
                                         {changeData?.links?.yourwebsite}
                                     </a>
-                                    <a href="#packages">
+                                    <a href="/#packages">
                                         {changeData?.links?.pricing}
                                     </a>
                                     <a href="/portfolio">
