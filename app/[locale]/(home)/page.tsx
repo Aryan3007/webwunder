@@ -53,7 +53,7 @@ export default function HomePage() {
                         <div className="bg-white overflow-hidden rounded-2xl shadow-lg max-w-4xl 3xl:max-w-6xl w-full relative">
                             <button
                                 onClick={() => setIsVisible(false)}
-                                className="absolute z-[50] top-2 right-2 text-gray-500 hover:text-gray-700"
+                                className="absolute z-[50] top-2 right-2 text-white rounded-full p-0.5 lg:text-black lg:bg-transparent bg-[#24252A] "
                             >
                                 <X className="h-6 w-6" />
                             </button>

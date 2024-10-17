@@ -132,6 +132,12 @@ const Why_mobCrousel: React.FC = () => {
         },
     ]
 
+    const youtubeLink =
+    changeLanguage === 'de'
+        ? 'https://youtu.be/mdaxGJFxj3g' // German
+        : 'https://youtu.be/j6SZoN30F84'; // English
+
+
     return (
         <section
             style={{
@@ -176,7 +182,7 @@ const Why_mobCrousel: React.FC = () => {
 
                 {/* Buttons */}
                 <div className="mb-7 mt-2 lg:scale-100 scale-90 flex items-center justify-center gap-2 lg:my-2 lg:gap-3">
-                    <Link href="#purchase-plans">
+                    <Link href={youtubeLink} target='_blank'>
                         {' '}
                         <button
                             className={`flex ${changeLanguage === 'de' ? 'h-14' : 'h-12'} w-fit flex-row items-center justify-between gap-3 rounded-full bg-[#24252A] p-2 transition-all hover:scale-95`}
