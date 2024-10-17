@@ -109,11 +109,11 @@ export default function SignupPage() {
         },
     ]
     return (
-        <div className="lg:p-6 p-0 min-h-screen">
+        <div className="lg:p-4 min-h-screen overflow-hidden">
 
-            <div className="flex rounded-none lg:rounded-2xl  min-h-screen bg-[url('/signupbg.svg')] bg-center bg-no-repeat bg-cover bg-black flex-col overflow-x-hidden">
+<div style={{ backgroundImage: "url('/signupbg.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }} className='flex lg:rounded-2xl rounded-none  flex-col   bg-black lg:flex-col'>
 
-                <div className="p-4 z-40 w-full items-center flex justify-between">
+                <div className="p-4 z-40 w-full flex  items-center justify-between">
                     <Link href={`/`}>
                         <Image src="./images/logo.svg"
 
@@ -122,20 +122,18 @@ export default function SignupPage() {
                             height="17" />
                     </Link>
 
-                    <div className='scale-75'>
+                    <div className=' scale-75'>
 
                         <CustomLanguageDropdown />
                     </div>
                 </div>
                 {/* Left side with carousel */}
 
-                <div className='flex justify-center items-center h-full w-full'>
+       
 
 
                     {/* Right side with form */}
-                    <div
-                        className={`flex w-full flex-col ${scale} items-center justify-center px-6 py-8 lg:py-0`}
-                    >
+                    <div className={`m-auto  lg:w-[40%] flex flex-col h-screen items-center justify-center px-3 py-8 bg-cover bg-center`}>
                         <div className="w-full max-w-lg lg:space-y-4 space-y-10">
                             <div className="space-y-2 text-left">
                                 <h2 className="font-archivo  text-center text-[45px] font-bold leading-none text-white">
@@ -222,6 +220,5 @@ export default function SignupPage() {
                 </div>
 
             </div>
-        </div>
     )
 }
