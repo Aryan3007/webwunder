@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { BsApple, BsGoogle, BsMicrosoft } from 'react-icons/bs'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/use-toast'
 import { loginSocial } from '@/services/login/actions'
@@ -10,7 +10,8 @@ type Provider = 'google' | 'apple' | 'azure'
 
 // Define the shape of the SocialData objects
 interface SocialDataItem {
-    icon: JSX.Element
+    imageSrc: string
+    altText: string
     label: string
     provider: Provider
 }
@@ -38,7 +39,7 @@ export default function Socials() {
         } catch (error) {
             toast({
                 title: 'Login Failed',
-                description: (error as Error).message, // Ensure the error is typed as Error
+                description: (error as Error).message,
                 variant: 'destructive',
             })
         } finally {
@@ -52,35 +53,41 @@ export default function Socials() {
     // Social login data
     const socialData: SocialDataItem[] = [
         {
-            icon: <BsGoogle className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />,
+            imageSrc: '/google.svg',
+            altText: 'Google Logo',
             label: 'Sign in with Google',
             provider: 'google',
         },
         {
-            icon: <BsApple className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />,
-            label: 'Sign in with Apple',
-            provider: 'apple',
-        },
-        {
-            icon: <BsMicrosoft className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />,
+            imageSrc: '/window.svg',
+            altText: 'Microsoft Logo',
             label: 'Sign in with Microsoft',
             provider: 'azure',
+        },
+        {
+            imageSrc: '/apple.svg',
+            altText: 'Apple Logo',
+            label: 'Sign in with Apple',
+            provider: 'apple',
         },
     ]
 
     return (
-        <div className="flex items-center justify-center gap-2 text-white">
+        <div className='flex text-zinc-500 flex-col gap-3'>
             {socialData.map((data, i) => (
-                <button
+                <div
                     key={i}
-                    disabled={loadingStates[data.provider]}
-                    onClick={() => handleSocialLogin(data.provider)}
-                    className="mb-4 w-full border-black"
+                    className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'
                 >
-                    <div className="me-2 flex justify-center">
-                        {data.icon}
-                    </div>
-                </button>
+                    <Image src={data.imageSrc} alt={data.altText} width={25} height={25} />
+                    <button
+                        disabled={loadingStates[data.provider]}
+                        onClick={() => handleSocialLogin(data.provider)}
+                        className='capitalize text-left w-full'
+                    >
+                        {data.label}
+                    </button>
+                </div>
             ))}
         </div>
     )

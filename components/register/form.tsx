@@ -165,28 +165,7 @@ export default function SignupPage() {
                                             ?.orSignUpwith
                                     }
                                 </p>
-                                <div className='flex text-zinc-500 flex-col gap-3'>
-                                    <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
-
-                                        <Image src="/google.svg" alt="Logo" width={25} height={25} />
-                                        <button className='capitalize text-left'>
-                                            {languageData?.logintypes?.[changeLanguage]?.google}
-                                        </button>
-                                    </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
-
-                                        <Image src="/window.svg" alt="Logo" width={25} height={25} />
-                                        <button className='capitalize text-left'>
-                                            {languageData?.logintypes?.[changeLanguage]?.microsoft}
-                                        </button>
-                                    </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
-
-                                        <Image src="/apple.svg" alt="Logo" width={25} height={25} />
-                                        <button className='capitalize text-left'>
-                                            {languageData?.logintypes?.[changeLanguage]?.apple}
-                                        </button>
-                                    </div>
-
-                                </div>
+                                <Socials/>
                             </div>
 
                             <div className="space-y-16 pb-4 text-center text-xs text-white/70">
