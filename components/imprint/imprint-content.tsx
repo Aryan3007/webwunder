@@ -24,9 +24,9 @@ const ImprintContent = () => {
                 <p className="mb-1 font-archivo text-base font-normal text-white/50">
                     {imprintData?.address}
                 </p>
-                <p className="mb-1 font-archivo text-base font-normal text-white/50">
+                {/* <p className="mb-1 font-archivo text-base font-normal text-white/50">
                     {imprintData?.companyNumber}
-                </p>
+                </p> */}
                 <p className="mb-4 font-archivo text-base font-normal text-white/50">
                     {imprintData?.managingDirector}
                 </p>

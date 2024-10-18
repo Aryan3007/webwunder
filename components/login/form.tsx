@@ -183,9 +183,7 @@ export default function LoginPage() {
                                     {languageData?.logintypes?.[changeLanguage]?.apple}
                                 </button>
                             </div>
-
                         </div>
-
 
 
                         <div className="space-y-16 text-center text-xs text-white/70">

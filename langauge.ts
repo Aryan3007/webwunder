@@ -820,7 +820,7 @@ en:{
                     name: 'Forza Lighting',
                 }, {
                     text: "Webwunder hat unsere Vorstellungen übertroffen. Die kreative Umsetzung und der schnelle Support machen sie zur besten und einzigen Agentur, die man für alles braucht!",
-                    name: 'Skylumina GmbH',
+                    name: 'Johannes Eidens',
                 },
             ],
             reviewPrompt:
@@ -852,7 +852,7 @@ en:{
                     name: 'Forza Lighting',
                 }, {
                     text: "Webwunder exceeded our expectations. Their creative execution and fast support make them the best and only agency you'll ever need for everything!",
-                    name: 'Skylumina GmbH',
+                    name: 'Johannes Eidens',
                 },
             ],
             reviewPrompt: 'Tell us your WebWunder experience',
@@ -1376,19 +1376,19 @@ en:{
     termspagehead: {
         en: {
             imprint: 'Imprint',
-            tandc: 'Terms and Conditions (AGB) of Skylumina GmbH, Trading as WebWunde',
+            tandc: 'Terms and Conditions (AGB) of Johannes Eidens, Trading as WebWunde',
             ppc: 'Privacy Policy'
         },
         de: {
             imprint: 'Impressum',
-            tandc: 'Allgemeine Geschäftsbedingungen (AGB) der Skylumina GmbH, handelnd als WebWunder',
+            tandc: 'Allgemeine Geschäftsbedingungen (AGB) der Johannes Eidens, handelnd als WebWunder',
             ppc: 'Datenschutzerklärung'
         }
 
     },
     imprintPage: {
         en: {
-            title: 'Skylumina GmbH',
+            title: 'Johannes Eidens',
             address: 'Horster Park 43, 4731 Raeren, Belgium',
             companyNumber: 'Company Number: 0800882676',
             managingDirector: 'Managing Director: Johannes Eidens (M.A.)',
@@ -1404,12 +1404,12 @@ en:{
             servicesProvided: {
                 title: 'Services Provided by WebWunder.de',
                 description:
-                    'Webwunder.de is a project of Skylumina GmbH, offering subscription-based website design, development, and maintenance services. All our subscriptions are cancellable on a monthly basis. However, the websites remain the property of Webwunder.de and are leased, not owned. If you choose to cancel your subscription and wish to continue using the website, it must be purchased from us.',
+                    'Webwunder.de is a project of Johannes Eidens, offering subscription-based website design, development, and maintenance services. All our subscriptions are cancellable on a monthly basis. However, the websites remain the property of Webwunder.de and are leased, not owned. If you choose to cancel your subscription and wish to continue using the website, it must be purchased from us.',
             },
             disputeResolution: {
                 title: 'Dispute Resolution and Consumer Rights',
                 description:
-                    'Skylumina GmbH does not participate in dispute resolution procedures before a consumer arbitration board.',
+                    'Johannes Eidens does not participate in dispute resolution procedures before a consumer arbitration board.',
             },
             liabilityForContent: {
                 title: 'Liability for Content',
@@ -1423,7 +1423,7 @@ en:{
             },
         },
         de: {
-            title: 'Skylumina GmbH',
+            title: 'Johannes Eidens',
             address: 'Horster Park 43, 4731 Raeren, Belgien',
             companyNumber: 'Unternehmensnummer: 0800882676',
             managingDirector: 'Geschäftsführer: Johannes Eidens (M.A.)',
@@ -1439,12 +1439,12 @@ en:{
             servicesProvided: {
                 title: 'Von WebWunder.de bereitgestellte Dienstleistungen',
                 description:
-                    'Webwunder.de ist ein Projekt der Skylumina GmbH und bietet abonnementsbasierte Dienstleistungen für Webdesign, -entwicklung und -wartung an. Unsere Abonnements sind alle monatlich kündbar. Die Websites bleiben jedoch im Eigentum von Webwunder.de und werden nur geleast. Wenn Sie Ihr Abonnement kündigen und die Website weiterhin nutzen möchten, muss die Website von uns erworben werden.',
+                    'Webwunder.de ist ein Projekt der Johannes Eidens und bietet abonnementsbasierte Dienstleistungen für Webdesign, -entwicklung und -wartung an. Unsere Abonnements sind alle monatlich kündbar. Die Websites bleiben jedoch im Eigentum von Webwunder.de und werden nur geleast. Wenn Sie Ihr Abonnement kündigen und die Website weiterhin nutzen möchten, muss die Website von uns erworben werden.',
             },
             disputeResolution: {
                 title: 'Streitbeilegung und Verbraucherrechte',
                 description:
-                    'Die Skylumina GmbH nimmt nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.',
+                    'Die Johannes Eidens nimmt nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.',
             },
             liabilityForContent: {
                 title: 'Haftung für Inhalte',
@@ -1463,12 +1463,12 @@ en:{
             {
                 title: '1. Introduction',
                 content:
-                    "Skylumina GmbH ('we', 'us', 'our') is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our website, WebWunder.de.",
+                    "Johannes Eidens ('we', 'us', 'our') is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and share your personal information when you use our website, WebWunder.de.",
             },
             {
                 title: '2. Data Controller',
                 content:
-                    'Skylumina GmbH is the data controller responsible for your personal data. Our Data Protection Officer is Ryan Matthew Quines, who can be contacted at datenschutz@webwunder.de.',
+                    'Johannes Eidens is the data controller responsible for your personal data. Our Data Protection Officer is Ryan Matthew Quines, who can be contacted at datenschutz@webwunder.de.',
             },
             {
                 title: '3. Data Collection',
@@ -1519,7 +1519,7 @@ en:{
                 title: '12. Contact Information',
                 content: {
                     text: 'If you have any questions or concerns about this Privacy Policy, please contact us at:',
-                    company: 'Skylumina GmbH',
+                    company: 'Johannes Eidens',
                     address: 'Horster Park 43, 4731 Raeren, Belgium',
                     email: 'datenschutz@webwunder.de',
                 },
@@ -1530,12 +1530,12 @@ en:{
             {
                 title: '1. Einführung',
                 content:
-                    "Die Skylumina GmbH ('wir', 'uns', 'unser') verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Datenschutzerklärung erklärt, wie wir Ihre persönlichen Daten erfassen, verwenden und teilen, wenn Sie unsere Website WebWunder.de nutzen.",
+                    "Die Johannes Eidens ('wir', 'uns', 'unser') verpflichtet sich, Ihre Privatsphäre zu schützen. Diese Datenschutzerklärung erklärt, wie wir Ihre persönlichen Daten erfassen, verwenden und teilen, wenn Sie unsere Website WebWunder.de nutzen.",
             },
             {
                 title: '2. Datenverantwortlicher',
                 content:
-                    'Die Skylumina GmbH ist der für Ihre personenbezogenen Daten verantwortliche Datenverantwortliche. Unser Datenschutzbeauftragter ist Ryan Matthew Quines, der unter datenschutz@webwunder.de kontaktiert werden kann.',
+                    'Die Johannes Eidens ist der für Ihre personenbezogenen Daten verantwortliche Datenverantwortliche. Unser Datenschutzbeauftragter ist Ryan Matthew Quines, der unter datenschutz@webwunder.de kontaktiert werden kann.',
             },
             {
                 title: '3. Datenerfassung',
@@ -1586,7 +1586,7 @@ en:{
                 title: '12. Kontaktinformationen',
                 content: {
                     text: 'Wenn Sie Fragen oder Bedenken bezüglich dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter:',
-                    company: 'Skylumina GmbH',
+                    company: 'Johannes Eidens',
                     address: 'Horster Park 43, 4731 Raeren, Belgien',
                     email: 'datenschutz@webwunder.de',
                 },
@@ -1604,7 +1604,7 @@ en:{
                         id: '1.1',
                         title: 'Applicability',
                         content:
-                            'These Terms and Conditions (AGB) govern all contracts and services provided by Skylumine GmbH (hereinafter referred to as "WebWunder") to its customers, encompassing website design, maintenance, and design services.',
+                            'These Terms and Conditions (AGB) govern all contracts and services provided by Johannes Eidens (hereinafter referred to as "WebWunder") to its customers, encompassing website design, maintenance, and design services.',
                     },
                     {
                         id: '1.2',
