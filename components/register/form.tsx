@@ -133,7 +133,7 @@ export default function SignupPage() {
 
 
                     {/* Right side with form */}
-                    <div className={`m-auto  lg:w-[40%] flex flex-col h-screen items-center justify-center px-3 py-8 bg-cover bg-center`}>
+                    <div className={`m-auto  lg:w-[40%] flex flex-col lg:h-screen items-center justify-center px-3 py-8 bg-cover bg-center`}>
                         <div className="w-full max-w-lg lg:space-y-4 space-y-10">
                             <div className="space-y-2 text-left">
                                 <h2 className="font-archivo  text-center text-[45px] font-bold leading-none text-white">

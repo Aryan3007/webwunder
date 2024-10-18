@@ -17,7 +17,7 @@ const TermsPage = () => {
     }, [])
     return (
         <PolicyContent
-            title= {lang === 'de' ? 'Allgemeine Geschäftsbedingungen (AGB) der Skylumina GmbH, handelnd als WebWunder' : 'Terms and Conditions (AGB) of Skylumina GmbH, Trading as WebWunder'}
+            title= {lang === 'de' ? 'Allgemeine Geschäftsbedingungen (AGB) der Johannes Eidens, handelnd als WebWunder' : 'Terms and Conditions (AGB) of Johannes Eidens, Trading as WebWunder'}
             breadcrumb={<TermsBreadcrumb />}
             content={<TermsContent />}
         />

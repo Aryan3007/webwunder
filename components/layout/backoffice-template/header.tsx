@@ -44,7 +44,7 @@ export default function Header(props: Props) {
                 className={`z-20 flex w-full flex-col bg-transparent`}
             >
                 <div
-                    className={`ms-0 flex w-full items-center justify-between px-4 pe-8 py-2`}
+                    className={`ms-0 flex w-full items-center justify-between h-10`}
                 >
                     <div
                         className={`flex w-full items-center justify-between rounded-xl bg-white`}

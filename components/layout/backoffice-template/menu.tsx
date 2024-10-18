@@ -1,54 +1,53 @@
 'use client'
+import React from 'react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { paths } from '@/paths';
 
-import Link from 'next/link'
-import { paths } from '@/paths'
-import MenuMobile from './menu-mobile'
-import Logout from './logout'
-import { usePathname } from 'next/navigation'
-import Profile from './profile'
+// Assuming these imports are available in your project
+// import { HelpCenterIcon } from './icons';
 
 export default function Menu() {
-    const pathname = usePathname()
-
-    const active = 'border-indigo-600 bg-gradient-to-r from-indigo-100'
+    const pathname = usePathname();
 
     return (
-        <nav className="flex h-full flex-col justify-between">
-            <div>
-                <Profile />
-                <ol className="mx-0 hidden flex-col gap-2 py-2 lg:flex">
-                    {Object.entries(paths.menu.backoffice).map(([_, value]) => (
-                        <li
-                            key={value.href}
-                            className={`flex border-s-4 ${pathname.includes(value.href) ? active : ''} cursor-pointer`}
-                        >
-                            <Link
-                                scroll
-                                className="flex h-full w-full items-center px-4 py-5 text-foreground"
-                                href={value.href}
-                            >
-                                <span className="me-2 text-2xl">
-                                    {value.icon}
-                                </span>
-                                {value.name}
-                            </Link>
-                        </li>
-                    ))}
-                </ol>
+        <nav className="flex flex-col h-full bg-gray-900 text-white w-full">
+            <div className="p-4 ">
+                <h1 className="text-xl font-bold">WebWunder</h1>
             </div>
-
-            <div className="flex flex-col items-start gap-4 px-4 py-8">
-                {/* <Link
-                    scroll
-                    className="flex items-center text-foreground"
-                    href={paths.pages.settings.href}
-                >
-                    <span className="me-2">{paths.pages.settings.icon}</span>
-                    {paths.pages.settings.name}
-                </Link> */}
-
-                <Logout />
+            <div className="flex-grow">
+                <div className="p-4">
+                    <h2 className="text-sm uppercase text-gray-400 mb-2">Menu</h2>
+                    <ul>
+                        {Object.entries(paths.menu.backoffice).map(([_, value]) => (
+                            <li 
+                                key={value.href} 
+                                className={`mb-1 ${pathname.includes(value.href) ? 'bg-indigo-600' : ''}`}
+                            >
+                                <Link
+                                    href={value.href}
+                                    className="flex items-center p-2 rounded hover:bg-gray-800"
+                                >
+                                    <span className="mr-3 text-2xl">{value.icon}</span>
+                                    {value.name}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            <div className="p-4 border-t border-gray-700">
+                <Link href="/help-center" className="flex items-center p-2 hover:bg-gray-800 rounded">
+                    {/* <HelpCenterIcon className="mr-3" /> */}
+                    Help Center
+                </Link>
+                <div className="flex items-center justify-between mt-4">
+                    <span>Dark Mode</span>
+                    <div className="w-10 h-5 bg-gray-700 rounded-full flex items-center p-1">
+                        <div className="w-4 h-4 bg-white rounded-full"></div>
+                    </div>
+                </div>
             </div>
         </nav>
-    )
+    );
 }
