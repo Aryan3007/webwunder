@@ -14,7 +14,6 @@ import React from 'react'
 import { useEffect, useRef, useState } from 'react'
 import { ArrowDown, CircleUserRound, Flag, MoveUpRight } from 'lucide-react'
 
-import { useTranslations } from 'next-intl'
 import {
     Select,
     SelectContent,

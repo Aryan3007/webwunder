@@ -4,7 +4,7 @@ import { Switch } from "@/components/ui/switch"
 
 import EnSVG from "@/assets/icons/locale/en.svg"
 import DeSVG from "@/assets/icons/locale/de.svg"
-import { useLocale, useTranslations } from "next-intl"
+import { useLocale } from "next-intl"
 import { useParams } from "next/navigation"
 import { lang, type Locale } from "@/i18n.config"
 import { ReactNode, useState, useTransition } from "react"
@@ -13,7 +13,6 @@ import { useRouter, Link, usePathname } from "@/services/navigation"
 
 export default function LocaleSwitcher({ className, ...props }: Props) {
 
-    const t = useTranslations()
     const locale = useLocale() as Locale;
 
     const params = useParams()
