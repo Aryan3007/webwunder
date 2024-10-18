@@ -60,7 +60,7 @@ const others = {
 const auth = {
     loginSuccess: {
         href: '/api/auth/login/success',
-        name: 'Login Success',
+        name: 'Login Success',     
     },
     settings: {
         href: '/auth/client/settings',

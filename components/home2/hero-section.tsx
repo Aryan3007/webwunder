@@ -22,11 +22,9 @@ import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { paths } from '@/paths'
-import { useTranslations } from 'next-intl'
 import SeePlans from './home-section/see-plans'
 
 export default function HeroSection(props: Props) {
-    const t = useTranslations()
 
     return (
         <section

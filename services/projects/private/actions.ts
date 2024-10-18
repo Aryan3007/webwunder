@@ -11,8 +11,7 @@ const getProjectFromDB = async (
         .select('*')
         .eq('user_id', payload.userId)
         .eq('payment_intent_id', payload.paymentIntentId)
-        .single()
-}
+     }
 
 const insertProjectToDB = async (
     supabase: SupabaseClient<Database, 'public'>,

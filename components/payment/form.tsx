@@ -23,7 +23,7 @@ export default function PaymentForm(
     const [title, setTitle] = useState('')
     const [coupon, setCoupon] = useState('')
     const userCtx = useUserContext()
-
+  
     const fetchClientSecret = useCallback(() => {
         // Create a Checkout Session
         return fetch('/api/checkout-sessions', {
@@ -53,6 +53,7 @@ export default function PaymentForm(
         props.packageType,
         props.priceIds,
         title,
+        coupon,
     ])
 
     return (

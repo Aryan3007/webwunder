@@ -105,47 +105,57 @@ export default function LoginPage() {
     ]
 
     return (
-        <div className="lg:p-4 min-h-screen overflow-hidden">
-            <div style={{ backgroundImage: "url('/signupbg.svg')", backgroundSize: 'cover', backgroundPosition: 'center' }} className='flex lg:rounded-2xl rounded-none  flex-col   bg-black lg:flex-col'>
-
-
-                <div className="p-4 z-40 w-full flex  items-center justify-between">
+        <div className="min-h-screen overflow-hidden lg:p-4">
+            <div
+                style={{
+                    backgroundImage: "url('/signupbg.svg')",
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+                className="flex flex-col rounded-none bg-black lg:flex-col lg:rounded-2xl"
+            >
+                <div className="z-40 flex w-full items-center justify-between p-4">
                     <Link href={`/`}>
-                        <Image src="./images/logo.svg"
-
+                        <Image
+                            src="./images/logo.svg"
                             alt="WebWunder Logo"
                             width="225"
-                            height="17" />
+                            height="17"
+                        />
                     </Link>
 
-                    <div className=' scale-75'>
-
+                    <div className="scale-75">
                         <CustomLanguageDropdown />
                     </div>
                 </div>
                 {/* Left side with carousel */}
 
-
                 {/* Right side with form */}
-                <div className={`m-auto  lg:w-[40%] lg:h-[91vh] flex flex-col ${scale} items-center justify-center px-3 py-8 bg-cover bg-center`}
-
-
-
+                <div
+                    className={`m-auto flex flex-col lg:h-[91vh] lg:w-[40%] ${scale} items-center justify-center bg-cover bg-center px-3 py-8`}
                 >
-                    <div className="z-10 w-full max-w-lg lg:space-y-4 space-y-10 lg:min-w-[30rem]">
-                        <div className={`space-y-2 lg:ml-0 mx-auto text-center ${changeLanguage === 'de' ? 'ml-8' : 'ml-0'}`}>
-                            <h2 className={`font-archivo text-center leading-none text-[45px] lg:w-full ${changeLanguage === 'de' ? 'w-3/4' : 'w-full'} font-bold text-white`}>
+                    <div className="z-10 w-full max-w-lg space-y-10 lg:min-w-[30rem] lg:space-y-4">
+                        <div
+                            className={`mx-auto space-y-2 text-center lg:ml-0 ${changeLanguage === 'de' ? 'ml-8' : 'ml-0'}`}
+                        >
+                            <h2
+                                className={`text-center font-archivo text-[45px] leading-none lg:w-full ${changeLanguage === 'de' ? 'w-3/4' : 'w-full'} font-bold text-white`}
+                            >
                                 {
                                     languageData?.loginPage?.[changeLanguage]
                                         ?.welcomeBack
                                 }
                             </h2>
-                            <p className="font-archivo  text-center text-base font-normal text-white">
-                                {languageData?.loginPage?.[changeLanguage]?.newTo}{' '}
+                            <p className="text-center font-archivo text-base font-normal text-white">
+                                {
+                                    languageData?.loginPage?.[changeLanguage]
+                                        ?.newTo
+                                }{' '}
                                 <Link href="/signup" className="text-[#5D59E1]">
                                     {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.signUp
+                                        languageData?.loginPage?.[
+                                            changeLanguage
+                                        ]?.signUp
                                     }{' '}
                                 </Link>
                             </p>
@@ -160,33 +170,55 @@ export default function LoginPage() {
                                         ?.orSignInwith
                                 }{' '}
                             </p>
-
                         </div>
 
-                        <div className='flex text-zinc-500 flex-col gap-3'>
-                            <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
-
-                                <Image src="/google.svg" alt="Logo" width={25} height={25} />
-                                <button className='capitalize text-left'>
-                                    {languageData?.logintypes?.[changeLanguage]?.google}
+                        <div className="flex flex-col gap-3 text-zinc-500">
+                            <div className="flex h-12 w-full gap-3 rounded-lg bg-[#24252a] px-4 text-left capitalize transition-all duration-150 hover:scale-95">
+                                <Image
+                                    src="/google.svg"
+                                    alt="Logo"
+                                    width={25}
+                                    height={25}
+                                />
+                                <button className="text-left capitalize">
+                                    {
+                                        languageData?.logintypes?.[
+                                            changeLanguage
+                                        ]?.google
+                                    }
                                 </button>
-                            </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
-
-                                <Image src="/window.svg" alt="Logo" width={25} height={25} />
-                                <button className='capitalize text-left'>
-                                    {languageData?.logintypes?.[changeLanguage]?.microsoft}
+                            </div>{' '}
+                            <div className="flex h-12 w-full gap-3 rounded-lg bg-[#24252a] px-4 text-left capitalize transition-all duration-150 hover:scale-95">
+                                <Image
+                                    src="/window.svg"
+                                    alt="Logo"
+                                    width={25}
+                                    height={25}
+                                />
+                                <button className="text-left capitalize">
+                                    {
+                                        languageData?.logintypes?.[
+                                            changeLanguage
+                                        ]?.microsoft
+                                    }
                                 </button>
-                            </div>   <div className='flex gap-3 hover:scale-95 transition-all duration-150 h-12 w-full rounded-lg capitalize text-left px-4 bg-[#24252a]'>
-
-                                <Image src="/apple.svg" alt="Logo" width={25} height={25} />
-                                <button className='capitalize text-left'>
-                                    {languageData?.logintypes?.[changeLanguage]?.apple}
+                            </div>{' '}
+                            <div className="flex h-12 w-full gap-3 rounded-lg bg-[#24252a] px-4 text-left capitalize transition-all duration-150 hover:scale-95">
+                                <Image
+                                    src="/apple.svg"
+                                    alt="Logo"
+                                    width={25}
+                                    height={25}
+                                />
+                                <button className="text-left capitalize">
+                                    {
+                                        languageData?.logintypes?.[
+                                            changeLanguage
+                                        ]?.apple
+                                    }
                                 </button>
                             </div>
-
                         </div>
-
-
 
                         <div className="space-y-16 text-center text-xs text-white/70">
                             <div className="flex flex-wrap justify-center space-x-8 font-archivo text-sm font-normal text-white">
@@ -195,25 +227,27 @@ export default function LoginPage() {
                                     className="hover:text-white"
                                 >
                                     {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.privacyPolicy
+                                        languageData?.loginPage?.[
+                                            changeLanguage
+                                        ]?.privacyPolicy
                                     }{' '}
                                 </a>
                                 <a href="/terms" className="hover:text-white">
                                     {/* Terms & Conditions */}
                                     {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.termsConditions
+                                        languageData?.loginPage?.[
+                                            changeLanguage
+                                        ]?.termsConditions
                                     }{' '}
                                 </a>
                                 <a href="/imprint" className="hover:text-white">
                                     {
-                                        languageData?.loginPage?.[changeLanguage]
-                                            ?.imprint
+                                        languageData?.loginPage?.[
+                                            changeLanguage
+                                        ]?.imprint
                                     }{' '}
                                 </a>
                             </div>
-
                         </div>
                     </div>
                 </div>

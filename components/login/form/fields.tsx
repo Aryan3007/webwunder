@@ -53,7 +53,7 @@ export const LoginForm = () => {
                 return
             }
 
-            toast({
+            toast({ 
                 title: 'Login Successfull',
                 description: `You have successfully logged in!`,
             })
@@ -101,7 +101,7 @@ export const LoginForm = () => {
             toast({
                 title: 'Forgot Password Email Sent',
                 description: `Please check your email.`,
-                variant: 'success',
+                variant: 'success',   
             })
             setIsResetting(false)
         } catch (error) {
