@@ -172,53 +172,7 @@ export default function LoginPage() {
                             </p>
                         </div>
 
-                        <div className="flex flex-col gap-3 text-zinc-500">
-                            <div className="flex h-12 w-full gap-3 rounded-lg bg-[#24252a] px-4 text-left capitalize transition-all duration-150 hover:scale-95">
-                                <Image
-                                    src="/google.svg"
-                                    alt="Logo"
-                                    width={25}
-                                    height={25}
-                                />
-                                <button className="text-left capitalize">
-                                    {
-                                        languageData?.logintypes?.[
-                                            changeLanguage
-                                        ]?.google
-                                    }
-                                </button>
-                            </div>{' '}
-                            <div className="flex h-12 w-full gap-3 rounded-lg bg-[#24252a] px-4 text-left capitalize transition-all duration-150 hover:scale-95">
-                                <Image
-                                    src="/window.svg"
-                                    alt="Logo"
-                                    width={25}
-                                    height={25}
-                                />
-                                <button className="text-left capitalize">
-                                    {
-                                        languageData?.logintypes?.[
-                                            changeLanguage
-                                        ]?.microsoft
-                                    }
-                                </button>
-                            </div>{' '}
-                            <div className="flex h-12 w-full gap-3 rounded-lg bg-[#24252a] px-4 text-left capitalize transition-all duration-150 hover:scale-95">
-                                <Image
-                                    src="/apple.svg"
-                                    alt="Logo"
-                                    width={25}
-                                    height={25}
-                                />
-                                <button className="text-left capitalize">
-                                    {
-                                        languageData?.logintypes?.[
-                                            changeLanguage
-                                        ]?.apple
-                                    }
-                                </button>
-                            </div>
-                        </div>
+                        <Socials/>
 
                         <div className="space-y-16 text-center text-xs text-white/70">
                             <div className="flex flex-wrap justify-center space-x-8 font-archivo text-sm font-normal text-white">

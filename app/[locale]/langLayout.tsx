@@ -8,7 +8,7 @@ interface LangLayoutProp {
 
 const LangLayout: React.FC<LangLayoutProp> = ({ children }) => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>(() => {
-        // Check if window exists to avoid issues with SSR
+        // Initialize state based on localStorage
         if (typeof window !== 'undefined') {
             const storedLang = localStorage.getItem('lang')
             return storedLang === 'de' || storedLang === 'en' ? storedLang : 'en'
@@ -20,19 +20,23 @@ const LangLayout: React.FC<LangLayoutProp> = ({ children }) => {
         try {
             const response = await axios.get('https://ipapi.co/json/')
             const countryCode = response.data.country_code
+            console.log('User country code:', countryCode)
+
             const germanSpeakingCountries = ['BE', 'DE', 'AT', 'CH'] // Belgium, Germany, Austria, Switzerland
 
             const detectedLanguage = germanSpeakingCountries.includes(countryCode) ? 'de' : 'en'
             
-            // Update localStorage and state after detection
-            if (typeof window !== 'undefined') {
-                localStorage.setItem('lang', detectedLanguage)
-                setChangeLanguage(detectedLanguage)
-            }
+            // Update localStorage and state after detection only if different from current language
+            // if (typeof window !== 'undefined') {
+                const storedLang = localStorage.getItem('lang')
+                if (storedLang !== detectedLanguage) {
+                    localStorage.setItem('lang', detectedLanguage)
+                    setChangeLanguage(detectedLanguage)
+                }
+            // }
         } catch (error) {
             console.error('Error fetching user location:', error)
-            
-            // If error, default to 'en'
+            // Fallback to 'en' if location detection fails
             if (typeof window !== 'undefined') {
                 localStorage.setItem('lang', 'en')
                 setChangeLanguage('en')
@@ -41,18 +45,21 @@ const LangLayout: React.FC<LangLayoutProp> = ({ children }) => {
     }
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const storedLang = localStorage.getItem('lang')
-            if (!storedLang) {
-                detectUserLanguage() // Detect language only if not already set
-            }
-        }
+        // Perform language detection if no language is set in localStorage
+        detectUserLanguage()
+
+        // if (typeof window !== 'undefined') {
+        //     const storedLang = localStorage.getItem('lang')
+        //     if (!storedLang) {
+        //         detectUserLanguage()
+        //     }
+        // }
     }, [])
 
-    // Only log `lang` when in a browser environment
     useEffect(() => {
+        // Log the current language stored in localStorage
         if (typeof window !== 'undefined') {
-            console.log(localStorage.getItem('lang'))
+            console.log('Current language:', localStorage.getItem('lang'))
         }
     }, [changeLanguage])
 

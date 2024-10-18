@@ -1,48 +1,29 @@
 'use client'
-import { Button } from '@/components/ui/button'
-import AppleSVG from '@/assets/icons/brands/apple.svg'
-import GoogleSVG from '@/assets/icons/brands/google.svg'
-import DiscordSVG from '@/assets/icons/discord.svg'
-import FacebookSVG from '@/assets/icons/facebook.svg'
-import GithubSVG from '@/assets/icons/github.svg'
-import TwitterSVG from '@/assets/icons/twitter.svg'
-import MicrosoftSVG from '@/assets/icons/brands/microsoft.svg'
-import { loginSocial } from '@/services/login/actions'
-import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import SpinnerSVG from '@/assets/icons/spinner.svg'
+import { BsApple, BsGoogle, BsMicrosoft } from 'react-icons/bs'
+import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/use-toast'
+import { loginSocial } from '@/services/login/actions'
 
-import {
-    BsApple,
-    BsDiscord,
-    BsGithub,
-    BsGoogle,
-    BsMicrosoft,
-} from 'react-icons/bs'
-import { FaAmazon, FaFacebookF, FaXTwitter } from 'react-icons/fa6'
-import { RiFacebookFill } from 'react-icons/ri'
+// Define the provider types explicitly for TypeScript
+type Provider = 'google' | 'apple' | 'azure'
 
-type Provider =
-    | 'google'
-    | 'apple'
-    | 'azure'
-    | 'discord'
-    | 'github'
-    | 'facebook'
-    | 'twitter'
+// Define the shape of the SocialData objects
+interface SocialDataItem {
+    icon: JSX.Element
+    label: string
+    provider: Provider
+}
+
 export default function Socials() {
     const { toast } = useToast()
     const router = useRouter()
 
-    const [loadingStates, setLoadingStates] = useState({
+    // State management with explicit typing for providers
+    const [loadingStates, setLoadingStates] = useState<Record<Provider, boolean>>({
         google: false,
         apple: false,
         azure: false,
-        discord: false,
-        github: false,
-        facebook: false,
-        twitter: false,
     })
 
     const handleSocialLogin = async (provider: Provider) => {
@@ -50,15 +31,14 @@ export default function Socials() {
         try {
             const result = await loginSocial(provider)
             if (result?.error) {
-                console.log('ERROR:', result.error)
                 throw new Error(result.error.message)
             }
-            // Handle successful login, e.g., router.push('/dashboard')
+            // Successful login can redirect to dashboard or other action
+            // e.g., router.push('/dashboard')
         } catch (error) {
-            console.error(error)
             toast({
                 title: 'Login Failed',
-                description: error + '',
+                description: (error as Error).message, // Ensure the error is typed as Error
                 variant: 'destructive',
             })
         } finally {
@@ -69,7 +49,8 @@ export default function Socials() {
         }
     }
 
-    const SocialData = [
+    // Social login data
+    const socialData: SocialDataItem[] = [
         {
             icon: <BsGoogle className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />,
             label: 'Sign in with Google',
@@ -81,59 +62,23 @@ export default function Socials() {
             provider: 'apple',
         },
         {
-            icon: (
-                <BsMicrosoft className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />
-            ),
+            icon: <BsMicrosoft className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />,
             label: 'Sign in with Microsoft',
-            provider: 'microsoft',
-        },
-        {
-            icon: <FaAmazon className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />,
-            label: 'Sign in with Amazon',
-            provider: 'amazon',
-        },
-        {
-            icon: (
-                <RiFacebookFill className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />
-            ),
-            label: 'Sign in with Facebook',
-            provider: 'facebook',
-        },
-        {
-            icon: (
-                <FaXTwitter className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />
-            ),
-            label: 'Sign in with Twitter',
-            provider: 'twitter',
-        },
-        {
-            icon: (
-                <BsDiscord className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-2 text-3xl" />
-            ),
-            label: 'Sign in with Discord',
-            provider: 'discord',
-        },
-        {
-            icon: <BsGithub className="rounded-md bg-[#29292F] md:p-3 md:text-5xl lg:p-2 lg:text-4xl p-1 text-2xl" />,
-            label: 'Sign in with GitHub',
-            provider: 'github',
+            provider: 'azure',
         },
     ]
 
     return (
         <div className="flex items-center justify-center gap-2 text-white">
-            {SocialData.map((data, i) => (
+            {socialData.map((data, i) => (
                 <button
                     key={i}
-                    disabled={loadingStates[data.provider as Provider]}
-                    onClick={() => handleSocialLogin(data.provider as Provider)}
+                    disabled={loadingStates[data.provider]}
+                    onClick={() => handleSocialLogin(data.provider)}
                     className="mb-4 w-full border-black"
                 >
                     <div className="me-2 flex justify-center">
                         {data.icon}
-                        {/* <SpinnerSVG
-                            className={`ms-2 text-2xl ${loadingStates[data.provider as Provider] ? '' : 'hidden'}`}
-                        /> */}
                     </div>
                 </button>
             ))}
