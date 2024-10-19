@@ -27,7 +27,7 @@ export const languageData = {
     navItems: {
         de: {
             benefits: 'Vorteile',
-            Process:"Prozess",
+            Process: 'Prozess',
             yourWebsite: 'Ihre Website',
             prices: 'Preise',
             portfolio: 'Portfolio',
@@ -39,7 +39,7 @@ export const languageData = {
         },
         en: {
             benefits: 'Benefits',
-            Process:"Process",
+            Process: 'Process',
             yourWebsite: 'Your Website',
             prices: 'Prices',
             portfolio: 'Portfolio',
@@ -51,15 +51,15 @@ export const languageData = {
         },
     },
 
-    popup:{
-de:{
-    Heading:"Upgrade für eine bessere Experience",
-    text:"Wir überarbeiten unser Kundenbackend, um Ihre Experience und den Support für unsere Webprojekte zu verbessern. Daher sind Buchungen, Neuanmeldungen und Logins vorübergehend nicht möglich. Alle Funktionen stehen mit neuen Erweiterungen Ende des Monats wieder zur Verfügung. Bei Fragen kontaktieren Sie uns bitte per E-Mail oder WhatsApp. Vielen Dank für Ihr Verständnis!"
-},
-en:{
-    Heading:"Upgrading for a Better Experience",
-    text:"We’re currently upgrading our customer backend to enhance your experience and support for our web projects. As a result, bookings, new registrations, and sign-ins are temporarily unavailable. All functions will be back with new features by the end of the month. For any questions, please contact us via email or WhatsApp. Thank you for your understanding!"
-}
+    popup: {
+        de: {
+            Heading: 'Upgrade für eine bessere Experience',
+            text: 'Wir überarbeiten unser Kundenbackend, um Ihre Experience und den Support für unsere Webprojekte zu verbessern. Daher sind Buchungen, Neuanmeldungen und Logins vorübergehend nicht möglich. Alle Funktionen stehen mit neuen Erweiterungen Ende des Monats wieder zur Verfügung. Bei Fragen kontaktieren Sie uns bitte per E-Mail oder WhatsApp. Vielen Dank für Ihr Verständnis!',
+        },
+        en: {
+            Heading: 'Upgrading for a Better Experience',
+            text: 'We’re currently upgrading our customer backend to enhance your experience and support for our web projects. As a result, bookings, new registrations, and sign-ins are temporarily unavailable. All functions will be back with new features by the end of the month. For any questions, please contact us via email or WhatsApp. Thank you for your understanding!',
+        },
     },
     mobNavFooter: {
         de: {
@@ -87,7 +87,7 @@ en:{
         de: {
             home: 'Startseite',
             benefits: 'Vorteile',
-            Process:"Prozess",
+            Process: 'Prozess',
             yourWebsite: 'Ihre Website',
             prices: 'Preise',
             portfolio: 'Portfolio',
@@ -99,7 +99,7 @@ en:{
         en: {
             home: 'Home',
             benefits: 'Benefits',
-            Process:"Process",
+            Process: 'Process',
             yourWebsite: 'Your Website',
             prices: 'Prices',
             portfolio: 'Portfolio',
@@ -113,7 +113,7 @@ en:{
         de: {
             home: '/',
             benefits: '/#join-us',
-            Process:"#easySteps",
+            Process: '#easySteps',
             yourWebsite: '/#all-in-one',
             prices: '/#purchase-plans',
             portfolio: '/portfolio',
@@ -125,7 +125,7 @@ en:{
         en: {
             home: '/',
             benefits: '/#join-us',
-            Process:"#easySteps",
+            Process: '#easySteps',
             yourWebsite: '/#all-in-one',
             prices: '/#purchase-plans',
             portfolio: '/portfolio',
@@ -150,7 +150,6 @@ en:{
             pinterest: 'https://www.pinterest.com/webwunderde/',
         },
         en: {
-
             writeEmail: 'mailto:info@webwunder.de ',
             BookACall: 'https://tidycal.com/skylumina/webwunder',
             sandAMessage: 'https://wa.me/c/4915114039455 ',
@@ -162,10 +161,9 @@ en:{
             behance: 'https://www.behance.net/webwunder',
             pinterest: 'https://www.pinterest.com/webwunderde/',
         },
-    }, mobmenufooterLinks2: {
+    },
+    mobmenufooterLinks2: {
         de: {
-
-
             Instagram: 'https://www.instagram.com/web_wunder/',
             Twitter: 'https://x.com/web_wunder',
             Facebook: '/de/kontakt',
@@ -175,7 +173,6 @@ en:{
             pinterest: 'https://www.pinterest.com/webwunderde/',
         },
         en: {
-
             Instagram: 'https://www.instagram.com/web_wunder/',
             Twitter: 'https://x.com/web_wunder',
             Facebook: 'https://www.facebook.com/profile.php?id=61559097817136',
@@ -460,7 +457,7 @@ en:{
                 {
                     title: 'Built by Entrepreneurs, for Entrepreneurs',
                     description:
-                        "We understand the hustle. With WebWunder, get a powerhouse website in under an hour of your time. We've perfected the process—over 100 projects successfully completed."
+                        "We understand the hustle. With WebWunder, get a powerhouse website in under an hour of your time. We've perfected the process—over 100 projects successfully completed.",
                 },
                 {
                     title: 'Free Updates and Design Refreshes',
@@ -802,24 +799,27 @@ en:{
             whatClientsSay: 'Was unsere Kunden sagen',
             testimonials: [
                 {
-                    text: "Webwunder hat unser Branding perfekt umgesetzt und uns dabei rundum begeistert. Schnell, effizient und genau auf den Punkt!",
+                    text: 'Webwunder hat unser Branding perfekt umgesetzt und uns dabei rundum begeistert. Schnell, effizient und genau auf den Punkt!',
                     name: 'HarzPlus GmbH',
                 },
                 {
-                    text: "Webwunder hat unsere Website modern gestaltet, und wir bekommen durchweg positive Rückmeldungen. Der Service ist top – schnell, zuverlässig und unkompliziert!",
+                    text: 'Webwunder hat unsere Website modern gestaltet, und wir bekommen durchweg positive Rückmeldungen. Der Service ist top – schnell, zuverlässig und unkompliziert!',
                     name: 'Praxis Kattan',
                 },
                 {
-                    text: "Webwunder hat unsere Vision sofort verstanden und übertroffen. Der gesamte Prozess war absolut reibungslos und das Ergebnis beeindruckend!",
+                    text: 'Webwunder hat unsere Vision sofort verstanden und übertroffen. Der gesamte Prozess war absolut reibungslos und das Ergebnis beeindruckend!',
                     name: 'EVS Energy GmbH',
-                }, {
-                    text: "Webwunder hat unser Rebranding zu Wladimir-Magic nicht nur professionell, sondern auch mit großem Feingefühl umgesetzt. Für alle, die höchste Qualität suchen, die perfekte Wahl!",
+                },
+                {
+                    text: 'Webwunder hat unser Rebranding zu Wladimir-Magic nicht nur professionell, sondern auch mit großem Feingefühl umgesetzt. Für alle, die höchste Qualität suchen, die perfekte Wahl!',
                     name: 'Wladimir-Magic.de',
-                }, {
-                    text: "Webwunder hat unser Branding auf ein neues Level gehoben. Die neue Website spiegelt unsere Marke perfekt wider – wir sind begeistert!",
+                },
+                {
+                    text: 'Webwunder hat unser Branding auf ein neues Level gehoben. Die neue Website spiegelt unsere Marke perfekt wider – wir sind begeistert!',
                     name: 'Forza Lighting',
-                }, {
-                    text: "Webwunder hat unsere Vorstellungen übertroffen. Die kreative Umsetzung und der schnelle Support machen sie zur besten und einzigen Agentur, die man für alles braucht!",
+                },
+                {
+                    text: 'Webwunder hat unsere Vorstellungen übertroffen. Die kreative Umsetzung und der schnelle Support machen sie zur besten und einzigen Agentur, die man für alles braucht!',
                     name: 'Johannes Eidens',
                 },
             ],
@@ -834,23 +834,26 @@ en:{
             whatClientsSay: 'What Our Clients Say',
             testimonials: [
                 {
-                    text: "Webwunder brought our branding to life perfectly and exceeded our expectations. Fast, efficient, and spot-on!",
+                    text: 'Webwunder brought our branding to life perfectly and exceeded our expectations. Fast, efficient, and spot-on!',
                     name: 'HarzPlus GmbH',
                 },
                 {
-                    text: "Webwunder created a modern website for us, and the feedback has been fantastic. Their service is top-notch – fast, reliable, and hassle-free!",
+                    text: 'Webwunder created a modern website for us, and the feedback has been fantastic. Their service is top-notch – fast, reliable, and hassle-free!',
                     name: 'Praxis Kattan',
                 },
                 {
-                    text: "Webwunder instantly understood and exceeded our vision. The entire process was seamless, and the result is impressive!",
+                    text: 'Webwunder instantly understood and exceeded our vision. The entire process was seamless, and the result is impressive!',
                     name: 'EVS Energy GmbH',
-                }, {
+                },
+                {
                     text: "Webwunder handled our Wladimir-Magic rebranding not just professionally, but with great attention to detail. If you're looking for top quality, they're the perfect choice!",
                     name: 'Wladimir-Magic.de',
-                }, {
-                    text: "Webwunder took our branding to the next level. The new website perfectly reflects our brand – we’re thrilled!",
+                },
+                {
+                    text: 'Webwunder took our branding to the next level. The new website perfectly reflects our brand – we’re thrilled!',
                     name: 'Forza Lighting',
-                }, {
+                },
+                {
                     text: "Webwunder exceeded our expectations. Their creative execution and fast support make them the best and only agency you'll ever need for everything!",
                     name: 'Johannes Eidens',
                 },
@@ -1029,15 +1032,15 @@ en:{
     },
     logintypes: {
         de: {
-            google: "weiter mit Google",
-            microsoft: "weiter mit Microsoft Account",
-            apple: "weiter mit Apple",
+            google: 'weiter mit Google',
+            microsoft: 'weiter mit Microsoft Account',
+            apple: 'weiter mit Apple',
         },
         en: {
-            google: "Continue with Google",
-            microsoft: "Continue with Microsoft Account",
-            apple: "Continue with Apple",
-        }
+            google: 'Continue with Google',
+            microsoft: 'Continue with Microsoft Account',
+            apple: 'Continue with Apple',
+        },
     },
     signupPage: {
         de: {
@@ -1377,14 +1380,13 @@ en:{
         en: {
             imprint: 'Imprint',
             tandc: 'Terms and Conditions (AGB) of Johannes Eidens, Trading as WebWunde',
-            ppc: 'Privacy Policy'
+            ppc: 'Privacy Policy',
         },
         de: {
             imprint: 'Impressum',
             tandc: 'Allgemeine Geschäftsbedingungen (AGB) der Johannes Eidens, handelnd als WebWunder',
-            ppc: 'Datenschutzerklärung'
-        }
-
+            ppc: 'Datenschutzerklärung',
+        },
     },
     imprintPage: {
         en: {
@@ -1603,8 +1605,7 @@ en:{
                     {
                         id: '1.1',
                         title: 'Applicability',
-                        content:
-                            'These Terms and Conditions (AGB) govern all contracts and services provided by Johannes Eidens (hereinafter referred to as "WebWunder") to its customers, encompassing website design, maintenance, and design services.',
+                        content: 'These Terms and Conditions',
                     },
                     {
                         id: '1.2',
@@ -2088,8 +2089,7 @@ en:{
             webwunder: 'Webwunder®',
         },
         de: {
-            winningSupport:
-                'Starke Webseiten. Support Für Immer.',
+            winningSupport: 'Starke Webseiten. Support Für Immer.',
             getInTouch: 'Kontaktieren Sie uns',
             quickConnect: 'Angebot',
             weAccept: 'Wir akzeptieren:',

@@ -23,7 +23,7 @@ const TermsBreadcrumb = () => {
 
     return (
         <Breadcrumb>
-            <BreadcrumbList className="relative lg:right-40 right-28 translate-x-1/2">
+            <BreadcrumbList className="relative right-28 translate-x-1/2">
                 <BreadcrumbItem>
                     <BreadcrumbLink
                         className="font-dm-sans text-base font-normal text-white hover:font-semibold hover:text-white"
