@@ -16,6 +16,7 @@ import New_Header from '../layout/home-template-new/New_Header'
 import MobileMenu from '../layout/home-template-new/MobileMenu'
 import MenuComponent from '../layout/home-template-new/MenuComponent'
 import FixedHeader from './FixedHeader'
+import FixedHeaderMob from './FixedHeaderMob'
 const Home_new = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
     const [isPopupOpen, setIsPopupOpen] = useState(false)
@@ -200,6 +201,7 @@ const Home_new = () => {
 
                     {/* <MenuComponent /> */}
                     <FixedHeader/>
+                    <FixedHeaderMob/>
 
 
 
