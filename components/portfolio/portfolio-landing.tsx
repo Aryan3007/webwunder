@@ -8,6 +8,7 @@ import axios from 'axios'
 import SidebarMenu from '../layout/home-template-new/menu-mobile'
 import Logo from '../common/logo'
 import FixedHeader from '../home-new/FixedHeader'
+import FixedHeaderMob from '../home-new/FixedHeaderMob'
 const PortfolioLanding = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en') // Initialize with default value
 
@@ -31,6 +32,11 @@ const PortfolioLanding = () => {
                     <Logo />
                     <SidebarMenu />
                 </div>
+
+                 {/* <MenuComponent /> */}
+                 <FixedHeader/>
+                    <FixedHeaderMob/>
+
                 <div className="mx-auto lg:pt-16 flex max-w-6xl flex-col items-center justify-center gap-4 p-4 pt-4">
                     <Badge
                         data-aos="fade-up"

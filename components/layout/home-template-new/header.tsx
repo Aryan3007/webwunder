@@ -103,7 +103,7 @@ export default function Header() {
                     className={`z-20 flex w-full flex-col bg-transparent ${isScrolling ? 'fixed top-2 lg:top-2' : ''}`}
                 >
                     <div className={`p-3 px-4`}>
-                        <div className={`flex w-full items-center justify-evenly rounded-xl bg-transparent ${isScrolling ? 'backdrop-blur-sm' : ''}`}>
+                        <div className={`flex w-full items-center justify-evenly bg-transparent ${isScrolling ? 'backdrop-blur-sm' : ''}`}>
                             <div className='w-96 flex justify-center items-center'>
                                 <Logo />
                             </div>
