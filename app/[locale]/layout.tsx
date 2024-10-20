@@ -48,7 +48,7 @@ export async function generateMetadata() {
         let description = ''
         let keywords = ''
         let imageUrl =
-            'https://res.cloudinary.com/dacn52tbe/image/upload/v1728158034/centerimage_t4imck.png'
+            'https://res.cloudinary.com/dacn52tbe/image/upload/v1729084649/SHARE-BANNER_llmoho.jpg'
 
         if (locale === 'de') {
             // Set German metadata
@@ -86,12 +86,11 @@ export async function generateMetadata() {
         }
     } catch (error) {
         console.error('Error generating metadata:', error)
-
         let title = de.global['site-title']
         let description = de.global['site-desc']
         let keywords = de.global['keywords']
         let imageUrl =
-            'https://res.cloudinary.com/dacn52tbe/image/upload/v1728158034/centerimage_t4imck.png'
+            'https://res.cloudinary.com/dacn52tbe/image/upload/v1729084649/SHARE-BANNER_llmoho.jpg'
 
         return {
             title: title,

@@ -32,54 +32,40 @@ const PolicyContent: React.FC<PolicyProps> = ({
         }
     }, [])
     return (
-        <div className=" bg-[url('/images/imprint.svg')] bg-cover bg-center  w-screen overflow-hidden lg:p-6">
-           
+        <div className="w-screen overflow-hidden bg-[url('/images/imprint.svg')] bg-cover bg-center lg:p-6">
+            <div className="hidden lg:flex">
+                <Header />
+            </div>
 
-
-
-
-                <div className='lg:flex hidden'>
-                    <Header />
-                </div>
-
-                <div className='relative lg:hidden pt-2 z-[50] w-full justify-between items-center px-6 flex'>
-                    <Link href={`/`}>
-                        <Image src="./images/logo.svg"
-
-                            alt="WebWunder Logo"
-                            width="225"
-                            height="17" />
-                    </Link>
-                    <SidebarMenu />
-                </div>
-
+            <div className="relative z-[50] flex w-full items-center justify-between px-6 pt-2 lg:hidden">
+                <Link href={`/`}>
+                    <Image
+                        src="./images/logo.svg"
+                        alt="WebWunder Logo"
+                        width="225"
+                        height="17"
+                    />
+                </Link>
+                <SidebarMenu />
+            </div>
 
             <div className="">
-
-                <div className="my-6 inset-0 h-44 flex justify-center items-center ">
-
-
-                    <div className=" z-10 flex h-full flex-col items-center  justify-center">
-                        <div className=" flex flex-col items-center justify-center text-center">
-                            <div className="xl:text[80px] max-w-[38.1rem] p-3  text-center font-archivo text-[25px] font-bold text-white">
+                <div className="inset-0 my-6 flex h-44 items-center justify-center">
+                    <div className="z-10 flex h-full flex-col items-center justify-center">
+                        <div className="flex flex-col items-center justify-center text-center">
+                            <div className="xl:text[80px] max-w-[38.1rem] p-3 text-center font-archivo text-[25px] font-bold text-white">
                                 {title}
                             </div>
-                            <div className='mx-auto max-w-80'>
-
+                            <div className="mx-auto max-w-80 text-center">
                                 {breadcrumb}
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-
-            <div className="rounded-b-lg bg-transparent  text-white">
-                {content}
-            </div>
-
-
-
+                <div className="rounded-b-lg bg-transparent text-white">
+                    {content}
+                </div>
             </div>
             {/* <div className="relative h-[400px] bg-black">
                 <div

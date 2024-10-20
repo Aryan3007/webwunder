@@ -17,7 +17,11 @@ const TermsPage = () => {
     }, [])
     return (
         <PolicyContent
-            title= {lang === 'de' ? 'Allgemeine Geschäftsbedingungen (AGB) der Johannes Eidens, handelnd als WebWunder' : 'Terms and Conditions (AGB) of Johannes Eidens, Trading as WebWunder'}
+            title={
+                lang === 'de'
+                    ? 'Allgemeine Geschäftsbedingungen'
+                    : 'Terms and Conditions '
+            }
             breadcrumb={<TermsBreadcrumb />}
             content={<TermsContent />}
         />
