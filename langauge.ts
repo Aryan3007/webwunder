@@ -1605,7 +1605,8 @@ export const languageData = {
                     {
                         id: '1.1',
                         title: 'Applicability',
-                        content: 'These Terms and Conditions',
+                        content:
+                            ' These General Terms and Conditions (GTC) govern all contracts and services offered by Johannes Eidens (hereinafter referred to as "WebWunder") to its clients, including web design, maintenance, and design services.',
                     },
                     {
                         id: '1.2',
@@ -1831,7 +1832,7 @@ export const languageData = {
                         id: '1.1',
                         title: 'Anwendbarkeit',
                         content:
-                            'Diese Allgemeinen Geschäftsbedingungen (AGB) regeln alle Verträge und Dienstleistungen, die von der Skylumine GmbH (im Folgenden „WebWunder“ genannt) ihren Kunden angeboten werden, einschließlich Webdesign, Wartung und Design-Dienstleistungen.',
+                            'Diese Allgemeinen Geschäftsbedingungen (AGB) regeln alle Verträge und Dienstleistungen, die von Johannes Eidens (im Folgenden „WebWunder“ genannt) seinen Kunden angeboten werden, einschließlich Webdesign, Wartung und Design-Dienstleistungen.',
                     },
                     {
                         id: '1.2',
