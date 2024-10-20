@@ -117,7 +117,7 @@ export default function SidebarMenu() {
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
-                                className="menu fixed inset-0 z-50"
+                                className="menu fixed inset-0 z-[99999]"
                             >
                                 <motion.div
                                     initial={{ opacity: 0 }}
