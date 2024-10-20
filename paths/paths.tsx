@@ -173,11 +173,32 @@ const newMainMenu = {
 
 // Backoffice menu
 const backofficeMenu = {
+    clientDashboard: {
+        href: '/auth/client/dashboard',
+        name: 'Dashboard',
+        icon: <BarChartSVG />,
+    },
+    clientProfile: {
+        href: '/auth/client/profile',
+        name: 'Profile',
+        icon: <BarChartSVG />,
+    },
+    clientMessages: {
+        href: '/auth/client/message',
+        name: 'Messages',
+        icon: <BarChartSVG />,
+    },
     clientProjects: {
         href: '/auth/client/projects',
         name: 'Projects',
         icon: <BarChartSVG />,
     },
+    clientFiles: {
+        href: '/auth/client/files',
+        name: 'Files',
+        icon: <BarChartSVG />,
+    },
+    
     purchasePackage: {
         href: '/auth/client/package/purchase',
         name: 'Purchase Package',

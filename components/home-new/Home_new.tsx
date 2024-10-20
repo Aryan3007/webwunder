@@ -15,6 +15,7 @@ import { ArrowRight, X } from 'lucide-react'
 import New_Header from '../layout/home-template-new/New_Header'
 import MobileMenu from '../layout/home-template-new/MobileMenu'
 import MenuComponent from '../layout/home-template-new/MenuComponent'
+import FixedHeader from './FixedHeader'
 const Home_new = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en')
     const [isPopupOpen, setIsPopupOpen] = useState(false)
@@ -188,7 +189,7 @@ const Home_new = () => {
 
                     {/* Header */}
 
-                    <div className='menu hidden lg:flex items-center justify-center top-2 w-full z-[99]'>
+                    <div className='menu hidden py-8 lg:flex items-center justify-center top-2 w-full z-[99]'>
                         <Header />
                     </div>
 
@@ -197,7 +198,8 @@ const Home_new = () => {
                         <SidebarMenu />
                     </div>
 
-                    <MenuComponent />
+                    {/* <MenuComponent /> */}
+                    <FixedHeader/>
 
 
 

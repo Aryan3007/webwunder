@@ -68,7 +68,7 @@ export default function Menu() {
 
     return (
         <nav className="flex items-center justify-center gap-3">
-            <ol className=" hidden py-8 lg:flex lg:gap-5">
+            <ol className=" hidden lg:flex lg:gap-5">
                 {Object.entries(newMainMenu).map(([key, value]) => (
                     <li
                         key={value.href}

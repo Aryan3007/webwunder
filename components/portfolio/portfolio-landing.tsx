@@ -7,6 +7,7 @@ import { languageData } from '@/langauge'
 import axios from 'axios'
 import SidebarMenu from '../layout/home-template-new/menu-mobile'
 import Logo from '../common/logo'
+import FixedHeader from '../home-new/FixedHeader'
 const PortfolioLanding = () => {
     const [changeLanguage, setChangeLanguage] = useState<'de' | 'en'>('en') // Initialize with default value
 
@@ -24,6 +25,7 @@ const PortfolioLanding = () => {
                 <div className='lg:flex hidden'>
                     <Header />
                 </div>
+                <FixedHeader />
 
                 <div className='lg:hidden w-full justify-between items-center p-4 flex'>
                     <Logo />

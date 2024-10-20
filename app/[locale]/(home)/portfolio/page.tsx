@@ -38,7 +38,7 @@ export default function PortfolioPage() {
         <PortfolioLanding />
         <PortfolioCarousel />
         <PortfolioMainContent />
-        <MenuComponent />
+        {/* <MenuComponent /> */}
         <Footer />
       </div>
     );
