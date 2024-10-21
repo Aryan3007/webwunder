@@ -32,15 +32,12 @@ export async function loginSocial(
         | 'google'
         | 'apple'
         | 'azure'
-        | 'discord'
-        | 'github'
-        | 'facebook'
-        | 'twitter',
 ) {
     const supabase = createClient()
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
+            scopes: 'offline_access',
             redirectTo: `${process.env.HOST}/api/auth/callback`,
         },
     })
