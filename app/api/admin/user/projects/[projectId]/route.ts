@@ -2,14 +2,14 @@ import { createAdminClient } from '@/lib/supabase/server'; // Adjust based on yo
 import { NextRequest, NextResponse } from 'next/server';
 
 // Route to get all projects of a specific user
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(request: NextRequest, { params }: { params: { projectId: string } }) {
     const supabase = createAdminClient();
 
     try {
-        const userId = params.id;
+        const projectID = params.projectId;
 
-        // Validate the userId
-        if (!userId) {
+        // Validate the projectID
+        if (!projectID) {
             return NextResponse.json({ error: 'Missing user ID' }, { status: 400 });
         }
 
@@ -17,7 +17,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
         const { data: userProjects, error } = await supabase
             .from('projects')
             .select('*') // Select all fields from the projects table
-            .eq('user_id', userId);
+            .eq('user_id', projectID);
 
         if (error) {
             throw new Error(`Error fetching projects: ${error.message}`);

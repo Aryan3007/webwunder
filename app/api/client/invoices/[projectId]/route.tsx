@@ -1,26 +1,26 @@
 import { createAdminClient } from '@/lib/supabase/server'; // Adjust based on your project structure
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(request: NextRequest, { params }: { params: { userId: string } }) {
+export async function GET(request: NextRequest, { params }: { params: { projectId: string } }) {
     const supabase = createAdminClient();
 
     try {
-        const userId = params.userId;
+        const projectId = params.projectId;
 
         // Fetch the project for the specified user_id
         const { data: projectData, error } = await supabase
             .from('projects')
             .select('invoice_url')
-            .eq('user_id', userId)
+            .eq('user_id', projectId)
             .single(); // single() is used if you expect only one result
 
         if (error) {
-            throw new Error(`Error fetching project for user_id: ${userId}: ${error.message}`);
+            throw new Error(`Error fetching project for user_id: ${projectId}: ${error.message}`);
         }
 
         // Check if a project was found for the given user_id
         if (!projectData) {
-            return NextResponse.json({ error: `No project found for user_id: ${userId}` }, { status: 404 });
+            return NextResponse.json({ error: `No project found for user_id: ${projectId}` }, { status: 404 });
         }
 
         // Return the invoice_url from the project data
