@@ -3,6 +3,8 @@ import { Check } from "lucide-react"
 const plans = [
   {
     name: "Start Plan",
+    subhead:"Perfect for startups and small projects needing a solid online foundation.",
+    textcolor:"[#FFDC26]",
     price: 490,
     setupFee: 2000,
     popular: false,
@@ -19,6 +21,9 @@ const plans = [
   },
   {
     name: "Start Plan",
+    subhead:"Perfect for startups and small projects needing a solid online foundation.",
+    textcolor:"[#27DAB7]",
+
     price: 690,
     setupFee: 2000,
     popular: true,
@@ -35,6 +40,9 @@ const plans = [
   },
   {
     name: "Pro Plan",
+    subhead:"Perfect for startups and small projects needing a solid online foundation.",
+    textcolor:"[#FB421F]",
+
     price: 990,
     setupFee: 3000,
     popular: false,
@@ -53,6 +61,9 @@ const plans = [
   },
   {
     name: "Unlimited Design",
+    subhead:"Perfect for startups and small projects needing a solid online foundation.",
+    textcolor:"[#5D59E1]",
+
     price: 4990,
     setupFee: 2000,
     popular: false,
@@ -70,11 +81,11 @@ const plans = [
 export default function PackagesPage() {
   return (
     <section className="py-16 bg-gray-50">
-      <div className=" px-4">
+      <div className="flex flex-col gap-12 px-4">
         <h1 className="text-3xl font-bold mb-8">Your Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  2xl:grid-cols-4 3xl:grid-cols-4 gap-8">
           {plans.map((plan, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div key={index} className="bg-white rounded-lg shadow-md justify-between flex flex-col overflow-hidden">
               {plan.popular && (
                 <div className="bg-green-500 text-white text-center py-1 text-sm font-semibold">
                   POPULAR
@@ -82,7 +93,8 @@ export default function PackagesPage() {
               )}
               <div className="p-6">
                 <h2 className="text-xl font-semibold mb-2">{plan.name}</h2>
-                <p className="text-sm text-gray-600 mb-4">€{plan.setupFee} Setup Fee</p>
+                <p className={`text-sm text-${plan.textcolor} mb-4`}>€{plan.setupFee} Setup Fee</p>
+                <p className="text-sm text-gray-400 mb-4">{plan.subhead}</p>
                 <div className="flex items-baseline mb-4">
                   <span className="text-4xl font-bold">€{plan.price}</span>
                   <span className="text-gray-600 ml-1">/per month</span>
@@ -91,7 +103,7 @@ export default function PackagesPage() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <Check className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-sm font-bold">{feature}</span>
                     </li>
                   ))}
                 </ul>

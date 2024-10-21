@@ -37,7 +37,7 @@ const FixedHeaderMob = () => {
 
     return (
         <div className="fixed lg:hidden flex  top-0 left-0 right-0 z-[99] bg-[#24252a] shadow-md transition-all duration-300 ease-in-out transform translate-y-0">
-            <div className='w-full flex justify-between items-center px-6 py-4'>
+            <div className='w-full flex justify-between items-center px-6 py-2'>
                 <Logo />
                 <div className='z-[99]'>
                 <SidebarMenu />
