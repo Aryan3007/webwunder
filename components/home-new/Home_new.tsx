@@ -25,9 +25,9 @@ const Home_new = () => {
     const closePopup = () => setIsPopupOpen(false)
 
     const videoSrc =
-    changeLanguage === 'de'
-      ? "https://www.youtube.com/embed/mdaxGJFxj3g?si=Kplkw-MGBSzfqmud"  // Replace with German video URL
-      : "https://www.youtube.com/embed/j6SZoN30F84?si=FzioD18NYkjKuotN" ; // English video URL
+        changeLanguage === 'de'
+            ? "https://www.youtube.com/embed/mdaxGJFxj3g?si=Kplkw-MGBSzfqmud"  // Replace with German video URL
+            : "https://www.youtube.com/embed/j6SZoN30F84?si=FzioD18NYkjKuotN"; // English video URL
 
 
     useEffect(() => {
@@ -200,8 +200,8 @@ const Home_new = () => {
                     </div>
 
                     {/* <MenuComponent /> */}
-                    <FixedHeader/>
-                    <FixedHeaderMob/>
+                    <FixedHeader />
+                    <FixedHeaderMob />
 
 
 

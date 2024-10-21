@@ -57,7 +57,7 @@ export default function FixedHeader() {
 
  
   return (
-    <header className="fixed hidden lg:flex top-0 left-0 right-0 bg-[#24252a] text-white z-[99999] animate-fadeIn">
+    <header className="fixed hidden lg:flex top-0 left-0 right-0 bg-[#24252a] text-white z-[99] animate-fadeIn">
       <Header/>
     </header>
   )

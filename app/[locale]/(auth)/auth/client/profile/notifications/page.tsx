@@ -22,7 +22,7 @@ const RadioGroup: React.FC<RadioGroupProps> = ({ value, onValueChange, children 
     <div className="space-y-2">
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
+          return React.cloneElement(child as React.ReactElement<{ checked: boolean; onChange: () => void }>, {
             checked: child.props.value === value,
             onChange: () => onValueChange(child.props.value),
           });
