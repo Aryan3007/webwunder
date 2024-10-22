@@ -1,32 +1,48 @@
-// app/api/improvmx/route.ts
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-    return NextResponse.json({ sucess: 'kaam kr raha hai endpoint' })
+    return NextResponse.json({ success: 'Endpoint is working' })
 }
+
 export async function POST(req: Request) {
     try {
         // Extract alias and forward email from the request body
         const { userFriendlyEmail, aworkLink } = await req.json()
-        console.log({ userFriendlyEmail, aworkLink })
-        const apiKey = 'sk_1f010385909b4a138db35be23a88a465' 
+
+        if (!userFriendlyEmail || !aworkLink) {
+            return NextResponse.json(
+                {
+                    error: 'Both userFriendlyEmail and aworkLink are required.',
+                },
+                { status: 400 },
+            )
+        }
+
+        const apiKey = 'sk_1f010385909b4a138db35be23a88a465'
         const basicAuth = Buffer.from(`api:${apiKey}`).toString('base64')
-        // console.log({ basicAuth })
+
+        // Prepare the body for the POST request
+        const requestBody = {
+            alias: userFriendlyEmail, // Alias to be used
+            forward: aworkLink, // Destination email for forwarding
+        }
+
+        console.log('Request Body:', requestBody) // Log to verify the structure
+
+        // Send the request to ImprovMX API
         const response = await fetch(
-            'https://api.improvmx.com/v3/domains/webwunder.de/aliases/',
+            'https://api.improvmx.com/v3/domains/projects.webwunder.de/aliases/',
             {
                 method: 'POST',
                 headers: {
                     Authorization: `Basic ${basicAuth}`, // Basic Auth with API key
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    alias : userFriendlyEmail, // Alias to be used
-                    forward : aworkLink, // Destination email for forwarding
-                }),
+                body: JSON.stringify(requestBody),
             },
         )
-        // console.log(response)
+
+        // Handle response
         if (!response.ok) {
             const errorData = await response.json()
             return NextResponse.json(
@@ -36,6 +52,7 @@ export async function POST(req: Request) {
         }
 
         const data = await response.json()
+
         return NextResponse.json(
             {
                 success: true,
