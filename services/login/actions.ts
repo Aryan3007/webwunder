@@ -37,7 +37,7 @@ export async function loginSocial(
     const { data, error } = await supabase.auth.signInWithOAuth({
         provider,
         options: {
-            scopes: 'offline_access',
+            scopes: 'email',
             redirectTo: `${process.env.HOST}/api/auth/callback`,
         },
     })
