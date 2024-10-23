@@ -8,7 +8,7 @@ export async function getLoggedInUser() {
         supabase.auth.getUser(),
         supabase.from('profiles').select('*, roles (role)').single(),
     ])
-
+    console.log({authUser, profileUser})
     if (authUser.error) throw authUser.error
     else if (profileUser.error) throw profileUser.error
     else {
